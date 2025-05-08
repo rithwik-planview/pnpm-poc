@@ -11,7 +11,8 @@
         "moduleResolution": "bundler",
         "useDefineForClassFields": true,
         "paths": {
-            "shell": ["../shell/src/index.tsx"]
+            "shell": ["../shell/src/index.tsx"],
+            "shared": ["../shared/src/index.ts"]
         }
     },
     "include": ["src"]

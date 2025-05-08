@@ -8,7 +8,7 @@ let currentModule = '';
 
 const App = () => {
     const renderFeature = useCallback(
-        (remoteName: string, port: number) => async () => {
+        (remoteName: string, port: number, elementId: string) => async () => {
             if (!moduleMap.has(remoteName)) {
                 const module = await loadRemote({ remoteName, port });
                 moduleMap.set(remoteName, module!);
@@ -17,7 +17,7 @@ const App = () => {
                 const prevModule = moduleMap.get(currentModule);
                 const module = moduleMap.get(remoteName);
                 if (module) {
-                    const element = document.getElementById('feature-id');
+                    const element = document.getElementById(elementId);
                     if (element) {
                         prevModule?.default.destroy({ element });
                         module.default.render({
@@ -32,21 +32,27 @@ const App = () => {
     );
     return (
         <div className="content">
-            <h1>Rsbuild with React</h1>
-            <button
-                style={{ width: 200, margin: '10px auto' }}
-                onClick={renderFeature('feature_1', 3003)}
-            >
-                Render feature 1
-            </button>
-            <button
-                style={{ width: 200, margin: '10px auto' }}
-                onClick={renderFeature('feature_2', 3005)}
-            >
-                Render feature 2
-            </button>
-            <p>Start building amazing things with Rsbuild.</p>
-            <div id="feature-id">Feature goes here..</div>
+            <h2>Unity Module Federation POC</h2>
+            <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+                <div>
+                    <button
+                        style={{ width: 200, margin: '10px auto' }}
+                        onClick={renderFeature('feature_1', 3004, 'feature-id-1')}
+                    >
+                        Render feature 1
+                    </button>
+                    <div id="feature-id-1">Feature goes here..</div>
+                </div>
+                <div>
+                    <button
+                        style={{ width: 200, margin: '10px auto' }}
+                        onClick={renderFeature('feature_2', 3006, 'feature-id-2')}
+                    >
+                        Render feature 2
+                    </button>
+                    <div id="feature-id-2">Feature goes here..</div>
+                </div>
+            </div>
         </div>
     );
 };

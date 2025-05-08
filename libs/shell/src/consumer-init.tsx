@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { init, loadRemote as loadMFRemote } from '@module-federation/enhanced/runtime';
+import {
+    init,
+    loadRemote as loadMFRemote,
+    registerRemotes,
+} from '@module-federation/enhanced/runtime';
 
 type RenderRemoteArgs = {
     remoteName: string;
@@ -15,38 +19,40 @@ type ModuleReturn = {
         destroy: DestroyFunction;
     };
 };
+init({
+    name: 'shell',
+    remotes: [],
+    shared: {
+        react: {
+            lib: () => React,
+            version: '18.3.1',
+            shareConfig: {
+                singleton: true,
+                requiredVersion: '18.3.1',
+            },
+        },
+        'react-dom': {
+            lib: () => ReactDOM,
+            version: '18.3.1',
+            shareConfig: {
+                singleton: true,
+                requiredVersion: '18.3.1',
+            },
+        },
+    },
+});
+
 const moduleMap = new Map<string, ModuleReturn>();
 
 export const loadRemote = async ({ remoteName, port }: RenderRemoteArgs) => {
     if (!moduleMap.has(remoteName)) {
         const name = `mf_${remoteName}`;
-        init({
-            name: 'shell',
-            remotes: [
-                {
-                    name,
-                    entry: `http://localhost:${port}/mf-manifest.json`,
-                },
-            ],
-            shared: {
-                react: {
-                    lib: () => React,
-                    version: '18.3.1',
-                    shareConfig: {
-                        singleton: true,
-                        requiredVersion: false,
-                    },
-                },
-                'react-dom': {
-                    lib: () => ReactDOM,
-                    version: '18.3.1',
-                    shareConfig: {
-                        singleton: true,
-                        requiredVersion: false,
-                    },
-                },
+        registerRemotes([
+            {
+                name,
+                entry: `http://localhost:${port}/mf-manifest.json`,
             },
-        });
+        ]);
         try {
             const module = await loadMFRemote<ModuleReturn>(name);
             moduleMap.set(remoteName, module!);

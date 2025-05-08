@@ -20,7 +20,8 @@
         "lint": "eslint ."
     },
     "dependencies": {
-        "shell": "*"
+        "shell": "*",
+        "shared": "*"
     },
     "devDependencies": {
         "@eslint/js": "^9.23.0",

@@ -1,14 +1,25 @@
 import { pluginReact } from '@rsbuild/plugin-react';
 import { defineConfig } from '@rslib/core';
-import { pluginModuleFederation } from '@module-federation/rsbuild-plugin';
-import moduleFederationConfig from './module-federation.config';
 
 export default defineConfig({
     lib: [
         {
-            bundle: true,
-            dts: true,
             format: 'esm',
+            syntax: 'es2021',
+            output: {
+                distPath: {
+                    root: './dist/esm',
+                },
+            },
+        },
+        {
+            format: 'cjs',
+            syntax: 'es2021',
+            output: {
+                distPath: {
+                    root: './dist/cjs',
+                },
+            },
         },
         {
             format: 'umd',
@@ -20,11 +31,5 @@ export default defineConfig({
             },
         },
     ],
-    output: {
-        target: 'web',
-    },
-    plugins: [pluginReact(), pluginModuleFederation(moduleFederationConfig)],
-    server: {
-        port: 3006,
-    },
+    plugins: [pluginReact()],
 });

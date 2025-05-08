@@ -1,8 +1,7 @@
 import { createModuleFederationConfig } from '@module-federation/rsbuild-plugin';
-import { name } from './package.json';
 
 export default createModuleFederationConfig({
-    name,
+    name: 'mf_feature_2',
     exposes: {
         '.': './src/index.tsx',
     },
@@ -13,8 +12,11 @@ export default createModuleFederationConfig({
         'react-dom': {
             singleton: true,
         },
-        shared: {
+        '@unity/shared.counter': {
             singleton: true,
         },
+    },
+    dts: {
+        tsConfigPath: './tsconfig.mf.json',
     },
 });

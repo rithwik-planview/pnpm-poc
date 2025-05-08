@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react';
 import './App.css';
-import { loadRemote } from 'shell';
+import { loadRemote } from '@unity/core.shell';
 
 type ModuleReturn = Awaited<ReturnType<typeof loadRemote>>;
 

@@ -14,9 +14,6 @@
         "resolveJsonModule": true,
         "moduleResolution": "bundler",
         "allowImportingTsExtensions": true,
-        "paths": {
-            "shell": ["../../libs/shell/src/index.tsx"]
-        },
 
         /* type checking */
         "strict": true,

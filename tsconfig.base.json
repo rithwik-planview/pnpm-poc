@@ -1,15 +1,28 @@
 {
     "compilerOptions": {
-        "target": "es2016",
-        "module": "commonjs",
-        "rootDir": "./",
-        "resolveJsonModule": true,
-        "esModuleInterop": true,
-        "forceConsistentCasingInFileNames": true,
+        "target": "esnext",
+        "module": "esnext",
+        "moduleResolution": "node",
+        "lib": ["dom", "dom.iterable", "es2020"],
+        "useDefineForClassFields": true,
+
         "strict": true,
+        "esModuleInterop": true,
         "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "allowSyntheticDefaultImports": true,
+        "noEmit": true,
+
+        "jsx": "preserve",
+
+        "baseUrl": "./",
         "paths": {
-            "@unity/libs/*": ["./libs/*"]
+            "@unity/core.shell": ["./libs/core/shell/src/index.ts"],
+            "@unity/shared.counter": ["./libs/shared/counter/src/index.ts"],
+            "@unity/features.feature-1": ["./libs/features/feature-1/src/index.ts"],
+            "@unity/features.feature-2": ["./libs/features/feature-2/src/index.ts"]
         }
     }
 }

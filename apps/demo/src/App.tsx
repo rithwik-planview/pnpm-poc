@@ -1,56 +1,90 @@
-import { useCallback } from 'react';
+import { useCallback, useState } from 'react';
 import './App.css';
 import { loadRemote } from 'shell';
 
 type ModuleReturn = Awaited<ReturnType<typeof loadRemote>>;
-const moduleMap = new Map<string, ModuleReturn>();
-let currentModule = '';
 
 const App = () => {
+    const [moduleMap, setModuleMap] = useState(new Map<string, ModuleReturn>());
     const renderFeature = useCallback(
         (remoteName: string, port: number, elementId: string) => async () => {
-            if (!moduleMap.has(remoteName)) {
-                const module = await loadRemote({ remoteName, port });
-                moduleMap.set(remoteName, module!);
+            let module = moduleMap.get(remoteName);
+            if (!module) {
+                module = await loadRemote({ remoteName, port });
+                setModuleMap((prev) => {
+                    const newMap = new Map(prev);
+                    newMap.set(remoteName, module!);
+                    return newMap;
+                });
             }
-            if (currentModule !== remoteName) {
-                const prevModule = moduleMap.get(currentModule);
-                const module = moduleMap.get(remoteName);
-                if (module) {
-                    const element = document.getElementById(elementId);
-                    if (element) {
-                        prevModule?.default.destroy({ element });
-                        module.default.render({
-                            element,
-                        });
-                        currentModule = remoteName;
-                    }
-                }
+            const element = document.getElementById(elementId);
+            if (element) {
+                module?.default.render({
+                    element,
+                });
             }
         },
-        [],
+        [moduleMap],
+    );
+
+    const removeFeature = useCallback(
+        (remoteName: string, elementId: string) => () => {
+            const module = moduleMap.get(remoteName);
+            if (module) {
+                const element = document.getElementById(elementId);
+                if (element) {
+                    module.default.destroy({
+                        element,
+                    });
+                }
+            }
+            setModuleMap((prev) => {
+                const newMap = new Map(prev);
+                newMap.delete(remoteName);
+                return newMap;
+            });
+        },
+        [moduleMap],
     );
     return (
         <div className="content">
             <h2>Unity Module Federation POC</h2>
-            <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+            <div className="container">
                 <div>
-                    <button
-                        style={{ width: 200, margin: '10px auto' }}
-                        onClick={renderFeature('feature_1', 3004, 'feature-id-1')}
-                    >
-                        Render feature 1
-                    </button>
-                    <div id="feature-id-1">Feature goes here..</div>
+                    {moduleMap.has('feature_1') ? (
+                        <button
+                            className="button"
+                            onClick={removeFeature('feature_1', 'feature-id-1')}
+                        >
+                            Remove feature 1
+                        </button>
+                    ) : (
+                        <button
+                            className="button"
+                            onClick={renderFeature('feature_1', 3004, 'feature-id-1')}
+                        >
+                            Render feature 1
+                        </button>
+                    )}
+                    <div id="feature-id-1" className="feature" />
                 </div>
                 <div>
-                    <button
-                        style={{ width: 200, margin: '10px auto' }}
-                        onClick={renderFeature('feature_2', 3006, 'feature-id-2')}
-                    >
-                        Render feature 2
-                    </button>
-                    <div id="feature-id-2">Feature goes here..</div>
+                    {moduleMap.has('feature_2') ? (
+                        <button
+                            className="button"
+                            onClick={removeFeature('feature_2', 'feature-id-2')}
+                        >
+                            Remove feature 2
+                        </button>
+                    ) : (
+                        <button
+                            className="button"
+                            onClick={renderFeature('feature_2', 3006, 'feature-id-2')}
+                        >
+                            Render feature 2
+                        </button>
+                    )}
+                    <div id="feature-id-2" className="feature" />
                 </div>
             </div>
         </div>

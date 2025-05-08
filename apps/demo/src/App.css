@@ -24,3 +24,24 @@ body {
     font-weight: 400;
     opacity: 0.5;
 }
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.button {
+	margin: 10px;
+	padding: 5px 10px;
+}
+
+.feature {
+	margin: 20px;
+	height: 150px;
+	width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px dotted #ffffff99;
+}

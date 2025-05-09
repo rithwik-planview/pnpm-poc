@@ -6,6 +6,7 @@ export default defineConfig({
         {
             format: 'esm',
             syntax: 'es2021',
+            dts: true,
             output: {
                 distPath: {
                     root: './dist/esm',
@@ -23,11 +24,12 @@ export default defineConfig({
         },
         {
             format: 'umd',
-            umdName: 'Shell',
+            umdName: 'Unity_Shell',
             output: {
                 distPath: {
                     root: './dist/umd',
                 },
+                target: 'web',
             },
         },
     ],

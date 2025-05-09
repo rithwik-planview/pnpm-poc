@@ -2,8 +2,8 @@ import { defineConfig } from '@rsbuild/core';
 import { pluginReact } from '@rsbuild/plugin-react';
 
 export default defineConfig({
-    server: {
-        cors: true,
+    html: {
+        title: 'Unity Module Federation (UMD) POC',
     },
     plugins: [pluginReact()],
 });

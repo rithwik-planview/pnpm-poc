@@ -1,5 +1,5 @@
 {
-    "name": "@unity/libs/features/feature-1",
+    "name": "@unity/features.feature-1",
     "version": "1.0.0",
     "type": "module",
     "exports": {

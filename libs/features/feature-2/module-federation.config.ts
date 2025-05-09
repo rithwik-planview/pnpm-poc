@@ -1,7 +1,9 @@
 import { createModuleFederationConfig } from '@module-federation/rsbuild-plugin';
+import { name } from './package.json';
+import { getDirname, getRequiredVersion } from '../../../tools';
 
 export default createModuleFederationConfig({
-    name: 'mf_feature_2',
+    name: name.replace(/[\/\.@\-]/g, '_'),
     exposes: {
         '.': './src/index.tsx',
     },
@@ -14,6 +16,10 @@ export default createModuleFederationConfig({
         },
         '@unity/shared.counter': {
             singleton: true,
+            requiredVersion: getRequiredVersion(
+                getDirname(import.meta.url),
+                '@unity/shared.counter',
+            ),
         },
     },
     dts: {

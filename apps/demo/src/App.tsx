@@ -3,6 +3,16 @@ import './App.css';
 import { loadRemote } from '@unity/core.shell';
 
 type ModuleReturn = Awaited<ReturnType<typeof loadRemote>>;
+const FEATURES = {
+    FEATURE_1: {
+        name: '@unity/features.feature-1',
+        port: 3003,
+    },
+    FEATURE_2: {
+        name: '@unity/features.feature-2',
+        port: 3005,
+    },
+};
 
 const App = () => {
     const [moduleMap, setModuleMap] = useState(new Map<string, ModuleReturn>());
@@ -51,17 +61,21 @@ const App = () => {
             <h2>Unity Module Federation POC</h2>
             <div className="container">
                 <div>
-                    {moduleMap.has('feature_1') ? (
+                    {moduleMap.has(FEATURES.FEATURE_1.name) ? (
                         <button
                             className="button"
-                            onClick={removeFeature('feature_1', 'feature-id-1')}
+                            onClick={removeFeature(FEATURES.FEATURE_1.name, 'feature-id-1')}
                         >
                             Remove feature 1
                         </button>
                     ) : (
                         <button
                             className="button"
-                            onClick={renderFeature('feature_1', 3004, 'feature-id-1')}
+                            onClick={renderFeature(
+                                FEATURES.FEATURE_1.name,
+                                FEATURES.FEATURE_1.port,
+                                'feature-id-1',
+                            )}
                         >
                             Render feature 1
                         </button>
@@ -69,17 +83,21 @@ const App = () => {
                     <div id="feature-id-1" className="feature" />
                 </div>
                 <div>
-                    {moduleMap.has('feature_2') ? (
+                    {moduleMap.has(FEATURES.FEATURE_2.name) ? (
                         <button
                             className="button"
-                            onClick={removeFeature('feature_2', 'feature-id-2')}
+                            onClick={removeFeature(FEATURES.FEATURE_2.name, 'feature-id-2')}
                         >
                             Remove feature 2
                         </button>
                     ) : (
                         <button
                             className="button"
-                            onClick={renderFeature('feature_2', 3006, 'feature-id-2')}
+                            onClick={renderFeature(
+                                FEATURES.FEATURE_2.name,
+                                FEATURES.FEATURE_2.port,
+                                'feature-id-2',
+                            )}
                         >
                             Render feature 2
                         </button>

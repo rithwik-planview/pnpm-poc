@@ -7,7 +7,7 @@ import {
 } from '@module-federation/enhanced/runtime';
 
 const sanitizeName = (name: string) => {
-    return name.replace(/[\/\.\@\-]/g, '_');
+    return name.replace(/[/.@-]/g, '_');
 };
 
 type RenderRemoteArgs = {

@@ -1,11 +1,13 @@
 import { createModuleFederationConfig } from '@module-federation/rsbuild-plugin';
 import { name } from './package.json';
 import { getDirname, getRequiredVersion } from '../../../tools';
+import { sanitizeName } from '@unity/shared.utils';
 
 export default createModuleFederationConfig({
-    name: name.replace(/[/.@-]/g, '_'),
+    name: sanitizeName(name),
     exposes: {
         '.': './src/index.tsx',
+        './App': './src/App.tsx',
     },
     shared: {
         react: {

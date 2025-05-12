@@ -1,9 +1,14 @@
 import { defineConfig } from '@rsbuild/core';
 import { pluginReact } from '@rsbuild/plugin-react';
+import { name } from './package.json';
+import { getPortFromName } from '@unity/shared.utils';
 
 export default defineConfig({
     html: {
         title: 'Unity Module Federation (UMD) POC',
     },
     plugins: [pluginReact()],
+    server: {
+        port: getPortFromName(name),
+    },
 });

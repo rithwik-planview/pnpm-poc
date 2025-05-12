@@ -9,11 +9,11 @@ import {
 import * as ReactDOM from 'react-dom/client';
 
 type CreateRemoteArgs<T> = {
-    rootComponent: ForwardRefExoticComponent<PropsWithoutRef<any> & RefAttributes<T>>;
+    rootComponent: ForwardRefExoticComponent<PropsWithoutRef<unknown> & RefAttributes<T>>;
 };
 
 export const createRemote = <T,>({ rootComponent: Component }: CreateRemoteArgs<T>) => {
-    const rootMap = new Map<any, ReactDOM.Root>();
+    const rootMap = new Map<unknown, ReactDOM.Root>();
     const render = (props: { element: HTMLElement }): RefObject<T | null> => {
         const appRef = createRef<T>();
         const root = ReactDOM.createRoot(props.element);

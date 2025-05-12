@@ -6,21 +6,19 @@ type ModuleReturn = Awaited<ReturnType<typeof loadRemote>>;
 const FEATURES = {
     FEATURE_1: {
         name: '@unity/features.feature-1',
-        port: 3003,
     },
     FEATURE_2: {
         name: '@unity/features.feature-2',
-        port: 3005,
     },
 };
 
 const App = () => {
     const [moduleMap, setModuleMap] = useState(new Map<string, ModuleReturn>());
     const renderFeature = useCallback(
-        (remoteName: string, port: number, elementId: string) => async () => {
+        (remoteName: string, elementId: string) => async () => {
             let module = moduleMap.get(remoteName);
             if (!module) {
-                module = await loadRemote({ remoteName, port });
+                module = await loadRemote({ remoteName });
                 setModuleMap((prev) => {
                     const newMap = new Map(prev);
                     newMap.set(remoteName, module!);
@@ -71,11 +69,7 @@ const App = () => {
                     ) : (
                         <button
                             className="button"
-                            onClick={renderFeature(
-                                FEATURES.FEATURE_1.name,
-                                FEATURES.FEATURE_1.port,
-                                'feature-id-1',
-                            )}
+                            onClick={renderFeature(FEATURES.FEATURE_1.name, 'feature-id-1')}
                         >
                             Render feature 1
                         </button>
@@ -93,11 +87,7 @@ const App = () => {
                     ) : (
                         <button
                             className="button"
-                            onClick={renderFeature(
-                                FEATURES.FEATURE_2.name,
-                                FEATURES.FEATURE_2.port,
-                                'feature-id-2',
-                            )}
+                            onClick={renderFeature(FEATURES.FEATURE_2.name, 'feature-id-2')}
                         >
                             Render feature 2
                         </button>

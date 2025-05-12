@@ -1,8 +1,8 @@
 {
     "extends": "../../../tsconfig.base.json",
     "compilerOptions": {
-        "moduleResolution": "bundler",
-        "jsx": "react-jsx"
+        "lib": ["es2020"],
+        "moduleResolution": "bundler"
     },
     "include": ["src"],
     "exclude": ["node_modules", "dist"]

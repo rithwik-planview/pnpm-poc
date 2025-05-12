@@ -3,6 +3,7 @@ import { defineConfig } from '@rslib/core';
 import { pluginModuleFederation } from '@module-federation/rsbuild-plugin';
 import moduleFederationConfig from './module-federation.config';
 import { name } from './package.json';
+import { getPortFromName } from '@unity/shared.utils';
 
 export default defineConfig({
     lib: [
@@ -20,7 +21,7 @@ export default defineConfig({
         },
     ],
     server: {
-        port: 3003,
+        port: getPortFromName(name),
     },
     plugins: [pluginReact(), pluginModuleFederation(moduleFederationConfig)],
 });

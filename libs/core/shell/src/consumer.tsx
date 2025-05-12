@@ -5,14 +5,10 @@ import {
     loadRemote as loadMFRemote,
     registerRemotes,
 } from '@module-federation/enhanced/runtime';
-
-const sanitizeName = (name: string) => {
-    return name.replace(/[/.@-]/g, '_');
-};
+import { getPortFromName, sanitizeName } from '@unity/shared.utils';
 
 type RenderRemoteArgs = {
     remoteName: string;
-    port: number;
 };
 
 type RenderFunction = (props: { element: HTMLElement }) => void;
@@ -48,9 +44,10 @@ init({
 
 const moduleMap = new Map<string, ModuleReturn>();
 
-export const loadRemote = async ({ remoteName, port }: RenderRemoteArgs) => {
+export const loadRemote = async ({ remoteName }: RenderRemoteArgs) => {
     if (!moduleMap.has(remoteName)) {
         const name = sanitizeName(remoteName);
+        const port = getPortFromName(remoteName);
         registerRemotes([
             {
                 name,

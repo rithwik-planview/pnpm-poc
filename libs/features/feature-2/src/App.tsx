@@ -7,8 +7,12 @@ const App = forwardRef<HTMLDivElement>((_props, ref) => {
     const counter = useSyncExternalStore(counterStore.subscribe, counterStore.getSnapshot);
     return (
         <div className={styles.container}>
-            <div ref={ref}>Feature 1</div>
-            <Button primary onClick={counterStore.increment} label={`Shared Counter: ${counter}`} />
+            <div ref={ref}>Feature 2</div>
+            <Button
+                backgroundColor="cyan"
+                onClick={counterStore.increment}
+                label={`Shared Counter: ${counter}`}
+            />
         </div>
     );
 });

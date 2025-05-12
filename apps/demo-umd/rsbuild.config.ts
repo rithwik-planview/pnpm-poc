@@ -1,4 +1,6 @@
 import { defineConfig } from '@rsbuild/core';
+import { name } from './package.json';
+import { getPortFromName } from '@unity/shared.utils';
 
 export default defineConfig({
     output: {
@@ -19,5 +21,8 @@ export default defineConfig({
                 },
             },
         ],
+    },
+    server: {
+        port: getPortFromName(name),
     },
 });

@@ -2,7 +2,7 @@ import { createModuleFederationConfig } from '@module-federation/rsbuild-plugin'
 import { name } from './package.json';
 import { getPortFromName, sanitizeName } from '@unity/shared.utils';
 
-const feature = '@unity/features.feature-1';
+const feature = '@unity/features.feature-2';
 const port = getPortFromName(feature);
 
 export default createModuleFederationConfig({

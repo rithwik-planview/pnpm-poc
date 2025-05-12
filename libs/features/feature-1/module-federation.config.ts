@@ -6,6 +6,7 @@ export default createModuleFederationConfig({
     name: name.replace(/[/.@-]/g, '_'),
     exposes: {
         '.': './src/index.tsx',
+        './App': './src/App.tsx',
     },
     shared: {
         react: {

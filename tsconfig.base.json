@@ -21,6 +21,7 @@
         "paths": {
             "@unity/core.shell": ["./libs/core/shell/src/index.ts"],
             "@unity/shared.counter": ["./libs/shared/counter/src/index.ts"],
+            "@unity/shared.ui": ["./libs/shared/ui/src/index.tsx"],
             "@unity/features.feature-1": ["./libs/features/feature-1/src/index.ts"],
             "@unity/features.feature-2": ["./libs/features/feature-2/src/index.ts"]
         }

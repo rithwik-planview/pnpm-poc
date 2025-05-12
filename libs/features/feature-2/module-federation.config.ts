@@ -3,7 +3,7 @@ import { name } from './package.json';
 import { getDirname, getRequiredVersion } from '../../../tools';
 
 export default createModuleFederationConfig({
-    name: name.replace(/[\/\.@\-]/g, '_'),
+    name: name.replace(/[/.@-]/g, '_'),
     exposes: {
         '.': './src/index.tsx',
     },
@@ -20,6 +20,9 @@ export default createModuleFederationConfig({
                 getDirname(import.meta.url),
                 '@unity/shared.counter',
             ),
+        },
+        '@unity/shared.ui': {
+            requiredVersion: getRequiredVersion(getDirname(import.meta.url), '@unity/shared.ui'),
         },
     },
     dts: {

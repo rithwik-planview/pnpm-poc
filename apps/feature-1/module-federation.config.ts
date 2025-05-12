@@ -5,13 +5,13 @@ const sanitizeName = (name: string) => {
     return name.replace(/[/.@-]/g, '_');
 };
 
-const feature1 = sanitizeName('@unity/features.feature-1');
+const feature = '@unity/features.feature-1';
 const port = 3003;
 
 export default createModuleFederationConfig({
     name: sanitizeName(name),
     remotes: {
-        [feature1]: `${feature1}@http://localhost:${port}/mf-manifest.json`,
+        [feature]: `${sanitizeName(feature)}@http://localhost:${port}/mf-manifest.json`,
     },
     shared: {
         react: {

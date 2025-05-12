@@ -1,5 +1,5 @@
 import './App.css';
-import Feature1 from '_unity_features_feature_1/App';
+import Feature1 from '@unity/features.feature-1/App';
 
 const App = () => {
     return (

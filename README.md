@@ -33,8 +33,8 @@ Establish a scalable, developer-friendly frontend monorepo architecture to suppo
 
 | Category         | Tooling |
 |------------------|---------|
-| **Monorepo**     | Nx (@nx/js) + pnpm |
-| **Build Tool**   | Rsbuild (Webpack 5 underneath) |
+| **Monorepo**     | pnpm workspaces |
+| **Build Tool**   | Rsbuild, Rslib |
 | **Module Federation** | @module-federation/enhanced  |
 | **TypeScript**   | Isolated `tsconfig.json`, `tsconfig.mf.json` where needed |
 | **UI Framework** | React 18.3.1 |

@@ -2,6 +2,7 @@
 .DS_Store
 *.local
 *.log*
+local_bucket/
 
 # Dist
 node_modules

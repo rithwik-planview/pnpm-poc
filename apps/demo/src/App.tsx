@@ -18,7 +18,7 @@ const App = () => {
         (remoteName: string, elementId: string) => async () => {
             let module = moduleMap.get(remoteName);
             if (!module) {
-                module = await loadRemote({ remoteName });
+                module = await loadRemote({ remoteName, mode: import.meta.env.MODE });
                 setModuleMap((prev) => {
                     const newMap = new Map(prev);
                     newMap.set(remoteName, module!);

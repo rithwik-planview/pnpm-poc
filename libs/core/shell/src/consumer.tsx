@@ -5,10 +5,11 @@ import {
     loadRemote as loadMFRemote,
     registerRemotes,
 } from '@module-federation/enhanced/runtime';
-import { getPortFromName, sanitizeName } from '@unity/shared.utils';
+import { sanitizeName, getRemoteUrl } from '@unity/shared.utils';
 
 type RenderRemoteArgs = {
     remoteName: string;
+	mode: 'development' | 'production' | 'none';
 };
 
 type RenderFunction = (props: { element: HTMLElement }) => void;
@@ -44,14 +45,13 @@ init({
 
 const moduleMap = new Map<string, ModuleReturn>();
 
-export const loadRemote = async ({ remoteName }: RenderRemoteArgs) => {
+export const loadRemote = async ({ remoteName, mode }: RenderRemoteArgs) => {
     if (!moduleMap.has(remoteName)) {
         const name = sanitizeName(remoteName);
-        const port = getPortFromName(remoteName);
         registerRemotes([
             {
                 name,
-                entry: `http://localhost:${port}/mf-manifest.json`,
+                entry: `${getRemoteUrl(remoteName, mode)}mf-manifest.json`,
             },
         ]);
         try {

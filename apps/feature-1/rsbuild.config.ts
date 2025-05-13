@@ -5,9 +5,11 @@ import moduleFederationConfig from './module-federation.config';
 import { name } from './package.json';
 import { getPortFromName } from '@unity/shared.utils';
 
-export default defineConfig({
-    plugins: [pluginReact(), pluginModuleFederation(moduleFederationConfig)],
-    server: {
-        port: getPortFromName(name),
-    },
+export default defineConfig(({ env }) => {
+    return {
+        plugins: [pluginReact(), pluginModuleFederation(moduleFederationConfig(env))],
+        server: {
+            port: getPortFromName(name),
+        },
+    };
 });

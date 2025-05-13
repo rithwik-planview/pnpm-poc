@@ -1,5 +1,5 @@
 import './index.css';
-import type { getPortFromName, loadRemote, sanitizeName } from '@unity/core.shell';
+import type { loadRemote, sanitizeName } from '@unity/core.shell';
 
 const FEATURES = {
     FEATURE_1: {
@@ -15,7 +15,6 @@ declare global {
         Unity_Shell: {
             loadRemote: typeof loadRemote;
             sanitizeName: typeof sanitizeName;
-            getPortFromName: typeof getPortFromName;
         };
     }
 }
@@ -36,12 +35,14 @@ if (rootEl) {
     const feature_1_element: HTMLDivElement = document.querySelector('#feature-1-id')!;
     const feature_1_module = await window.Unity_Shell.loadRemote({
         remoteName: FEATURES.FEATURE_1.name,
+		mode: import.meta.env.MODE,
     });
     feature_1_module?.default.render({ element: feature_1_element });
 
     const feature_2_element: HTMLDivElement = document.querySelector('#feature-2-id')!;
     const feature_2_module = await window.Unity_Shell.loadRemote({
         remoteName: FEATURES.FEATURE_2.name,
+		mode: import.meta.env.MODE,
     });
     feature_2_module?.default.render({ element: feature_2_element });
 }

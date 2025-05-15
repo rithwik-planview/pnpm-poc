@@ -18,7 +18,8 @@
         "build": "rslib build",
         "dev": "rslib build --watch",
         "format": "prettier --write .",
-        "lint": "eslint ."
+        "lint": "eslint .",
+        "deploy-package": "tsx ./src/deploy.ts"
     },
     "devDependencies": {
         "@eslint/js": "^9.25.1",
@@ -27,8 +28,13 @@
         "eslint": "^9.25.1",
         "globals": "^16.0.0",
         "prettier": "^3.5.3",
+        "tsx": "^4.19.4",
         "typescript": "^5.8.3",
         "typescript-eslint": "^8.31.1"
     },
-    "private": true
+    "private": true,
+    "dependencies": {
+        "chalk": "^5.4.1",
+        "listr2": "^8.3.3"
+    }
 }

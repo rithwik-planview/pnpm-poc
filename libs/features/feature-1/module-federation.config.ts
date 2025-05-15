@@ -1,6 +1,6 @@
 import { createModuleFederationConfig } from '@module-federation/rsbuild-plugin';
 import { name } from './package.json';
-import { getDirname, getRequiredVersion } from '../../../tools';
+import { getDirname, getRequiredVersion } from '@unity/tools';
 import { sanitizeName } from '@unity/shared.utils';
 
 export default createModuleFederationConfig({

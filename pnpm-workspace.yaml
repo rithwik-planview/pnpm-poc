@@ -3,6 +3,7 @@ packages:
   - libs/core/*
   - libs/shared/*
   - libs/features/*
+  - tools
 onlyBuiltDependencies:
   - core-js
   - esbuild

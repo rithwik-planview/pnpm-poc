@@ -24,7 +24,8 @@
             "@unity/shared.ui": ["./libs/shared/ui/src/index.tsx"],
             "@unity/shared.utils": ["./libs/shared/utils/src/index.ts"],
             "@unity/features.feature-1": ["./libs/features/feature-1/src/index.ts"],
-            "@unity/features.feature-2": ["./libs/features/feature-2/src/index.ts"]
+            "@unity/features.feature-2": ["./libs/features/feature-2/src/index.ts"],
+            "@unity/tools": ["./tools/src/index.ts"]
         }
     }
 }

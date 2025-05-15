@@ -33,6 +33,7 @@
         "@types/react": "^18.3.20",
         "@types/react-dom": "^18.3.7",
         "@unity/shared.utils": "workspace:*",
+        "@unity/tools": "workspace:*",
         "eslint": "^9.23.0",
         "globals": "^16.0.0",
         "prettier": "^3.5.3",

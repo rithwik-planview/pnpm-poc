@@ -3,7 +3,7 @@ import { counterStore } from '@unity/shared.counter';
 import { Button } from '@unity/shared.ui';
 import styles from './styles.module.css';
 
-const App = forwardRef<HTMLDivElement>((_props, ref) => {
+const App = forwardRef<HTMLDivElement>(function Feature1(_props, ref) {
     const counter = useSyncExternalStore(counterStore.subscribe, counterStore.getSnapshot);
     return (
         <div className={styles.container}>

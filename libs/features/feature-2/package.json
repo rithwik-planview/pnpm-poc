@@ -22,12 +22,11 @@
     },
     "dependencies": {
         "@rspack/core": "^1.3.9",
-        "@unity/shared.counter": "workspace:*",
         "@unity/core.shell": "workspace:*",
+        "@unity/shared.counter": "workspace:*",
         "@unity/shared.ui": "workspace:*"
     },
     "devDependencies": {
-        "@eslint/js": "^9.23.0",
         "@module-federation/rsbuild-plugin": "^0.13.1",
         "@rsbuild/plugin-react": "^1.3.0",
         "@rslib/core": "^0.6.8",
@@ -35,13 +34,11 @@
         "@types/react-dom": "^18.3.7",
         "@unity/shared.utils": "workspace:*",
         "@unity/tools": "workspace:*",
-        "eslint": "^9.23.0",
         "globals": "^16.0.0",
         "prettier": "^3.5.3",
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
-        "typescript": "^5.8.3",
-        "typescript-eslint": "^8.29.0"
+        "typescript": "^5.8.3"
     },
     "peerDependencies": {
         "react": ">=16.9.0",

@@ -1,6 +1,7 @@
 import base from './base.mjs';
 import globals from 'globals';
 import jest from 'eslint-plugin-jest';
+import jestDom from 'eslint-plugin-jest-dom';
 
 export default [
     ...base,
@@ -8,6 +9,6 @@ export default [
     {
         files: ['**/*.{spec,test}.{ts,tsx}'],
         ...jest.configs['flat/recommended'],
+        ...jestDom.configs['flat/recommended'],
     },
-    { ignores: ['dist/'] },
 ];

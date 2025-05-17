@@ -2,23 +2,14 @@
     "name": "@unity/features.feature-1",
     "version": "1.0.0",
     "type": "module",
-    "exports": {
-        ".": {
-            "types": "./dist/index.d.ts",
-            "import": "./dist/index.js"
-        }
-    },
-    "types": "./dist/index.d.ts",
-    "files": [
-        "dist"
-    ],
     "scripts": {
         "build": "rslib build",
         "dev": "rslib build --watch",
         "mf-dev": "rslib mf-dev",
         "format": "prettier --write .",
         "lint": "eslint .",
-        "deploy-package": "deploy-package @unity/features.feature-1 --with-deps"
+        "deploy-package": "deploy-package @unity/features.feature-1 --with-deps",
+        "test": "jest"
     },
     "dependencies": {
         "@rspack/core": "^1.3.9",

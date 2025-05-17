@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getPortFromName should return the correct port for each remote name 1`] = `3681`;
+
+exports[`getPortFromName should return the correct port for each remote name 2`] = `3189`;
+
+exports[`getPortFromName should return the correct port for each remote name 3`] = `3378`;
+
+exports[`getPortFromName should return the correct port for each remote name 4`] = `3081`;
+
+exports[`getPortFromName should return the correct port for each remote name 5`] = `3577`;

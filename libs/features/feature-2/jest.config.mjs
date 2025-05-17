@@ -2,5 +2,5 @@ import react from '../../../configs/jest/react.mjs';
 
 export default {
     ...react,
-    displayName: '@unity/shared.ui',
+    displayName: '@unity/features.feature-2',
 };

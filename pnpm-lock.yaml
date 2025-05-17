@@ -63,6 +63,9 @@ importers:
       lint-staged:
         specifier: ^16.0.0
         version: 16.0.0
+      prettier:
+        specifier: ^3.5.3
+        version: 3.5.3
       typescript-eslint:
         specifier: ^8.32.1
         version: 8.32.1(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3)
@@ -103,9 +106,6 @@ importers:
       globals:
         specifier: ^16.0.0
         version: 16.1.0
-      prettier:
-        specifier: ^3.5.3
-        version: 3.5.3
       typescript:
         specifier: ^5.8.2
         version: 5.8.3
@@ -125,9 +125,6 @@ importers:
       globals:
         specifier: ^16.0.0
         version: 16.1.0
-      prettier:
-        specifier: ^3.5.3
-        version: 3.5.3
       typescript:
         specifier: ^5.8.3
         version: 5.8.3
@@ -162,9 +159,6 @@ importers:
       globals:
         specifier: ^16.0.0
         version: 16.1.0
-      prettier:
-        specifier: ^3.5.3
-        version: 3.5.3
       typescript:
         specifier: ^5.8.3
         version: 5.8.3
@@ -199,9 +193,6 @@ importers:
       globals:
         specifier: ^16.0.0
         version: 16.1.0
-      prettier:
-        specifier: ^3.5.3
-        version: 3.5.3
       typescript:
         specifier: ^5.8.3
         version: 5.8.3
@@ -233,9 +224,6 @@ importers:
       globals:
         specifier: ^16.0.0
         version: 16.1.0
-      prettier:
-        specifier: ^3.5.3
-        version: 3.5.3
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -285,9 +273,6 @@ importers:
       globals:
         specifier: ^16.0.0
         version: 16.1.0
-      prettier:
-        specifier: ^3.5.3
-        version: 3.5.3
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -337,9 +322,6 @@ importers:
       globals:
         specifier: ^16.0.0
         version: 16.1.0
-      prettier:
-        specifier: ^3.5.3
-        version: 3.5.3
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -361,9 +343,6 @@ importers:
       globals:
         specifier: ^16.0.0
         version: 16.1.0
-      prettier:
-        specifier: ^3.5.3
-        version: 3.5.3
       typescript:
         specifier: ^5.8.3
         version: 5.8.3
@@ -386,9 +365,6 @@ importers:
       '@types/react-dom':
         specifier: ^18.3.7
         version: 18.3.7(@types/react@18.3.21)
-      prettier:
-        specifier: ^3.5.3
-        version: 3.5.3
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -407,9 +383,6 @@ importers:
       globals:
         specifier: ^16.0.0
         version: 16.1.0
-      prettier:
-        specifier: ^3.5.3
-        version: 3.5.3
       typescript:
         specifier: ^5.8.3
         version: 5.8.3
@@ -432,9 +405,6 @@ importers:
       globals:
         specifier: ^16.0.0
         version: 16.1.0
-      prettier:
-        specifier: ^3.5.3
-        version: 3.5.3
       typescript:
         specifier: ^5.8.3
         version: 5.8.3

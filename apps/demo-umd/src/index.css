@@ -26,15 +26,15 @@ body {
 }
 
 .features {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .feature {
-	margin: 20px;
-	height: 150px;
-	width: 200px;
+    margin: 20px;
+    height: 150px;
+    width: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -9,7 +9,7 @@
             "require": "./dist/cjs/index.cjs"
         }
     },
-	"main": "./dist/cjs/index.cjs",
+    "main": "./dist/cjs/index.cjs",
     "types": "./dist/esm/index.d.ts",
     "files": [
         "dist"
@@ -26,7 +26,6 @@
         "@rslib/core": "^0.6.9",
         "@types/react": "^18.3.21",
         "@types/react-dom": "^18.3.7",
-        "prettier": "^3.5.3",
         "react": "^19.1.0",
         "typescript": "^5.8.3"
     },

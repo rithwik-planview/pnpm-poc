@@ -28,7 +28,6 @@
         "@rslib/core": "^0.7.1",
         "@types/node": "^22.15.16",
         "globals": "^16.0.0",
-        "prettier": "^3.5.3",
         "typescript": "^5.8.3"
     },
     "private": true,

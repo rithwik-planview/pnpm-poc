@@ -9,7 +9,7 @@ import { sanitizeName, getRemoteUrl } from '@unity/shared.utils';
 
 type RenderRemoteArgs = {
     remoteName: string;
-	mode: 'development' | 'production' | 'none';
+    mode: 'development' | 'production' | 'none';
 };
 
 type RenderFunction = (props: { element: HTMLElement }) => void;

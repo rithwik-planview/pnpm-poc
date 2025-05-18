@@ -20,6 +20,9 @@ export default defineConfig(({ env }) => {
         ],
         server: {
             port: getPortFromName(name),
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+            },
         },
         plugins: [pluginReact(), pluginModuleFederation(moduleFederationConfig)],
     };

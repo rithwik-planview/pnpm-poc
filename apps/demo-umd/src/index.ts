@@ -1,5 +1,4 @@
 import './index.css';
-import type { loadRemote, sanitizeName } from '@unity/core.shell';
 
 const FEATURES = {
     FEATURE_1: {
@@ -9,15 +8,6 @@ const FEATURES = {
         name: '@unity/features.feature-2',
     },
 };
-
-declare global {
-    interface Window {
-        Unity_Shell: {
-            loadRemote: typeof loadRemote;
-            sanitizeName: typeof sanitizeName;
-        };
-    }
-}
 
 const rootEl = document.querySelector('#root');
 if (rootEl) {

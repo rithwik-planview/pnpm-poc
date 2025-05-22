@@ -1,7 +1,6 @@
 {
-    "extends": "./tsconfig.build.json",
+    "extends": "../../../configs/tsconfig/mf.json",
     "compilerOptions": {
         "rootDir": "../../../"
-    },
-    "include": ["../../../libs/**/*"]
+    }
 }

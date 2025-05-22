@@ -3,6 +3,7 @@
 *.local
 *.log*
 local-bucket/
+*.tsbuildinfo
 
 # Dist
 node_modules

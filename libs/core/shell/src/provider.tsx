@@ -1,11 +1,5 @@
-import {
-    createRef,
-    StrictMode,
-    RefObject,
-    ForwardRefExoticComponent,
-    PropsWithoutRef,
-    RefAttributes,
-} from 'react';
+import { createRef, StrictMode } from 'react';
+import type { RefObject, ForwardRefExoticComponent, PropsWithoutRef, RefAttributes } from 'react';
 import * as ReactDOM from 'react-dom/client';
 
 type CreateRemoteArgs<T> = {

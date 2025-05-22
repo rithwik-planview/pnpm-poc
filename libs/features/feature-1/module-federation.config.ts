@@ -27,7 +27,8 @@ export default createModuleFederationConfig({
             requiredVersion: getRequiredVersion(getDirname(import.meta.url), '@unity/shared.ui'),
         },
     },
-    dts: {
-        tsConfigPath: './tsconfig.mf.json',
-    },
+    dts: false,
+    // dts: {
+    //     tsConfigPath: './tsconfig.mf.json',
+    // },
 });

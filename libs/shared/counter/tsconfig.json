@@ -1,9 +1,9 @@
 {
-    "extends": "../../../tsconfig.base.json",
+    "extends": "../../../configs/tsconfig/web.json",
     "compilerOptions": {
-        "lib": ["es2020"],
-        "moduleResolution": "node"
+        "outDir": "./dist",
+        "rootDir": "./src"
     },
-    "include": ["src"],
+    "include": ["./src"],
     "exclude": ["node_modules", "dist"]
 }

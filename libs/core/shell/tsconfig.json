@@ -1,9 +1,14 @@
 {
-    "extends": "../../../tsconfig.base.json",
+    "extends": "../../../configs/tsconfig/react.json",
     "compilerOptions": {
-        "moduleResolution": "bundler",
-        "jsx": "react-jsx"
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "baseUrl": "./",
+        "paths": {
+            "@unity/shared.utils": ["../../shared/utils/src"]
+        }
     },
-    "include": ["src"],
-    "exclude": ["node_modules", "dist"]
+    "include": ["./src"],
+    "exclude": ["node_modules", "dist"],
+    "references": [{ "path": "../../shared/utils/tsconfig.build.json" }]
 }

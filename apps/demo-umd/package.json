@@ -9,7 +9,10 @@
         "mf-dev": "rsbuild mf-dev --open",
         "format": "prettier --write .",
         "lint": "eslint .",
-        "preview": "rsbuild preview"
+        "preview": "rsbuild preview",
+        "typecheck": "pnpm typecheck:all && pnpm typecheck:build",
+        "typecheck:build": "tsc -b tsconfig.build.json",
+        "typecheck:all": "tsc -b tsconfig.json"
     },
     "dependencies": {
         "@unity/core.shell": "workspace:*"

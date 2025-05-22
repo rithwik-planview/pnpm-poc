@@ -1,0 +1,17 @@
+{
+    "extends": "./configs/tsconfig/base.json",
+    "files": [],
+    "references": [
+        { "path": "./libs/core/shell/tsconfig.build.json" },
+        { "path": "./libs/shared/counter/tsconfig.build.json" },
+        { "path": "./libs/shared/ui/tsconfig.build.json" },
+        { "path": "./libs/shared/utils/tsconfig.build.json" },
+        { "path": "./libs/features/feature-1/tsconfig.build.json" },
+        { "path": "./libs/features/feature-2/tsconfig.build.json" },
+        { "path": "./tools/tsconfig.build.json" },
+        { "path": "./apps/demo/tsconfig.build.json" },
+        { "path": "./apps/demo-umd/tsconfig.build.json" },
+        { "path": "./apps/feature-1/tsconfig.build.json" },
+        { "path": "./apps/feature-2/tsconfig.build.json" }
+    ]
+}

@@ -9,7 +9,10 @@
         "format": "prettier --write .",
         "lint": "eslint .",
         "deploy-package": "deploy-package @unity/features.feature-2 --with-deps",
-        "test": "jest"
+        "test": "jest",
+        "typecheck": "pnpm typecheck:all && pnpm typecheck:build",
+        "typecheck:build": "tsc -b tsconfig.build.json",
+        "typecheck:all": "tsc -b tsconfig.json"
     },
     "dependencies": {
         "@rspack/core": "^1.3.9",

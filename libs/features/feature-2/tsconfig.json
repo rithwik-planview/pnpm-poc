@@ -1,9 +1,24 @@
 {
-    "extends": "../../../tsconfig.base.json",
+    "extends": "../../../configs/tsconfig/react.json",
     "compilerOptions": {
-        "moduleResolution": "bundler",
-        "jsx": "react-jsx"
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "baseUrl": "./",
+        "paths": {
+            "@unity/shared.utils": ["../../shared/utils/src"],
+            "@unity/shared.counter": ["../../shared/counter/src"],
+            "@unity/shared.ui": ["../../shared/ui/src"],
+            "@unity/core.shell": ["../../core/shell/src"],
+            "@unity/tools": ["../../../tools/src"]
+        }
     },
-    "include": ["src"],
-    "exclude": ["node_modules", "dist"]
+    "include": ["./src"],
+    "exclude": ["node_modules", "dist"],
+    "references": [
+        { "path": "../../shared/utils/tsconfig.build.json" },
+        { "path": "../../shared/counter/tsconfig.build.json" },
+        { "path": "../../shared/ui/tsconfig.build.json" },
+        { "path": "../../core/shell/tsconfig.build.json" },
+        { "path": "../../../tools/tsconfig.build.json" }
+    ]
 }

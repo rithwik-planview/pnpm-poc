@@ -7,6 +7,9 @@ import { getPortFromName, getRemoteUrl } from '@unity/shared.utils';
 
 export default defineConfig(({ env }) => {
     return {
+        source: {
+            tsconfigPath: './tsconfig.build.json',
+        },
         lib: [
             {
                 format: 'mf',

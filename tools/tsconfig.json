@@ -1,8 +1,9 @@
 {
-    "extends": ["../tsconfig.base.json"],
+    "extends": "../configs/tsconfig/node.json",
     "compilerOptions": {
-        "module": "esnext",
-        "moduleResolution": "node"
+        "outDir": "./dist",
+        "rootDir": "./src"
     },
-    "include": ["src"]
+    "include": ["./src"],
+    "exclude": ["node_modules", "dist"]
 }

@@ -6,6 +6,7 @@ export default defineConfig({
             index: './src/index.ts',
             'deploy-cli': './src/deploy.ts',
         },
+        tsconfigPath: './tsconfig.build.json',
     },
     lib: [
         {

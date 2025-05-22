@@ -54,9 +54,9 @@ async function main() {
             {
                 title: 'Building packages',
                 task: () => {
-                    const filterArgs = pkgs.map((p) => `-F "${p}"`).join(' ');
-                    const recursive = withDeps ? '-r' : '';
-                    const cmd = `pnpm ${filterArgs} ${recursive} build`;
+                    const downstream = withDeps ? '...' : '';
+                    const filterArgs = pkgs.map((p) => `-F "${p}${downstream}"`).join(' ');
+                    const cmd = `pnpm ${filterArgs} build`;
                     return exec(cmd);
                 },
             },

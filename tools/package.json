@@ -1,7 +1,19 @@
 {
     "name": "@unity/tools",
     "version": "1.0.0",
-    "type": "module",
+    "bin": {
+        "deploy-package": "./dist/deploy-cli.js"
+    },
+    "dependencies": {
+        "chalk": "^5.4.1",
+        "listr2": "^8.3.3"
+    },
+    "devDependencies": {
+        "@rslib/core": "^0.7.1",
+        "@types/node": "^22.15.16",
+        "globals": "^16.1.0",
+        "typescript": "^5.8.3"
+    },
     "exports": {
         ".": {
             "types": "./dist/index.d.ts",
@@ -9,14 +21,11 @@
             "require": "./dist/index.cjs"
         }
     },
-    "main": "./dist/index.cjs",
-    "types": "./dist/index.d.ts",
     "files": [
         "dist"
     ],
-    "bin": {
-        "deploy-package": "./dist/deploy-cli.js"
-    },
+    "main": "./dist/index.cjs",
+    "private": true,
     "scripts": {
         "build": "rslib build",
         "dev": "rslib build --watch",
@@ -24,18 +33,9 @@
         "lint": "eslint .",
         "test": "jest",
         "typecheck": "pnpm typecheck:all && pnpm typecheck:build",
-        "typecheck:build": "tsc -b tsconfig.build.json",
-        "typecheck:all": "tsc -b tsconfig.json"
+        "typecheck:all": "tsc -b tsconfig.json",
+        "typecheck:build": "tsc -b tsconfig.build.json"
     },
-    "devDependencies": {
-        "@rslib/core": "^0.7.1",
-        "@types/node": "^22.15.16",
-        "globals": "^16.0.0",
-        "typescript": "^5.8.3"
-    },
-    "private": true,
-    "dependencies": {
-        "chalk": "^5.4.1",
-        "listr2": "^8.3.3"
-    }
+    "type": "module",
+    "types": "./dist/index.d.ts"
 }

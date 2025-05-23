@@ -1,19 +1,6 @@
 {
     "name": "@unity/features.feature-1",
     "version": "1.0.0",
-    "type": "module",
-    "scripts": {
-        "build": "rslib build",
-        "dev": "rslib build --watch",
-        "mf-dev": "rslib mf-dev",
-        "format": "prettier --write .",
-        "lint": "eslint .",
-        "deploy-package": "deploy-package @unity/features.feature-1 --with-deps",
-        "test": "jest",
-        "typecheck": "pnpm typecheck:all && pnpm typecheck:build",
-        "typecheck:build": "tsc -b tsconfig.build.json",
-        "typecheck:all": "tsc -b tsconfig.json"
-    },
     "dependencies": {
         "@rspack/core": "^1.3.9",
         "@unity/core.shell": "workspace:*",
@@ -22,16 +9,29 @@
     },
     "devDependencies": {
         "@module-federation/rsbuild-plugin": "^0.13.1",
-        "@rsbuild/plugin-react": "^1.3.0",
-        "@rslib/core": "^0.6.8",
-        "@types/react": "^18.3.20",
+        "@rsbuild/plugin-react": "^1.3.1",
+        "@rslib/core": "^0.7.1",
+        "@types/react": "^18.3.21",
         "@types/react-dom": "^18.3.7",
         "@unity/shared.utils": "workspace:*",
         "@unity/tools": "workspace:*",
-        "globals": "^16.0.0",
-        "react": "^18.3.1",
+        "globals": "^16.1.0",
+        "react": "^19.1.0",
         "react-dom": "^18.3.1",
         "typescript": "^5.8.3"
     },
-    "private": true
+    "private": true,
+    "scripts": {
+        "build": "rslib build",
+        "deploy-package": "deploy-package @unity/features.feature-1 --with-deps",
+        "dev": "rslib build --watch",
+        "format": "prettier --write .",
+        "lint": "eslint .",
+        "mf-dev": "rslib mf-dev",
+        "test": "jest",
+        "typecheck": "pnpm typecheck:all && pnpm typecheck:build",
+        "typecheck:all": "tsc -b tsconfig.json",
+        "typecheck:build": "tsc -b tsconfig.build.json"
+    },
+    "type": "module"
 }

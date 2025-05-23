@@ -89,13 +89,13 @@ importers:
         specifier: ^0.13.1
         version: 0.13.1(@rsbuild/core@1.3.19)(@rspack/core@1.3.10(@swc/helpers@0.5.17))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)
       '@rsbuild/core':
-        specifier: ^1.3.1
+        specifier: ^1.3.15
         version: 1.3.19
       '@rsbuild/plugin-react':
-        specifier: ^1.1.1
+        specifier: ^1.3.1
         version: 1.3.1(@rsbuild/core@1.3.19)
       '@types/react':
-        specifier: ^18.3.20
+        specifier: ^18.3.21
         version: 18.3.21
       '@types/react-dom':
         specifier: ^18.3.7
@@ -104,10 +104,10 @@ importers:
         specifier: workspace:*
         version: link:../../libs/shared/utils
       globals:
-        specifier: ^16.0.0
+        specifier: ^16.1.0
         version: 16.1.0
       typescript:
-        specifier: ^5.8.2
+        specifier: ^5.8.3
         version: 5.8.3
 
   apps/demo-umd:
@@ -123,7 +123,7 @@ importers:
         specifier: workspace:*
         version: link:../../libs/shared/utils
       globals:
-        specifier: ^16.0.0
+        specifier: ^16.1.0
         version: 16.1.0
       typescript:
         specifier: ^5.8.3
@@ -145,19 +145,19 @@ importers:
         specifier: ^1.3.15
         version: 1.3.19
       '@rsbuild/plugin-react':
-        specifier: ^1.3.0
+        specifier: ^1.3.1
         version: 1.3.1(@rsbuild/core@1.3.19)
       '@types/react':
-        specifier: ^18.3.18
+        specifier: ^18.3.21
         version: 18.3.21
       '@types/react-dom':
-        specifier: ^18.3.5
+        specifier: ^18.3.7
         version: 18.3.7(@types/react@18.3.21)
       '@unity/shared.utils':
         specifier: workspace:*
         version: link:../../libs/shared/utils
       globals:
-        specifier: ^16.0.0
+        specifier: ^16.1.0
         version: 16.1.0
       typescript:
         specifier: ^5.8.3
@@ -179,19 +179,19 @@ importers:
         specifier: ^1.3.15
         version: 1.3.19
       '@rsbuild/plugin-react':
-        specifier: ^1.3.0
+        specifier: ^1.3.1
         version: 1.3.1(@rsbuild/core@1.3.19)
       '@types/react':
-        specifier: ^18.3.18
+        specifier: ^18.3.21
         version: 18.3.21
       '@types/react-dom':
-        specifier: ^18.3.5
+        specifier: ^18.3.7
         version: 18.3.7(@types/react@18.3.21)
       '@unity/shared.utils':
         specifier: workspace:*
         version: link:../../libs/shared/utils
       globals:
-        specifier: ^16.0.0
+        specifier: ^16.1.0
         version: 16.1.0
       typescript:
         specifier: ^5.8.3
@@ -210,19 +210,19 @@ importers:
         specifier: ^0.13.1
         version: 0.13.1(@rsbuild/core@1.3.19)(@rspack/core@1.3.10(@swc/helpers@0.5.17))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)
       '@rsbuild/plugin-react':
-        specifier: ^1.3.0
+        specifier: ^1.3.1
         version: 1.3.1(@rsbuild/core@1.3.19)
       '@rslib/core':
-        specifier: ^0.6.8
-        version: 0.6.9(typescript@5.8.3)
+        specifier: ^0.7.1
+        version: 0.7.1(typescript@5.8.3)
       '@types/react':
-        specifier: ^18.3.20
+        specifier: ^18.3.21
         version: 18.3.21
       '@types/react-dom':
         specifier: ^18.3.7
         version: 18.3.7(@types/react@18.3.21)
       globals:
-        specifier: ^16.0.0
+        specifier: ^16.1.0
         version: 16.1.0
       react:
         specifier: ^18.3.1
@@ -253,13 +253,13 @@ importers:
         specifier: ^0.13.1
         version: 0.13.1(@rsbuild/core@1.3.19)(@rspack/core@1.3.10(@swc/helpers@0.5.17))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)
       '@rsbuild/plugin-react':
-        specifier: ^1.3.0
+        specifier: ^1.3.1
         version: 1.3.1(@rsbuild/core@1.3.19)
       '@rslib/core':
-        specifier: ^0.6.8
-        version: 0.6.9(typescript@5.8.3)
+        specifier: ^0.7.1
+        version: 0.7.1(typescript@5.8.3)
       '@types/react':
-        specifier: ^18.3.20
+        specifier: ^18.3.21
         version: 18.3.21
       '@types/react-dom':
         specifier: ^18.3.7
@@ -271,7 +271,7 @@ importers:
         specifier: workspace:*
         version: link:../../../tools
       globals:
-        specifier: ^16.0.0
+        specifier: ^16.1.0
         version: 16.1.0
       react:
         specifier: ^18.3.1
@@ -302,13 +302,13 @@ importers:
         specifier: ^0.13.1
         version: 0.13.1(@rsbuild/core@1.3.19)(@rspack/core@1.3.10(@swc/helpers@0.5.17))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)
       '@rsbuild/plugin-react':
-        specifier: ^1.3.0
+        specifier: ^1.3.1
         version: 1.3.1(@rsbuild/core@1.3.19)
       '@rslib/core':
-        specifier: ^0.6.8
-        version: 0.6.9(typescript@5.8.3)
+        specifier: ^0.7.1
+        version: 0.7.1(typescript@5.8.3)
       '@types/react':
-        specifier: ^18.3.20
+        specifier: ^18.3.21
         version: 18.3.21
       '@types/react-dom':
         specifier: ^18.3.7
@@ -320,7 +320,7 @@ importers:
         specifier: workspace:*
         version: link:../../../tools
       globals:
-        specifier: ^16.0.0
+        specifier: ^16.1.0
         version: 16.1.0
       react:
         specifier: ^18.3.1
@@ -335,13 +335,13 @@ importers:
   libs/shared/counter:
     devDependencies:
       '@rslib/core':
-        specifier: ^0.6.8
-        version: 0.6.9(typescript@5.8.3)
+        specifier: ^0.7.1
+        version: 0.7.1(typescript@5.8.3)
       '@types/node':
-        specifier: ^22.8.1
+        specifier: ^22.15.16
         version: 22.15.16
       globals:
-        specifier: ^16.0.0
+        specifier: ^16.1.0
         version: 16.1.0
       typescript:
         specifier: ^5.8.3
@@ -353,8 +353,8 @@ importers:
         specifier: ^1.3.1
         version: 1.3.1(@rsbuild/core@1.3.19)
       '@rslib/core':
-        specifier: ^0.6.9
-        version: 0.6.9(typescript@5.8.3)
+        specifier: ^0.7.1
+        version: 0.7.1(typescript@5.8.3)
       '@types/react':
         specifier: ^18.3.21
         version: 18.3.21
@@ -371,13 +371,13 @@ importers:
   libs/shared/utils:
     devDependencies:
       '@rslib/core':
-        specifier: ^0.6.9
-        version: 0.6.9(typescript@5.8.3)
+        specifier: ^0.7.1
+        version: 0.7.1(typescript@5.8.3)
       '@types/node':
-        specifier: ^22.8.1
+        specifier: ^22.15.16
         version: 22.15.16
       globals:
-        specifier: ^16.0.0
+        specifier: ^16.1.0
         version: 16.1.0
       typescript:
         specifier: ^5.8.3
@@ -399,7 +399,7 @@ importers:
         specifier: ^22.15.16
         version: 22.15.16
       globals:
-        specifier: ^16.0.0
+        specifier: ^16.1.0
         version: 16.1.0
       typescript:
         specifier: ^5.8.3
@@ -1036,11 +1036,6 @@ packages:
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
 
-  '@rsbuild/core@1.3.18':
-    resolution: {integrity: sha512-ocnz3pVapMTeuoP3zZ1shYcxnAQtRf6RzLl8n7acNi8Hu+ku6SiDGR65foclwcubWF6e9nZPohH94rXnmEVfrw==}
-    engines: {node: '>=16.10.0'}
-    hasBin: true
-
   '@rsbuild/core@1.3.19':
     resolution: {integrity: sha512-qN8PwbahiPv8e4bp0Wvbqrysz8fB6OxslsXPPKszS9IBYFqUhRC5ve2pCUnc9CFRYJ2hkHY2wtg4ooHYdZRHDQ==}
     engines: {node: '>=16.10.0'}
@@ -1050,19 +1045,6 @@ packages:
     resolution: {integrity: sha512-1PfE0CZDwiSIUFaMFOEprwsHK6oo29zU6DdtFH2D49uLcpUdOUvU1u2p00RCVO1CIgnAjRajLS7dnPdQUwFOuQ==}
     peerDependencies:
       '@rsbuild/core': 1.x
-
-  '@rslib/core@0.6.9':
-    resolution: {integrity: sha512-xF/JssYVghxoR6qE/O9tdUW029aN4WdWTIve9VrStsFkLK6U/1lykMHtgDu3VhcfYrs2p0Wfku5dLBmo9/WnrA==}
-    engines: {node: '>=16.7.0'}
-    hasBin: true
-    peerDependencies:
-      '@microsoft/api-extractor': ^7
-      typescript: ^5
-    peerDependenciesMeta:
-      '@microsoft/api-extractor':
-        optional: true
-      typescript:
-        optional: true
 
   '@rslib/core@0.7.1':
     resolution: {integrity: sha512-PX/GM0OsPNVbJ2XyNAQlw5T8DEcwf3Zo6PfY5jVMLhNX50GWhk3Y9J/CKx7sbbWKw9ic3C7ENDlkbT2yCFkyng==}
@@ -3329,19 +3311,6 @@ packages:
     resolution: {integrity: sha512-nLTrUKm2UyiL7rlhapu/Zl45FwNgkZGaCpZbIHajDYgwlJCOzLSk+cIPAnsEqV955GjILJnKbdQC1nVPz+gAYQ==}
     engines: {node: '>= 18'}
 
-  rsbuild-plugin-dts@0.6.9:
-    resolution: {integrity: sha512-mcB4mxfUqkHHzR5VV6PuXRGpLC1Gdly0BN/jRzbPmdWDtvfBO6LLOniiBzVVemibqs9gBQhl2OEilJs4Cyoq5w==}
-    engines: {node: '>=16.7.0'}
-    peerDependencies:
-      '@microsoft/api-extractor': ^7
-      '@rsbuild/core': 1.x
-      typescript: ^5
-    peerDependenciesMeta:
-      '@microsoft/api-extractor':
-        optional: true
-      typescript:
-        optional: true
-
   rsbuild-plugin-dts@0.7.1:
     resolution: {integrity: sha512-JSArKFGgoVelS0b/wteg1eoZ7jpgq1HE7qtLDevzSA6CoJH4Fy8UNA9k/cYHHxRhIfjYTG3VCBD1rV4CZ8Em0A==}
     engines: {node: '>=16.7.0'}
@@ -4612,14 +4581,6 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.19.1
 
-  '@rsbuild/core@1.3.18':
-    dependencies:
-      '@rspack/core': 1.3.9(@swc/helpers@0.5.17)
-      '@rspack/lite-tapable': 1.0.1
-      '@swc/helpers': 0.5.17
-      core-js: 3.42.0
-      jiti: 2.4.2
-
   '@rsbuild/core@1.3.19':
     dependencies:
       '@rspack/core': 1.3.9(@swc/helpers@0.5.17)
@@ -4635,14 +4596,6 @@ snapshots:
       react-refresh: 0.17.0
     transitivePeerDependencies:
       - webpack-hot-middleware
-
-  '@rslib/core@0.6.9(typescript@5.8.3)':
-    dependencies:
-      '@rsbuild/core': 1.3.18
-      rsbuild-plugin-dts: 0.6.9(@rsbuild/core@1.3.18)(typescript@5.8.3)
-      tinyglobby: 0.2.13
-    optionalDependencies:
-      typescript: 5.8.3
 
   '@rslib/core@0.7.1(typescript@5.8.3)':
     dependencies:
@@ -7293,17 +7246,6 @@ snapshots:
       path-to-regexp: 8.2.0
     transitivePeerDependencies:
       - supports-color
-
-  rsbuild-plugin-dts@0.6.9(@rsbuild/core@1.3.18)(typescript@5.8.3):
-    dependencies:
-      '@ast-grep/napi': 0.37.0
-      '@rsbuild/core': 1.3.18
-      magic-string: 0.30.17
-      picocolors: 1.1.1
-      tinyglobby: 0.2.13
-      tsconfig-paths: 4.2.0
-    optionalDependencies:
-      typescript: 5.8.3
 
   rsbuild-plugin-dts@0.7.1(@rsbuild/core@1.3.19)(typescript@5.8.3):
     dependencies:

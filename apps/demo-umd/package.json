@@ -1,16 +1,6 @@
 {
     "name": "@unity/apps.demo-umd",
     "version": "1.0.0",
-    "dependencies": {
-        "@unity/core.shell": "workspace:*"
-    },
-    "devDependencies": {
-        "@rsbuild/core": "^1.3.21",
-        "@rspack/core": "^1.3.11",
-        "@unity/shared.utils": "workspace:*",
-        "globals": "^16.1.0",
-        "typescript": "^5.8.3"
-    },
     "private": true,
     "scripts": {
         "build": "rsbuild build",
@@ -23,5 +13,15 @@
         "typecheck:all": "tsc -b tsconfig.json",
         "typecheck:build": "tsc -b tsconfig.build.json"
     },
-    "type": "module"
+    "type": "module",
+    "dependencies": {
+        "@unity/core.shell": "workspace:*"
+    },
+    "devDependencies": {
+        "@rsbuild/core": "^1.3.21",
+        "@rspack/core": "^1.3.11",
+        "@unity/shared.utils": "workspace:*",
+        "globals": "^16.1.0",
+        "typescript": "^5.8.3"
+    }
 }

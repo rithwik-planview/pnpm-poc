@@ -1,6 +1,17 @@
 {
     "name": "@unity/core.shell",
     "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "build": "rslib build",
+        "dev": "rslib build --watch",
+        "format": "prettier --write .",
+        "lint": "eslint .",
+        "typecheck": "pnpm typecheck:all && pnpm typecheck:build",
+        "typecheck:all": "tsc -b tsconfig.json",
+        "typecheck:build": "tsc -b tsconfig.build.json"
+    },
+    "type": "module",
     "dependencies": {
         "@module-federation/enhanced": "^0.14.0",
         "@unity/shared.utils": "workspace:*"
@@ -27,16 +38,5 @@
     "files": [
         "dist"
     ],
-    "private": true,
-    "scripts": {
-        "build": "rslib build",
-        "dev": "rslib build --watch",
-        "format": "prettier --write .",
-        "lint": "eslint .",
-        "typecheck": "pnpm typecheck:all && pnpm typecheck:build",
-        "typecheck:all": "tsc -b tsconfig.json",
-        "typecheck:build": "tsc -b tsconfig.build.json"
-    },
-    "type": "module",
     "types": "./dist/esm/index.d.ts"
 }

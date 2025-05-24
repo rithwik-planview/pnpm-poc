@@ -1,6 +1,18 @@
 {
     "name": "@unity/shared.counter",
     "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "build": "rslib build",
+        "dev": "rslib build --watch",
+        "format": "prettier --write .",
+        "lint": "eslint .",
+        "typecheck": "pnpm typecheck:all && pnpm typecheck:build",
+        "typecheck:all": "tsc -b tsconfig.json",
+        "typecheck:build": "tsc -b tsconfig.build.json"
+    },
+    "type": "module",
+    "main": "./dist/cjs/index.cjs",
     "devDependencies": {
         "@rslib/core": "^0.8.0",
         "@rspack/core": "^1.3.11",
@@ -18,17 +30,5 @@
     "files": [
         "dist"
     ],
-    "main": "./dist/cjs/index.cjs",
-    "private": true,
-    "scripts": {
-        "build": "rslib build",
-        "dev": "rslib build --watch",
-        "format": "prettier --write .",
-        "lint": "eslint .",
-        "typecheck": "pnpm typecheck:all && pnpm typecheck:build",
-        "typecheck:all": "tsc -b tsconfig.json",
-        "typecheck:build": "tsc -b tsconfig.build.json"
-    },
-    "type": "module",
     "types": "./dist/esm/index.d.ts"
 }

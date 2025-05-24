@@ -1,8 +1,17 @@
 {
     "name": "unity",
-    "description": "",
     "version": "1.0.0",
+    "private": true,
+    "keywords": [],
+    "description": "",
     "author": "",
+    "license": "ISC",
+    "scripts": {
+        "prepare": "husky",
+        "syncpack:fix": "syncpack format && syncpack fix"
+    },
+    "type": "module",
+    "main": "index.js",
     "devDependencies": {
         "@eslint/js": "^10.0.0",
         "@swc/jest": "^0.2.38",
@@ -24,14 +33,5 @@
         "syncpack": "14.0.0-alpha.12",
         "typescript-eslint": "^8.32.1"
     },
-    "keywords": [],
-    "license": "ISC",
-    "main": "index.js",
-    "packageManager": "pnpm@10.11.0",
-    "private": true,
-    "scripts": {
-        "prepare": "husky",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "type": "module"
+    "packageManager": "pnpm@10.11.0"
 }

@@ -1,6 +1,19 @@
 {
     "name": "@unity/apps.demo",
     "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "build": "rsbuild build",
+        "dev": "rsbuild dev --open",
+        "format": "prettier --write .",
+        "lint": "eslint .",
+        "mf-dev": "rsbuild mf-dev --open",
+        "preview": "rsbuild preview",
+        "typecheck": "pnpm typecheck:all && pnpm typecheck:build",
+        "typecheck:all": "tsc -b tsconfig.json",
+        "typecheck:build": "tsc -b tsconfig.build.json"
+    },
+    "type": "module",
     "dependencies": {
         "@module-federation/enhanced": "^0.14.0",
         "@unity/core.shell": "workspace:*",
@@ -17,18 +30,5 @@
         "@unity/shared.utils": "workspace:*",
         "globals": "^16.1.0",
         "typescript": "^5.8.3"
-    },
-    "private": true,
-    "scripts": {
-        "build": "rsbuild build",
-        "dev": "rsbuild dev --open",
-        "format": "prettier --write .",
-        "lint": "eslint .",
-        "mf-dev": "rsbuild mf-dev --open",
-        "preview": "rsbuild preview",
-        "typecheck": "pnpm typecheck:all && pnpm typecheck:build",
-        "typecheck:all": "tsc -b tsconfig.json",
-        "typecheck:build": "tsc -b tsconfig.build.json"
-    },
-    "type": "module"
+    }
 }

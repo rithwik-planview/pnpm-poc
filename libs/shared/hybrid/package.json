@@ -1,0 +1,46 @@
+{
+    "name": "@unity/shared.hybrid",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "build": "rslib build",
+        "dev": "rslib build --watch",
+        "format": "prettier --write .",
+        "lint": "eslint .",
+        "test": "jest",
+        "typecheck": "pnpm typecheck:all && pnpm typecheck:build",
+        "typecheck:all": "tsc -b tsconfig.json",
+        "typecheck:build": "tsc -b tsconfig.build.json"
+    },
+    "type": "module",
+    "main": "./dist/cjs/index.cjs",
+    "dependencies": {
+        "@planview/pv-icons": "^2.25.0",
+        "@planview/pv-toolbar": "^1.14.1",
+        "@planview/pv-uikit": "^7.36.0",
+        "@planview/pv-utilities": "^4.22.2",
+        "@unity/core.data-access": "workspace:*",
+        "react-intl": "^7.1.11",
+        "styled-components": "^6.1.18"
+    },
+    "devDependencies": {
+        "@rsbuild/plugin-react": "^1.3.1",
+        "@rslib/core": "^0.8.0",
+        "@rspack/core": "^1.3.11",
+        "@types/react": "^19.1.5",
+        "@types/react-dom": "^19.1.5",
+        "react": "^19.1.0",
+        "typescript": "^5.8.3"
+    },
+    "exports": {
+        ".": {
+            "types": "./dist/esm/index.d.ts",
+            "import": "./dist/esm/index.js",
+            "require": "./dist/cjs/index.cjs"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "types": "./dist/esm/index.d.ts"
+}

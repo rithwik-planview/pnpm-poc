@@ -1,4 +1,4 @@
-import { decodeToken, validateToken, type JwtToken } from './jwt';
+import { decodeToken, validateToken, type JwtToken } from './index';
 
 describe('JWT Token Functions', () => {
     // Mock window.atob

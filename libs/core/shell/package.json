@@ -14,7 +14,9 @@
     "type": "module",
     "dependencies": {
         "@module-federation/enhanced": "^0.14.0",
-        "@unity/shared.utils": "workspace:*"
+        "@unity/shared.utils": "workspace:*",
+        "react": "^19.1.0",
+        "react-dom": "^19.1.0"
     },
     "devDependencies": {
         "@module-federation/rsbuild-plugin": "^0.14.0",
@@ -24,8 +26,6 @@
         "@types/react": "^19.1.5",
         "@types/react-dom": "^19.1.5",
         "globals": "^16.1.0",
-        "react": "^19.1.0",
-        "react-dom": "^19.1.0",
         "typescript": "^5.8.3"
     },
     "exports": {

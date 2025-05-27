@@ -9,6 +9,9 @@ export default defineConfig(({ env }) => {
     return {
         source: { tsconfigPath: './tsconfig.build.json' },
         plugins: [pluginReact(), pluginModuleFederation(moduleFederationConfig(env))],
+        html: {
+            title: 'Relation Viewer Demo',
+        },
         server: {
             port: getPortFromName(name),
         },

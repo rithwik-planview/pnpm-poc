@@ -4,6 +4,8 @@ import RelationViewerApp from './components/relation-viewer/relation-viewer';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { forwardRef } from 'react';
+import { IntlProvider } from 'react-intl';
+import en from '@planview/pv-grid/lang/en.json';
 
 const StyledApp = styled.div`
     ${align.centerV};
@@ -19,7 +21,9 @@ export const RelationViewer: typeof RelationViewerApp = forwardRef(function (pro
         <QueryClientProvider client={queryClient}>
             <ReactQueryDevtools />
             <StyledApp>
-                <RelationViewerApp {...props} ref={ref} />
+                <IntlProvider locale="en" messages={en}>
+                    <RelationViewerApp {...props} ref={ref} />
+                </IntlProvider>
             </StyledApp>
         </QueryClientProvider>
     );

@@ -27,9 +27,7 @@ const App = () => {
             }
             const element = document.getElementById(elementId);
             if (element) {
-                module?.default.render({
-                    element,
-                });
+                module?.default.render(element, {});
             }
         },
         [moduleMap],
@@ -41,9 +39,7 @@ const App = () => {
             if (module) {
                 const element = document.getElementById(elementId);
                 if (element) {
-                    module.default.destroy({
-                        element,
-                    });
+                    module.default.destroy(element);
                 }
             }
             setModuleMap((prev) => {

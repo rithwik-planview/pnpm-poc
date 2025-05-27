@@ -6,20 +6,18 @@ import {
     registerRemotes,
 } from '@module-federation/enhanced/runtime';
 import { sanitizeName, getRemoteUrl } from '@unity/shared.utils';
+import { createRemote } from './provider';
 
 type RenderRemoteArgs = {
     remoteName: string;
     mode: 'development' | 'production' | 'none';
 };
 
-type RenderFunction = (props: { element: HTMLElement }) => void;
-type DestroyFunction = (props: { element: HTMLElement }) => void;
-type ModuleReturn = {
-    default: {
-        render: RenderFunction;
-        destroy: DestroyFunction;
-    };
+type ProviderReturn<P, R> = ReturnType<typeof createRemote<P, R>>;
+type ModuleReturn<P, R> = {
+    default: ProviderReturn<P, R>;
 };
+
 init({
     name: sanitizeName('@unity/core.shell'),
     remotes: [],
@@ -43,9 +41,12 @@ init({
     },
 });
 
-const moduleMap = new Map<string, ModuleReturn>();
+const moduleMap = new Map<string, ModuleReturn<unknown, unknown>>();
 
-export const loadRemote = async ({ remoteName, mode }: RenderRemoteArgs) => {
+export async function loadRemote<P, R>({
+    remoteName,
+    mode,
+}: RenderRemoteArgs): Promise<ModuleReturn<P, R> | undefined> {
     if (!moduleMap.has(remoteName)) {
         const name = sanitizeName(remoteName);
         registerRemotes([
@@ -55,12 +56,12 @@ export const loadRemote = async ({ remoteName, mode }: RenderRemoteArgs) => {
             },
         ]);
         try {
-            const module = await loadMFRemote<ModuleReturn>(name);
-            moduleMap.set(remoteName, module!);
+            const module = await loadMFRemote<ModuleReturn<P, R>>(name);
+            moduleMap.set(remoteName, module! as ModuleReturn<unknown, unknown>);
         } catch (error) {
             console.error(`Error loading remote module: ${remoteName}, ${error}`);
             return;
         }
     }
-    return moduleMap.get(remoteName);
-};
+    return moduleMap.get(remoteName) as ModuleReturn<P, R>;
+}

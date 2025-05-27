@@ -349,6 +349,12 @@ importers:
       '@unity/shared.utils':
         specifier: workspace:*
         version: link:../../shared/utils
+      react:
+        specifier: ^19.0.0
+        version: 19.1.0
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.1.0(react@19.1.0)
     devDependencies:
       '@module-federation/rsbuild-plugin':
         specifier: ^0.14.0
@@ -371,12 +377,6 @@ importers:
       globals:
         specifier: ^16.1.0
         version: 16.1.0
-      react:
-        specifier: ^19.0.0
-        version: 19.1.0
-      react-dom:
-        specifier: ^19.0.0
-        version: 19.1.0(react@19.1.0)
       typescript:
         specifier: ^5.8.3
         version: 5.8.3

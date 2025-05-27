@@ -2,19 +2,21 @@ import { createRef, StrictMode } from 'react';
 import type { RefObject, ForwardRefExoticComponent, PropsWithoutRef, RefAttributes } from 'react';
 import * as ReactDOM from 'react-dom/client';
 
-type CreateRemoteArgs<T> = {
-    rootComponent: ForwardRefExoticComponent<PropsWithoutRef<unknown> & RefAttributes<T>>;
+type CreateRemoteArgs<T, P> = {
+    rootComponent: ForwardRefExoticComponent<PropsWithoutRef<P> & RefAttributes<T>>;
 };
 
-export const createRemote = <T,>({ rootComponent: Component }: CreateRemoteArgs<T>) => {
-    const rootMap = new Map<unknown, ReactDOM.Root>();
-    const render = (props: { element: HTMLElement }): RefObject<T | null> => {
+export const createRemote = <T, P>({ rootComponent: Component }: CreateRemoteArgs<T, P>) => {
+    const rootMap = new Map<HTMLElement, ReactDOM.Root>();
+
+    const render = (props: { element: HTMLElement } & P): RefObject<T | null> => {
+        const { element, ...componentProps } = props;
         const appRef = createRef<T>();
-        const root = ReactDOM.createRoot(props.element);
-        rootMap.set(props.element, root);
+        const root = ReactDOM.createRoot(element);
+        rootMap.set(element, root);
         root.render(
             <StrictMode>
-                <Component ref={appRef} />
+                <Component ref={appRef} {...(componentProps as PropsWithoutRef<P>)} />
             </StrictMode>,
         );
         return appRef;

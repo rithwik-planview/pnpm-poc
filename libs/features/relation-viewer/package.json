@@ -1,0 +1,45 @@
+{
+    "name": "@unity/features.relation-viewer",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "build": "rslib build",
+        "deploy-package": "deploy-package @unity/relation-viewer --with-deps",
+        "dev": "rslib build --watch",
+        "format": "prettier --write .",
+        "lint": "eslint .",
+        "mf-dev": "rslib mf-dev",
+        "test": "jest",
+        "typecheck": "pnpm typecheck:all && pnpm typecheck:build",
+        "typecheck:all": "tsc -b tsconfig.json",
+        "typecheck:build": "tsc -b tsconfig.build.json"
+    },
+    "type": "module",
+    "dependencies": {
+        "@planview/pv-details": "^1.6.0",
+        "@planview/pv-grid": "^1.34.2",
+        "@planview/pv-icons": "^2.25.0",
+        "@planview/pv-uikit": "^7.36.0",
+        "@planview/pv-utilities": "^4.22.2",
+        "@tanstack/react-query": "^5.77.0",
+        "@tanstack/react-query-devtools": "^5.77.0",
+        "@unity/core.shell": "workspace:*",
+        "@unity/shared.hybrid": "workspace:*",
+        "react": "^19.1.0",
+        "react-dom": "^19.1.0",
+        "react-intl": "^7.1.11",
+        "styled-components": "^6.1.18"
+    },
+    "devDependencies": {
+        "@module-federation/rsbuild-plugin": "^0.14.0",
+        "@rsbuild/plugin-react": "^1.3.1",
+        "@rslib/core": "^0.8.0",
+        "@rspack/core": "^1.3.11",
+        "@types/react": "^19.1.5",
+        "@types/react-dom": "^19.1.5",
+        "@unity/shared.utils": "workspace:*",
+        "@unity/tools": "workspace:*",
+        "globals": "^16.1.0",
+        "typescript": "^5.8.3"
+    }
+}

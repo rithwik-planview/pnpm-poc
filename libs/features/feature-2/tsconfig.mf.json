@@ -1,6 +1,7 @@
 {
-    "extends": "../../../configs/tsconfig/mf.json",
+    "extends": "./tsconfig.build.json",
     "compilerOptions": {
+        "composite": false,
         "rootDir": "../../../"
     }
 }

@@ -27,12 +27,12 @@ if (rootEl) {
         remoteName: FEATURES.FEATURE_1.name,
         mode: import.meta.env.MODE,
     });
-    feature_1_module?.default.render({ element: feature_1_element });
+    feature_1_module?.default.render(feature_1_element, {});
 
     const feature_2_element: HTMLDivElement = document.querySelector('#feature-2-id')!;
     const feature_2_module = await window.Unity_Shell.loadRemote({
         remoteName: FEATURES.FEATURE_2.name,
         mode: import.meta.env.MODE,
     });
-    feature_2_module?.default.render({ element: feature_2_element });
+    feature_2_module?.default.render(feature_2_element, {});
 }

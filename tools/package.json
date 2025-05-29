@@ -15,8 +15,11 @@
     "type": "module",
     "main": "./dist/index.cjs",
     "dependencies": {
+        "@formatjs/cli-lib": "^6.6.6",
         "chalk": "^5.4.1",
-        "listr2": "^8.3.3"
+        "glob": "^11.0.2",
+        "listr2": "^8.3.3",
+        "prettier": "^3.5.3"
     },
     "devDependencies": {
         "@rslib/core": "^0.8.0",
@@ -26,7 +29,9 @@
         "typescript": "^5.8.3"
     },
     "bin": {
-        "deploy-package": "./dist/deploy-cli.js"
+        "deploy-package": "./dist/deploy-cli.js",
+        "i18n-extract": "./dist/i18n-extract-cli.js",
+        "i18n-compile": "./dist/i18n-compile-cli.js"
     },
     "exports": {
         ".": {

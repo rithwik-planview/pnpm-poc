@@ -1,0 +1,14 @@
+{
+  "relation-viewer.fullScreenView": {
+    "defaultMessage": "Full Screen View",
+    "description": "Full Screen View"
+  },
+  "relation-viewer.minimize": {
+    "defaultMessage": "Minimize",
+    "description": "Minimize"
+  },
+  "relation-viewer.noActionsFound": {
+    "defaultMessage": "No actions found",
+    "description": "No actions found"
+  }
+}

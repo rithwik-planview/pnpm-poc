@@ -5,6 +5,8 @@ export default defineConfig({
         entry: {
             index: './src/index.ts',
             'deploy-cli': './src/deploy.ts',
+            'i18n-extract-cli': './src/i18n/extract.ts',
+            'i18n-compile-cli': './src/i18n/compile.ts',
         },
         tsconfigPath: './tsconfig.build.json',
     },

@@ -1,14 +1,14 @@
 {
-  "relation-viewer.fullScreenView": {
-    "defaultMessage": "Full Screen View",
-    "description": "Full Screen View"
-  },
-  "relation-viewer.minimize": {
+  "1U+Bxd": {
     "defaultMessage": "Minimize",
     "description": "Minimize"
   },
-  "relation-viewer.noActionsFound": {
+  "9iUp7C": {
     "defaultMessage": "No actions found",
     "description": "No actions found"
+  },
+  "P3WXSO": {
+    "defaultMessage": "Full Screen View",
+    "description": "Full Screen View"
   }
 }

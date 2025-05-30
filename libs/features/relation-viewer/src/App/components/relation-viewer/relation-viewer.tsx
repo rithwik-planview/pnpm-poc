@@ -1,6 +1,5 @@
 import { ButtonEmpty, DropdownMenu } from '@planview/pv-uikit';
 import { DotsVertical, PlusCircle } from '@planview/pv-icons';
-import { IntlProvider } from 'react-intl';
 import { forwardRef, useImperativeHandle, useState } from 'react';
 import { useRelationViewerSort } from '../hooks/useRelationViewerSort';
 import type { Props, RelationViewerHandle } from '../types/types';
@@ -78,17 +77,15 @@ export const RelationViewer = forwardRef<RelationViewerHandle, Props>(
                         </>
                     }
                 >
-                    <IntlProvider locale="en" messages={{}}>
-                        <RelationViewerGrid
-                            loading={loading}
-                            columns={columns}
-                            rows={rows}
-                            sort={sort}
-                            onSortChange={setSort}
-                            error={error}
-                            actionsMenu={{ Menu: actionsMenu }}
-                        />
-                    </IntlProvider>
+                    <RelationViewerGrid
+                        loading={loading}
+                        columns={columns}
+                        rows={rows}
+                        sort={sort}
+                        onSortChange={setSort}
+                        error={error}
+                        actionsMenu={{ Menu: actionsMenu }}
+                    />
                 </DetailsPanelSection>
 
                 <div style={{ display: 'none' }}>

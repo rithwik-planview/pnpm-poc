@@ -4,8 +4,8 @@ import RelationViewerApp from './components/relation-viewer/relation-viewer';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { forwardRef } from 'react';
-import { IntlProvider } from 'react-intl';
-import en from '@planview/pv-grid/lang/en.json';
+import { UnityIntlProvider, type MessageLoader, type SupportedLocales } from '@unity/shared.ui';
+import en from '../../translations/en.json';
 
 const StyledApp = styled.div`
     ${align.centerV};
@@ -16,14 +16,24 @@ const StyledApp = styled.div`
 
 const queryClient = new QueryClient();
 
+const loadMessages: MessageLoader = async (locale: SupportedLocales) => {
+    try {
+        const { default: md } = await import(`../../translations/compiled/${locale}.json`);
+        return md;
+    } catch (e) {
+        console.error(`Failed to load messages for locale ${locale}:`, e);
+        return en;
+    }
+};
+
 export const RelationViewer: typeof RelationViewerApp = forwardRef(function (props, ref) {
     return (
         <QueryClientProvider client={queryClient}>
             <ReactQueryDevtools />
             <StyledApp>
-                <IntlProvider locale="en" messages={en}>
+                <UnityIntlProvider defaultLocale="en" loadMessages={loadMessages}>
                     <RelationViewerApp {...props} ref={ref} />
-                </IntlProvider>
+                </UnityIntlProvider>
             </StyledApp>
         </QueryClientProvider>
     );

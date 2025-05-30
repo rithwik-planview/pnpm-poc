@@ -28,5 +28,23 @@ export default defineConfig(({ env }) => {
             },
         },
         plugins: [pluginReact(), pluginModuleFederation(moduleFederationConfig)],
+        tools: {
+            swc: {
+                jsc: {
+                    experimental: {
+                        plugins: [
+                            ['@swc/plugin-styled-components', {}],
+                            [
+                                '@swc/plugin-formatjs',
+                                {
+                                    idInterpolationPattern: '[sha512:contenthash:base64:6]',
+                                    ast: true,
+                                },
+                            ],
+                        ],
+                    },
+                },
+            },
+        },
     };
 });

@@ -4,7 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import { type EnrichedEntity, ribbonActionsGetContextMenusOptions } from '@unity/shared.hybrid';
 import { useCallback } from 'react';
 import { strings } from './strings';
-import { useIntl } from 'react-intl';
+import { useUnityIntl } from '@unity/shared.ui';
 
 type Props = GridActionsMenuFullProps<EnrichedEntity> & {
     mainEntityId: string;
@@ -41,7 +41,7 @@ export default function EntityActionsMenu({
     relationName,
     onAction,
 }: Props) {
-    const { formatMessage } = useIntl();
+    const { formatMessage } = useUnityIntl();
     const { data, error } = useQuery({
         ...ribbonActionsGetContextMenusOptions({
             body: {

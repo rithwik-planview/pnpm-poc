@@ -1,6 +1,7 @@
 import { pluginReact } from '@rsbuild/plugin-react';
 import { defineConfig } from '@rslib/core';
 
+const externals = ['react', 'react-intl', 'styled-components'];
 export default defineConfig({
     source: {
         tsconfigPath: './tsconfig.build.json',
@@ -13,6 +14,7 @@ export default defineConfig({
                 distPath: {
                     root: './dist/esm',
                 },
+                externals,
             },
         },
         {
@@ -21,6 +23,7 @@ export default defineConfig({
                 distPath: {
                     root: './dist/cjs',
                 },
+                externals,
             },
         },
     ],

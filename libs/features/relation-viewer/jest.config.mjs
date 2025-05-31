@@ -2,5 +2,5 @@ import react from '../../../configs/jest/react.mjs';
 
 export default {
     ...react,
-    displayName: '@unity/features.feature-1',
+    displayName: '@unity/features.relation-viewer',
 };

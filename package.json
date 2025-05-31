@@ -15,6 +15,8 @@
     "devDependencies": {
         "@eslint/js": "^9.27.0",
         "@swc/jest": "^0.2.38",
+        "@swc/plugin-formatjs": "^3.2.2",
+        "@swc/plugin-styled-components": "^7.1.5",
         "@tanstack/eslint-plugin-query": "^5.74.7",
         "@testing-library/jest-dom": "^6.6.3",
         "@testing-library/react": "^16.3.0",

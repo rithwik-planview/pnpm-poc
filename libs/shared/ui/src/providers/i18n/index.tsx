@@ -1,5 +1,14 @@
+/// <reference types="@rslib/core/types" />
+
 import React, { createContext, useState, useEffect, useCallback, useContext } from 'react';
-import { IntlProvider as ReactIntlProvider, useIntl, type IntlShape } from 'react-intl';
+import {
+    IntlProvider as ReactIntlProvider,
+    useIntl,
+    type IntlShape,
+    type IntlConfig,
+    ReactIntlErrorCode,
+} from 'react-intl';
+import { LoadingContainer } from './loaders';
 
 export type SupportedLocales = 'en' | 'es' | 'fr';
 
@@ -31,6 +40,10 @@ interface UnityIntlProviderProps {
 
 export type UnityIntlShape = IntlShape & UnityIntlContextType;
 
+export const defaultRichTextElements = {
+    b: (chunks: React.ReactNode[]) => <strong>{chunks}</strong>,
+};
+
 export const UnityIntlProvider: React.FC<UnityIntlProviderProps> = ({
     children,
     defaultLocale = 'en',
@@ -60,10 +73,31 @@ export const UnityIntlProvider: React.FC<UnityIntlProviderProps> = ({
         setLocale(defaultLocale);
     }, [defaultLocale, setLocale]);
 
+    const onError = React.useCallback<NonNullable<IntlConfig['onError']>>((err) => {
+        if (err.code === ReactIntlErrorCode.MISSING_TRANSLATION) {
+            // if the translations are missing & we are not running locally, console out a message
+            if (import.meta.env.PROD) {
+                console.log('Missing translation', err.message);
+            }
+            return;
+        }
+        throw err;
+    }, []);
+
+    if (loading) {
+        return <LoadingContainer />;
+    }
+
     return (
         <UnityIntlContext.Provider value={{ locale, setLocale, messages, loading }}>
-            <ReactIntlProvider messages={messages} locale={locale} defaultLocale={defaultLocale}>
-                {loading ? <div>Loading translations...</div> : children}
+            <ReactIntlProvider
+                messages={messages}
+                locale={locale}
+                defaultLocale={defaultLocale}
+                defaultRichTextElements={defaultRichTextElements}
+                onError={onError}
+            >
+                {children}
             </ReactIntlProvider>
         </UnityIntlContext.Provider>
     );

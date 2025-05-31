@@ -4,6 +4,7 @@
 *.log*
 local-bucket/
 *.tsbuildinfo
+.swc
 
 # Dist
 node_modules

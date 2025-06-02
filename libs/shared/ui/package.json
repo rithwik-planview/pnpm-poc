@@ -15,7 +15,9 @@
     "type": "module",
     "main": "./dist/cjs/index.cjs",
     "dependencies": {
-        "@planview/pv-uikit": "^7.36.0"
+        "@planview/pv-grid": "^1.34.2",
+        "@planview/pv-uikit": "^7.36.0",
+        "@planview/pv-utilities": "^4.22.2"
     },
     "devDependencies": {
         "@rsbuild/plugin-react": "^1.3.1",

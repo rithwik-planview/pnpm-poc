@@ -7,15 +7,15 @@
         "deploy-package": "deploy-package @unity/features.relation-viewer --with-deps",
         "dev": "rslib build --watch",
         "format": "prettier --write .",
+        "i18n": "pnpm i18n:extract && pnpm i18n:compile",
+        "i18n:compile": "i18n-compile @unity/features.relation-viewer",
+        "i18n:extract": "i18n-extract @unity/features.relation-viewer",
         "lint": "eslint .",
         "mf-dev": "rslib mf-dev",
         "test": "jest",
         "typecheck": "pnpm typecheck:all && pnpm typecheck:build",
         "typecheck:all": "tsc -b tsconfig.json",
-        "typecheck:build": "tsc -b tsconfig.build.json",
-        "i18n": "pnpm i18n:extract && pnpm i18n:compile",
-        "i18n:extract": "i18n-extract @unity/features.relation-viewer",
-        "i18n:compile": "i18n-compile @unity/features.relation-viewer"
+        "typecheck:build": "tsc -b tsconfig.build.json"
     },
     "type": "module",
     "dependencies": {

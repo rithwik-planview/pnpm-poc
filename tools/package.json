@@ -30,8 +30,8 @@
     },
     "bin": {
         "deploy-package": "./dist/deploy-cli.js",
-        "i18n-extract": "./dist/i18n-extract-cli.js",
-        "i18n-compile": "./dist/i18n-compile-cli.js"
+        "i18n-compile": "./dist/i18n-compile-cli.js",
+        "i18n-extract": "./dist/i18n-extract-cli.js"
     },
     "exports": {
         ".": {

@@ -9,7 +9,6 @@ local-bucket/
 # Dist
 node_modules
 dist/
-@mf-types/
 **/translations/compiled
 
 # IDE

@@ -1,0 +1,38 @@
+{
+    "name": "@unity/storybook",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "build": "storybook build",
+        "dev": "storybook dev -p 6006",
+        "format": "prettier --write .",
+        "lint": "eslint .",
+        "typecheck": "pnpm typecheck:all && pnpm typecheck:build",
+        "typecheck:all": "tsc -b tsconfig.json",
+        "typecheck:build": "tsc -b tsconfig.build.json"
+    },
+    "type": "module",
+    "dependencies": {
+        "react": "^19.1.0",
+        "react-dom": "^19.1.0"
+    },
+    "devDependencies": {
+        "@chromatic-com/storybook": "^4.0.0",
+        "@eslint/js": "^9.27.0",
+        "@storybook/addon-docs": "^9.0.4",
+        "@storybook/addon-onboarding": "^9.0.4",
+        "@storybook/react-vite": "^9.0.4",
+        "@types/react": "^19.1.5",
+        "@types/react-dom": "^19.1.5",
+        "@vitejs/plugin-react": "^4.4.1",
+        "eslint": "^9.27.0",
+        "eslint-plugin-react-hooks": "6.0.0-rc.1",
+        "eslint-plugin-react-refresh": "^0.4.19",
+        "eslint-plugin-storybook": "^9.0.4",
+        "globals": "^16.1.0",
+        "storybook": "^9.0.4",
+        "typescript": "^5.8.3",
+        "typescript-eslint": "^8.32.1",
+        "vite": "^6.3.5"
+    }
+}

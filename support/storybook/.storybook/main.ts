@@ -1,3 +1,4 @@
+import remarkGfm from 'remark-gfm';
 import { mergeConfig } from 'vite';
 import type { StorybookConfig } from '@storybook/react-vite';
 
@@ -6,7 +7,28 @@ const config: StorybookConfig = {
         '../../../docs/**/*.mdx',
         '../../../libs/shared/ui/src/**/*.@(mdx|stories.@(js|jsx|ts|tsx))',
     ],
-    addons: ['@storybook/addon-docs'],
+    addons: [
+        {
+            name: '@storybook/addon-docs',
+            options: {
+                mdxPluginOptions: {
+                    mdxCompileOptions: {
+                        remarkPlugins: [remarkGfm],
+                    },
+                },
+            },
+        },
+    ],
+    staticDirs: [
+        {
+            from: './fonts',
+            to: '/fonts',
+        },
+        {
+            from: './img',
+            to: '/img',
+        },
+    ],
     framework: {
         name: '@storybook/react-vite',
         options: {},

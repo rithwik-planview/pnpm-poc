@@ -5,6 +5,7 @@ packages:
     - libs/features/*
     - tools
     - support/*
+    - docs
 onlyBuiltDependencies:
     - core-js
     - esbuild

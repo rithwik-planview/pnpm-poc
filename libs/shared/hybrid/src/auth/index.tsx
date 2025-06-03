@@ -15,6 +15,7 @@ import { Avatar, ListItem, ListItemDivider, Spinner } from '@planview/pv-uikit';
 import { Logout, Mail, User } from '@planview/pv-icons';
 import styled from 'styled-components';
 import { align } from '@planview/pv-utilities';
+import { HYBRID_BASE_URL, SESSION_ID, TIME_DELTA } from '../constants';
 
 interface AuthResponse {
     sessionId: string;
@@ -27,6 +28,7 @@ interface AppShellProps {
     title: string;
     origin: string;
     basePath?: string;
+    hybridBasePath?: string;
     username?: string;
     password?: string;
     children: React.ReactNode;
@@ -53,6 +55,7 @@ export const HybridAppShell: React.FC<AppShellProps> = ({
     title,
     origin,
     basePath = 'release.latest',
+    hybridBasePath = 'HybridSolutions',
     username = 'Admin_User',
     password = 'Password1!',
     children,
@@ -77,21 +80,23 @@ export const HybridAppShell: React.FC<AppShellProps> = ({
                     },
                 },
             );
+            await new Promise((resolve) => setTimeout(resolve, 10000)); // Simulate network delay
             const { sessionId } = response;
             const serverTime = new Date(response.serverTime);
             const localTime = new Date();
             const timeDelta = (serverTime.getTime() - localTime.getTime()) / 1000;
-            localStorage.setItem('timeDelta', `${timeDelta}`);
-            localStorage.setItem('origin', origin);
-            localStorage.setItem('sessionId', sessionId);
+            const baseUrl = `${origin}/${hybridBasePath}`;
+            localStorage.setItem(TIME_DELTA, `${timeDelta}`);
+            localStorage.setItem(HYBRID_BASE_URL, baseUrl);
+            localStorage.setItem(SESSION_ID, sessionId);
             window.location.reload();
         } catch (e) {
             console.error(e);
         }
-    }, [hybridClient, origin, password, username]);
+    }, [hybridBasePath, hybridClient, origin, password, username]);
     useEffect(() => {
-        const sessionId = localStorage.getItem('sessionId');
-        const timeDelta = +(localStorage.getItem('timeDelta') ?? 0);
+        const sessionId = localStorage.getItem(SESSION_ID);
+        const timeDelta = +(localStorage.getItem(TIME_DELTA) ?? 0);
 
         if (sessionId && validateToken(sessionId, { username, origin, timeDelta })) {
             setIsAuthenticated(true);
@@ -101,14 +106,14 @@ export const HybridAppShell: React.FC<AppShellProps> = ({
     }, [basePath, updateSessionIdAndReload, hybridClient, origin, password, username]);
 
     const handleLogout = useCallback(() => {
-        localStorage.removeItem('sessionId');
-        localStorage.removeItem('timeDelta');
-        localStorage.removeItem('origin');
+        localStorage.removeItem(SESSION_ID);
+        localStorage.removeItem(TIME_DELTA);
+        localStorage.removeItem(HYBRID_BASE_URL);
         window.location.reload();
     }, []);
 
-    const fullName = decodeToken(localStorage.getItem('sessionId'))?.clzUserName ?? '';
-    const email = decodeToken(localStorage.getItem('sessionId'))?.email ?? '';
+    const fullName = decodeToken(localStorage.getItem(SESSION_ID))?.clzUserName ?? '';
+    const email = decodeToken(localStorage.getItem(SESSION_ID))?.email ?? '';
     return (
         <IntlProvider locale="en" messages={en}>
             <AppLayout>

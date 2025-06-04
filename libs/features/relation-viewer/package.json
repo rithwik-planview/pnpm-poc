@@ -44,8 +44,6 @@
         "@types/react": "^19.1.5",
         "@types/react-dom": "^19.1.5",
         "@unity/shared.utils": "workspace:*",
-        "@unity/tools": "workspace:*",
-        "globals": "^16.1.0",
-        "typescript": "^5.8.3"
+        "@unity/tools": "workspace:*"
     }
 }

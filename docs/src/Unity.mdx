@@ -65,6 +65,7 @@ Unity aims to provide:
   SharedUI["@unity.shared.ui"]
   SharedHybrid["@unity.shared.hybrid"]
   DataAccess["@unity.core.data-access"]
+  ReactPVDS["@planview/react-pvds"]
 
   HostApp --> UnityShell
   UnityShell --> Feature1
@@ -75,4 +76,6 @@ Unity aims to provide:
   Feature2 --> SharedHybrid
   Feature1 --> DataAccess
   Feature2 --> DataAccess
+  Feature1 --> ReactPVDS
+  Feature2 --> ReactPVDS
 `} />

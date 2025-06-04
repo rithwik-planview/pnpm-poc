@@ -19,6 +19,7 @@
     },
     "type": "module",
     "dependencies": {
+        "@planview/pv-details": "^1.6.0",
         "@planview/pv-grid": "^1.34.2",
         "@planview/pv-icons": "^2.25.0",
         "@planview/pv-toolbar": "^1.14.1",
@@ -44,8 +45,6 @@
         "@types/react": "^19.1.5",
         "@types/react-dom": "^19.1.5",
         "@unity/shared.utils": "workspace:*",
-        "@unity/tools": "workspace:*",
-        "globals": "^16.1.0",
-        "typescript": "^5.8.3"
+        "@unity/tools": "workspace:*"
     }
 }

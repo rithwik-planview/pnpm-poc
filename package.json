@@ -14,6 +14,7 @@
     "main": "index.js",
     "devDependencies": {
         "@eslint/js": "^9.27.0",
+        "@mdx-js/language-service": "^0.7.1",
         "@storybook/addon-docs": "^9.0.4",
         "@storybook/react-vite": "^9.0.4",
         "@swc/jest": "^0.2.38",
@@ -24,13 +25,14 @@
         "@testing-library/react": "^16.3.0",
         "@testing-library/user-event": "^14.6.1",
         "@types/jest": "^29.5.14",
+        "@types/node": "^22.15.29",
         "eslint": "^9.27.0",
         "eslint-plugin-jest": "^28.11.0",
         "eslint-plugin-jest-dom": "^5.5.0",
         "eslint-plugin-react": "^7.37.5",
         "eslint-plugin-react-hooks": "6.0.0-rc.1",
         "eslint-plugin-storybook": "^9.0.4",
-        "globals": "^16.1.0",
+        "globals": "^16.2.0",
         "husky": "^9.1.7",
         "identity-obj-proxy": "^3.0.0",
         "jest": "^29.7.0",
@@ -42,6 +44,7 @@
         "remark-gfm": "^4.0.1",
         "storybook": "^9.0.4",
         "syncpack": "14.0.0-alpha.12",
+        "typescript": "^5.8.3",
         "typescript-eslint": "^8.32.1"
     },
     "packageManager": "pnpm@10.11.0"

@@ -38,6 +38,11 @@
             "types": "./dist/esm/index.d.ts",
             "import": "./dist/esm/index.js",
             "require": "./dist/cjs/index.cjs"
+        },
+        "./test-utils": {
+            "types": "./dist/esm/test-utils.d.ts",
+            "import": "./dist/esm/test-utils.js",
+            "require": "./dist/cjs/test-utils.cjs"
         }
     },
     "files": [

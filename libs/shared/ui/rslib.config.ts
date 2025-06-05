@@ -5,6 +5,10 @@ const externals = ['react', 'react-intl', 'styled-components'];
 export default defineConfig({
     source: {
         tsconfigPath: './tsconfig.build.json',
+        entry: {
+            index: './src/index.tsx',
+            'test-utils': './src/test-utils/index.tsx',
+        },
     },
     lib: [
         {

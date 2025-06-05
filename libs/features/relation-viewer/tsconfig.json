@@ -8,6 +8,7 @@
             "@unity/shared.utils": ["../../shared/utils/src"],
             "@unity/shared.hybrid": ["../../shared/hybrid/src"],
             "@unity/shared.ui": ["../../shared/ui/src"],
+            "@unity/shared.ui/test-utils": ["../../shared/ui/src/test-utils"],
             "@unity/core.shell": ["../../core/shell/src"],
             "@unity/tools": ["../../../tools/src"]
         }

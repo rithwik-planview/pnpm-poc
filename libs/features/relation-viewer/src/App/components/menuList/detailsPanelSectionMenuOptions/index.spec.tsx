@@ -1,4 +1,4 @@
-import { renderWithIntl } from '@unity/shared.ui';
+import { renderWithIntl } from '@unity/shared.ui/test-utils';
 import { HEADER_MORE_MENU_ITEMS as HeaderItems } from './index';
 import '@testing-library/jest-dom';
 import { cleanup } from '@testing-library/react';

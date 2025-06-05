@@ -9,10 +9,10 @@ import {
     UserMenu,
     ToolbarButtonEmptyInverse,
 } from '@planview/pv-toolbar';
-import { Avatar, ListItem, ListItemDivider, Spinner } from '@planview/pv-uikit';
-import { Logout, Mail, User } from '@planview/pv-icons';
+import { Avatar, EmptyStateError, ListItem, ListItemDivider, Spinner } from '@planview/pv-uikit';
+import { Logout, Mail, User, WarningFilled } from '@planview/pv-icons';
 import styled from 'styled-components';
-import { align } from '@planview/pv-utilities';
+import { align, color } from '@planview/pv-utilities';
 import { HYBRID_BASE_URL, SESSION_ID, TIME_DELTA } from '../constants';
 
 interface AuthResponse {
@@ -65,6 +65,7 @@ export const HybridAppShell: React.FC<AppShellProps> = ({
         });
     });
     const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [error, setError] = useState(false);
 
     const updateSessionIdAndReload = useCallback(async () => {
         try {
@@ -88,7 +89,8 @@ export const HybridAppShell: React.FC<AppShellProps> = ({
             localStorage.setItem(SESSION_ID, sessionId);
             window.location.reload();
         } catch (e) {
-            console.error(e);
+            console.error('Authentication failed:', e);
+            setError(true);
         }
     }, [hybridBasePath, hybridClient, origin, password, username]);
     useEffect(() => {
@@ -130,6 +132,8 @@ export const HybridAppShell: React.FC<AppShellProps> = ({
                                         .map((s) => s.charAt(0))
                                         .join('')}
                                 />
+                            ) : error ? (
+                                <WarningFilled color={color.iconError} />
                             ) : (
                                 <Spinner size="medium" inverse />
                             )
@@ -149,6 +153,10 @@ export const HybridAppShell: React.FC<AppShellProps> = ({
             <ContentLayout>
                 {isAuthenticated ? (
                     children
+                ) : error ? (
+                    <LoadingLayout>
+                        <EmptyStateError />
+                    </LoadingLayout>
                 ) : (
                     <LoadingLayout>
                         <Spinner size="xlarge" />

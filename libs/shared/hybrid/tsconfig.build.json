@@ -11,5 +11,8 @@
         "./src/__utils/tests/*.*",
         "**/*.stories.tsx"
     ],
-    "references": [{ "path": "../../core/data-access/tsconfig.build.json" }]
+    "references": [
+        { "path": "../../core/data-access/tsconfig.build.json" },
+        { "path": "../../shared/ui/tsconfig.build.json" }
+    ]
 }

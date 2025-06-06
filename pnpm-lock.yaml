@@ -402,6 +402,9 @@ importers:
       '@module-federation/rsbuild-plugin':
         specifier: ^0.14.0
         version: 0.14.0(@rsbuild/core@1.3.21)(@rspack/core@1.3.11(@swc/helpers@0.5.17))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)
+      '@rsbuild/core':
+        specifier: ^1.3.21
+        version: 1.3.21
       '@rsbuild/plugin-react':
         specifier: ^1.3.1
         version: 1.3.1(@rsbuild/core@1.3.21)
@@ -789,12 +792,18 @@ importers:
 
   libs/shared/utils:
     devDependencies:
+      '@rsbuild/core':
+        specifier: ^1.3.21
+        version: 1.3.21
       '@rslib/core':
         specifier: ^0.8.0
         version: 0.8.0(typescript@5.8.3)
       '@rspack/core':
         specifier: ^1.3.11
         version: 1.3.11(@swc/helpers@0.5.17)
+      '@unity/tools':
+        specifier: workspace:*
+        version: link:../../../tools
 
   support/storybook:
     dependencies:

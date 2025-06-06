@@ -7,7 +7,7 @@ import { globSync } from 'glob';
 import { existsSync } from 'fs';
 import { writeFile, mkdir } from 'fs/promises';
 import path from 'path';
-import { format } from 'prettier';
+import { format, resolveConfig } from 'prettier';
 
 const exec = promisify(_exec);
 
@@ -43,10 +43,13 @@ async function main() {
                             await mkdir(translationsDir, { recursive: true });
                         }
                         const parsed = JSON.parse(result);
+                        const fileName = path.join(translationsDir, 'en.json');
+                        const prettierOptions = await resolveConfig(fileName);
                         const formatted = await format(JSON.stringify(parsed, null, 4), {
+                            ...prettierOptions,
                             parser: 'json',
                         });
-                        await writeFile(path.join(translationsDir, 'en.json'), formatted, 'utf-8');
+                        await writeFile(fileName, formatted, 'utf-8');
                     },
                 }));
                 return new Listr(tasks);

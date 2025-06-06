@@ -9,7 +9,7 @@ import { mkdir, readdir } from 'node:fs/promises';
 import { writeFile } from 'fs/promises';
 import path from 'path';
 import type { Formatter } from '@formatjs/cli-lib/src/formatters';
-import prettier from 'prettier';
+import { format, resolveConfig } from 'prettier';
 
 const exec = promisify(_exec);
 
@@ -66,10 +66,10 @@ async function main() {
                         const fileTasks = files.map((file) => ({
                             title: `Compiling ${file} for ${pkg}`,
                             task: async () => {
-                                const [fileName] = file.split('.json');
+                                const [lang] = file.split('.json');
                                 const projectFile = path.join(translationsDir, file);
                                 const pvdsFiles = globSync(
-                                    `${projectMap[pkg]}/node_modules/@planview/pv-*/lang/${fileName}.json`,
+                                    `${projectMap[pkg]}/node_modules/@planview/pv-*/lang/${lang}.json`,
                                 );
                                 const result = await compile([projectFile, ...pvdsFiles], {
                                     ast: true,
@@ -96,14 +96,6 @@ async function main() {
                                         },
                                         {} as Record<string, string>,
                                     );
-
-                                const formatted = await prettier.format(
-                                    JSON.stringify(sorted, null, 4),
-                                    {
-                                        parser: 'json',
-                                    },
-                                );
-
                                 const compiledTranslationsDir = path.join(
                                     projectMap[pkg],
                                     'translations',
@@ -112,12 +104,14 @@ async function main() {
                                 if (!existsSync(compiledTranslationsDir)) {
                                     await mkdir(compiledTranslationsDir, { recursive: true });
                                 }
+                                const fileName = path.join(compiledTranslationsDir, `${lang}.json`);
+                                const prettierOptions = await resolveConfig(fileName);
+                                const formatted = await format(JSON.stringify(sorted, null, 4), {
+                                    ...prettierOptions,
+                                    parser: 'json',
+                                });
 
-                                await writeFile(
-                                    path.join(compiledTranslationsDir, `${fileName}.json`),
-                                    formatted,
-                                    'utf-8',
-                                );
+                                await writeFile(fileName, formatted, 'utf-8');
                             },
                         }));
                         return new Listr(fileTasks);

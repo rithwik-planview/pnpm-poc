@@ -1,18 +1,10 @@
 import { defineConfig } from '@rsbuild/core';
 import { name } from './package.json';
-import { getPortFromName } from '@unity/shared.utils';
+import { getPortFromName, getRemoteUrl } from '@unity/shared.utils';
 
 export default defineConfig({
     source: {
         tsconfigPath: './tsconfig.build.json',
-    },
-    output: {
-        copy: [
-            {
-                from: '../../libs/core/shell/dist/umd/index.js',
-                to: './static/js/@unity.shell.umd.js',
-            },
-        ],
     },
     html: {
         title: 'Unity Module Federation (UMD) POC',
@@ -20,7 +12,7 @@ export default defineConfig({
             {
                 tag: 'script',
                 attrs: {
-                    src: 'static/js/@unity.shell.umd.js',
+                    src: `${getRemoteUrl('@unity/core.shell', 'production', 'umd')}index.js`,
                 },
             },
         ],

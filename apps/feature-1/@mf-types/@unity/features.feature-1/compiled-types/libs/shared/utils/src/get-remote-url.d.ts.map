@@ -1,1 +1,1 @@
-{"version":3,"file":"get-remote-url.d.ts","sourceRoot":"","sources":["../../../../../../../../../../shared/utils/src/get-remote-url.ts"],"names":[],"mappings":"AAEA,eAAO,MAAM,YAAY,GAAI,MAAM,MAAM,EAAE,MAAM,MAAM,WAItD,CAAC"}
+{"version":3,"file":"get-remote-url.d.ts","sourceRoot":"","sources":["../../../../../../../../../../shared/utils/src/get-remote-url.ts"],"names":[],"mappings":"AAEA,KAAK,UAAU,GAAG,IAAI,GAAG,KAAK,GAAG,KAAK,GAAG,KAAK,GAAG,MAAM,CAAC;AACxD,eAAO,MAAM,YAAY,GAAI,MAAM,MAAM,EAAE,MAAM,MAAM,EAAE,aAAY,UAAiB,WAIrF,CAAC"}

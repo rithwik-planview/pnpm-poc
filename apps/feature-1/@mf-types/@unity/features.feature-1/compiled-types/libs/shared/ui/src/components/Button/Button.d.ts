@@ -1,5 +1,5 @@
 import './button.css';
-interface ButtonProps {
+export interface ButtonProps {
     primary?: boolean;
     backgroundColor?: string;
     size?: 'small' | 'medium' | 'large';
@@ -13,5 +13,4 @@ export declare const Button: ({
     label,
     ...props
 }: ButtonProps) => import('react/jsx-runtime').JSX.Element;
-export {};
 //# sourceMappingURL=Button.d.ts.map

@@ -1,17 +1,19 @@
 packages:
-    - apps/*
-    - libs/core/*
-    - libs/shared/*
-    - libs/features/*
-    - tools
-    - support/*
-    - docs
+  - apps/*
+  - libs/core/*
+  - libs/shared/*
+  - libs/features/*
+  - tools
+  - support/*
+  - docs
+ignoredBuiltDependencies:
+  - puppeteer
 onlyBuiltDependencies:
-    - core-js
-    - esbuild
-    - '@swc/core'
+  - core-js
+  - esbuild
+  - '@swc/core'
 overrides:
-    react: ^19.0.0
-    react-dom: ^19.0.0
+  react: ^19.0.0
+  react-dom: ^19.0.0
 sharedWorkspaceLockFile: true
 strictPeerDependencies: true

@@ -19,18 +19,7 @@ type Options = {
     sortStrategy?: EntitySortStrategy;
     fields: Field[];
 };
-export declare function useRelationsDataLoader(
-    {
-        entityType,
-        entityId,
-        relationName,
-        relationEntityType,
-        sortBy,
-        sortStrategy,
-        fields,
-    }: Options,
-    limit?: number,
-): {
+export declare function useRelationsDataLoader({ entityType, entityId, relationName, relationEntityType, sortBy, sortStrategy, fields, }: Options, limit?: number): {
     loading: boolean;
     error: boolean;
     loader: Loader;

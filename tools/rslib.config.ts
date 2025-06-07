@@ -13,12 +13,20 @@ export default defineConfig({
     lib: [
         {
             format: 'esm',
-            syntax: ['node 18'],
             dts: true,
+            output: {
+                distPath: {
+                    root: './dist/esm',
+                },
+            },
         },
         {
             format: 'cjs',
-            syntax: ['node 18'],
+            output: {
+                distPath: {
+                    root: './dist/cjs',
+                },
+            },
         },
     ],
 });

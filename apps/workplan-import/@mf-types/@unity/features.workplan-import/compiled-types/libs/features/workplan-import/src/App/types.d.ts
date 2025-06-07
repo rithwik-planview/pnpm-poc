@@ -38,10 +38,10 @@ export interface RowValue {
     listValues: RowValue[] | null;
 }
 export declare enum RowState {
-    Unchanged = 'Unchanged',
-    Updated = 'Updated',
-    New = 'New',
-    Error = 'Error',
+    Unchanged = "Unchanged",
+    Updated = "Updated",
+    New = "New",
+    Error = "Error"
 }
 interface Row {
     mainIdentifier: string;

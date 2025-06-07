@@ -8,7 +8,7 @@ export default defineConfig({
         tsconfigPath: './tsconfig.build.json',
     },
     html: {
-        title: 'Unity Module Federation (UMD) POC',
+        title: 'Unity Module Federation POC',
     },
     plugins: [pluginReact()],
     server: {

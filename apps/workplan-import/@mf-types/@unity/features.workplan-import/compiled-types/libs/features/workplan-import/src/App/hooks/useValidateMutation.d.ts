@@ -8,11 +8,6 @@ interface Variables {
     fileId: string;
     rows: rows;
 }
-export declare function useValidateMutation(): import('@tanstack/react-query').UseMutationResult<
-    ValidateResponse,
-    Error,
-    Variables,
-    unknown
->;
+export declare function useValidateMutation(): import("@tanstack/react-query").UseMutationResult<ValidateResponse, Error, Variables, unknown>;
 export default useValidateMutation;
 //# sourceMappingURL=useValidateMutation.d.ts.map

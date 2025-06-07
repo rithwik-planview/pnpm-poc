@@ -8,8 +8,6 @@ import { type Config, type ClientOptions as DefaultClientOptions } from '@hey-ap
  * `setConfig()`. This is useful for example if you're using Next.js
  * to ensure your client always has the correct values.
  */
-export type CreateClientConfig<T extends DefaultClientOptions = ClientOptions> = (
-    override?: Config<DefaultClientOptions & T>,
-) => Config<Required<DefaultClientOptions> & T>;
-export declare const client: import('@hey-api/client-axios').Client;
+export type CreateClientConfig<T extends DefaultClientOptions = ClientOptions> = (override?: Config<DefaultClientOptions & T>) => Config<Required<DefaultClientOptions> & T>;
+export declare const client: import("@hey-api/client-axios").Client;
 //# sourceMappingURL=client.gen.d.ts.map

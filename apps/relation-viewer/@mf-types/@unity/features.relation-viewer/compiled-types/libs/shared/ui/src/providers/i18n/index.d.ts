@@ -18,6 +18,9 @@ interface UnityIntlProviderProps {
     loadMessages: MessageLoader;
 }
 export type UnityIntlShape = IntlShape & UnityIntlContextType;
+export declare const defaultRichTextElements: {
+    b: (chunks: React.ReactNode[]) => import("react/jsx-runtime").JSX.Element;
+};
 export declare const UnityIntlProvider: React.FC<UnityIntlProviderProps>;
 export declare const useUnityIntl: () => UnityIntlShape;
 //# sourceMappingURL=index.d.ts.map

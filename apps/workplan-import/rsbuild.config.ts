@@ -5,15 +5,13 @@ import moduleFederationConfig from './module-federation.config';
 import { name } from './package.json';
 import { getPortFromName, Mode } from '@unity/shared.utils';
 
-export default defineConfig(({ env }) => {
-    return {
-        source: { tsconfigPath: './tsconfig.build.json' },
-        plugins: [pluginReact(), pluginModuleFederation(moduleFederationConfig(env as Mode))],
-        html: {
-            title: 'Workplan Import Demo',
-        },
-        server: {
-            port: getPortFromName(name),
-        },
-    };
-});
+export default defineConfig(({ env }) => ({
+    source: { tsconfigPath: './tsconfig.build.json' },
+    plugins: [pluginReact(), pluginModuleFederation(moduleFederationConfig(env as Mode))],
+    html: {
+        title: 'Workplan Import Demo',
+    },
+    server: {
+        port: getPortFromName(name),
+    },
+}));

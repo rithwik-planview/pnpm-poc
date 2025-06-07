@@ -7,7 +7,6 @@ export default defineConfig({
     lib: [
         {
             format: 'esm',
-            syntax: 'es2021',
             dts: true,
             output: {
                 distPath: {
@@ -17,7 +16,6 @@ export default defineConfig({
         },
         {
             format: 'cjs',
-            syntax: 'es2021',
             dts: true,
             output: {
                 distPath: {

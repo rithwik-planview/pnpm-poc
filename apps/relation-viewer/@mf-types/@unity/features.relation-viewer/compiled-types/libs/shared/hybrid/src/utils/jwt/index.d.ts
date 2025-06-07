@@ -22,12 +22,9 @@ export interface JwtToken {
     aud: number;
 }
 export declare const decodeToken: (token: string | null) => JwtToken;
-export declare const validateToken: (
-    token: string,
-    options: {
-        username: string;
-        origin: string;
-        timeDelta: number;
-    },
-) => boolean;
+export declare const validateToken: (token: string, options: {
+    username: string;
+    origin: string;
+    timeDelta: number;
+}) => boolean;
 //# sourceMappingURL=index.d.ts.map

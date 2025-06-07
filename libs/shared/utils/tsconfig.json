@@ -1,7 +1,7 @@
 {
     "extends": "../../../configs/tsconfig/node.json",
     "compilerOptions": {
-        "outDir": "./dist",
+        "declarationDir": "./dist/types",
         "rootDir": "./src",
         "paths": {
             "@unity/tools": ["../../../tools/src"]

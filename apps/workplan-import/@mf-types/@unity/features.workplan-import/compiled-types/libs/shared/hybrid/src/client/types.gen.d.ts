@@ -45,69 +45,8 @@ export type FilterField = {
     entityType: string;
     fieldName: string;
 };
-export type OperatorId =
-    | 'None'
-    | 'Equals'
-    | 'NotEqual'
-    | 'In'
-    | 'NotIn'
-    | 'GreaterThan'
-    | 'LessThan'
-    | 'Before'
-    | 'After'
-    | 'BeginsWith'
-    | 'EndsWith'
-    | 'TextualContains'
-    | 'Between'
-    | 'Contains'
-    | 'DoesNotContain'
-    | 'NotBetween'
-    | 'GreaterOrEqual'
-    | 'LessOrEqual'
-    | 'Match'
-    | 'AfterOrEqualsOf'
-    | 'BeforeOrEqualsOf'
-    | 'Blanks'
-    | 'MatchesCurrency'
-    | 'NotMatchedCurrency'
-    | 'IsUnassignedOrEquals'
-    | 'NonBlanks'
-    | 'Is'
-    | 'IsNot'
-    | 'InTheFollowing'
-    | 'DuringThePrevious'
-    | 'PreviousDay'
-    | 'Today'
-    | 'NextDay'
-    | 'LastWeek'
-    | 'ThisWeek'
-    | 'NextWeek'
-    | 'LastMonth'
-    | 'ThisMonth'
-    | 'NextMonth'
-    | 'LastQuarter'
-    | 'ThisQuarter'
-    | 'NextQuarter'
-    | 'LastYear'
-    | 'ThisYear'
-    | 'NextYear'
-    | 'Me'
-    | 'MyManager'
-    | 'MyDirectReports'
-    | 'EqualsMulti'
-    | 'NotEqualsMulti';
-export type FilterValueItemType =
-    | 'None'
-    | 'Numeric'
-    | 'NumericWithUnit'
-    | 'PickList'
-    | 'Date'
-    | 'ReferenceToObject'
-    | 'Checkbox'
-    | 'Text'
-    | 'TextArea'
-    | 'RelativeDate'
-    | 'ContextualDate';
+export type OperatorId = 'None' | 'Equals' | 'NotEqual' | 'In' | 'NotIn' | 'GreaterThan' | 'LessThan' | 'Before' | 'After' | 'BeginsWith' | 'EndsWith' | 'TextualContains' | 'Between' | 'Contains' | 'DoesNotContain' | 'NotBetween' | 'GreaterOrEqual' | 'LessOrEqual' | 'Match' | 'AfterOrEqualsOf' | 'BeforeOrEqualsOf' | 'Blanks' | 'MatchesCurrency' | 'NotMatchedCurrency' | 'IsUnassignedOrEquals' | 'NonBlanks' | 'Is' | 'IsNot' | 'InTheFollowing' | 'DuringThePrevious' | 'PreviousDay' | 'Today' | 'NextDay' | 'LastWeek' | 'ThisWeek' | 'NextWeek' | 'LastMonth' | 'ThisMonth' | 'NextMonth' | 'LastQuarter' | 'ThisQuarter' | 'NextQuarter' | 'LastYear' | 'ThisYear' | 'NextYear' | 'Me' | 'MyManager' | 'MyDirectReports' | 'EqualsMulti' | 'NotEqualsMulti';
+export type FilterValueItemType = 'None' | 'Numeric' | 'NumericWithUnit' | 'PickList' | 'Date' | 'ReferenceToObject' | 'Checkbox' | 'Text' | 'TextArea' | 'RelativeDate' | 'ContextualDate';
 export type BaseFilterValue = {
     [key: string]: unknown;
 };
@@ -117,16 +56,7 @@ export type CheckboxFilterValue = {
 export type ContextualDateFilterValue = {
     value: ContextualDate;
 };
-export type ContextualDate =
-    | 'Today'
-    | 'ThisWeek'
-    | 'NextWeek'
-    | 'ThisMonth'
-    | 'NextMonth'
-    | 'ThisQuarter'
-    | 'NextQuarter'
-    | 'ThisYear'
-    | 'NextYear';
+export type ContextualDate = 'Today' | 'ThisWeek' | 'NextWeek' | 'ThisMonth' | 'NextMonth' | 'ThisQuarter' | 'NextQuarter' | 'ThisYear' | 'NextYear';
 export type DateFilterValue = {
     value: Date;
 };
@@ -280,14 +210,9 @@ export type ProblemDetails = {
     extensions: {
         [key: string]: unknown;
     };
-    [key: string]:
-        | unknown
-        | string
-        | number
-        | {
-              [key: string]: unknown;
-          }
-        | undefined;
+    [key: string]: unknown | string | number | {
+        [key: string]: unknown;
+    } | undefined;
 };
 export type SwimlaneResponse = {
     grandTotal: number;
@@ -626,15 +551,7 @@ export type WorkloadRequest = {
 export type LoadBase = 'ProjectAssignment' | 'TaskAssignment';
 export type MeasureType = 'Hours' | 'Units' | 'FTE' | 'PersonDays';
 export type SlicePeriodType = 'Day' | 'Week' | 'Month' | 'Quarter' | 'Year';
-export type ResourceManagementAggregationTypes =
-    | 'None'
-    | 'RootObjectLevel'
-    | 'ProjectLevel'
-    | 'ProjectLevelDetailed'
-    | 'UseCapacity'
-    | 'UseProjectPool'
-    | 'UseCurrentPeriodActualAndPlanned'
-    | 'UseProjectsWithNoTaskAssignment';
+export type ResourceManagementAggregationTypes = 'None' | 'RootObjectLevel' | 'ProjectLevel' | 'ProjectLevelDetailed' | 'UseCapacity' | 'UseProjectPool' | 'UseCurrentPeriodActualAndPlanned' | 'UseProjectsWithNoTaskAssignment';
 export type SourceEntity = {
     entityKeys: Array<EntityKey>;
     entityType: string;
@@ -807,8 +724,7 @@ export type BugsGetByIdentifierData = {
 export type BugsGetByIdentifierResponses = {
     200: EntityDetailsResponse;
 };
-export type BugsGetByIdentifierResponse =
-    BugsGetByIdentifierResponses[keyof BugsGetByIdentifierResponses];
+export type BugsGetByIdentifierResponse = BugsGetByIdentifierResponses[keyof BugsGetByIdentifierResponses];
 export type BugsGetByIdsData = {
     body: EntitiesByIdsRequest;
     path?: never;
@@ -854,8 +770,7 @@ export type BugsGetRelationsCountData = {
 export type BugsGetRelationsCountResponses = {
     200: CountResponse;
 };
-export type BugsGetRelationsCountResponse =
-    BugsGetRelationsCountResponses[keyof BugsGetRelationsCountResponses];
+export type BugsGetRelationsCountResponse = BugsGetRelationsCountResponses[keyof BugsGetRelationsCountResponses];
 export type BugsGetGroupedRelationsData = {
     body: GroupedRelationsRequest;
     path: {
@@ -868,8 +783,7 @@ export type BugsGetGroupedRelationsData = {
 export type BugsGetGroupedRelationsResponses = {
     200: GroupedEntitiesResponse;
 };
-export type BugsGetGroupedRelationsResponse =
-    BugsGetGroupedRelationsResponses[keyof BugsGetGroupedRelationsResponses];
+export type BugsGetGroupedRelationsResponse = BugsGetGroupedRelationsResponses[keyof BugsGetGroupedRelationsResponses];
 export type BugsGetAvatarsData = {
     body: AvatarsRequest;
     path?: never;
@@ -892,8 +806,7 @@ export type BugsGetRelationsAvatarsData = {
 export type BugsGetRelationsAvatarsResponses = {
     200: AvatarsResponse;
 };
-export type BugsGetRelationsAvatarsResponse =
-    BugsGetRelationsAvatarsResponses[keyof BugsGetRelationsAvatarsResponses];
+export type BugsGetRelationsAvatarsResponse = BugsGetRelationsAvatarsResponses[keyof BugsGetRelationsAvatarsResponses];
 export type CasesGetData = {
     body: EntitiesRequest;
     path?: never;
@@ -925,8 +838,7 @@ export type CasesGetByIdentifierData = {
 export type CasesGetByIdentifierResponses = {
     200: EntityDetailsResponse;
 };
-export type CasesGetByIdentifierResponse =
-    CasesGetByIdentifierResponses[keyof CasesGetByIdentifierResponses];
+export type CasesGetByIdentifierResponse = CasesGetByIdentifierResponses[keyof CasesGetByIdentifierResponses];
 export type CasesGetByIdsData = {
     body: EntitiesByIdsRequest;
     path?: never;
@@ -959,8 +871,7 @@ export type CasesGetRelationsData = {
 export type CasesGetRelationsResponses = {
     200: EntitiesResponse;
 };
-export type CasesGetRelationsResponse =
-    CasesGetRelationsResponses[keyof CasesGetRelationsResponses];
+export type CasesGetRelationsResponse = CasesGetRelationsResponses[keyof CasesGetRelationsResponses];
 export type CasesGetRelationsCountData = {
     body: CountRequest;
     path: {
@@ -973,8 +884,7 @@ export type CasesGetRelationsCountData = {
 export type CasesGetRelationsCountResponses = {
     200: CountResponse;
 };
-export type CasesGetRelationsCountResponse =
-    CasesGetRelationsCountResponses[keyof CasesGetRelationsCountResponses];
+export type CasesGetRelationsCountResponse = CasesGetRelationsCountResponses[keyof CasesGetRelationsCountResponses];
 export type CasesGetGroupedRelationsData = {
     body: GroupedRelationsRequest;
     path: {
@@ -987,8 +897,7 @@ export type CasesGetGroupedRelationsData = {
 export type CasesGetGroupedRelationsResponses = {
     200: GroupedEntitiesResponse;
 };
-export type CasesGetGroupedRelationsResponse =
-    CasesGetGroupedRelationsResponses[keyof CasesGetGroupedRelationsResponses];
+export type CasesGetGroupedRelationsResponse = CasesGetGroupedRelationsResponses[keyof CasesGetGroupedRelationsResponses];
 export type CasesGetAvatarsData = {
     body: AvatarsRequest;
     path?: never;
@@ -1011,8 +920,7 @@ export type CasesGetRelationsAvatarsData = {
 export type CasesGetRelationsAvatarsResponses = {
     200: AvatarsResponse;
 };
-export type CasesGetRelationsAvatarsResponse =
-    CasesGetRelationsAvatarsResponses[keyof CasesGetRelationsAvatarsResponses];
+export type CasesGetRelationsAvatarsResponse = CasesGetRelationsAvatarsResponses[keyof CasesGetRelationsAvatarsResponses];
 export type IssuesGetData = {
     body: EntitiesRequest;
     path?: never;
@@ -1044,8 +952,7 @@ export type IssuesGetByIdentifierData = {
 export type IssuesGetByIdentifierResponses = {
     200: EntityDetailsResponse;
 };
-export type IssuesGetByIdentifierResponse =
-    IssuesGetByIdentifierResponses[keyof IssuesGetByIdentifierResponses];
+export type IssuesGetByIdentifierResponse = IssuesGetByIdentifierResponses[keyof IssuesGetByIdentifierResponses];
 export type IssuesGetByIdsData = {
     body: EntitiesByIdsRequest;
     path?: never;
@@ -1078,8 +985,7 @@ export type IssuesGetRelationsData = {
 export type IssuesGetRelationsResponses = {
     200: EntitiesResponse;
 };
-export type IssuesGetRelationsResponse =
-    IssuesGetRelationsResponses[keyof IssuesGetRelationsResponses];
+export type IssuesGetRelationsResponse = IssuesGetRelationsResponses[keyof IssuesGetRelationsResponses];
 export type IssuesGetRelationsCountData = {
     body: CountRequest;
     path: {
@@ -1092,8 +998,7 @@ export type IssuesGetRelationsCountData = {
 export type IssuesGetRelationsCountResponses = {
     200: CountResponse;
 };
-export type IssuesGetRelationsCountResponse =
-    IssuesGetRelationsCountResponses[keyof IssuesGetRelationsCountResponses];
+export type IssuesGetRelationsCountResponse = IssuesGetRelationsCountResponses[keyof IssuesGetRelationsCountResponses];
 export type IssuesGetGroupedRelationsData = {
     body: GroupedRelationsRequest;
     path: {
@@ -1106,8 +1011,7 @@ export type IssuesGetGroupedRelationsData = {
 export type IssuesGetGroupedRelationsResponses = {
     200: GroupedEntitiesResponse;
 };
-export type IssuesGetGroupedRelationsResponse =
-    IssuesGetGroupedRelationsResponses[keyof IssuesGetGroupedRelationsResponses];
+export type IssuesGetGroupedRelationsResponse = IssuesGetGroupedRelationsResponses[keyof IssuesGetGroupedRelationsResponses];
 export type IssuesGetAvatarsData = {
     body: AvatarsRequest;
     path?: never;
@@ -1130,8 +1034,7 @@ export type IssuesGetRelationsAvatarsData = {
 export type IssuesGetRelationsAvatarsResponses = {
     200: AvatarsResponse;
 };
-export type IssuesGetRelationsAvatarsResponse =
-    IssuesGetRelationsAvatarsResponses[keyof IssuesGetRelationsAvatarsResponses];
+export type IssuesGetRelationsAvatarsResponse = IssuesGetRelationsAvatarsResponses[keyof IssuesGetRelationsAvatarsResponses];
 export type RequestsGetData = {
     body: EntitiesRequest;
     path?: never;
@@ -1151,8 +1054,7 @@ export type RequestsGetGroupedData = {
 export type RequestsGetGroupedResponses = {
     200: GroupedEntitiesResponse;
 };
-export type RequestsGetGroupedResponse =
-    RequestsGetGroupedResponses[keyof RequestsGetGroupedResponses];
+export type RequestsGetGroupedResponse = RequestsGetGroupedResponses[keyof RequestsGetGroupedResponses];
 export type RequestsGetByIdentifierData = {
     body: EntityDetailsRequest;
     path: {
@@ -1164,8 +1066,7 @@ export type RequestsGetByIdentifierData = {
 export type RequestsGetByIdentifierResponses = {
     200: EntityDetailsResponse;
 };
-export type RequestsGetByIdentifierResponse =
-    RequestsGetByIdentifierResponses[keyof RequestsGetByIdentifierResponses];
+export type RequestsGetByIdentifierResponse = RequestsGetByIdentifierResponses[keyof RequestsGetByIdentifierResponses];
 export type RequestsGetByIdsData = {
     body: EntitiesByIdsRequest;
     path?: never;
@@ -1198,8 +1099,7 @@ export type RequestsGetRelationsData = {
 export type RequestsGetRelationsResponses = {
     200: EntitiesResponse;
 };
-export type RequestsGetRelationsResponse =
-    RequestsGetRelationsResponses[keyof RequestsGetRelationsResponses];
+export type RequestsGetRelationsResponse = RequestsGetRelationsResponses[keyof RequestsGetRelationsResponses];
 export type RequestsGetRelationsCountData = {
     body: CountRequest;
     path: {
@@ -1212,8 +1112,7 @@ export type RequestsGetRelationsCountData = {
 export type RequestsGetRelationsCountResponses = {
     200: CountResponse;
 };
-export type RequestsGetRelationsCountResponse =
-    RequestsGetRelationsCountResponses[keyof RequestsGetRelationsCountResponses];
+export type RequestsGetRelationsCountResponse = RequestsGetRelationsCountResponses[keyof RequestsGetRelationsCountResponses];
 export type RequestsGetGroupedRelationsData = {
     body: GroupedRelationsRequest;
     path: {
@@ -1226,8 +1125,7 @@ export type RequestsGetGroupedRelationsData = {
 export type RequestsGetGroupedRelationsResponses = {
     200: GroupedEntitiesResponse;
 };
-export type RequestsGetGroupedRelationsResponse =
-    RequestsGetGroupedRelationsResponses[keyof RequestsGetGroupedRelationsResponses];
+export type RequestsGetGroupedRelationsResponse = RequestsGetGroupedRelationsResponses[keyof RequestsGetGroupedRelationsResponses];
 export type RequestsGetAvatarsData = {
     body: AvatarsRequest;
     path?: never;
@@ -1237,8 +1135,7 @@ export type RequestsGetAvatarsData = {
 export type RequestsGetAvatarsResponses = {
     200: AvatarsResponse;
 };
-export type RequestsGetAvatarsResponse =
-    RequestsGetAvatarsResponses[keyof RequestsGetAvatarsResponses];
+export type RequestsGetAvatarsResponse = RequestsGetAvatarsResponses[keyof RequestsGetAvatarsResponses];
 export type RequestsGetRelationsAvatarsData = {
     body: AvatarsRequest;
     path: {
@@ -1251,8 +1148,7 @@ export type RequestsGetRelationsAvatarsData = {
 export type RequestsGetRelationsAvatarsResponses = {
     200: AvatarsResponse;
 };
-export type RequestsGetRelationsAvatarsResponse =
-    RequestsGetRelationsAvatarsResponses[keyof RequestsGetRelationsAvatarsResponses];
+export type RequestsGetRelationsAvatarsResponse = RequestsGetRelationsAvatarsResponses[keyof RequestsGetRelationsAvatarsResponses];
 export type RisksGetData = {
     body: EntitiesRequest;
     path?: never;
@@ -1284,8 +1180,7 @@ export type RisksGetByIdentifierData = {
 export type RisksGetByIdentifierResponses = {
     200: EntityDetailsResponse;
 };
-export type RisksGetByIdentifierResponse =
-    RisksGetByIdentifierResponses[keyof RisksGetByIdentifierResponses];
+export type RisksGetByIdentifierResponse = RisksGetByIdentifierResponses[keyof RisksGetByIdentifierResponses];
 export type RisksGetByIdsData = {
     body: EntitiesByIdsRequest;
     path?: never;
@@ -1318,8 +1213,7 @@ export type RisksGetRelationsData = {
 export type RisksGetRelationsResponses = {
     200: EntitiesResponse;
 };
-export type RisksGetRelationsResponse =
-    RisksGetRelationsResponses[keyof RisksGetRelationsResponses];
+export type RisksGetRelationsResponse = RisksGetRelationsResponses[keyof RisksGetRelationsResponses];
 export type RisksGetRelationsCountData = {
     body: CountRequest;
     path: {
@@ -1332,8 +1226,7 @@ export type RisksGetRelationsCountData = {
 export type RisksGetRelationsCountResponses = {
     200: CountResponse;
 };
-export type RisksGetRelationsCountResponse =
-    RisksGetRelationsCountResponses[keyof RisksGetRelationsCountResponses];
+export type RisksGetRelationsCountResponse = RisksGetRelationsCountResponses[keyof RisksGetRelationsCountResponses];
 export type RisksGetGroupedRelationsData = {
     body: GroupedRelationsRequest;
     path: {
@@ -1346,8 +1239,7 @@ export type RisksGetGroupedRelationsData = {
 export type RisksGetGroupedRelationsResponses = {
     200: GroupedEntitiesResponse;
 };
-export type RisksGetGroupedRelationsResponse =
-    RisksGetGroupedRelationsResponses[keyof RisksGetGroupedRelationsResponses];
+export type RisksGetGroupedRelationsResponse = RisksGetGroupedRelationsResponses[keyof RisksGetGroupedRelationsResponses];
 export type RisksGetAvatarsData = {
     body: AvatarsRequest;
     path?: never;
@@ -1370,8 +1262,7 @@ export type RisksGetRelationsAvatarsData = {
 export type RisksGetRelationsAvatarsResponses = {
     200: AvatarsResponse;
 };
-export type RisksGetRelationsAvatarsResponse =
-    RisksGetRelationsAvatarsResponses[keyof RisksGetRelationsAvatarsResponses];
+export type RisksGetRelationsAvatarsResponse = RisksGetRelationsAvatarsResponses[keyof RisksGetRelationsAvatarsResponses];
 export type GenericEntityGetData = {
     body: EntitiesRequest;
     path: {
@@ -1395,8 +1286,7 @@ export type GenericEntityGetGroupedData = {
 export type GenericEntityGetGroupedResponses = {
     200: GroupedEntitiesResponse;
 };
-export type GenericEntityGetGroupedResponse =
-    GenericEntityGetGroupedResponses[keyof GenericEntityGetGroupedResponses];
+export type GenericEntityGetGroupedResponse = GenericEntityGetGroupedResponses[keyof GenericEntityGetGroupedResponses];
 export type GenericEntityGetByIdentifierData = {
     body: EntityDetailsRequest;
     path: {
@@ -1409,8 +1299,7 @@ export type GenericEntityGetByIdentifierData = {
 export type GenericEntityGetByIdentifierResponses = {
     200: EntityDetailsResponse;
 };
-export type GenericEntityGetByIdentifierResponse =
-    GenericEntityGetByIdentifierResponses[keyof GenericEntityGetByIdentifierResponses];
+export type GenericEntityGetByIdentifierResponse = GenericEntityGetByIdentifierResponses[keyof GenericEntityGetByIdentifierResponses];
 export type GenericEntityGetByIdsData = {
     body: EntitiesByIdsRequest;
     path: {
@@ -1422,8 +1311,7 @@ export type GenericEntityGetByIdsData = {
 export type GenericEntityGetByIdsResponses = {
     200: EntitiesResponse;
 };
-export type GenericEntityGetByIdsResponse =
-    GenericEntityGetByIdsResponses[keyof GenericEntityGetByIdsResponses];
+export type GenericEntityGetByIdsResponse = GenericEntityGetByIdsResponses[keyof GenericEntityGetByIdsResponses];
 export type GenericEntityGetCountData = {
     body: CountRequest;
     path: {
@@ -1435,8 +1323,7 @@ export type GenericEntityGetCountData = {
 export type GenericEntityGetCountResponses = {
     200: CountResponse;
 };
-export type GenericEntityGetCountResponse =
-    GenericEntityGetCountResponses[keyof GenericEntityGetCountResponses];
+export type GenericEntityGetCountResponse = GenericEntityGetCountResponses[keyof GenericEntityGetCountResponses];
 export type GenericEntityGetRelationsData = {
     body: RelatedEntitiesRequest;
     path: {
@@ -1450,8 +1337,7 @@ export type GenericEntityGetRelationsData = {
 export type GenericEntityGetRelationsResponses = {
     200: EntitiesResponse;
 };
-export type GenericEntityGetRelationsResponse =
-    GenericEntityGetRelationsResponses[keyof GenericEntityGetRelationsResponses];
+export type GenericEntityGetRelationsResponse = GenericEntityGetRelationsResponses[keyof GenericEntityGetRelationsResponses];
 export type GenericEntityGetRelationsCountData = {
     body: CountRequest;
     path: {
@@ -1465,8 +1351,7 @@ export type GenericEntityGetRelationsCountData = {
 export type GenericEntityGetRelationsCountResponses = {
     200: CountResponse;
 };
-export type GenericEntityGetRelationsCountResponse =
-    GenericEntityGetRelationsCountResponses[keyof GenericEntityGetRelationsCountResponses];
+export type GenericEntityGetRelationsCountResponse = GenericEntityGetRelationsCountResponses[keyof GenericEntityGetRelationsCountResponses];
 export type GenericEntityGetGroupedRelationsData = {
     body: GroupedRelationsRequest;
     path: {
@@ -1480,8 +1365,7 @@ export type GenericEntityGetGroupedRelationsData = {
 export type GenericEntityGetGroupedRelationsResponses = {
     200: GroupedEntitiesResponse;
 };
-export type GenericEntityGetGroupedRelationsResponse =
-    GenericEntityGetGroupedRelationsResponses[keyof GenericEntityGetGroupedRelationsResponses];
+export type GenericEntityGetGroupedRelationsResponse = GenericEntityGetGroupedRelationsResponses[keyof GenericEntityGetGroupedRelationsResponses];
 export type GenericEntityGetEntityPicklistData = {
     body?: never;
     path: {
@@ -1500,13 +1384,11 @@ export type GenericEntityGetEntityPicklistData = {
 export type GenericEntityGetEntityPicklistErrors = {
     400: ProblemDetails;
 };
-export type GenericEntityGetEntityPicklistError =
-    GenericEntityGetEntityPicklistErrors[keyof GenericEntityGetEntityPicklistErrors];
+export type GenericEntityGetEntityPicklistError = GenericEntityGetEntityPicklistErrors[keyof GenericEntityGetEntityPicklistErrors];
 export type GenericEntityGetEntityPicklistResponses = {
     200: PicklistData;
 };
-export type GenericEntityGetEntityPicklistResponse =
-    GenericEntityGetEntityPicklistResponses[keyof GenericEntityGetEntityPicklistResponses];
+export type GenericEntityGetEntityPicklistResponse = GenericEntityGetEntityPicklistResponses[keyof GenericEntityGetEntityPicklistResponses];
 export type GenericEntityGetSwimlanesData = {
     body: GroupedEntitiesRequest;
     path: {
@@ -1519,8 +1401,7 @@ export type GenericEntityGetSwimlanesData = {
 export type GenericEntityGetSwimlanesResponses = {
     200: SwimlaneResponse;
 };
-export type GenericEntityGetSwimlanesResponse =
-    GenericEntityGetSwimlanesResponses[keyof GenericEntityGetSwimlanesResponses];
+export type GenericEntityGetSwimlanesResponse = GenericEntityGetSwimlanesResponses[keyof GenericEntityGetSwimlanesResponses];
 export type GenericEntityGetAvatarsData = {
     body: AvatarsRequest;
     path: {
@@ -1532,8 +1413,7 @@ export type GenericEntityGetAvatarsData = {
 export type GenericEntityGetAvatarsResponses = {
     200: AvatarsResponse;
 };
-export type GenericEntityGetAvatarsResponse =
-    GenericEntityGetAvatarsResponses[keyof GenericEntityGetAvatarsResponses];
+export type GenericEntityGetAvatarsResponse = GenericEntityGetAvatarsResponses[keyof GenericEntityGetAvatarsResponses];
 export type GenericEntityGetRelationAvatarsData = {
     body: AvatarsRequest;
     path: {
@@ -1547,8 +1427,7 @@ export type GenericEntityGetRelationAvatarsData = {
 export type GenericEntityGetRelationAvatarsResponses = {
     200: AvatarsResponse;
 };
-export type GenericEntityGetRelationAvatarsResponse =
-    GenericEntityGetRelationAvatarsResponses[keyof GenericEntityGetRelationAvatarsResponses];
+export type GenericEntityGetRelationAvatarsResponse = GenericEntityGetRelationAvatarsResponses[keyof GenericEntityGetRelationAvatarsResponses];
 export type GenericEntityGetCustomPanelByIdentifierData = {
     body?: never;
     path: {
@@ -1561,8 +1440,7 @@ export type GenericEntityGetCustomPanelByIdentifierData = {
 export type GenericEntityGetCustomPanelByIdentifierResponses = {
     200: Array<CustomPanel>;
 };
-export type GenericEntityGetCustomPanelByIdentifierResponse =
-    GenericEntityGetCustomPanelByIdentifierResponses[keyof GenericEntityGetCustomPanelByIdentifierResponses];
+export type GenericEntityGetCustomPanelByIdentifierResponse = GenericEntityGetCustomPanelByIdentifierResponses[keyof GenericEntityGetCustomPanelByIdentifierResponses];
 export type GenericEntityGetSwimlanesByRelationIdentifierData = {
     body: GroupedRelationsRequest;
     path: {
@@ -1577,8 +1455,7 @@ export type GenericEntityGetSwimlanesByRelationIdentifierData = {
 export type GenericEntityGetSwimlanesByRelationIdentifierResponses = {
     200: SwimlaneResponse;
 };
-export type GenericEntityGetSwimlanesByRelationIdentifierResponse =
-    GenericEntityGetSwimlanesByRelationIdentifierResponses[keyof GenericEntityGetSwimlanesByRelationIdentifierResponses];
+export type GenericEntityGetSwimlanesByRelationIdentifierResponse = GenericEntityGetSwimlanesByRelationIdentifierResponses[keyof GenericEntityGetSwimlanesByRelationIdentifierResponses];
 export type GenericEntityGetAvailableEntitiesData = {
     body: EntitiesRequest;
     path: {
@@ -1592,8 +1469,7 @@ export type GenericEntityGetAvailableEntitiesData = {
 export type GenericEntityGetAvailableEntitiesResponses = {
     200: EntitiesResponse;
 };
-export type GenericEntityGetAvailableEntitiesResponse =
-    GenericEntityGetAvailableEntitiesResponses[keyof GenericEntityGetAvailableEntitiesResponses];
+export type GenericEntityGetAvailableEntitiesResponse = GenericEntityGetAvailableEntitiesResponses[keyof GenericEntityGetAvailableEntitiesResponses];
 export type MetadataGetPicklistData = {
     body: MetadataRequest;
     path?: never;
@@ -1603,8 +1479,7 @@ export type MetadataGetPicklistData = {
 export type MetadataGetPicklistResponses = {
     200: Array<PicklistData>;
 };
-export type MetadataGetPicklistResponse =
-    MetadataGetPicklistResponses[keyof MetadataGetPicklistResponses];
+export type MetadataGetPicklistResponse = MetadataGetPicklistResponses[keyof MetadataGetPicklistResponses];
 export type MetadataGetFieldsData = {
     body: MetadataEntitiesRequest;
     path?: never;
@@ -1614,8 +1489,7 @@ export type MetadataGetFieldsData = {
 export type MetadataGetFieldsResponses = {
     200: Array<FieldsResponse>;
 };
-export type MetadataGetFieldsResponse =
-    MetadataGetFieldsResponses[keyof MetadataGetFieldsResponses];
+export type MetadataGetFieldsResponse = MetadataGetFieldsResponses[keyof MetadataGetFieldsResponses];
 export type MetadataGetSystemSettingsData = {
     body?: never;
     path?: never;
@@ -1625,8 +1499,7 @@ export type MetadataGetSystemSettingsData = {
 export type MetadataGetSystemSettingsResponses = {
     200: SystemSettingsResponse;
 };
-export type MetadataGetSystemSettingsResponse =
-    MetadataGetSystemSettingsResponses[keyof MetadataGetSystemSettingsResponses];
+export type MetadataGetSystemSettingsResponse = MetadataGetSystemSettingsResponses[keyof MetadataGetSystemSettingsResponses];
 export type MetadataGetOrganizationSettingsData = {
     body?: never;
     path?: never;
@@ -1636,8 +1509,7 @@ export type MetadataGetOrganizationSettingsData = {
 export type MetadataGetOrganizationSettingsResponses = {
     200: OrganizationSettingsResponse;
 };
-export type MetadataGetOrganizationSettingsResponse =
-    MetadataGetOrganizationSettingsResponses[keyof MetadataGetOrganizationSettingsResponses];
+export type MetadataGetOrganizationSettingsResponse = MetadataGetOrganizationSettingsResponses[keyof MetadataGetOrganizationSettingsResponses];
 export type MetadataGetEntitiesDescriptionData = {
     body: DescribeEntitiesRequest;
     path?: never;
@@ -1647,8 +1519,7 @@ export type MetadataGetEntitiesDescriptionData = {
 export type MetadataGetEntitiesDescriptionResponses = {
     200: DescribeEntitiesResponse;
 };
-export type MetadataGetEntitiesDescriptionResponse =
-    MetadataGetEntitiesDescriptionResponses[keyof MetadataGetEntitiesDescriptionResponses];
+export type MetadataGetEntitiesDescriptionResponse = MetadataGetEntitiesDescriptionResponses[keyof MetadataGetEntitiesDescriptionResponses];
 export type MetadataGetAvailableFieldsData = {
     body: AvailableFieldsRequest;
     path?: never;
@@ -1658,8 +1529,7 @@ export type MetadataGetAvailableFieldsData = {
 export type MetadataGetAvailableFieldsResponses = {
     200: Array<FieldsResponse>;
 };
-export type MetadataGetAvailableFieldsResponse =
-    MetadataGetAvailableFieldsResponses[keyof MetadataGetAvailableFieldsResponses];
+export type MetadataGetAvailableFieldsResponse = MetadataGetAvailableFieldsResponses[keyof MetadataGetAvailableFieldsResponses];
 export type MetadataGetRelationViewerFieldsData = {
     body: RelationFieldsRequest;
     path?: never;
@@ -1669,8 +1539,7 @@ export type MetadataGetRelationViewerFieldsData = {
 export type MetadataGetRelationViewerFieldsResponses = {
     200: Array<RelationFieldsResponse>;
 };
-export type MetadataGetRelationViewerFieldsResponse =
-    MetadataGetRelationViewerFieldsResponses[keyof MetadataGetRelationViewerFieldsResponses];
+export type MetadataGetRelationViewerFieldsResponse = MetadataGetRelationViewerFieldsResponses[keyof MetadataGetRelationViewerFieldsResponses];
 export type PortfoliosGetData = {
     body: EntitiesRequest;
     path?: never;
@@ -1690,8 +1559,7 @@ export type PortfoliosGetGroupedData = {
 export type PortfoliosGetGroupedResponses = {
     200: GroupedEntitiesResponse;
 };
-export type PortfoliosGetGroupedResponse =
-    PortfoliosGetGroupedResponses[keyof PortfoliosGetGroupedResponses];
+export type PortfoliosGetGroupedResponse = PortfoliosGetGroupedResponses[keyof PortfoliosGetGroupedResponses];
 export type PortfoliosGetByIdentifierData = {
     body: EntityDetailsRequest;
     path: {
@@ -1703,8 +1571,7 @@ export type PortfoliosGetByIdentifierData = {
 export type PortfoliosGetByIdentifierResponses = {
     200: EntityDetailsResponse;
 };
-export type PortfoliosGetByIdentifierResponse =
-    PortfoliosGetByIdentifierResponses[keyof PortfoliosGetByIdentifierResponses];
+export type PortfoliosGetByIdentifierResponse = PortfoliosGetByIdentifierResponses[keyof PortfoliosGetByIdentifierResponses];
 export type PortfoliosGetByIdsData = {
     body: EntitiesByIdsRequest;
     path?: never;
@@ -1714,8 +1581,7 @@ export type PortfoliosGetByIdsData = {
 export type PortfoliosGetByIdsResponses = {
     200: EntitiesResponse;
 };
-export type PortfoliosGetByIdsResponse =
-    PortfoliosGetByIdsResponses[keyof PortfoliosGetByIdsResponses];
+export type PortfoliosGetByIdsResponse = PortfoliosGetByIdsResponses[keyof PortfoliosGetByIdsResponses];
 export type PortfoliosGetCountData = {
     body: CountRequest;
     path?: never;
@@ -1725,8 +1591,7 @@ export type PortfoliosGetCountData = {
 export type PortfoliosGetCountResponses = {
     200: CountResponse;
 };
-export type PortfoliosGetCountResponse =
-    PortfoliosGetCountResponses[keyof PortfoliosGetCountResponses];
+export type PortfoliosGetCountResponse = PortfoliosGetCountResponses[keyof PortfoliosGetCountResponses];
 export type PortfoliosGetRelationsData = {
     body: RelatedEntitiesRequest;
     path: {
@@ -1739,8 +1604,7 @@ export type PortfoliosGetRelationsData = {
 export type PortfoliosGetRelationsResponses = {
     200: EntitiesResponse;
 };
-export type PortfoliosGetRelationsResponse =
-    PortfoliosGetRelationsResponses[keyof PortfoliosGetRelationsResponses];
+export type PortfoliosGetRelationsResponse = PortfoliosGetRelationsResponses[keyof PortfoliosGetRelationsResponses];
 export type PortfoliosGetRelationsCountData = {
     body: CountRequest;
     path: {
@@ -1753,8 +1617,7 @@ export type PortfoliosGetRelationsCountData = {
 export type PortfoliosGetRelationsCountResponses = {
     200: CountResponse;
 };
-export type PortfoliosGetRelationsCountResponse =
-    PortfoliosGetRelationsCountResponses[keyof PortfoliosGetRelationsCountResponses];
+export type PortfoliosGetRelationsCountResponse = PortfoliosGetRelationsCountResponses[keyof PortfoliosGetRelationsCountResponses];
 export type PortfoliosGetGroupedRelationsData = {
     body: GroupedRelationsRequest;
     path: {
@@ -1767,8 +1630,7 @@ export type PortfoliosGetGroupedRelationsData = {
 export type PortfoliosGetGroupedRelationsResponses = {
     200: GroupedEntitiesResponse;
 };
-export type PortfoliosGetGroupedRelationsResponse =
-    PortfoliosGetGroupedRelationsResponses[keyof PortfoliosGetGroupedRelationsResponses];
+export type PortfoliosGetGroupedRelationsResponse = PortfoliosGetGroupedRelationsResponses[keyof PortfoliosGetGroupedRelationsResponses];
 export type PortfoliosGetAvatarsData = {
     body: AvatarsRequest;
     path?: never;
@@ -1778,8 +1640,7 @@ export type PortfoliosGetAvatarsData = {
 export type PortfoliosGetAvatarsResponses = {
     200: AvatarsResponse;
 };
-export type PortfoliosGetAvatarsResponse =
-    PortfoliosGetAvatarsResponses[keyof PortfoliosGetAvatarsResponses];
+export type PortfoliosGetAvatarsResponse = PortfoliosGetAvatarsResponses[keyof PortfoliosGetAvatarsResponses];
 export type PortfoliosGetRelationsAvatarsData = {
     body: AvatarsRequest;
     path: {
@@ -1792,8 +1653,7 @@ export type PortfoliosGetRelationsAvatarsData = {
 export type PortfoliosGetRelationsAvatarsResponses = {
     200: AvatarsResponse;
 };
-export type PortfoliosGetRelationsAvatarsResponse =
-    PortfoliosGetRelationsAvatarsResponses[keyof PortfoliosGetRelationsAvatarsResponses];
+export type PortfoliosGetRelationsAvatarsResponse = PortfoliosGetRelationsAvatarsResponses[keyof PortfoliosGetRelationsAvatarsResponses];
 export type PropertyCardLayoutGetPropertyCardLayoutData = {
     body?: never;
     path: {
@@ -1805,8 +1665,7 @@ export type PropertyCardLayoutGetPropertyCardLayoutData = {
 export type PropertyCardLayoutGetPropertyCardLayoutResponses = {
     200: PropertyCardLayoutResponse;
 };
-export type PropertyCardLayoutGetPropertyCardLayoutResponse =
-    PropertyCardLayoutGetPropertyCardLayoutResponses[keyof PropertyCardLayoutGetPropertyCardLayoutResponses];
+export type PropertyCardLayoutGetPropertyCardLayoutResponse = PropertyCardLayoutGetPropertyCardLayoutResponses[keyof PropertyCardLayoutGetPropertyCardLayoutResponses];
 export type PropertyCardLayoutGetPropertyCardLayoutByEntityIdData = {
     body?: never;
     path: {
@@ -1818,8 +1677,7 @@ export type PropertyCardLayoutGetPropertyCardLayoutByEntityIdData = {
 export type PropertyCardLayoutGetPropertyCardLayoutByEntityIdResponses = {
     200: PropertyCardLayoutResponse;
 };
-export type PropertyCardLayoutGetPropertyCardLayoutByEntityIdResponse =
-    PropertyCardLayoutGetPropertyCardLayoutByEntityIdResponses[keyof PropertyCardLayoutGetPropertyCardLayoutByEntityIdResponses];
+export type PropertyCardLayoutGetPropertyCardLayoutByEntityIdResponse = PropertyCardLayoutGetPropertyCardLayoutByEntityIdResponses[keyof PropertyCardLayoutGetPropertyCardLayoutByEntityIdResponses];
 export type JobTitlesGetCountData = {
     body: CountRequest;
     path?: never;
@@ -1829,8 +1687,7 @@ export type JobTitlesGetCountData = {
 export type JobTitlesGetCountResponses = {
     200: CountResponse;
 };
-export type JobTitlesGetCountResponse =
-    JobTitlesGetCountResponses[keyof JobTitlesGetCountResponses];
+export type JobTitlesGetCountResponse = JobTitlesGetCountResponses[keyof JobTitlesGetCountResponses];
 export type JobTitlesGetRelationsCountData = {
     body: CountRequest;
     path: {
@@ -1843,8 +1700,7 @@ export type JobTitlesGetRelationsCountData = {
 export type JobTitlesGetRelationsCountResponses = {
     200: CountResponse;
 };
-export type JobTitlesGetRelationsCountResponse =
-    JobTitlesGetRelationsCountResponses[keyof JobTitlesGetRelationsCountResponses];
+export type JobTitlesGetRelationsCountResponse = JobTitlesGetRelationsCountResponses[keyof JobTitlesGetRelationsCountResponses];
 export type JobTitlesGetData = {
     body: EntitiesRequest;
     path?: never;
@@ -1864,8 +1720,7 @@ export type JobTitlesGetGroupedData = {
 export type JobTitlesGetGroupedResponses = {
     200: GroupedEntitiesResponse;
 };
-export type JobTitlesGetGroupedResponse =
-    JobTitlesGetGroupedResponses[keyof JobTitlesGetGroupedResponses];
+export type JobTitlesGetGroupedResponse = JobTitlesGetGroupedResponses[keyof JobTitlesGetGroupedResponses];
 export type JobTitlesGetByIdentifierData = {
     body: EntityDetailsRequest;
     path: {
@@ -1877,8 +1732,7 @@ export type JobTitlesGetByIdentifierData = {
 export type JobTitlesGetByIdentifierResponses = {
     200: EntityDetailsResponse;
 };
-export type JobTitlesGetByIdentifierResponse =
-    JobTitlesGetByIdentifierResponses[keyof JobTitlesGetByIdentifierResponses];
+export type JobTitlesGetByIdentifierResponse = JobTitlesGetByIdentifierResponses[keyof JobTitlesGetByIdentifierResponses];
 export type JobTitlesGetByIdsData = {
     body: EntitiesByIdsRequest;
     path?: never;
@@ -1888,8 +1742,7 @@ export type JobTitlesGetByIdsData = {
 export type JobTitlesGetByIdsResponses = {
     200: EntitiesResponse;
 };
-export type JobTitlesGetByIdsResponse =
-    JobTitlesGetByIdsResponses[keyof JobTitlesGetByIdsResponses];
+export type JobTitlesGetByIdsResponse = JobTitlesGetByIdsResponses[keyof JobTitlesGetByIdsResponses];
 export type JobTitlesGetRelationsData = {
     body: RelatedEntitiesRequest;
     path: {
@@ -1902,8 +1755,7 @@ export type JobTitlesGetRelationsData = {
 export type JobTitlesGetRelationsResponses = {
     200: EntitiesResponse;
 };
-export type JobTitlesGetRelationsResponse =
-    JobTitlesGetRelationsResponses[keyof JobTitlesGetRelationsResponses];
+export type JobTitlesGetRelationsResponse = JobTitlesGetRelationsResponses[keyof JobTitlesGetRelationsResponses];
 export type JobTitlesGetGroupedRelationsData = {
     body: GroupedRelationsRequest;
     path: {
@@ -1916,8 +1768,7 @@ export type JobTitlesGetGroupedRelationsData = {
 export type JobTitlesGetGroupedRelationsResponses = {
     200: GroupedEntitiesResponse;
 };
-export type JobTitlesGetGroupedRelationsResponse =
-    JobTitlesGetGroupedRelationsResponses[keyof JobTitlesGetGroupedRelationsResponses];
+export type JobTitlesGetGroupedRelationsResponse = JobTitlesGetGroupedRelationsResponses[keyof JobTitlesGetGroupedRelationsResponses];
 export type MembersGetAllMembersData = {
     body: EntitiesRequest;
     path?: never;
@@ -1927,8 +1778,7 @@ export type MembersGetAllMembersData = {
 export type MembersGetAllMembersResponses = {
     200: EntitiesResponse;
 };
-export type MembersGetAllMembersResponse =
-    MembersGetAllMembersResponses[keyof MembersGetAllMembersResponses];
+export type MembersGetAllMembersResponse = MembersGetAllMembersResponses[keyof MembersGetAllMembersResponses];
 export type ProfilesGetCountData = {
     body: CountRequest;
     path?: never;
@@ -1960,8 +1810,7 @@ export type ProfilesGetByIdentifierData = {
 export type ProfilesGetByIdentifierResponses = {
     200: EntityDetailsResponse;
 };
-export type ProfilesGetByIdentifierResponse =
-    ProfilesGetByIdentifierResponses[keyof ProfilesGetByIdentifierResponses];
+export type ProfilesGetByIdentifierResponse = ProfilesGetByIdentifierResponses[keyof ProfilesGetByIdentifierResponses];
 export type ProfilesGetByIdsData = {
     body: EntitiesByIdsRequest;
     path?: never;
@@ -1983,8 +1832,7 @@ export type ProfilesGetUserProfilesData = {
 export type ProfilesGetUserProfilesResponses = {
     200: ProfilesResponse;
 };
-export type ProfilesGetUserProfilesResponse =
-    ProfilesGetUserProfilesResponses[keyof ProfilesGetUserProfilesResponses];
+export type ProfilesGetUserProfilesResponse = ProfilesGetUserProfilesResponses[keyof ProfilesGetUserProfilesResponses];
 export type SkillsGetData = {
     body: EntitiesRequest;
     path?: never;
@@ -2016,8 +1864,7 @@ export type SkillsGetByIdentifierData = {
 export type SkillsGetByIdentifierResponses = {
     200: EntityDetailsResponse;
 };
-export type SkillsGetByIdentifierResponse =
-    SkillsGetByIdentifierResponses[keyof SkillsGetByIdentifierResponses];
+export type SkillsGetByIdentifierResponse = SkillsGetByIdentifierResponses[keyof SkillsGetByIdentifierResponses];
 export type SkillsGetByIdsData = {
     body: EntitiesByIdsRequest;
     path?: never;
@@ -2050,8 +1897,7 @@ export type SkillsGetRelationsData = {
 export type SkillsGetRelationsResponses = {
     200: EntitiesResponse;
 };
-export type SkillsGetRelationsResponse =
-    SkillsGetRelationsResponses[keyof SkillsGetRelationsResponses];
+export type SkillsGetRelationsResponse = SkillsGetRelationsResponses[keyof SkillsGetRelationsResponses];
 export type SkillsGetRelationsCountData = {
     body: CountRequest;
     path: {
@@ -2064,8 +1910,7 @@ export type SkillsGetRelationsCountData = {
 export type SkillsGetRelationsCountResponses = {
     200: CountResponse;
 };
-export type SkillsGetRelationsCountResponse =
-    SkillsGetRelationsCountResponses[keyof SkillsGetRelationsCountResponses];
+export type SkillsGetRelationsCountResponse = SkillsGetRelationsCountResponses[keyof SkillsGetRelationsCountResponses];
 export type SkillsGetGroupedRelationsData = {
     body: GroupedRelationsRequest;
     path: {
@@ -2078,8 +1923,7 @@ export type SkillsGetGroupedRelationsData = {
 export type SkillsGetGroupedRelationsResponses = {
     200: GroupedEntitiesResponse;
 };
-export type SkillsGetGroupedRelationsResponse =
-    SkillsGetGroupedRelationsResponses[keyof SkillsGetGroupedRelationsResponses];
+export type SkillsGetGroupedRelationsResponse = SkillsGetGroupedRelationsResponses[keyof SkillsGetGroupedRelationsResponses];
 export type UserGroupsGetData = {
     body: EntitiesRequest;
     path?: never;
@@ -2099,8 +1943,7 @@ export type UserGroupsGetGroupedData = {
 export type UserGroupsGetGroupedResponses = {
     200: GroupedEntitiesResponse;
 };
-export type UserGroupsGetGroupedResponse =
-    UserGroupsGetGroupedResponses[keyof UserGroupsGetGroupedResponses];
+export type UserGroupsGetGroupedResponse = UserGroupsGetGroupedResponses[keyof UserGroupsGetGroupedResponses];
 export type UserGroupsGetByIdentifierData = {
     body: EntityDetailsRequest;
     path: {
@@ -2112,8 +1955,7 @@ export type UserGroupsGetByIdentifierData = {
 export type UserGroupsGetByIdentifierResponses = {
     200: EntityDetailsResponse;
 };
-export type UserGroupsGetByIdentifierResponse =
-    UserGroupsGetByIdentifierResponses[keyof UserGroupsGetByIdentifierResponses];
+export type UserGroupsGetByIdentifierResponse = UserGroupsGetByIdentifierResponses[keyof UserGroupsGetByIdentifierResponses];
 export type UserGroupsGetByIdsData = {
     body: EntitiesByIdsRequest;
     path?: never;
@@ -2123,8 +1965,7 @@ export type UserGroupsGetByIdsData = {
 export type UserGroupsGetByIdsResponses = {
     200: EntitiesResponse;
 };
-export type UserGroupsGetByIdsResponse =
-    UserGroupsGetByIdsResponses[keyof UserGroupsGetByIdsResponses];
+export type UserGroupsGetByIdsResponse = UserGroupsGetByIdsResponses[keyof UserGroupsGetByIdsResponses];
 export type UserGroupsGetCountData = {
     body: CountRequest;
     path?: never;
@@ -2134,8 +1975,7 @@ export type UserGroupsGetCountData = {
 export type UserGroupsGetCountResponses = {
     200: CountResponse;
 };
-export type UserGroupsGetCountResponse =
-    UserGroupsGetCountResponses[keyof UserGroupsGetCountResponses];
+export type UserGroupsGetCountResponse = UserGroupsGetCountResponses[keyof UserGroupsGetCountResponses];
 export type UserGroupsGetRelationsData = {
     body: RelatedEntitiesRequest;
     path: {
@@ -2148,8 +1988,7 @@ export type UserGroupsGetRelationsData = {
 export type UserGroupsGetRelationsResponses = {
     200: EntitiesResponse;
 };
-export type UserGroupsGetRelationsResponse =
-    UserGroupsGetRelationsResponses[keyof UserGroupsGetRelationsResponses];
+export type UserGroupsGetRelationsResponse = UserGroupsGetRelationsResponses[keyof UserGroupsGetRelationsResponses];
 export type UserGroupsGetRelationsCountData = {
     body: CountRequest;
     path: {
@@ -2162,8 +2001,7 @@ export type UserGroupsGetRelationsCountData = {
 export type UserGroupsGetRelationsCountResponses = {
     200: CountResponse;
 };
-export type UserGroupsGetRelationsCountResponse =
-    UserGroupsGetRelationsCountResponses[keyof UserGroupsGetRelationsCountResponses];
+export type UserGroupsGetRelationsCountResponse = UserGroupsGetRelationsCountResponses[keyof UserGroupsGetRelationsCountResponses];
 export type UserGroupsGetGroupedRelationsData = {
     body: GroupedRelationsRequest;
     path: {
@@ -2176,8 +2014,7 @@ export type UserGroupsGetGroupedRelationsData = {
 export type UserGroupsGetGroupedRelationsResponses = {
     200: GroupedEntitiesResponse;
 };
-export type UserGroupsGetGroupedRelationsResponse =
-    UserGroupsGetGroupedRelationsResponses[keyof UserGroupsGetGroupedRelationsResponses];
+export type UserGroupsGetGroupedRelationsResponse = UserGroupsGetGroupedRelationsResponses[keyof UserGroupsGetGroupedRelationsResponses];
 export type UserGroupsGetAuthorizationGroupsData = {
     body?: never;
     path?: never;
@@ -2187,8 +2024,7 @@ export type UserGroupsGetAuthorizationGroupsData = {
 export type UserGroupsGetAuthorizationGroupsResponses = {
     200: AuthorizationGroupsResponse;
 };
-export type UserGroupsGetAuthorizationGroupsResponse =
-    UserGroupsGetAuthorizationGroupsResponses[keyof UserGroupsGetAuthorizationGroupsResponses];
+export type UserGroupsGetAuthorizationGroupsResponse = UserGroupsGetAuthorizationGroupsResponses[keyof UserGroupsGetAuthorizationGroupsResponses];
 export type UserGroupsGetRelatedGroupsForUserData = {
     body: EntitiesRequest;
     path: {
@@ -2200,8 +2036,7 @@ export type UserGroupsGetRelatedGroupsForUserData = {
 export type UserGroupsGetRelatedGroupsForUserResponses = {
     200: EntitiesResponse;
 };
-export type UserGroupsGetRelatedGroupsForUserResponse =
-    UserGroupsGetRelatedGroupsForUserResponses[keyof UserGroupsGetRelatedGroupsForUserResponses];
+export type UserGroupsGetRelatedGroupsForUserResponse = UserGroupsGetRelatedGroupsForUserResponses[keyof UserGroupsGetRelatedGroupsForUserResponses];
 export type UsersGetData = {
     body: EntitiesRequest;
     path?: never;
@@ -2233,8 +2068,7 @@ export type UsersGetByIdentifierData = {
 export type UsersGetByIdentifierResponses = {
     200: EntityDetailsResponse;
 };
-export type UsersGetByIdentifierResponse =
-    UsersGetByIdentifierResponses[keyof UsersGetByIdentifierResponses];
+export type UsersGetByIdentifierResponse = UsersGetByIdentifierResponses[keyof UsersGetByIdentifierResponses];
 export type UsersGetByIdsData = {
     body: EntitiesByIdsRequest;
     path?: never;
@@ -2267,8 +2101,7 @@ export type UsersGetRelationsData = {
 export type UsersGetRelationsResponses = {
     200: EntitiesResponse;
 };
-export type UsersGetRelationsResponse =
-    UsersGetRelationsResponses[keyof UsersGetRelationsResponses];
+export type UsersGetRelationsResponse = UsersGetRelationsResponses[keyof UsersGetRelationsResponses];
 export type UsersGetRelationsCountData = {
     body: CountRequest;
     path: {
@@ -2281,8 +2114,7 @@ export type UsersGetRelationsCountData = {
 export type UsersGetRelationsCountResponses = {
     200: CountResponse;
 };
-export type UsersGetRelationsCountResponse =
-    UsersGetRelationsCountResponses[keyof UsersGetRelationsCountResponses];
+export type UsersGetRelationsCountResponse = UsersGetRelationsCountResponses[keyof UsersGetRelationsCountResponses];
 export type UsersGetGroupedRelationsData = {
     body: GroupedRelationsRequest;
     path: {
@@ -2295,8 +2127,7 @@ export type UsersGetGroupedRelationsData = {
 export type UsersGetGroupedRelationsResponses = {
     200: GroupedEntitiesResponse;
 };
-export type UsersGetGroupedRelationsResponse =
-    UsersGetGroupedRelationsResponses[keyof UsersGetGroupedRelationsResponses];
+export type UsersGetGroupedRelationsResponse = UsersGetGroupedRelationsResponses[keyof UsersGetGroupedRelationsResponses];
 export type RibbonActionsGetRibbonActionsData = {
     body: RibbonActionsRequest;
     path?: never;
@@ -2306,8 +2137,7 @@ export type RibbonActionsGetRibbonActionsData = {
 export type RibbonActionsGetRibbonActionsResponses = {
     200: RibbonActionsResponse;
 };
-export type RibbonActionsGetRibbonActionsResponse =
-    RibbonActionsGetRibbonActionsResponses[keyof RibbonActionsGetRibbonActionsResponses];
+export type RibbonActionsGetRibbonActionsResponse = RibbonActionsGetRibbonActionsResponses[keyof RibbonActionsGetRibbonActionsResponses];
 export type RibbonActionsGetContextMenusData = {
     body: ContextMenusRequest;
     path?: never;
@@ -2317,8 +2147,7 @@ export type RibbonActionsGetContextMenusData = {
 export type RibbonActionsGetContextMenusResponses = {
     200: ContextMenusResponse;
 };
-export type RibbonActionsGetContextMenusResponse =
-    RibbonActionsGetContextMenusResponses[keyof RibbonActionsGetContextMenusResponses];
+export type RibbonActionsGetContextMenusResponse = RibbonActionsGetContextMenusResponses[keyof RibbonActionsGetContextMenusResponses];
 export type MilestonesGetData = {
     body: EntitiesRequest;
     path?: never;
@@ -2338,8 +2167,7 @@ export type MilestonesGetGroupedData = {
 export type MilestonesGetGroupedResponses = {
     200: GroupedEntitiesResponse;
 };
-export type MilestonesGetGroupedResponse =
-    MilestonesGetGroupedResponses[keyof MilestonesGetGroupedResponses];
+export type MilestonesGetGroupedResponse = MilestonesGetGroupedResponses[keyof MilestonesGetGroupedResponses];
 export type MilestonesGetByIdentifierData = {
     body: EntityDetailsRequest;
     path: {
@@ -2351,8 +2179,7 @@ export type MilestonesGetByIdentifierData = {
 export type MilestonesGetByIdentifierResponses = {
     200: EntityDetailsResponse;
 };
-export type MilestonesGetByIdentifierResponse =
-    MilestonesGetByIdentifierResponses[keyof MilestonesGetByIdentifierResponses];
+export type MilestonesGetByIdentifierResponse = MilestonesGetByIdentifierResponses[keyof MilestonesGetByIdentifierResponses];
 export type MilestonesGetByIdsData = {
     body: EntitiesByIdsRequest;
     path?: never;
@@ -2362,8 +2189,7 @@ export type MilestonesGetByIdsData = {
 export type MilestonesGetByIdsResponses = {
     200: EntitiesResponse;
 };
-export type MilestonesGetByIdsResponse =
-    MilestonesGetByIdsResponses[keyof MilestonesGetByIdsResponses];
+export type MilestonesGetByIdsResponse = MilestonesGetByIdsResponses[keyof MilestonesGetByIdsResponses];
 export type MilestonesGetCountData = {
     body: CountRequest;
     path?: never;
@@ -2373,8 +2199,7 @@ export type MilestonesGetCountData = {
 export type MilestonesGetCountResponses = {
     200: CountResponse;
 };
-export type MilestonesGetCountResponse =
-    MilestonesGetCountResponses[keyof MilestonesGetCountResponses];
+export type MilestonesGetCountResponse = MilestonesGetCountResponses[keyof MilestonesGetCountResponses];
 export type MilestonesGetRelationsData = {
     body: RelatedEntitiesRequest;
     path: {
@@ -2387,8 +2212,7 @@ export type MilestonesGetRelationsData = {
 export type MilestonesGetRelationsResponses = {
     200: EntitiesResponse;
 };
-export type MilestonesGetRelationsResponse =
-    MilestonesGetRelationsResponses[keyof MilestonesGetRelationsResponses];
+export type MilestonesGetRelationsResponse = MilestonesGetRelationsResponses[keyof MilestonesGetRelationsResponses];
 export type MilestonesGetRelationsCountData = {
     body: CountRequest;
     path: {
@@ -2401,8 +2225,7 @@ export type MilestonesGetRelationsCountData = {
 export type MilestonesGetRelationsCountResponses = {
     200: CountResponse;
 };
-export type MilestonesGetRelationsCountResponse =
-    MilestonesGetRelationsCountResponses[keyof MilestonesGetRelationsCountResponses];
+export type MilestonesGetRelationsCountResponse = MilestonesGetRelationsCountResponses[keyof MilestonesGetRelationsCountResponses];
 export type MilestonesGetGroupedRelationsData = {
     body: GroupedRelationsRequest;
     path: {
@@ -2415,8 +2238,7 @@ export type MilestonesGetGroupedRelationsData = {
 export type MilestonesGetGroupedRelationsResponses = {
     200: GroupedEntitiesResponse;
 };
-export type MilestonesGetGroupedRelationsResponse =
-    MilestonesGetGroupedRelationsResponses[keyof MilestonesGetGroupedRelationsResponses];
+export type MilestonesGetGroupedRelationsResponse = MilestonesGetGroupedRelationsResponses[keyof MilestonesGetGroupedRelationsResponses];
 export type MilestonesGetAvatarsData = {
     body: AvatarsRequest;
     path?: never;
@@ -2426,8 +2248,7 @@ export type MilestonesGetAvatarsData = {
 export type MilestonesGetAvatarsResponses = {
     200: AvatarsResponse;
 };
-export type MilestonesGetAvatarsResponse =
-    MilestonesGetAvatarsResponses[keyof MilestonesGetAvatarsResponses];
+export type MilestonesGetAvatarsResponse = MilestonesGetAvatarsResponses[keyof MilestonesGetAvatarsResponses];
 export type MilestonesGetRelationsAvatarsData = {
     body: AvatarsRequest;
     path: {
@@ -2440,8 +2261,7 @@ export type MilestonesGetRelationsAvatarsData = {
 export type MilestonesGetRelationsAvatarsResponses = {
     200: AvatarsResponse;
 };
-export type MilestonesGetRelationsAvatarsResponse =
-    MilestonesGetRelationsAvatarsResponses[keyof MilestonesGetRelationsAvatarsResponses];
+export type MilestonesGetRelationsAvatarsResponse = MilestonesGetRelationsAvatarsResponses[keyof MilestonesGetRelationsAvatarsResponses];
 export type ProgramsGetData = {
     body: EntitiesRequest;
     path?: never;
@@ -2461,8 +2281,7 @@ export type ProgramsGetGroupedData = {
 export type ProgramsGetGroupedResponses = {
     200: GroupedEntitiesResponse;
 };
-export type ProgramsGetGroupedResponse =
-    ProgramsGetGroupedResponses[keyof ProgramsGetGroupedResponses];
+export type ProgramsGetGroupedResponse = ProgramsGetGroupedResponses[keyof ProgramsGetGroupedResponses];
 export type ProgramsGetByIdentifierData = {
     body: EntityDetailsRequest;
     path: {
@@ -2474,8 +2293,7 @@ export type ProgramsGetByIdentifierData = {
 export type ProgramsGetByIdentifierResponses = {
     200: EntityDetailsResponse;
 };
-export type ProgramsGetByIdentifierResponse =
-    ProgramsGetByIdentifierResponses[keyof ProgramsGetByIdentifierResponses];
+export type ProgramsGetByIdentifierResponse = ProgramsGetByIdentifierResponses[keyof ProgramsGetByIdentifierResponses];
 export type ProgramsGetByIdsData = {
     body: EntitiesByIdsRequest;
     path?: never;
@@ -2508,8 +2326,7 @@ export type ProgramsGetRelationsData = {
 export type ProgramsGetRelationsResponses = {
     200: EntitiesResponse;
 };
-export type ProgramsGetRelationsResponse =
-    ProgramsGetRelationsResponses[keyof ProgramsGetRelationsResponses];
+export type ProgramsGetRelationsResponse = ProgramsGetRelationsResponses[keyof ProgramsGetRelationsResponses];
 export type ProgramsGetRelationsCountData = {
     body: CountRequest;
     path: {
@@ -2522,8 +2339,7 @@ export type ProgramsGetRelationsCountData = {
 export type ProgramsGetRelationsCountResponses = {
     200: CountResponse;
 };
-export type ProgramsGetRelationsCountResponse =
-    ProgramsGetRelationsCountResponses[keyof ProgramsGetRelationsCountResponses];
+export type ProgramsGetRelationsCountResponse = ProgramsGetRelationsCountResponses[keyof ProgramsGetRelationsCountResponses];
 export type ProgramsGetGroupedRelationsData = {
     body: GroupedRelationsRequest;
     path: {
@@ -2536,8 +2352,7 @@ export type ProgramsGetGroupedRelationsData = {
 export type ProgramsGetGroupedRelationsResponses = {
     200: GroupedEntitiesResponse;
 };
-export type ProgramsGetGroupedRelationsResponse =
-    ProgramsGetGroupedRelationsResponses[keyof ProgramsGetGroupedRelationsResponses];
+export type ProgramsGetGroupedRelationsResponse = ProgramsGetGroupedRelationsResponses[keyof ProgramsGetGroupedRelationsResponses];
 export type ProgramsGetAvatarsData = {
     body: AvatarsRequest;
     path?: never;
@@ -2547,8 +2362,7 @@ export type ProgramsGetAvatarsData = {
 export type ProgramsGetAvatarsResponses = {
     200: AvatarsResponse;
 };
-export type ProgramsGetAvatarsResponse =
-    ProgramsGetAvatarsResponses[keyof ProgramsGetAvatarsResponses];
+export type ProgramsGetAvatarsResponse = ProgramsGetAvatarsResponses[keyof ProgramsGetAvatarsResponses];
 export type ProgramsGetRelationsAvatarsData = {
     body: AvatarsRequest;
     path: {
@@ -2561,8 +2375,7 @@ export type ProgramsGetRelationsAvatarsData = {
 export type ProgramsGetRelationsAvatarsResponses = {
     200: AvatarsResponse;
 };
-export type ProgramsGetRelationsAvatarsResponse =
-    ProgramsGetRelationsAvatarsResponses[keyof ProgramsGetRelationsAvatarsResponses];
+export type ProgramsGetRelationsAvatarsResponse = ProgramsGetRelationsAvatarsResponses[keyof ProgramsGetRelationsAvatarsResponses];
 export type ProjectsGetData = {
     body: EntitiesRequest;
     path?: never;
@@ -2582,8 +2395,7 @@ export type ProjectsGetGroupedData = {
 export type ProjectsGetGroupedResponses = {
     200: GroupedEntitiesResponse;
 };
-export type ProjectsGetGroupedResponse =
-    ProjectsGetGroupedResponses[keyof ProjectsGetGroupedResponses];
+export type ProjectsGetGroupedResponse = ProjectsGetGroupedResponses[keyof ProjectsGetGroupedResponses];
 export type ProjectsGetByIdentifierData = {
     body: EntityDetailsRequest;
     path: {
@@ -2595,8 +2407,7 @@ export type ProjectsGetByIdentifierData = {
 export type ProjectsGetByIdentifierResponses = {
     200: EntityDetailsResponse;
 };
-export type ProjectsGetByIdentifierResponse =
-    ProjectsGetByIdentifierResponses[keyof ProjectsGetByIdentifierResponses];
+export type ProjectsGetByIdentifierResponse = ProjectsGetByIdentifierResponses[keyof ProjectsGetByIdentifierResponses];
 export type ProjectsGetByIdsData = {
     body: EntitiesByIdsRequest;
     path?: never;
@@ -2629,8 +2440,7 @@ export type ProjectsGetRelationsData = {
 export type ProjectsGetRelationsResponses = {
     200: EntitiesResponse;
 };
-export type ProjectsGetRelationsResponse =
-    ProjectsGetRelationsResponses[keyof ProjectsGetRelationsResponses];
+export type ProjectsGetRelationsResponse = ProjectsGetRelationsResponses[keyof ProjectsGetRelationsResponses];
 export type ProjectsGetRelationsCountData = {
     body: CountRequest;
     path: {
@@ -2643,8 +2453,7 @@ export type ProjectsGetRelationsCountData = {
 export type ProjectsGetRelationsCountResponses = {
     200: CountResponse;
 };
-export type ProjectsGetRelationsCountResponse =
-    ProjectsGetRelationsCountResponses[keyof ProjectsGetRelationsCountResponses];
+export type ProjectsGetRelationsCountResponse = ProjectsGetRelationsCountResponses[keyof ProjectsGetRelationsCountResponses];
 export type ProjectsGetGroupedRelationsData = {
     body: GroupedRelationsRequest;
     path: {
@@ -2657,8 +2466,7 @@ export type ProjectsGetGroupedRelationsData = {
 export type ProjectsGetGroupedRelationsResponses = {
     200: GroupedEntitiesResponse;
 };
-export type ProjectsGetGroupedRelationsResponse =
-    ProjectsGetGroupedRelationsResponses[keyof ProjectsGetGroupedRelationsResponses];
+export type ProjectsGetGroupedRelationsResponse = ProjectsGetGroupedRelationsResponses[keyof ProjectsGetGroupedRelationsResponses];
 export type ProjectsGetAvatarsData = {
     body: AvatarsRequest;
     path?: never;
@@ -2668,8 +2476,7 @@ export type ProjectsGetAvatarsData = {
 export type ProjectsGetAvatarsResponses = {
     200: AvatarsResponse;
 };
-export type ProjectsGetAvatarsResponse =
-    ProjectsGetAvatarsResponses[keyof ProjectsGetAvatarsResponses];
+export type ProjectsGetAvatarsResponse = ProjectsGetAvatarsResponses[keyof ProjectsGetAvatarsResponses];
 export type ProjectsGetRelationsAvatarsData = {
     body: AvatarsRequest;
     path: {
@@ -2682,8 +2489,7 @@ export type ProjectsGetRelationsAvatarsData = {
 export type ProjectsGetRelationsAvatarsResponses = {
     200: AvatarsResponse;
 };
-export type ProjectsGetRelationsAvatarsResponse =
-    ProjectsGetRelationsAvatarsResponses[keyof ProjectsGetRelationsAvatarsResponses];
+export type ProjectsGetRelationsAvatarsResponse = ProjectsGetRelationsAvatarsResponses[keyof ProjectsGetRelationsAvatarsResponses];
 export type TasksGetData = {
     body: EntitiesRequest;
     path?: never;
@@ -2715,8 +2521,7 @@ export type TasksGetByIdentifierData = {
 export type TasksGetByIdentifierResponses = {
     200: EntityDetailsResponse;
 };
-export type TasksGetByIdentifierResponse =
-    TasksGetByIdentifierResponses[keyof TasksGetByIdentifierResponses];
+export type TasksGetByIdentifierResponse = TasksGetByIdentifierResponses[keyof TasksGetByIdentifierResponses];
 export type TasksGetByIdsData = {
     body: EntitiesByIdsRequest;
     path?: never;
@@ -2749,8 +2554,7 @@ export type TasksGetRelationsData = {
 export type TasksGetRelationsResponses = {
     200: EntitiesResponse;
 };
-export type TasksGetRelationsResponse =
-    TasksGetRelationsResponses[keyof TasksGetRelationsResponses];
+export type TasksGetRelationsResponse = TasksGetRelationsResponses[keyof TasksGetRelationsResponses];
 export type TasksGetRelationsCountData = {
     body: CountRequest;
     path: {
@@ -2763,8 +2567,7 @@ export type TasksGetRelationsCountData = {
 export type TasksGetRelationsCountResponses = {
     200: CountResponse;
 };
-export type TasksGetRelationsCountResponse =
-    TasksGetRelationsCountResponses[keyof TasksGetRelationsCountResponses];
+export type TasksGetRelationsCountResponse = TasksGetRelationsCountResponses[keyof TasksGetRelationsCountResponses];
 export type TasksGetGroupedRelationsData = {
     body: GroupedRelationsRequest;
     path: {
@@ -2777,8 +2580,7 @@ export type TasksGetGroupedRelationsData = {
 export type TasksGetGroupedRelationsResponses = {
     200: GroupedEntitiesResponse;
 };
-export type TasksGetGroupedRelationsResponse =
-    TasksGetGroupedRelationsResponses[keyof TasksGetGroupedRelationsResponses];
+export type TasksGetGroupedRelationsResponse = TasksGetGroupedRelationsResponses[keyof TasksGetGroupedRelationsResponses];
 export type TasksGetAvatarsData = {
     body: AvatarsRequest;
     path?: never;
@@ -2801,8 +2603,7 @@ export type TasksGetRelationsAvatarsData = {
 export type TasksGetRelationsAvatarsResponses = {
     200: AvatarsResponse;
 };
-export type TasksGetRelationsAvatarsResponse =
-    TasksGetRelationsAvatarsResponses[keyof TasksGetRelationsAvatarsResponses];
+export type TasksGetRelationsAvatarsResponse = TasksGetRelationsAvatarsResponses[keyof TasksGetRelationsAvatarsResponses];
 export type DataWarehouseEntityGetCountData = {
     body: DataWarehouseCountRequest;
     path: {
@@ -2814,8 +2615,7 @@ export type DataWarehouseEntityGetCountData = {
 export type DataWarehouseEntityGetCountResponses = {
     200: CountResponse;
 };
-export type DataWarehouseEntityGetCountResponse =
-    DataWarehouseEntityGetCountResponses[keyof DataWarehouseEntityGetCountResponses];
+export type DataWarehouseEntityGetCountResponse = DataWarehouseEntityGetCountResponses[keyof DataWarehouseEntityGetCountResponses];
 export type DataWarehouseEntityGetByIdsData = {
     body: DataWarehouseEntitiesByIdsRequest;
     path: {
@@ -2827,8 +2627,7 @@ export type DataWarehouseEntityGetByIdsData = {
 export type DataWarehouseEntityGetByIdsResponses = {
     200: DataWarehouseEntitiesByIdsResponse;
 };
-export type DataWarehouseEntityGetByIdsResponse =
-    DataWarehouseEntityGetByIdsResponses[keyof DataWarehouseEntityGetByIdsResponses];
+export type DataWarehouseEntityGetByIdsResponse = DataWarehouseEntityGetByIdsResponses[keyof DataWarehouseEntityGetByIdsResponses];
 export type DataWarehouseEntityGetIdsData = {
     body: DataWarehouseGetIdsRequest;
     path: {
@@ -2840,8 +2639,7 @@ export type DataWarehouseEntityGetIdsData = {
 export type DataWarehouseEntityGetIdsResponses = {
     200: DataWarehouseGetIdsResponse;
 };
-export type DataWarehouseEntityGetIdsResponse =
-    DataWarehouseEntityGetIdsResponses[keyof DataWarehouseEntityGetIdsResponses];
+export type DataWarehouseEntityGetIdsResponse = DataWarehouseEntityGetIdsResponses[keyof DataWarehouseEntityGetIdsResponses];
 export type ConfigurationGetConfigurationData = {
     body: ConfigurationRequest;
     path?: never;
@@ -2855,8 +2653,7 @@ export type ConfigurationGetConfigurationErrors = {
 export type ConfigurationGetConfigurationResponses = {
     200: DataWarehouseEntityDetailsResponseOfBiConfiguration;
 };
-export type ConfigurationGetConfigurationResponse =
-    ConfigurationGetConfigurationResponses[keyof ConfigurationGetConfigurationResponses];
+export type ConfigurationGetConfigurationResponse = ConfigurationGetConfigurationResponses[keyof ConfigurationGetConfigurationResponses];
 export type ConfigurationUpdateConfigurationData = {
     body: UpdateConfigurationRequest;
     path?: never;
@@ -2884,8 +2681,7 @@ export type StorageConnectionsTestAzureBlobConnectionErrors = {
 export type StorageConnectionsTestAzureBlobConnectionResponses = {
     200: StorageConnectionResponse;
 };
-export type StorageConnectionsTestAzureBlobConnectionResponse =
-    StorageConnectionsTestAzureBlobConnectionResponses[keyof StorageConnectionsTestAzureBlobConnectionResponses];
+export type StorageConnectionsTestAzureBlobConnectionResponse = StorageConnectionsTestAzureBlobConnectionResponses[keyof StorageConnectionsTestAzureBlobConnectionResponses];
 export type TriggerExportTriggerExportData = {
     body?: never;
     path?: never;
@@ -2913,8 +2709,7 @@ export type PlanviewAdminGetUsersData = {
 export type PlanviewAdminGetUsersResponses = {
     200: GetUsersResponse;
 };
-export type PlanviewAdminGetUsersResponse =
-    PlanviewAdminGetUsersResponses[keyof PlanviewAdminGetUsersResponses];
+export type PlanviewAdminGetUsersResponse = PlanviewAdminGetUsersResponses[keyof PlanviewAdminGetUsersResponses];
 export type PlanviewAdminGetData = {
     body?: never;
     path?: never;
@@ -2943,8 +2738,7 @@ export type PlanviewTokenServiceGetPtsTokenForCoPilotData = {
 export type PlanviewTokenServiceGetPtsTokenForCoPilotResponses = {
     200: GetTokenResponse;
 };
-export type PlanviewTokenServiceGetPtsTokenForCoPilotResponse =
-    PlanviewTokenServiceGetPtsTokenForCoPilotResponses[keyof PlanviewTokenServiceGetPtsTokenForCoPilotResponses];
+export type PlanviewTokenServiceGetPtsTokenForCoPilotResponse = PlanviewTokenServiceGetPtsTokenForCoPilotResponses[keyof PlanviewTokenServiceGetPtsTokenForCoPilotResponses];
 export type PlanviewTokenServiceGetPtsTokenInternalData = {
     body?: never;
     path?: never;
@@ -2954,8 +2748,7 @@ export type PlanviewTokenServiceGetPtsTokenInternalData = {
 export type PlanviewTokenServiceGetPtsTokenInternalResponses = {
     200: GetTokenResponse;
 };
-export type PlanviewTokenServiceGetPtsTokenInternalResponse =
-    PlanviewTokenServiceGetPtsTokenInternalResponses[keyof PlanviewTokenServiceGetPtsTokenInternalResponses];
+export type PlanviewTokenServiceGetPtsTokenInternalResponse = PlanviewTokenServiceGetPtsTokenInternalResponses[keyof PlanviewTokenServiceGetPtsTokenInternalResponses];
 export type SentimentAnalysisServiceCalculateSentimentData = {
     body: CalculateSentimentRequest;
     path?: never;
@@ -2965,8 +2758,7 @@ export type SentimentAnalysisServiceCalculateSentimentData = {
 export type SentimentAnalysisServiceCalculateSentimentResponses = {
     200: CalculateSentimentResponse;
 };
-export type SentimentAnalysisServiceCalculateSentimentResponse =
-    SentimentAnalysisServiceCalculateSentimentResponses[keyof SentimentAnalysisServiceCalculateSentimentResponses];
+export type SentimentAnalysisServiceCalculateSentimentResponse = SentimentAnalysisServiceCalculateSentimentResponses[keyof SentimentAnalysisServiceCalculateSentimentResponses];
 export type WhiteboardPtsTokenForWhiteboardData = {
     body?: never;
     path: {
@@ -2979,8 +2771,7 @@ export type WhiteboardPtsTokenForWhiteboardData = {
 export type WhiteboardPtsTokenForWhiteboardResponses = {
     200: WhiteboardTokenResponse;
 };
-export type WhiteboardPtsTokenForWhiteboardResponse =
-    WhiteboardPtsTokenForWhiteboardResponses[keyof WhiteboardPtsTokenForWhiteboardResponses];
+export type WhiteboardPtsTokenForWhiteboardResponse = WhiteboardPtsTokenForWhiteboardResponses[keyof WhiteboardPtsTokenForWhiteboardResponses];
 export type WorkloadGetWorkloadResourcesData = {
     body: ResourceWorkloadRequest;
     path?: never;
@@ -2990,8 +2781,7 @@ export type WorkloadGetWorkloadResourcesData = {
 export type WorkloadGetWorkloadResourcesResponses = {
     200: WorkloadEntitiesResponse;
 };
-export type WorkloadGetWorkloadResourcesResponse =
-    WorkloadGetWorkloadResourcesResponses[keyof WorkloadGetWorkloadResourcesResponses];
+export type WorkloadGetWorkloadResourcesResponse = WorkloadGetWorkloadResourcesResponses[keyof WorkloadGetWorkloadResourcesResponses];
 export type WorkloadGetWorkloadProjectsData = {
     body: EntityWorkloadRequest;
     path?: never;
@@ -3001,8 +2791,7 @@ export type WorkloadGetWorkloadProjectsData = {
 export type WorkloadGetWorkloadProjectsResponses = {
     200: WorkloadEntitiesResponse;
 };
-export type WorkloadGetWorkloadProjectsResponse =
-    WorkloadGetWorkloadProjectsResponses[keyof WorkloadGetWorkloadProjectsResponses];
+export type WorkloadGetWorkloadProjectsResponse = WorkloadGetWorkloadProjectsResponses[keyof WorkloadGetWorkloadProjectsResponses];
 export type WorkloadGetWorkloadTasksData = {
     body: EntityWorkloadRequest;
     path: {
@@ -3014,8 +2803,7 @@ export type WorkloadGetWorkloadTasksData = {
 export type WorkloadGetWorkloadTasksResponses = {
     200: WorkloadEntitiesResponse;
 };
-export type WorkloadGetWorkloadTasksResponse =
-    WorkloadGetWorkloadTasksResponses[keyof WorkloadGetWorkloadTasksResponses];
+export type WorkloadGetWorkloadTasksResponse = WorkloadGetWorkloadTasksResponses[keyof WorkloadGetWorkloadTasksResponses];
 export type PublicisGetReportableWorkItemsPerUserData = {
     body: GetReportableWorkItemsRequest;
     path: {
@@ -3027,8 +2815,7 @@ export type PublicisGetReportableWorkItemsPerUserData = {
 export type PublicisGetReportableWorkItemsPerUserResponses = {
     200: GetReportableWorkItemsResponse;
 };
-export type PublicisGetReportableWorkItemsPerUserResponse =
-    PublicisGetReportableWorkItemsPerUserResponses[keyof PublicisGetReportableWorkItemsPerUserResponses];
+export type PublicisGetReportableWorkItemsPerUserResponse = PublicisGetReportableWorkItemsPerUserResponses[keyof PublicisGetReportableWorkItemsPerUserResponses];
 export type PublicisGetReportableTasksByIdsData = {
     body: GetReportableTasksByIdsRequest;
     path: {
@@ -3040,8 +2827,7 @@ export type PublicisGetReportableTasksByIdsData = {
 export type PublicisGetReportableTasksByIdsResponses = {
     200: GetReportableTasksByIdsResponse;
 };
-export type PublicisGetReportableTasksByIdsResponse =
-    PublicisGetReportableTasksByIdsResponses[keyof PublicisGetReportableTasksByIdsResponses];
+export type PublicisGetReportableTasksByIdsResponse = PublicisGetReportableTasksByIdsResponses[keyof PublicisGetReportableTasksByIdsResponses];
 export type PublicisGetReportableTasksByIds2Data = {
     body: GetReportableTasksByIdsRequest;
     path?: never;
@@ -3051,8 +2837,7 @@ export type PublicisGetReportableTasksByIds2Data = {
 export type PublicisGetReportableTasksByIds2Responses = {
     200: GetReportableTasksByIdsResponse;
 };
-export type PublicisGetReportableTasksByIds2Response =
-    PublicisGetReportableTasksByIds2Responses[keyof PublicisGetReportableTasksByIds2Responses];
+export type PublicisGetReportableTasksByIds2Response = PublicisGetReportableTasksByIds2Responses[keyof PublicisGetReportableTasksByIds2Responses];
 export type PublicisGetAssignmentsPerUsersData = {
     body: GetAssignmentsPerUsersRequest;
     path?: never;
@@ -3062,8 +2847,7 @@ export type PublicisGetAssignmentsPerUsersData = {
 export type PublicisGetAssignmentsPerUsersResponses = {
     200: GetAssignmentsPerUsersResponse;
 };
-export type PublicisGetAssignmentsPerUsersResponse =
-    PublicisGetAssignmentsPerUsersResponses[keyof PublicisGetAssignmentsPerUsersResponses];
+export type PublicisGetAssignmentsPerUsersResponse = PublicisGetAssignmentsPerUsersResponses[keyof PublicisGetAssignmentsPerUsersResponses];
 export type PublicisGetUsersWorkingHoursData = {
     body: GetUsersWorkingHoursRequest;
     path?: never;
@@ -3073,8 +2857,7 @@ export type PublicisGetUsersWorkingHoursData = {
 export type PublicisGetUsersWorkingHoursResponses = {
     200: GetUsersWorkingHoursResponse;
 };
-export type PublicisGetUsersWorkingHoursResponse =
-    PublicisGetUsersWorkingHoursResponses[keyof PublicisGetUsersWorkingHoursResponses];
+export type PublicisGetUsersWorkingHoursResponse = PublicisGetUsersWorkingHoursResponses[keyof PublicisGetUsersWorkingHoursResponses];
 export type PublicisGetGroupMembershipLinksData = {
     body: GetGroupMembershipLinksRequest;
     path?: never;
@@ -3084,8 +2867,7 @@ export type PublicisGetGroupMembershipLinksData = {
 export type PublicisGetGroupMembershipLinksResponses = {
     200: GetGroupMembershipLinksResponse;
 };
-export type PublicisGetGroupMembershipLinksResponse =
-    PublicisGetGroupMembershipLinksResponses[keyof PublicisGetGroupMembershipLinksResponses];
+export type PublicisGetGroupMembershipLinksResponse = PublicisGetGroupMembershipLinksResponses[keyof PublicisGetGroupMembershipLinksResponses];
 export type PublicisGetResourceProjectsData = {
     body: GetResourceProjectsRequest;
     path?: never;
@@ -3095,8 +2877,7 @@ export type PublicisGetResourceProjectsData = {
 export type PublicisGetResourceProjectsResponses = {
     200: GetResourceProjectsResponse;
 };
-export type PublicisGetResourceProjectsResponse =
-    PublicisGetResourceProjectsResponses[keyof PublicisGetResourceProjectsResponses];
+export type PublicisGetResourceProjectsResponse = PublicisGetResourceProjectsResponses[keyof PublicisGetResourceProjectsResponses];
 export type ClientOptions = {
     baseURL: 'https://qaapp1.clarizen.com/HybridSolutions' | (string & {});
 };

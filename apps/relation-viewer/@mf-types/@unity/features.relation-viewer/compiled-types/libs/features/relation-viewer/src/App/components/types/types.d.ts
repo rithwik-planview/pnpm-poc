@@ -9,14 +9,7 @@ export type Props = {
     relationEntityType: string;
     fields: Field[];
     title: string;
-    onContextMenuAction?: ({
-        actionId,
-        additionalData,
-        relationEntityId,
-        relationEntityName,
-        relationEntityType,
-        relationLinkId,
-    }: {
+    onContextMenuAction?: ({ actionId, additionalData, relationEntityId, relationEntityName, relationEntityType, relationLinkId, }: {
         actionId: string;
         additionalData?: boolean;
         relationEntityId: string;

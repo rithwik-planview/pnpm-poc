@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { extract } from '@formatjs/cli-lib';
 import { promisify } from 'util';
 import chalk from 'chalk';

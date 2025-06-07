@@ -35,12 +35,12 @@
     },
     "exports": {
         ".": {
-            "types": "./dist/esm/index.d.ts",
+            "types": "./dist/types/index.d.ts",
             "import": "./dist/esm/index.js",
             "require": "./dist/cjs/index.cjs"
         },
         "./test-utils": {
-            "types": "./dist/esm/test-utils.d.ts",
+            "types": "./dist/types/test-utils/index.d.ts",
             "import": "./dist/esm/test-utils.js",
             "require": "./dist/cjs/test-utils.cjs"
         }
@@ -48,5 +48,5 @@
     "files": [
         "dist"
     ],
-    "types": "./dist/esm/index.d.ts"
+    "types": "./dist/types/index.d.ts"
 }

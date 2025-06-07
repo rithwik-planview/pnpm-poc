@@ -7,6 +7,9 @@ import { getPortFromName, Mode } from '@unity/shared.utils';
 
 export default defineConfig(({ env }) => ({
     source: { tsconfigPath: './tsconfig.build.json' },
+    html: {
+        title: 'Feature-2 Demo',
+    },
     plugins: [pluginReact(), pluginModuleFederation(moduleFederationConfig(env as Mode))],
     server: {
         port: getPortFromName(name),

@@ -7,6 +7,7 @@
         "dev": "rslib build --watch",
         "format": "prettier --write .",
         "lint": "eslint .",
+        "prepare": "shx test -e dist || pnpm build",
         "test": "jest",
         "typecheck": "pnpm typecheck:all && pnpm typecheck:build",
         "typecheck:all": "tsc -b tsconfig.json",
@@ -23,7 +24,8 @@
     },
     "devDependencies": {
         "@rslib/core": "^0.8.0",
-        "@rspack/core": "^1.3.11"
+        "@rspack/core": "^1.3.11",
+        "shx": "^0.4.0"
     },
     "bin": {
         "deploy-package": "./dist/esm/deploy-cli.js",

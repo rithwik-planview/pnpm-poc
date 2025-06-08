@@ -36,7 +36,7 @@ const config: StorybookConfig = {
     refs: {
         pvds: {
             title: 'Planview Design System',
-            url: 'https://planview-ds.github.io/react-pvds',
+            url: '/pvds',
             expanded: true,
         },
     },
@@ -44,6 +44,15 @@ const config: StorybookConfig = {
         return mergeConfig(config, {
             build: {
                 chunkSizeWarningLimit: 1600,
+            },
+            server: {
+                proxy: {
+                    '/pvds': {
+                        target: 'https://planview-ds.github.io/react-pvds',
+                        changeOrigin: true,
+                        rewrite: (path: string) => path.replace(/^\/pvds/, ''),
+                    },
+                },
             },
         });
     },

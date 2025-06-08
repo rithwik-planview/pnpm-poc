@@ -12,7 +12,7 @@ const preview: Preview = {
         },
         options: {
             storySort: {
-                order: ['Docs', ['Unity', 'Shell']],
+                order: ['Docs', ['Unity', 'Getting Started', 'Shell']],
             },
         },
     },

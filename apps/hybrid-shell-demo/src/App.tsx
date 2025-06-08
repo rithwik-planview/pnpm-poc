@@ -21,8 +21,21 @@ const P = styled.p`
 
 const App = () => {
     const fullName = decodeToken(localStorage.getItem('sessionId'))?.clzUserName ?? '';
+    const origin = import.meta.env?.PUBLIC_HYBRID_AUTH_ORIGIN || 'https://qaapp1.clarizen.com';
+    const basePath = import.meta.env?.PUBLIC_HYBRID_AUTH_BASE_PATH || 'release.latest';
+    const hybridBasePath =
+        import.meta.env?.PUBLIC_HYBRID_AUTH_HYBRID_BASE_PATH || 'HybridSolutions';
+    const username = import.meta.env?.PUBLIC_HYBRID_AUTH_USERNAME || 'Admin_User';
+    const password = import.meta.env?.PUBLIC_HYBRID_AUTH_PASSWORD || 'Password1!';
     return (
-        <HybridAppShell origin="https://qaapp1.clarizen.com" title="Authenticated Hybrid Shell">
+        <HybridAppShell
+            origin={origin}
+            basePath={basePath}
+            hybridBasePath={hybridBasePath}
+            username={username}
+            password={password}
+            title="Authenticated Hybrid Shell"
+        >
             <Content>
                 <H1>Hi, {fullName} 👋</H1>
                 <P>Welcome to an authenticated hybrid shell!</P>

@@ -266,6 +266,9 @@ importers:
       '@unity/shared.utils':
         specifier: workspace:*
         version: link:../../libs/shared/utils
+      '@unity/tools':
+        specifier: workspace:*
+        version: link:../../tools
 
   apps/relation-viewer:
     dependencies:

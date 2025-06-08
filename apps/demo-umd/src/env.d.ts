@@ -1,4 +1,5 @@
 /// <reference types="@rsbuild/core/types" />
+/// <reference types="../../../env/types" />
 import type { loadRemote, sanitizeName } from '@unity/core.shell';
 
 declare global {

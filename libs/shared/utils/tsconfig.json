@@ -2,13 +2,8 @@
     "extends": "../../../configs/tsconfig/node.json",
     "compilerOptions": {
         "declarationDir": "./dist/types",
-        "rootDir": "./src",
-        "baseUrl": ".",
-        "paths": {
-            "@unity/tools": ["../../../tools/src"]
-        }
+        "rootDir": "./src"
     },
     "include": ["./src"],
-    "exclude": ["node_modules", "dist"],
-    "references": [{ "path": "../../../tools/tsconfig.build.json" }]
+    "exclude": ["node_modules", "dist"]
 }

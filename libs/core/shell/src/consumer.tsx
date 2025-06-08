@@ -10,7 +10,7 @@ import { createRemote } from './provider';
 
 type RenderRemoteArgs = {
     remoteName: string;
-    mode: 'development' | 'production' | 'none';
+    baseUrl?: string;
 };
 
 type ProviderReturn<P, R> = ReturnType<typeof createRemote<P, R>>;
@@ -45,14 +45,14 @@ const moduleMap = new Map<string, ModuleReturn<unknown, unknown>>();
 
 export async function loadRemote<P, R>({
     remoteName,
-    mode,
+    baseUrl,
 }: RenderRemoteArgs): Promise<ModuleReturn<P, R> | undefined> {
     if (!moduleMap.has(remoteName)) {
         const name = sanitizeName(remoteName);
         registerRemotes([
             {
                 name,
-                entry: `${getRemoteUrl(remoteName, mode)}mf-manifest.json`,
+                entry: `${getRemoteUrl(remoteName, 'mf', baseUrl)}mf-manifest.json`,
             },
         ]);
         try {

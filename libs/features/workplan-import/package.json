@@ -4,7 +4,7 @@
     "private": true,
     "scripts": {
         "build": "rslib build",
-        "deploy-package": "deploy-package @unity/features.relation-viewer --with-deps",
+        "deploy-package": "deploy-package @unity/features.workplan-import --with-deps",
         "dev": "rslib build --watch",
         "format": "prettier --write .",
         "i18n": "pnpm i18n:extract && pnpm i18n:compile",
@@ -45,6 +45,7 @@
         "@types/react": "^19.1.5",
         "@types/react-dom": "^19.1.5",
         "@unity/shared.utils": "workspace:*",
-        "@unity/tools": "workspace:*"
+        "@unity/tools": "workspace:*",
+        "dotenv": "^16.5.0"
     }
 }

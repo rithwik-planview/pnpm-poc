@@ -12,13 +12,22 @@ const FEATURES = {
     },
 };
 
+let baseUrl: string;
+try {
+    if (!import.meta.env.DEV) {
+        baseUrl = import.meta.env.PUBLIC_BASE_URL;
+    }
+} catch (error) {
+    console.log('Running in local mode', error);
+}
+
 const App = () => {
     const [moduleMap, setModuleMap] = useState(new Map<string, ModuleReturn>());
     const renderFeature = useCallback(
         (remoteName: string, elementId: string) => async () => {
             let module = moduleMap.get(remoteName);
             if (!module) {
-                module = await loadRemote({ remoteName, mode: import.meta.env.MODE });
+                module = await loadRemote({ remoteName, baseUrl });
                 setModuleMap((prev) => {
                     const newMap = new Map(prev);
                     newMap.set(remoteName, module!);

@@ -8,7 +8,8 @@
     "license": "ISC",
     "scripts": {
         "prepare": "husky",
-        "syncpack:fix": "syncpack format && syncpack fix"
+        "syncpack:fix": "syncpack format && syncpack fix",
+        "serve:local-bucket": "pnpm dlx http-server local-bucket -p 80 --cors"
     },
     "type": "module",
     "main": "index.js",

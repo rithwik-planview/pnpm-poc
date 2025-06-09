@@ -40,3 +40,12 @@ pnpm -F @unity/storybook dev
 ```bash
 pnpm -F "@unity/*.workplan-import" mf-dev
 ```
+
+7. Start production preview server for a feature (example: `workplan-import`):
+
+```bash
+pnpm -F @unity/features.workplan-import deploy-package
+pnpm serve:local-bucket
+pnpm -F @unity/apps.workplan-import build
+pnpm -F @unity/apps.workplan-import preview
+```

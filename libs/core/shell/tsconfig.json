@@ -1,14 +1,15 @@
 {
     "extends": "../../../configs/tsconfig/react.json",
     "compilerOptions": {
+        "noEmit": true,
         "declarationDir": "./dist/types",
-        "rootDir": "./src",
+        "rootDir": "./",
         "baseUrl": "./",
         "paths": {
             "@unity/shared.utils": ["../../shared/utils/src"]
         }
     },
-    "include": ["./src"],
+    "include": ["./src", "*.config.ts", "**/*.json"],
     "exclude": ["node_modules", "dist"],
     "references": [{ "path": "../../shared/utils/tsconfig.build.json" }]
 }

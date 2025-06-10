@@ -1,8 +1,11 @@
-import { createModuleFederationConfig } from '@module-federation/rsbuild-plugin';
+import {
+    createModuleFederationConfig,
+    type ModuleFederationOptions,
+} from '@module-federation/rsbuild-plugin';
 import { name } from './package.json';
 import { sanitizeName } from '@unity/shared.utils';
 
-export default createModuleFederationConfig({
+const config: ModuleFederationOptions = createModuleFederationConfig({
     name: sanitizeName(name),
     exposes: {
         '.': './src/index.tsx',
@@ -20,3 +23,5 @@ export default createModuleFederationConfig({
         tsConfigPath: './tsconfig.mf.json',
     },
 });
+
+export default config;

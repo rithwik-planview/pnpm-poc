@@ -1,8 +1,9 @@
 {
     "extends": "../../configs/tsconfig/react.json",
     "compilerOptions": {
+        "noEmit": true,
         "declarationDir": "./dist/types",
-        "rootDir": "./src",
+        "rootDir": "./",
         "baseUrl": "./",
         "paths": {
             "@unity/core.shell": ["../../libs/core/shell/src"],
@@ -11,7 +12,7 @@
             "@unity/tools": ["../../tools/src"]
         }
     },
-    "include": ["./src"],
+    "include": ["./src", "*.config.ts", "**/*.json"],
     "exclude": ["node_modules", "dist"],
     "references": [
         { "path": "../../libs/core/shell/tsconfig.build.json" },

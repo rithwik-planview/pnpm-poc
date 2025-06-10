@@ -1,9 +1,10 @@
 {
     "extends": "../../../configs/tsconfig/web.json",
     "compilerOptions": {
+        "noEmit": true,
         "declarationDir": "./dist/types",
-        "rootDir": "./src"
+        "rootDir": "./"
     },
-    "include": ["./src"],
+    "include": ["./src", "*.config.ts", "**/*.json"],
     "exclude": ["node_modules", "dist"]
 }

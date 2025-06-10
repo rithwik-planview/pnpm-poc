@@ -1,6 +1,7 @@
 {
     "extends": "../configs/tsconfig/react.json",
     "compilerOptions": {
+        "noEmit": true,
         "declarationDir": "./dist/types",
         "rootDir": "./src"
     },

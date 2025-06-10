@@ -1,9 +1,13 @@
 {
-    "extends": "../../../configs/tsconfig/node.json",
+    "extends": "../../../configs/tsconfig/react.json",
     "compilerOptions": {
         "declarationDir": "./dist/types",
-        "rootDir": "./src"
+        "rootDir": ".",
+        "baseUrl": "./"
     },
-    "include": ["./src"],
+    "include": [
+        "src/**/*",
+        "*.config.ts"
+    ],
     "exclude": ["node_modules", "dist"]
 }

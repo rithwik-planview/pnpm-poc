@@ -2,7 +2,7 @@
     "extends": "../../configs/tsconfig/react.json",
     "compilerOptions": {
         "declarationDir": "./dist/types",
-        "rootDir": "./src",
+        "rootDir": ".",
         "baseUrl": "./",
         "paths": {
             "*": ["./@mf-types/*"],
@@ -12,12 +12,15 @@
             "@unity/tools": ["../../tools/src"]
         }
     },
-    "include": ["./src"],
+    "include": [
+        "src/**/*",
+        "*.config.ts"
+    ],
     "exclude": ["node_modules", "dist"],
     "references": [
         { "path": "../../libs/core/shell/tsconfig.build.json" },
-        { "path": "../../libs/shared/utils/tsconfig.build.json" },
         { "path": "../../libs/shared/hybrid/tsconfig.build.json" },
+        { "path": "../../libs/shared/utils/tsconfig.build.json" },
         { "path": "../../tools/tsconfig.build.json" }
     ]
 }

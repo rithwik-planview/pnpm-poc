@@ -1,12 +1,16 @@
-import { createModuleFederationConfig } from '@module-federation/rsbuild-plugin';
+import {
+    createModuleFederationConfig,
+    type ModuleFederationOptions,
+} from '@module-federation/rsbuild-plugin';
 import { name } from './package.json';
+import { getDirname, getRequiredVersion } from '@unity/tools';
 import { sanitizeName } from '@unity/shared.utils';
 
-export default createModuleFederationConfig({
+const config: ModuleFederationOptions = createModuleFederationConfig({
     name: sanitizeName(name),
     exposes: {
         '.': './src/index.tsx',
-        './App': './src/App/index.tsx',
+        './App': './src/App.tsx',
     },
     shared: {
         react: {
@@ -15,8 +19,20 @@ export default createModuleFederationConfig({
         'react-dom': {
             singleton: true,
         },
+        '@unity/shared.counter': {
+            singleton: true,
+            requiredVersion: getRequiredVersion(
+                getDirname(import.meta.url),
+                '@unity/shared.counter',
+            ),
+        },
+        '@unity/shared.ui': {
+            requiredVersion: getRequiredVersion(getDirname(import.meta.url), '@unity/shared.ui'),
+        },
     },
     dts: {
         tsConfigPath: './tsconfig.mf.json',
     },
 });
+
+export default config;

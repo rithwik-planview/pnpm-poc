@@ -9,6 +9,7 @@
         "lint": "eslint .",
         "prepare": "shx test -e dist || pnpm build",
         "test": "jest",
+        "test:ci": "jest --coverage",
         "typecheck": "pnpm typecheck:all && pnpm typecheck:build",
         "typecheck:all": "tsc -b tsconfig.json",
         "typecheck:build": "tsc -b tsconfig.build.json"

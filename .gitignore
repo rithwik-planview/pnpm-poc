@@ -12,6 +12,10 @@ dist/
 **/translations/compiled
 storybook-static
 
+# Testing
+junit.xml
+coverage/
+
 # IDE
 .vscode/*
 !.vscode/extensions.json

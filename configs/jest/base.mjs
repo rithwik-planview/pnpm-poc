@@ -30,4 +30,12 @@ export default {
             '<rootDir>/__mocks__/fileMock.js',
         '\\.(css|less)$': 'identity-obj-proxy',
     },
+    collectCoverageFrom: [
+        'src/**/*.{ts,tsx}',
+        '!**/*.test.{ts,tsx}',
+        '!**/*.spec.{ts,tsx}',
+        '!**/*story.{ts,tsx}',
+    ],
+    coveragePathIgnorePatterns: ['/node_modules/', 'package.json', 'package-lock.json'],
+    reporters: ['default', 'jest-junit'],
 };

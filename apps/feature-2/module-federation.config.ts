@@ -1,10 +1,13 @@
-import { createModuleFederationConfig } from '@module-federation/rsbuild-plugin';
+import {
+    createModuleFederationConfig,
+    type ModuleFederationOptions,
+} from '@module-federation/rsbuild-plugin';
 import { name } from './package.json';
 import { sanitizeName, getRemoteUrl } from '@unity/shared.utils';
 
 const feature = '@unity/features.feature-2';
 
-export default function (baseUrl?: string) {
+export default function (baseUrl?: string): ModuleFederationOptions {
     return createModuleFederationConfig({
         name: sanitizeName(name),
         remotes: {

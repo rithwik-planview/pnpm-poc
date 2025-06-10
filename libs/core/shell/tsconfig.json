@@ -2,13 +2,12 @@
     "extends": "../../../configs/tsconfig/react.json",
     "compilerOptions": {
         "declarationDir": "./dist/types",
-        "rootDir": "./src",
-        "baseUrl": "./",
-        "paths": {
-            "@unity/shared.utils": ["../../shared/utils/src"]
-        }
+        "rootDir": ".",
+        "baseUrl": "./"
     },
-    "include": ["./src"],
-    "exclude": ["node_modules", "dist"],
-    "references": [{ "path": "../../shared/utils/tsconfig.build.json" }]
+    "include": [
+        "src/**/*",
+        "*.config.ts"
+    ],
+    "exclude": ["node_modules", "dist"]
 }

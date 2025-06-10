@@ -2,8 +2,12 @@
     "extends": "../configs/tsconfig/node.json",
     "compilerOptions": {
         "declarationDir": "./dist/types",
-        "rootDir": "./src"
+        "rootDir": "."
     },
-    "include": ["./src"],
+    "include": [
+        "./src",
+        "*.config.ts",
+        "*.config.mjs"
+    ],
     "exclude": ["node_modules", "dist"]
 }

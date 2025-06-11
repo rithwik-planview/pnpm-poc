@@ -55,6 +55,8 @@ pipeline {
             steps {
                 script {
                     sh """
+                    set +x && . /home/jenkins/.profile
+					nvm use
                     pnpm install
                     """
                 }
@@ -64,6 +66,8 @@ pipeline {
             steps {
                 script {
                     sh """
+                    set +x && . /home/jenkins/.profile
+					nvm use
                     pnpm -r i18n
                     """
                 }
@@ -73,6 +77,8 @@ pipeline {
             steps {
                 script {
                     sh """
+                    set +x && . /home/jenkins/.profile
+					nvm use
                     pnpm -r typecheck
                     """
                 }
@@ -82,6 +88,8 @@ pipeline {
             steps {
                 script {
                     sh """
+                    set +x && . /home/jenkins/.profile
+					nvm use
                     pnpm -r build
                     """
                 }
@@ -92,6 +100,8 @@ pipeline {
                 catchError(buildResult: "UNSTABLE", stageResult: "UNSTABLE") {
                     script {
                         sh """
+						set +x && . /home/jenkins/.profile
+						nvm use
                         pnpm -r test:ci
                         """
                     }
@@ -106,6 +116,17 @@ pipeline {
                 }
             }
         }
+		stage("Build deploy folder") {
+			steps {
+				script {
+					sh """
+					set +x && . /home/jenkins/.profile
+					nvm use
+					pnpm -r deploy-package
+					"""
+				}
+			}
+		}
     }
     post {
         unsuccessful {

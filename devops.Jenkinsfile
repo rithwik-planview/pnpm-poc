@@ -1,6 +1,6 @@
 @Library("jsl-one") _
 
-def component = "unity_v2"
+def component = "unityV2"
 def config = [
         ecrUrl           : '411231698121.dkr.ecr.eu-west-1.amazonaws.com',
         ecrRepo          : "ci/${component}",
@@ -9,7 +9,7 @@ def config = [
         sonarOrganization: 'clarizenportfolio',
         product         : 'one',
         domain          : "clarizen-ci.io",
-        url_suffix      : "unity_v2",
+        url_suffix      : "unityV2",
         namespace       : 'one',
         recipients      : 'cc:pd-adaptivework-devops@planview.com',
         mailToDev       : true,
@@ -116,7 +116,7 @@ pipeline {
                 }
             }
         }
-		stage("Build deploy folder") {
+		stage("Generate local build drop") {
 			steps {
 				script {
 					sh """

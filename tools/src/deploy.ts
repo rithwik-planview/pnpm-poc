@@ -40,7 +40,7 @@ async function main() {
     const pkgs = args.filter((arg) => !arg.startsWith('--'));
     const pnpmRoot = await exec('pnpm root -w');
     const workspaceRoot = path.resolve(pnpmRoot.stdout.trim(), '..');
-    const targetRoot = path.join(workspaceRoot, 'local-bucket/');
+    const targetRoot = path.join(workspaceRoot, 'build-drop/');
 
     if (pkgs.length === 0) {
         console.error('Usage: deploy.ts <pkg1> <pkg2> ... [--with-deps]');
@@ -66,7 +66,7 @@ async function main() {
                     throw new Error(`Package not found: ${pkg}`);
                 }
                 return {
-                    title: `Deploying ${pkg}`,
+                    title: `Generating local build drop for ${pkg}`,
                     task: async () => {
                         const outDir = path.join(pkgPath, 'dist/');
                         const targetDir = path.join(targetRoot, pkg);
@@ -85,7 +85,7 @@ async function main() {
     );
 
     await tasks.run();
-    console.log(chalk.greenBright('\n🎉 Deployment complete!'));
+    console.log(chalk.greenBright('\n🎉 Local build drop generated successfully!'));
 }
 
 main().catch((err) => {

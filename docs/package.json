@@ -8,9 +8,12 @@
     "scripts": {},
     "main": "index.js",
     "dependencies": {
-        "mdx-mermaid": "^2.0.3",
         "mermaid": "^11.6.0",
+        "react": "^19.1.0",
         "unist-util-visit": "^4.1.2"
+    },
+    "devDependencies": {
+        "@types/react": "^19.1.5"
     },
     "packageManager": "pnpm@10.11.0"
 }

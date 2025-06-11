@@ -12,7 +12,12 @@ const preview: Preview = {
         },
         options: {
             storySort: {
-                order: ['Docs', ['Unity', 'Getting Started', 'Shell']],
+                order: [
+                    'Overview',
+                    ['Introduction', 'Project Structure', 'Getting Started'],
+                    'Core',
+                    ['Shell Introduction', 'Shell Usage'],
+                ],
             },
         },
     },

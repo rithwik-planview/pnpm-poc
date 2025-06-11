@@ -1,0 +1,79 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+import { MermaidFlow } from '../components/MermaidFlow'
+
+<Meta title="Core/Shell Usage" />
+
+# Shell Usage Modes
+
+These federated modules can be consumed in three different ways, depending on the build environment:
+
+## 1. With Module Federation Build Plugins
+
+**Use Case**: A demo app within the Unity repo
+
+**Reference**: `@unity/apps.feature-1`
+
+```bash
+pnpm -F "@unity/apps.feature-1..." build --env-mode development
+pnpm -F "@unity/*.feature-1" mf-dev
+```
+
+### Highlights:
+
+* Consumes the `./App` export directly
+* No dependency on `@unity/shell`
+
+<MermaidFlow
+  id="direct-import"
+  definition={`
+    flowchart TB
+      D[Demo App] --> E[Directly imports ./App]
+  `}
+/>
+
+## 2. Without Module Federation Build Plugins
+
+**Use Case**: Products using Webpack < 5 (e.g., legacy consumers)
+
+**Reference**: `@unity/apps.demo`
+
+```bash
+pnpm -r build --env-mode development
+pnpm -F "@unity/features.*" -F "@unity/apps.demo" mf-dev
+```
+
+### Highlights:
+
+* Consumes the `@unity/shell` npm package
+* Uses `@unity/shell#loadRemote` to load the remote by name
+
+<MermaidFlow
+  id="legacy-consumer"
+  definition={`
+    flowchart TD
+      F[Legacy Consumer] --> G["@unity.shell#loadRemote"]
+  `}
+/>
+
+## 3. No Build Environment (Runtime-Only Support)
+
+**Use Case**: Server-rendered UIs (e.g., AdaptiveWork, Portfolios)
+**Reference**: `@unity/apps.demo-umd`
+
+```bash
+pnpm -r build --env-mode development
+pnpm -F "@unity/features.*" -F "@unity/apps.demo-umd" mf-dev
+```
+
+### Highlights:
+
+* Consumes the UMD build of `@unity/shell`
+* Uses `window.Shell#loadRemote` to load the remote by name
+
+<MermaidFlow
+  id="runtime-consumer"
+  definition={`
+    flowchart TD
+      H[Server-rendered App] --> I["window.Shell#loadRemote('feature-1')"]
+  `}
+/>

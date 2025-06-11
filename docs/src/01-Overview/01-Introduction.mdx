@@ -1,0 +1,69 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+import { MermaidFlow } from '../components/MermaidFlow'
+
+<Meta title="Overview/Introduction" />
+
+<div style={{ background: '#000a22', textAlign: 'center', borderRadius: 10 }}>
+	<img src="img/Unity-color.png" alt="Unity Logo" style={{ height: '400px' }} />
+</div>
+
+---
+
+# Unity Framework
+
+**Unity** is the micro-frontend framework that powers modern **AdaptiveWork** views.
+
+It is designed to provide a highly modular, scalable, and maintainable environment for building and composing frontend applications at runtime, while supporting best practices around developer experience, testability, and operational readiness.
+
+## Goals
+
+Unity aims to provide:
+
+1. A **multi-tier modular architecture** managed in a monorepo  
+2. An efficient way to **compose applications at runtime** using **Webpack Module Federation**
+3. A robust **toolchain** and support packages for:
+   - i18n
+   - telemetry
+   - quality control (linting, formatting, testing)
+   - documentation
+4. **Independent release and deployment** of micro-frontend applications
+
+## Tech Stack
+
+| Domain           | Tool(s)                                         |
+|------------------|------------------------------------------------|
+| **Package Mgmt** | `pnpm`                                         |
+| **Bundlers**     | `rslib`, `rebuild`                            |
+| **Linting**      | `ESLint`, `Syncpack`                          |
+| **Formatting**   | `Prettier`, `Syncpack`                         |
+| **Testing**      | `Jest`, `@testing-library/react`, `Playwright` |
+| **Docs**         | `Storybook`                                    |
+
+## Architecture at a Glance
+
+<MermaidFlow
+  id="architecture-overview"
+  definition={`
+    graph TD
+      HostApp["Host Container (.NET App)"]
+      UnityShell["Unity Shell (core.shell)"]
+      Feature1["@unity.features.relation-viewer"]
+      Feature2["@unity.features.workplan-import"]
+      SharedUI["@unity.shared.ui"]
+      SharedHybrid["@unity.shared.hybrid"]
+      DataAccess["@unity.core.data-access"]
+      ReactPVDS["@planview/react-pvds"]
+
+      HostApp --> UnityShell
+      UnityShell --> Feature1
+      UnityShell --> Feature2
+      Feature1 --> SharedUI
+      Feature2 --> SharedUI
+      Feature1 --> SharedHybrid
+      Feature2 --> SharedHybrid
+      Feature1 --> DataAccess
+      Feature2 --> DataAccess
+      Feature1 --> ReactPVDS
+      Feature2 --> ReactPVDS
+  `}
+/>

@@ -1,9 +1,12 @@
 import { Meta } from '@storybook/addon-docs/blocks'
-import { Mermaid } from 'mdx-mermaid/Mermaid'
 
-<Meta title="Docs/Getting Started" />
+<Meta title="Overview/Getting Started" />
 
 # Getting Started
+
+Follow these steps to set up your development environment:
+
+## Initial Setup
 
 1. Install dependencies:
 
@@ -23,29 +26,38 @@ pnpm -r i18n
 pnpm -r build
 ```
 
-4. Run tests:
+## Development
+
+### Running Tests
 
 ```bash
 pnpm -r test
 ```
 
-5. Start Storybook:
+### Starting Storybook
 
 ```bash
 pnpm -F @unity/storybook dev
 ```
 
-6. Start development server for a feature (example: `workplan-import`):
+## Feature Development
+
+1. Start development server for a feature (example: `workplan-import`):
 
 ```bash
 pnpm -F "@unity/*.workplan-import" mf-dev
 ```
 
-7. Start production preview server for a feature (example: `workplan-import`):
+2. Start production preview server:
 
 ```bash
+# Build and deploy the feature
 pnpm -F @unity/features.workplan-import deploy-package
+
+# Start local server
 pnpm serve:local-bucket
+
+# Build and preview the app
 pnpm -F @unity/apps.workplan-import build
 pnpm -F @unity/apps.workplan-import preview
 ```

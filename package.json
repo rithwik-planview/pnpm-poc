@@ -8,6 +8,8 @@
     "license": "ISC",
     "scripts": {
         "prepare": "husky",
+        "format": "prettier --write .",
+        "format:check": "prettier --check .",
         "syncpack:fix": "syncpack format && syncpack fix",
         "serve:local-build-drop": "pnpm dlx http-server build-drop -p 80 --cors"
     },

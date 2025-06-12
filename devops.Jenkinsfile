@@ -84,6 +84,17 @@ pipeline {
                 }
             }
         }
+        stage("Format") {
+            steps {
+                script {
+                    sh """
+                    set +x && . /home/jenkins/.profile
+					nvm use
+                    pnpm format:check
+                    """
+                }
+            }
+        }
         stage("Type Check") {
             steps {
                 script {

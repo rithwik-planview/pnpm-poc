@@ -1,45 +1,45 @@
-import { Meta } from '@storybook/addon-docs/blocks'
-import { MermaidFlow } from '../components/MermaidFlow'
+import { Meta } from '@storybook/addon-docs/blocks';
+import { MermaidFlow } from '../components/MermaidFlow';
 
 <Meta title="Core/Shell Introduction" />
 
 # Unity Shell (@unity/core.shell)
 
-The core idea behind this setup is that **Unity projects/capabilities can be exported as Module Federation remotes** (e.g., `libs/features/feature-1`, `feature-2`). 
+The core idea behind this setup is that **Unity projects/capabilities can be exported as Module Federation remotes** (e.g., `libs/features/feature-1`, `feature-2`).
 
 ## Benefits
 
-* **Dependency Deduplication**
+- **Dependency Deduplication**
   Large libraries like React, ReactDOM, PVDS, Unity Utils, etc., can be shared across different micro-frontends, reducing bundle size and duplication.
 
-* **Independent Deployability**
+- **Independent Deployability**
   Individual projects can be deployed independently, enabling faster, safer releases.
 
-* **Shared Singleton Instances**
+- **Shared Singleton Instances**
   Apart from React, ReactDOM, and React Router, we could also share sensible state (e.g., Apollo cache) to improve perceived performance.
 
-* **Great Developer Experience**
+- **Great Developer Experience**
   Working with these apps in a monorepo with build-time MF support is a breeze.
   With the Module Federation Chrome Extension, we can swap out production builds with local development builds and even enable Hot Module Replacement! 🤯
 
-* **Supports a Wide Range of Consumers**
+- **Supports a Wide Range of Consumers**
   This architecture offers frictionless consumption across various environments.
 
 ## Remote Module Exports
 
 Each remote exposes two primary modules:
 
-* `./App`
+- `./App`
   Exports the root React component of the micro-frontend.
 
-* `.` (default export)
+- `.` (default export)
   Wraps the root component with `@unity/shell#createRemote`. This is consumed using `@unity/shell#loadRemote`.
 
 Reference implementation: `@unity/features/feature-1`
 
 <MermaidFlow
-  id="remote-module-flow"
-  definition={`
+    id="remote-module-flow"
+    definition={`
     flowchart TD
       subgraph Remote_Module
         A["React Component (./App)"] --> B["Default Export - createRemote wrapper (.)"]

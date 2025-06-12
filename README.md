@@ -2,10 +2,10 @@
 
 Establish a scalable, developer-friendly frontend monorepo architecture to support modular development across teams. Emphasis is on:
 
--   Independent module ownership
--   Runtime composition using Module Federation
--   Optimised developer experience (DX)
--   Seamless integration into CI/CD
+- Independent module ownership
+- Runtime composition using Module Federation
+- Optimised developer experience (DX)
+- Seamless integration into CI/CD
 
 ---
 
@@ -48,11 +48,11 @@ Establish a scalable, developer-friendly frontend monorepo architecture to suppo
 
 We use `@module-federation/enhanced` with Rsbuild, which:
 
--   Automatically emits:
-    -   `mf-manifest.json`: Remote exposure details
--   Supports both:
-    -   Module Federation for `demo` consuming `feature-1`, `feature-2`
-    -   UMD fallback for loading remotes in non-React/non-MF hosts like Unity
+- Automatically emits:
+    - `mf-manifest.json`: Remote exposure details
+- Supports both:
+    - Module Federation for `demo` consuming `feature-1`, `feature-2`
+    - UMD fallback for loading remotes in non-React/non-MF hosts like Unity
 
 ---
 
@@ -137,9 +137,9 @@ Uniform type linking across apps and libraries
 
 ## 🔐 Dependency Management Policy
 
--   Everything is pinned via `pnpm-lock.yaml`.
--   Each subproject has local `node_modules`, but resolutions are hoisted via pnpm.
--   TypeScript is isolated with a shared `tsconfig.base.json`.
+- Everything is pinned via `pnpm-lock.yaml`.
+- Each subproject has local `node_modules`, but resolutions are hoisted via pnpm.
+- TypeScript is isolated with a shared `tsconfig.base.json`.
 
 ---
 

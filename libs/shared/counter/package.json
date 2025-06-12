@@ -5,7 +5,6 @@
     "scripts": {
         "build": "rslib build",
         "dev": "rslib build --watch",
-        "format": "prettier --write .",
         "lint": "eslint .",
         "typecheck": "pnpm typecheck:all && pnpm typecheck:build",
         "typecheck:all": "tsc -b tsconfig.json",

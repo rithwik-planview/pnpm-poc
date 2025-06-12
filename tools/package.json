@@ -5,7 +5,6 @@
     "scripts": {
         "build": "rslib build",
         "dev": "rslib build --watch",
-        "format": "prettier --write .",
         "lint": "eslint .",
         "prepare": "shx test -e dist || pnpm build",
         "test": "jest",

@@ -1,10 +1,10 @@
-import { Meta } from '@storybook/addon-docs/blocks'
-import { MermaidFlow } from '../components/MermaidFlow'
+import { Meta } from '@storybook/addon-docs/blocks';
+import { MermaidFlow } from '../components/MermaidFlow';
 
 <Meta title="Overview/Introduction" />
 
 <div style={{ background: '#000a22', textAlign: 'center', borderRadius: 10 }}>
-	<img src="img/Unity-color.png" alt="Unity Logo" style={{ height: '400px' }} />
+    <img src="img/Unity-color.png" alt="Unity Logo" style={{ height: '400px' }} />
 </div>
 
 ---
@@ -19,22 +19,22 @@ It is designed to provide a highly modular, scalable, and maintainable environme
 
 Unity aims to provide:
 
-1. A **multi-tier modular architecture** managed in a monorepo  
+1. A **multi-tier modular architecture** managed in a monorepo
 2. An efficient way to **compose applications at runtime** using **Webpack Module Federation**
 3. A robust **toolchain** and support packages for:
-   - i18n
-   - telemetry
-   - quality control (linting, formatting, testing)
-   - documentation
+    - i18n
+    - telemetry
+    - quality control (linting, formatting, testing)
+    - documentation
 4. **Independent release and deployment** of micro-frontend applications
 
 ## Tech Stack
 
-| Domain           | Tool(s)                                         |
-|------------------|------------------------------------------------|
+| Domain           | Tool(s)                                        |
+| ---------------- | ---------------------------------------------- |
 | **Package Mgmt** | `pnpm`                                         |
-| **Bundlers**     | `rslib`, `rebuild`                            |
-| **Linting**      | `ESLint`, `Syncpack`                          |
+| **Bundlers**     | `rslib`, `rebuild`                             |
+| **Linting**      | `ESLint`, `Syncpack`                           |
 | **Formatting**   | `Prettier`, `Syncpack`                         |
 | **Testing**      | `Jest`, `@testing-library/react`, `Playwright` |
 | **Docs**         | `Storybook`                                    |
@@ -65,5 +65,6 @@ Unity aims to provide:
       Feature2 --> DataAccess
       Feature1 --> ReactPVDS
       Feature2 --> ReactPVDS
-  `}
+
+`}
 />

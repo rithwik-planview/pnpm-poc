@@ -7,7 +7,6 @@
         "deploy-package": "deploy-package @unity/features.workplan-import --build",
         "deploy-package:ci": "deploy-package @unity/features.workplan-import",
         "dev": "rslib build --watch",
-        "format": "prettier --write .",
         "i18n": "pnpm i18n:extract && pnpm i18n:compile",
         "i18n:compile": "i18n-compile @unity/features.workplan-import",
         "i18n:extract": "i18n-extract @unity/features.workplan-import",

@@ -1,168 +1,185 @@
-import { Meta } from '@storybook/addon-docs/blocks'
+import { Meta } from '@storybook/addon-docs/blocks';
 
 <Meta title="Overview/Project Structure" />
 
 # Project Structure
+
 A comprehensive guide to the development tools, configurations, and package organization used in this project.
 
 ## Packages Overview
+
 An overview of all the packages in the Unity ecosystem and their purposes.
 
-| Package Name                  | Description                                                |
-|------------------------------|------------------------------------------------------------|
-| `@unity.tools`               | Node utilities for common dev tasks (e.g. `deploy-package`, `i18n:compile`) |
-| `@unity.storybook`           | Storybook instance with shared docs and workshop components |
-| `@unity.core.data-access`    | API client layer — wrapper over Axios                     |
-| `@unity.core.shell`          | Module Federation API — provides remote/host runtime wrappers |
-| `@unity.shared.ui`           | Reusable design system components                         |
-| `@unity.shared.hybrid`       | Data client for HybridSolutions service                   |
-| `@unity.shared.utils`        | General-purpose JavaScript/Node utilities                 |
-| `@unity.features.*`          | Micro-frontend feature modules (loaded as remotes)        |
-| `@unity.apps.*`              | Reference applications for local dev and integration      |
-| `@unity.e2e.*`               | End-to-end test suites powered by Playwright              |
-| `@unity.docs`                | Common markdown/MDX documentation and visual assets       |
+| Package Name              | Description                                                                 |
+| ------------------------- | --------------------------------------------------------------------------- |
+| `@unity.tools`            | Node utilities for common dev tasks (e.g. `deploy-package`, `i18n:compile`) |
+| `@unity.storybook`        | Storybook instance with shared docs and workshop components                 |
+| `@unity.core.data-access` | API client layer — wrapper over Axios                                       |
+| `@unity.core.shell`       | Module Federation API — provides remote/host runtime wrappers               |
+| `@unity.shared.ui`        | Reusable design system components                                           |
+| `@unity.shared.hybrid`    | Data client for HybridSolutions service                                     |
+| `@unity.shared.utils`     | General-purpose JavaScript/Node utilities                                   |
+| `@unity.features.*`       | Micro-frontend feature modules (loaded as remotes)                          |
+| `@unity.apps.*`           | Reference applications for local dev and integration                        |
+| `@unity.e2e.*`            | End-to-end test suites powered by Playwright                                |
+| `@unity.docs`             | Common markdown/MDX documentation and visual assets                         |
 
 ## Project Setup
 
 The project uses:
 
 ### TypeScript Configuration
+
 A sophisticated type-checking setup with project references for optimal development experience.
 
 - Each package contains multiple TypeScript configurations:
-  - `tsconfig.json`: Used by the editor
-    - Covers both src/ and non-src/ files
-    - Doesn't emit declarations
-    - Provides full IDE support
-  - `tsconfig.build.json`: Used by the bundler
-    - Covers only buildable src files
-    - Emits declarations for dependent projects
-    - Supports project references
-  - `tsconfig.mf.json`: For Module Federation remotes
-    - Used by `@module-federation/rsbuild-plugin`
-    - Doesn't support composite mode
-    - Built using `tsc -p` command
-    - Enables type sharing across federated modules
+    - `tsconfig.json`: Used by the editor
+        - Covers both src/ and non-src/ files
+        - Doesn't emit declarations
+        - Provides full IDE support
+    - `tsconfig.build.json`: Used by the bundler
+        - Covers only buildable src files
+        - Emits declarations for dependent projects
+        - Supports project references
+    - `tsconfig.mf.json`: For Module Federation remotes
+        - Used by `@module-federation/rsbuild-plugin`
+        - Doesn't support composite mode
+        - Built using `tsc -p` command
+        - Enables type sharing across federated modules
 
 ### Code Quality Tools
+
 A comprehensive set of tools ensuring consistent code quality across the project.
 
 - **ESLint v9**: Code quality enforcement
-  - Uses the new flat config format
-  - Configurations extended from `configs/eslint` folder
-  - Ensures consistent code quality across packages
+    - Uses the new flat config format
+    - Configurations extended from `configs/eslint` folder
+    - Ensures consistent code quality across packages
 - **Prettier**: Code formatting
-  - Centralized configuration via `.prettierrc` at root
-  - Ensures consistent code style across the project
-  - Integrated with the development workflow
+    - Centralized configuration via `.prettierrc` at root
+    - Ensures consistent code style across the project
+    - Integrated with the development workflow
 
 ### Testing Infrastructure
+
 Robust testing setup for unit, integration, and end-to-end testing.
 
 - **Jest**: Testing framework
-  - Uses Jest with @swc/core for fast execution
-  - Test configurations centralized in `configs/jest/` folder
-  - Provides consistent testing environment across packages
+    - Uses Jest with @swc/core for fast execution
+    - Test configurations centralized in `configs/jest/` folder
+    - Provides consistent testing environment across packages
 
 ### Documentation
+
 Interactive documentation and component development environment.
 
 - **Storybook**: Component documentation and testing
-  - Built on react-vite framework
-  - Enhanced markdown support:
-    - Github Flavored Markdown (via remark-gfm)
-    - Mermaid charts support (via mermaid)
-  - Provides interactive component documentation
+    - Built on react-vite framework
+    - Enhanced markdown support:
+        - Github Flavored Markdown (via remark-gfm)
+        - Mermaid charts support (via mermaid)
+    - Provides interactive component documentation
 
 ### Build System
+
 Modern bundling solutions optimized for both applications and libraries.
 
 - **Application Building**:
-  - Built with rsbuild
-  - Optimized for Module Federation
-  - Development and production modes
+
+    - Built with rsbuild
+    - Optimized for Module Federation
+    - Development and production modes
 
 - **Library Building**:
-  - Built with rslib
-  - Optimized for package distribution
-  - Supports watch mode for development
+
+    - Built with rslib
+    - Optimized for package distribution
+    - Supports watch mode for development
 
 - **Shared Features**:
-  - Powered by rspack
-  - Uses swc for TypeScript compilation
-  - Multiple output formats:
-    - /esm (ES modules)
-    - /cjs (CommonJS)
-    - /umd (Universal Module Definition)
-    - /mf (Module Federation)
-    - /types (TypeScript declarations)
+    - Powered by rspack
+    - Uses swc for TypeScript compilation
+    - Multiple output formats:
+        - /esm (ES modules)
+        - /cjs (CommonJS)
+        - /umd (Universal Module Definition)
+        - /mf (Module Federation)
+        - /types (TypeScript declarations)
 
 ### Package Management
+
 Efficient dependency management and workspace organization using pnpm.
 
 - **Workspace Management**:
-  - Uses pnpm for fast, disk-space efficient package management
-  - Workspaces configured via `pnpm-workspace.yaml`
-  - Workspace dependencies use `workspace:*` versioning
-  - Supports multiple package types (apps, libraries, tools)
+
+    - Uses pnpm for fast, disk-space efficient package management
+    - Workspaces configured via `pnpm-workspace.yaml`
+    - Workspace dependencies use `workspace:*` versioning
+    - Supports multiple package types (apps, libraries, tools)
 
 - **Version Control**:
-  - Dependencies synchronized using syncpack
-  - Package versioning follows semver with `^` range
-  - Consistent versioning across all packages
-  - Automated version checks in CI/CD
+
+    - Dependencies synchronized using syncpack
+    - Package versioning follows semver with `^` range
+    - Consistent versioning across all packages
+    - Automated version checks in CI/CD
 
 - **Development Scripts**:
-  - Standardized script names across packages
-  - Support for parallel execution
-  - Environment-specific commands
-  - Workspace-filtered commands
+    - Standardized script names across packages
+    - Support for parallel execution
+    - Environment-specific commands
+    - Workspace-filtered commands
 
 ### Available Scripts
+
 Common commands and scripts available across all packages in the workspace.
 
 - **Build Commands**:
-  - `build`: Builds the package using rsbuild/rslib
-    - Apps: Uses rsbuild for application bundling
-    - Libraries: Uses rslib for library packaging
-  - `deploy-package`: Builds and deploys a package with its dependencies
-    - Useful for Module Federation remotes
-    - Includes dependency resolution
+
+    - `build`: Builds the package using rsbuild/rslib
+        - Apps: Uses rsbuild for application bundling
+        - Libraries: Uses rslib for library packaging
+    - `deploy-package`: Builds and deploys a package with its dependencies
+        - Useful for Module Federation remotes
+        - Includes dependency resolution
 
 - **Development Commands**:
-  - `dev`: Development mode with watch capabilities
-    - Hot Module Replacement enabled
-    - Automatic rebuilds on changes
-  - `mf-dev`: Module Federation development mode
-    - Starts development server for federated modules
-    - Enables remote module hot-reloading
-  - `preview`: Preview production build locally
+
+    - `dev`: Development mode with watch capabilities
+        - Hot Module Replacement enabled
+        - Automatic rebuilds on changes
+    - `mf-dev`: Module Federation development mode
+        - Starts development server for federated modules
+        - Enables remote module hot-reloading
+    - `preview`: Preview production build locally
 
 - **Type Checking**:
-  - `typecheck`: Comprehensive type checking
-    - `typecheck:all`: Checks all files (src and non-src)
-    - `typecheck:build`: Checks only buildable files
-  - Validates TypeScript configurations
-  - Ensures type compatibility across packages
+
+    - `typecheck`: Comprehensive type checking
+        - `typecheck:all`: Checks all files (src and non-src)
+        - `typecheck:build`: Checks only buildable files
+    - Validates TypeScript configurations
+    - Ensures type compatibility across packages
 
 - **Quality Assurance**:
-  - `lint`: Runs ESLint for code quality
-    - Uses project-specific ESLint configs
-    - Enforces coding standards
-  - `format`: Formats code using Prettier
-    - Ensures consistent code style
-    - Can be run with `--write` or `--check`
-  - `test`: Runs Jest tests
-    - `test:ci`: Runs tests with coverage reporting
-    - Parallel test execution for speed
+
+    - `lint`: Runs ESLint for code quality
+        - Uses project-specific ESLint configs
+        - Enforces coding standards
+    - `test`: Runs Jest tests
+        - `test:ci`: Runs tests with coverage reporting
+        - Parallel test execution for speed
 
 - **Internationalization**:
-  - `i18n`: Compiles localization files
-    - Extracts messages from source code
-    - Generates type definitions
-    - Updates translation files
+
+    - `i18n`: Compiles localization files
+        - Extracts messages from source code
+        - Generates type definitions
+        - Updates translation files
 
 - **Utility Commands**:
-  - `serve:local-build-drop`: Starts local server for testing
-  - `clean`: Removes build artifacts and caches
-  - `prepare`: Sets up git hooks and project requirements
+    - `serve:local-build-drop`: Starts local server for testing
+    - `clean`: Removes build artifacts and caches
+    - `prepare`: Sets up git hooks and project requirements
+    - `format`: Formats code using Prettier
+	- `format:check`: Checks code formatting without changes

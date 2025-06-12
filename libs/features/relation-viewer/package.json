@@ -4,7 +4,7 @@
     "private": true,
     "scripts": {
         "build": "rslib build",
-        "deploy-package": "deploy-package @unity/features.relation-viewer --with-deps",
+        "deploy-package": "deploy-package @unity/features.relation-viewer --build",
         "deploy-package:ci": "deploy-package @unity/features.relation-viewer",
         "dev": "rslib build --watch",
         "format": "prettier --write .",

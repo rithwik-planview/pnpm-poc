@@ -4,7 +4,7 @@
     "private": true,
     "scripts": {
         "build": "rslib build",
-        "deploy-package": "deploy-package @unity/features.feature-1 --with-deps",
+        "deploy-package": "deploy-package @unity/features.feature-1 --build",
         "deploy-package:ci": "deploy-package @unity/features.feature-1",
         "dev": "rslib build --watch",
         "format": "prettier --write .",

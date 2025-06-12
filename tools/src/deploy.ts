@@ -36,14 +36,14 @@ async function getProjectPaths(): Promise<Record<string, string>> {
 
 async function main() {
     const args = process.argv.slice(2);
-    const withDeps = args.includes('--with-deps');
+    const shouldBuild = args.includes('--build');
     const pkgs = args.filter((arg) => !arg.startsWith('--'));
     const pnpmRoot = await exec('pnpm root -w');
     const workspaceRoot = path.resolve(pnpmRoot.stdout.trim(), '..');
     const targetRoot = path.join(workspaceRoot, 'build-drop/');
 
     if (pkgs.length === 0) {
-        console.error('Usage: deploy.ts <pkg1> <pkg2> ... [--with-deps]');
+        console.error(chalk.red('Usage: deploy.ts <pkg1> <pkg2> ... [--build]'));
         process.exit(1);
     }
 
@@ -51,15 +51,18 @@ async function main() {
 
     const tasks = new Listr(
         [
-            {
-                title: 'Building packages',
-                task: () => {
-                    const downstream = withDeps ? '...' : '';
-                    const filterArgs = pkgs.map((p) => `-F "${p}${downstream}"`).join(' ');
-                    const cmd = `pnpm ${filterArgs} build`;
-                    return exec(cmd);
-                },
-            },
+            ...(shouldBuild
+                ? [
+                      {
+                          title: 'Building packages',
+                          task: () => {
+                              const filterArgs = pkgs.map((p) => `-F "${p}..."`).join(' ');
+                              const cmd = `pnpm ${filterArgs} build`;
+                              return exec(cmd);
+                          },
+                      },
+                  ]
+                : []),
             ...pkgs.map((pkg) => {
                 const pkgPath = projectMap[pkg];
                 if (!pkgPath) {

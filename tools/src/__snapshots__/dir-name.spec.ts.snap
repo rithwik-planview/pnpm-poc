@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`getDirName should return the correct directory name for each remote name 1`] = `"/Users/ranand/Code/module_federation/pnpm-poc/tools/src"`;

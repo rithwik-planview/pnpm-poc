@@ -56,7 +56,7 @@ pipeline {
                 script {
                     sh """
                     set +x && . /home/jenkins/.profile
-					nvm use
+					          nvm use
                     pnpm install
                     """
                 }
@@ -67,12 +67,13 @@ pipeline {
                 script {
                     sh """
                     set +x && . /home/jenkins/.profile
-					nvm use
+					          nvm use
                     pnpm -r i18n
                     """
                 }
             }
         }
+        
         stage("Type Check") {
             steps {
                 script {
@@ -84,17 +85,7 @@ pipeline {
                 }
             }
         }
-        stage("Build") {
-            steps {
-                script {
-                    sh """
-                    set +x && . /home/jenkins/.profile
-					nvm use
-                    pnpm -r build
-                    """
-                }
-            }
-        }
+        
         stage("Test") {
             steps {
                 catchError(buildResult: "UNSTABLE", stageResult: "UNSTABLE") {
@@ -116,17 +107,62 @@ pipeline {
                 }
             }
         }
-		stage("Generate local build drop") {
-			steps {
-				script {
-					sh """
-					set +x && . /home/jenkins/.profile
-					nvm use
-					pnpm -r deploy-package
-					"""
-				}
-			}
-		}
+        
+        stage("Generate Local Build Drop") {
+            steps {
+                script {
+                    sh """
+                    set +x && . /home/jenkins/.profile
+                    nvm use
+                    pnpm -r deploy-package
+                    """
+                }
+      		}
+        }
+        stage("Upload Build to S3") {
+            steps {
+                script {
+                    withAWS(region: 'eu-west-1', credentials: '411231698121-aws-creds') {
+                        s3Upload(
+                            workingDir: 'build-drop',
+                            includePathPattern: '**/*',
+                            bucket: 'modernization-build-drop',
+                            path: "unityV2/test-build"
+                        )
+                    }
+                }
+            }
+        }
+        
+        stage("Deploy to QA") {
+            when {
+                expression {
+                    return env.BRANCH_NAME == 'develop'
+                }
+            }
+            steps {
+                script {
+                    def sourceBucket = 'modernization-build-drop'
+                    def destBucket = 'unity-application-qa'
+                    def cfDistribution = 'E3PJSDDQC0849R'
+                    
+                    withAWS(region: 'eu-west-1', credentials: 'jenkins-aws-rnd-s3-admin') {
+                      sh """
+                          echo "Syncing files from ${sourceBucket} to ${destBucket} ..."
+                          aws s3 sync s3://${sourceBucket}/unityV2/test-build/ s3://${destBucket}/unityV2/
+                          """
+                            
+                      // Flush the Cache on AWS CloudFront
+                      sh """
+                        echo "Flushing the cache on CloudFront Distribution for ${destBucket} ..."
+                        aws cloudfront create-invalidation \
+                            --distribution-id ${cfDistribution} \
+                            --paths "/*"
+                      """
+                        }
+                  }
+            }
+        }
     }
     post {
         unsuccessful {

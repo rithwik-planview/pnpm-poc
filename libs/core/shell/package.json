@@ -5,6 +5,7 @@
     "scripts": {
         "build": "rslib build",
         "deploy-package": "deploy-package @unity/core.shell --with-deps",
+        "deploy-package:ci": "deploy-package @unity/core.shell",
         "dev": "rslib build --watch",
         "format": "prettier --write .",
         "lint": "eslint .",

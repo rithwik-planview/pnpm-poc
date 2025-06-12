@@ -95,6 +95,17 @@ pipeline {
                 }
             }
         }
+        stage("Build") {
+            steps {
+                script {
+                    sh """
+                    set +x && . /home/jenkins/.profile
+					nvm use
+                    pnpm -r build
+                    """
+                }
+            }
+        }
         stage("Test") {
             steps {
                 catchError(buildResult: "UNSTABLE", stageResult: "UNSTABLE") {
@@ -122,7 +133,7 @@ pipeline {
                     sh """
                     set +x && . /home/jenkins/.profile
                     nvm use
-                    pnpm -r deploy-package
+                    pnpm -r deploy-package:ci
                     """
                 }
       		}

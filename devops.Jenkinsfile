@@ -56,7 +56,7 @@ pipeline {
                 script {
                     sh """
                     set +x && . /home/jenkins/.profile
-					          nvm use
+					nvm use
                     pnpm install
                     """
                 }
@@ -67,13 +67,23 @@ pipeline {
                 script {
                     sh """
                     set +x && . /home/jenkins/.profile
-					          nvm use
+					nvm use
                     pnpm -r i18n
                     """
                 }
             }
         }
-        
+        stage("Lint") {
+            steps {
+                script {
+                    sh """
+                    set +x && . /home/jenkins/.profile
+					nvm use
+                    pnpm -r lint
+                    """
+                }
+            }
+        }
         stage("Type Check") {
             steps {
                 script {
@@ -85,7 +95,6 @@ pipeline {
                 }
             }
         }
-        
         stage("Test") {
             steps {
                 catchError(buildResult: "UNSTABLE", stageResult: "UNSTABLE") {
@@ -107,7 +116,6 @@ pipeline {
                 }
             }
         }
-        
         stage("Generate Local Build Drop") {
             steps {
                 script {
@@ -133,7 +141,6 @@ pipeline {
                 }
             }
         }
-        
         stage("Deploy to QA") {
             when {
                 expression {

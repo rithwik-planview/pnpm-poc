@@ -13,7 +13,7 @@ const { parsed } = loadEnv({ cwd: envDir });
 export default defineConfig(({ env }) => ({
     source: { tsconfigPath: './tsconfig.build.json' },
     html: {
-        title: 'Feature-1 Demo',
+        title: 'Feature-2 Demo',
     },
     plugins: [
         pluginReact(),

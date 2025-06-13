@@ -3,59 +3,46 @@ import { defineConfig } from '@rslib/core';
 import { pluginModuleFederation } from '@module-federation/rsbuild-plugin';
 import moduleFederationConfig from './module-federation.config';
 import { name } from './package.json';
-import { getPortFromName, getRemoteUrl } from '@unity/shared.utils';
-import dotenv from 'dotenv-flow';
-import { getDirname } from '@unity/tools';
-import path from 'path';
+import { getPortFromName } from '@unity/shared.utils';
 
-const envDir = path.join(getDirname(import.meta.url), '../../../env');
-const { parsed } = dotenv.config({
-    path: envDir,
-});
-
-export default defineConfig(({ env }) => {
-    return {
-        source: {
-            tsconfigPath: './tsconfig.build.json',
-        },
-        lib: [
-            {
-                format: 'mf',
-                output: {
-                    assetPrefix:
-                        env !== 'development'
-                            ? getRemoteUrl(name, 'mf', parsed?.PUBLIC_BASE_URL)
-                            : undefined,
-                    distPath: {
-                        root: './dist/mf',
-                    },
+export default defineConfig({
+    source: {
+        tsconfigPath: './tsconfig.build.json',
+    },
+    lib: [
+        {
+            format: 'mf',
+            output: {
+                assetPrefix: 'auto',
+                distPath: {
+                    root: './dist/mf',
                 },
             },
-        ],
-        server: {
-            port: getPortFromName(name),
-            headers: {
-                'Access-Control-Allow-Origin': '*',
-            },
         },
-        plugins: [pluginReact(), pluginModuleFederation(moduleFederationConfig)],
-        tools: {
-            swc: {
-                jsc: {
-                    experimental: {
-                        plugins: [
-                            ['@swc/plugin-styled-components', {}],
-                            [
-                                '@swc/plugin-formatjs',
-                                {
-                                    idInterpolationPattern: '[sha512:contenthash:base64:6]',
-                                    ast: true,
-                                },
-                            ],
+    ],
+    server: {
+        port: getPortFromName(name),
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+        },
+    },
+    plugins: [pluginReact(), pluginModuleFederation(moduleFederationConfig)],
+    tools: {
+        swc: {
+            jsc: {
+                experimental: {
+                    plugins: [
+                        ['@swc/plugin-styled-components', {}],
+                        [
+                            '@swc/plugin-formatjs',
+                            {
+                                idInterpolationPattern: '[sha512:contenthash:base64:6]',
+                                ast: true,
+                            },
                         ],
-                    },
+                    ],
                 },
             },
         },
-    };
+    },
 });

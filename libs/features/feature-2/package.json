@@ -28,7 +28,6 @@
         "@types/react-dom": "^19.1.5",
         "@unity/shared.utils": "workspace:*",
         "@unity/tools": "workspace:*",
-        "dotenv-flow": "^4.1.0",
         "react": "^19.1.0",
         "react-dom": "^19.1.0"
     }

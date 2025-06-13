@@ -124,7 +124,7 @@ pipeline {
                         sh """
 						set +x && . /home/jenkins/.profile
 						nvm use
-                        pnpm -r test:ci
+                        pnpm -r test --coverage
                         """
                     }
                 }
@@ -144,7 +144,7 @@ pipeline {
                     sh """
                     set +x && . /home/jenkins/.profile
                     nvm use
-                    pnpm -r deploy-package:ci
+                    pnpm -r deploy-package --skip-build
                     """
                 }
       		}

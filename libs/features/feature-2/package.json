@@ -4,13 +4,11 @@
     "private": true,
     "scripts": {
         "build": "rslib build",
-        "deploy-package": "deploy-package @unity/features.feature-2 --build",
-        "deploy-package:ci": "deploy-package @unity/features.feature-2",
+        "deploy-package": "deploy-package @unity/features.feature-2",
         "dev": "rslib build --watch",
         "lint": "eslint .",
         "mf-dev": "rslib mf-dev",
         "test": "jest",
-        "test:ci": "jest --coverage",
         "typecheck": "pnpm typecheck:all && pnpm typecheck:build",
         "typecheck:all": "tsc -b tsconfig.json",
         "typecheck:build": "tsc -b tsconfig.build.json"

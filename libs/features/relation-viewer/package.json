@@ -4,8 +4,7 @@
     "private": true,
     "scripts": {
         "build": "rslib build",
-        "deploy-package": "deploy-package @unity/features.relation-viewer --build",
-        "deploy-package:ci": "deploy-package @unity/features.relation-viewer",
+        "deploy-package": "deploy-package @unity/features.relation-viewer",
         "dev": "rslib build --watch",
         "i18n": "pnpm i18n:extract && pnpm i18n:compile",
         "i18n:compile": "i18n-compile @unity/features.relation-viewer",
@@ -13,7 +12,6 @@
         "lint": "eslint .",
         "mf-dev": "rslib mf-dev",
         "test": "jest",
-        "test:ci": "jest --coverage",
         "typecheck": "pnpm typecheck:all && pnpm typecheck:build",
         "typecheck:all": "tsc -b tsconfig.json",
         "typecheck:build": "tsc -b tsconfig.build.json"

@@ -4,8 +4,7 @@
     "private": true,
     "scripts": {
         "build": "rslib build",
-        "deploy-package": "deploy-package @unity/core.shell --build",
-        "deploy-package:ci": "deploy-package @unity/core.shell",
+        "deploy-package": "deploy-package @unity/core.shell",
         "dev": "rslib build --watch",
         "lint": "eslint .",
         "typecheck": "pnpm typecheck:all && pnpm typecheck:build",

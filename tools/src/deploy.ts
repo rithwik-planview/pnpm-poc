@@ -36,7 +36,7 @@ async function getProjectPaths(): Promise<Record<string, string>> {
 
 async function main() {
     const args = process.argv.slice(2);
-    const shouldBuild = args.includes('--build');
+    const skipBuild = args.includes('--skip-build');
     const pkgs = args.filter((arg) => !arg.startsWith('--'));
     const pnpmRoot = await exec('pnpm root -w');
     const workspaceRoot = path.resolve(pnpmRoot.stdout.trim(), '..');
@@ -51,7 +51,7 @@ async function main() {
 
     const tasks = new Listr(
         [
-            ...(shouldBuild
+            ...(!skipBuild
                 ? [
                       {
                           title: 'Building packages',

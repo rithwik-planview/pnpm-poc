@@ -1,0 +1,14 @@
+{
+    "extends": "../../../configs/tsconfig/react.json",
+    "compilerOptions": {
+        "declarationDir": "./dist/types",
+        "rootDir": "./src",
+        "baseUrl": "./",
+        "paths": {
+            "@unity/shared.utils": ["../../shared/utils/src"]
+        }
+    },
+    "include": ["./src", "src/types"],
+    "exclude": ["node_modules", "dist"],
+    "references": [{ "path": "../../shared/utils/tsconfig.build.json" }]
+}

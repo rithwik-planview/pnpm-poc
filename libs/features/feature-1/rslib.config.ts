@@ -4,16 +4,13 @@ import { pluginModuleFederation } from '@module-federation/rsbuild-plugin';
 import moduleFederationConfig from './module-federation.config';
 import { name } from './package.json';
 import { getPortFromName, getRemoteUrl } from '@unity/shared.utils';
-import dotenv from 'dotenv';
+import dotenv from 'dotenv-flow';
 import { getDirname } from '@unity/tools';
 import path from 'path';
 
 const envDir = path.join(getDirname(import.meta.url), '../../../env');
-const envFiles = ['.env.production.local', '.env.production'].map((file) =>
-    path.join(envDir, file),
-);
 const { parsed } = dotenv.config({
-    path: envFiles,
+    path: envDir,
 });
 
 export default defineConfig(({ env }) => {

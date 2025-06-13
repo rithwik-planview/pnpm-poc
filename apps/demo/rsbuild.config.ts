@@ -13,6 +13,9 @@ export default defineConfig({
         tsconfigPath: './tsconfig.build.json',
         define: publicVars,
     },
+    output: {
+        assetPrefix: './',
+    },
     html: {
         title: 'Unity Module Federation POC',
     },

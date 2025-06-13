@@ -34,9 +34,16 @@ const config: StorybookConfig = {
         options: {},
     },
     refs: {
-        pvds: {
+        // Had to do this because of an iframe access error.
+        // But it started working again after some time, so it might not be needed.
+        // pvds: {
+        //     title: 'Planview Design System',
+        //     url: '/pvds',
+        //     expanded: true,
+        // },
+        pvds_real: {
             title: 'Planview Design System',
-            url: '/pvds',
+            url: 'https://planview-ds.github.io/react-pvds',
             expanded: true,
         },
     },
@@ -45,6 +52,8 @@ const config: StorybookConfig = {
             build: {
                 chunkSizeWarningLimit: 1600,
             },
+            // Had to do this because of an iframe access error.
+            // But it started working again after some time, so it might not be needed.
             server: {
                 proxy: {
                     '/pvds': {

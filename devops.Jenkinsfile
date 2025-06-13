@@ -107,6 +107,9 @@ pipeline {
             }
         }
         stage("Build") {
+            environment {
+                NODE_ENV = 'ci'
+            }
             steps {
                 script {
                     sh """

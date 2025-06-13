@@ -15,6 +15,9 @@ export default defineConfig(({ env }) => ({
     html: {
         title: 'Feature-2 Demo',
     },
+    output: {
+        assetPrefix: './',
+    },
     plugins: [
         pluginReact(),
         pluginModuleFederation(

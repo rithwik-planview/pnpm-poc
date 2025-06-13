@@ -4,6 +4,7 @@
     "private": true,
     "scripts": {
         "build": "rsbuild build",
+        "deploy-package": "deploy-package @unity/apps.demo-umd",
         "dev": "rsbuild dev --open",
         "lint": "eslint .",
         "mf-dev": "rsbuild mf-dev --open",

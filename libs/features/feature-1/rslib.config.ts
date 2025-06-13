@@ -23,7 +23,7 @@ export default defineConfig(({ env }) => {
                 format: 'mf',
                 output: {
                     assetPrefix:
-                        env === 'production'
+                        env !== 'development'
                             ? getRemoteUrl(name, 'mf', parsed?.PUBLIC_BASE_URL)
                             : undefined,
                     distPath: {

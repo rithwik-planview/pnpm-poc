@@ -8,7 +8,7 @@ export type QueryKey<TOptions extends Options> = [
         _infinite?: boolean;
     }
 ];
-export declare const bugsGetQueryKey: (options: Options<BugsGetData>) => [Pick<Options<BugsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const bugsGetQueryKey: (options: Options<BugsGetData>) => [Pick<Options<BugsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -47,16 +47,16 @@ export declare const bugsGetQueryKey: (options: Options<BugsGetData>) => [Pick<O
  * "excludePermissions": true
  * }
  */
-export declare const bugsGetOptions: (options: Options<BugsGetData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<BugsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const bugsGetOptions: (options: Options<BugsGetData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<BugsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<BugsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<BugsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<BugsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<BugsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -100,17 +100,17 @@ export declare const bugsGetInfiniteQueryKey: (options: Options<BugsGetData>) =>
  * "excludePermissions": true
  * }
  */
-export declare const bugsGetInfiniteOptions: (options: Options<BugsGetData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<BugsGetData>>, number | Pick<Pick<Options<BugsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const bugsGetInfiniteOptions: (options: Options<BugsGetData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<BugsGetData>>, number | Pick<Pick<Options<BugsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<BugsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<BugsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<BugsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<BugsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<BugsGetData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -153,7 +153,7 @@ export declare const bugsGetInfiniteOptions: (options: Options<BugsGetData>) => 
  * }
  */
 export declare const bugsGetMutation: (options?: Partial<Options<BugsGetData>>) => UseMutationOptions<BugsGetResponse, AxiosError<DefaultError>, Options<BugsGetData>>;
-export declare const bugsGetGroupedQueryKey: (options: Options<BugsGetGroupedData>) => [Pick<Options<BugsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const bugsGetGroupedQueryKey: (options: Options<BugsGetGroupedData>) => [Pick<Options<BugsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -194,16 +194,16 @@ export declare const bugsGetGroupedQueryKey: (options: Options<BugsGetGroupedDat
  * "groupName": "Submitted"
  * }
  */
-export declare const bugsGetGroupedOptions: (options: Options<BugsGetGroupedData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<BugsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const bugsGetGroupedOptions: (options: Options<BugsGetGroupedData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<BugsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<BugsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<BugsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<BugsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<BugsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -249,17 +249,17 @@ export declare const bugsGetGroupedInfiniteQueryKey: (options: Options<BugsGetGr
  * "groupName": "Submitted"
  * }
  */
-export declare const bugsGetGroupedInfiniteOptions: (options: Options<BugsGetGroupedData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<BugsGetGroupedData>>, number | Pick<Pick<Options<BugsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const bugsGetGroupedInfiniteOptions: (options: Options<BugsGetGroupedData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<BugsGetGroupedData>>, number | Pick<Pick<Options<BugsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<BugsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<BugsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<BugsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<BugsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<BugsGetGroupedData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>;
@@ -304,7 +304,7 @@ export declare const bugsGetGroupedInfiniteOptions: (options: Options<BugsGetGro
  * }
  */
 export declare const bugsGetGroupedMutation: (options?: Partial<Options<BugsGetGroupedData>>) => UseMutationOptions<BugsGetGroupedResponse, AxiosError<DefaultError>, Options<BugsGetGroupedData>>;
-export declare const bugsGetByIdentifierQueryKey: (options: Options<BugsGetByIdentifierData>) => [Pick<Options<BugsGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const bugsGetByIdentifierQueryKey: (options: Options<BugsGetByIdentifierData>) => [Pick<Options<BugsGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -321,16 +321,16 @@ export declare const bugsGetByIdentifierQueryKey: (options: Options<BugsGetByIde
  * "excludePermissions": true
  * }
  */
-export declare const bugsGetByIdentifierOptions: (options: Options<BugsGetByIdentifierData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntityDetailsResponse, Error, import("../types.gen").EntityDetailsResponse, [Pick<Options<BugsGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const bugsGetByIdentifierOptions: (options: Options<BugsGetByIdentifierData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntityDetailsResponse, Error, import("../types.gen").EntityDetailsResponse, [Pick<Options<BugsGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntityDetailsResponse, [Pick<Options<BugsGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntityDetailsResponse, [Pick<Options<BugsGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<BugsGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<BugsGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -352,7 +352,7 @@ export declare const bugsGetByIdentifierOptions: (options: Options<BugsGetByIden
  * }
  */
 export declare const bugsGetByIdentifierMutation: (options?: Partial<Options<BugsGetByIdentifierData>>) => UseMutationOptions<BugsGetByIdentifierResponse, AxiosError<DefaultError>, Options<BugsGetByIdentifierData>>;
-export declare const bugsGetByIdsQueryKey: (options: Options<BugsGetByIdsData>) => [Pick<Options<BugsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const bugsGetByIdsQueryKey: (options: Options<BugsGetByIdsData>) => [Pick<Options<BugsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -392,16 +392,16 @@ export declare const bugsGetByIdsQueryKey: (options: Options<BugsGetByIdsData>) 
  * "ids": ["11.222.333", "44.555.66"]
  * }
  */
-export declare const bugsGetByIdsOptions: (options: Options<BugsGetByIdsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<BugsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const bugsGetByIdsOptions: (options: Options<BugsGetByIdsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<BugsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<BugsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<BugsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<BugsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<BugsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -446,17 +446,17 @@ export declare const bugsGetByIdsInfiniteQueryKey: (options: Options<BugsGetById
  * "ids": ["11.222.333", "44.555.66"]
  * }
  */
-export declare const bugsGetByIdsInfiniteOptions: (options: Options<BugsGetByIdsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<BugsGetByIdsData>>, number | Pick<Pick<Options<BugsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const bugsGetByIdsInfiniteOptions: (options: Options<BugsGetByIdsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<BugsGetByIdsData>>, number | Pick<Pick<Options<BugsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<BugsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<BugsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<BugsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<BugsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<BugsGetByIdsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -500,7 +500,7 @@ export declare const bugsGetByIdsInfiniteOptions: (options: Options<BugsGetByIds
  * }
  */
 export declare const bugsGetByIdsMutation: (options?: Partial<Options<BugsGetByIdsData>>) => UseMutationOptions<BugsGetByIdsResponse, AxiosError<DefaultError>, Options<BugsGetByIdsData>>;
-export declare const bugsGetCountQueryKey: (options: Options<BugsGetCountData>) => [Pick<Options<BugsGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const bugsGetCountQueryKey: (options: Options<BugsGetCountData>) => [Pick<Options<BugsGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -529,16 +529,16 @@ export declare const bugsGetCountQueryKey: (options: Options<BugsGetCountData>) 
  * ]
  * }
  */
-export declare const bugsGetCountOptions: (options: Options<BugsGetCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<BugsGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const bugsGetCountOptions: (options: Options<BugsGetCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<BugsGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<BugsGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<BugsGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<BugsGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<BugsGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -572,7 +572,7 @@ export declare const bugsGetCountOptions: (options: Options<BugsGetCountData>) =
  * }
  */
 export declare const bugsGetCountMutation: (options?: Partial<Options<BugsGetCountData>>) => UseMutationOptions<BugsGetCountResponse, AxiosError<DefaultError>, Options<BugsGetCountData>>;
-export declare const bugsGetRelationsQueryKey: (options: Options<BugsGetRelationsData>) => [Pick<Options<BugsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const bugsGetRelationsQueryKey: (options: Options<BugsGetRelationsData>) => [Pick<Options<BugsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -611,16 +611,16 @@ export declare const bugsGetRelationsQueryKey: (options: Options<BugsGetRelation
  * "excludePermissions": true
  * }
  */
-export declare const bugsGetRelationsOptions: (options: Options<BugsGetRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<BugsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const bugsGetRelationsOptions: (options: Options<BugsGetRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<BugsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<BugsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<BugsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<BugsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<BugsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -664,17 +664,17 @@ export declare const bugsGetRelationsInfiniteQueryKey: (options: Options<BugsGet
  * "excludePermissions": true
  * }
  */
-export declare const bugsGetRelationsInfiniteOptions: (options: Options<BugsGetRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<BugsGetRelationsData>>, number | Pick<Pick<Options<BugsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const bugsGetRelationsInfiniteOptions: (options: Options<BugsGetRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<BugsGetRelationsData>>, number | Pick<Pick<Options<BugsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<BugsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<BugsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<BugsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<BugsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<BugsGetRelationsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -717,7 +717,7 @@ export declare const bugsGetRelationsInfiniteOptions: (options: Options<BugsGetR
  * }
  */
 export declare const bugsGetRelationsMutation: (options?: Partial<Options<BugsGetRelationsData>>) => UseMutationOptions<BugsGetRelationsResponse, AxiosError<DefaultError>, Options<BugsGetRelationsData>>;
-export declare const bugsGetRelationsCountQueryKey: (options: Options<BugsGetRelationsCountData>) => [Pick<Options<BugsGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const bugsGetRelationsCountQueryKey: (options: Options<BugsGetRelationsCountData>) => [Pick<Options<BugsGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -746,16 +746,16 @@ export declare const bugsGetRelationsCountQueryKey: (options: Options<BugsGetRel
  * ]
  * }
  */
-export declare const bugsGetRelationsCountOptions: (options: Options<BugsGetRelationsCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<BugsGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const bugsGetRelationsCountOptions: (options: Options<BugsGetRelationsCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<BugsGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<BugsGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<BugsGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<BugsGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<BugsGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -789,7 +789,7 @@ export declare const bugsGetRelationsCountOptions: (options: Options<BugsGetRela
  * }
  */
 export declare const bugsGetRelationsCountMutation: (options?: Partial<Options<BugsGetRelationsCountData>>) => UseMutationOptions<BugsGetRelationsCountResponse, AxiosError<DefaultError>, Options<BugsGetRelationsCountData>>;
-export declare const bugsGetGroupedRelationsQueryKey: (options: Options<BugsGetGroupedRelationsData>) => [Pick<Options<BugsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const bugsGetGroupedRelationsQueryKey: (options: Options<BugsGetGroupedRelationsData>) => [Pick<Options<BugsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -830,16 +830,16 @@ export declare const bugsGetGroupedRelationsQueryKey: (options: Options<BugsGetG
  * "groupName": "Active"
  * }
  */
-export declare const bugsGetGroupedRelationsOptions: (options: Options<BugsGetGroupedRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<BugsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const bugsGetGroupedRelationsOptions: (options: Options<BugsGetGroupedRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<BugsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<BugsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<BugsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<BugsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<BugsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -885,17 +885,17 @@ export declare const bugsGetGroupedRelationsInfiniteQueryKey: (options: Options<
  * "groupName": "Active"
  * }
  */
-export declare const bugsGetGroupedRelationsInfiniteOptions: (options: Options<BugsGetGroupedRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<BugsGetGroupedRelationsData>>, number | Pick<Pick<Options<BugsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const bugsGetGroupedRelationsInfiniteOptions: (options: Options<BugsGetGroupedRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<BugsGetGroupedRelationsData>>, number | Pick<Pick<Options<BugsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<BugsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<BugsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<BugsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<BugsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<BugsGetGroupedRelationsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>;
@@ -940,7 +940,7 @@ export declare const bugsGetGroupedRelationsInfiniteOptions: (options: Options<B
  * }
  */
 export declare const bugsGetGroupedRelationsMutation: (options?: Partial<Options<BugsGetGroupedRelationsData>>) => UseMutationOptions<BugsGetGroupedRelationsResponse, AxiosError<DefaultError>, Options<BugsGetGroupedRelationsData>>;
-export declare const bugsGetAvatarsQueryKey: (options: Options<BugsGetAvatarsData>) => [Pick<Options<BugsGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const bugsGetAvatarsQueryKey: (options: Options<BugsGetAvatarsData>) => [Pick<Options<BugsGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -970,16 +970,16 @@ export declare const bugsGetAvatarsQueryKey: (options: Options<BugsGetAvatarsDat
  * ]
  * }
  */
-export declare const bugsGetAvatarsOptions: (options: Options<BugsGetAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<BugsGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const bugsGetAvatarsOptions: (options: Options<BugsGetAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<BugsGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<BugsGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<BugsGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<BugsGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<BugsGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -1014,7 +1014,7 @@ export declare const bugsGetAvatarsOptions: (options: Options<BugsGetAvatarsData
  * }
  */
 export declare const bugsGetAvatarsMutation: (options?: Partial<Options<BugsGetAvatarsData>>) => UseMutationOptions<BugsGetAvatarsResponse, AxiosError<DefaultError>, Options<BugsGetAvatarsData>>;
-export declare const bugsGetRelationsAvatarsQueryKey: (options: Options<BugsGetRelationsAvatarsData>) => [Pick<Options<BugsGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const bugsGetRelationsAvatarsQueryKey: (options: Options<BugsGetRelationsAvatarsData>) => [Pick<Options<BugsGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -1044,16 +1044,16 @@ export declare const bugsGetRelationsAvatarsQueryKey: (options: Options<BugsGetR
  * ]
  * }
  */
-export declare const bugsGetRelationsAvatarsOptions: (options: Options<BugsGetRelationsAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<BugsGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const bugsGetRelationsAvatarsOptions: (options: Options<BugsGetRelationsAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<BugsGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<BugsGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<BugsGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<BugsGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<BugsGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -1088,7 +1088,7 @@ export declare const bugsGetRelationsAvatarsOptions: (options: Options<BugsGetRe
  * }
  */
 export declare const bugsGetRelationsAvatarsMutation: (options?: Partial<Options<BugsGetRelationsAvatarsData>>) => UseMutationOptions<BugsGetRelationsAvatarsResponse, AxiosError<DefaultError>, Options<BugsGetRelationsAvatarsData>>;
-export declare const casesGetQueryKey: (options: Options<CasesGetData>) => [Pick<Options<CasesGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const casesGetQueryKey: (options: Options<CasesGetData>) => [Pick<Options<CasesGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -1127,16 +1127,16 @@ export declare const casesGetQueryKey: (options: Options<CasesGetData>) => [Pick
  * "excludePermissions": true
  * }
  */
-export declare const casesGetOptions: (options: Options<CasesGetData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<CasesGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const casesGetOptions: (options: Options<CasesGetData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<CasesGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<CasesGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<CasesGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<CasesGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<CasesGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -1180,17 +1180,17 @@ export declare const casesGetInfiniteQueryKey: (options: Options<CasesGetData>) 
  * "excludePermissions": true
  * }
  */
-export declare const casesGetInfiniteOptions: (options: Options<CasesGetData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<CasesGetData>>, number | Pick<Pick<Options<CasesGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const casesGetInfiniteOptions: (options: Options<CasesGetData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<CasesGetData>>, number | Pick<Pick<Options<CasesGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<CasesGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<CasesGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<CasesGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<CasesGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<CasesGetData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -1233,7 +1233,7 @@ export declare const casesGetInfiniteOptions: (options: Options<CasesGetData>) =
  * }
  */
 export declare const casesGetMutation: (options?: Partial<Options<CasesGetData>>) => UseMutationOptions<CasesGetResponse, AxiosError<DefaultError>, Options<CasesGetData>>;
-export declare const casesGetGroupedQueryKey: (options: Options<CasesGetGroupedData>) => [Pick<Options<CasesGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const casesGetGroupedQueryKey: (options: Options<CasesGetGroupedData>) => [Pick<Options<CasesGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -1274,16 +1274,16 @@ export declare const casesGetGroupedQueryKey: (options: Options<CasesGetGroupedD
  * "groupName": "Submitted"
  * }
  */
-export declare const casesGetGroupedOptions: (options: Options<CasesGetGroupedData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<CasesGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const casesGetGroupedOptions: (options: Options<CasesGetGroupedData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<CasesGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<CasesGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<CasesGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<CasesGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<CasesGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -1329,17 +1329,17 @@ export declare const casesGetGroupedInfiniteQueryKey: (options: Options<CasesGet
  * "groupName": "Submitted"
  * }
  */
-export declare const casesGetGroupedInfiniteOptions: (options: Options<CasesGetGroupedData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<CasesGetGroupedData>>, number | Pick<Pick<Options<CasesGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const casesGetGroupedInfiniteOptions: (options: Options<CasesGetGroupedData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<CasesGetGroupedData>>, number | Pick<Pick<Options<CasesGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<CasesGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<CasesGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<CasesGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<CasesGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<CasesGetGroupedData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>;
@@ -1384,7 +1384,7 @@ export declare const casesGetGroupedInfiniteOptions: (options: Options<CasesGetG
  * }
  */
 export declare const casesGetGroupedMutation: (options?: Partial<Options<CasesGetGroupedData>>) => UseMutationOptions<CasesGetGroupedResponse, AxiosError<DefaultError>, Options<CasesGetGroupedData>>;
-export declare const casesGetByIdentifierQueryKey: (options: Options<CasesGetByIdentifierData>) => [Pick<Options<CasesGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const casesGetByIdentifierQueryKey: (options: Options<CasesGetByIdentifierData>) => [Pick<Options<CasesGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -1423,16 +1423,16 @@ export declare const casesGetByIdentifierQueryKey: (options: Options<CasesGetByI
  * "excludePermissions": true
  * }
  */
-export declare const casesGetByIdentifierOptions: (options: Options<CasesGetByIdentifierData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntityDetailsResponse, Error, import("../types.gen").EntityDetailsResponse, [Pick<Options<CasesGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const casesGetByIdentifierOptions: (options: Options<CasesGetByIdentifierData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntityDetailsResponse, Error, import("../types.gen").EntityDetailsResponse, [Pick<Options<CasesGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntityDetailsResponse, [Pick<Options<CasesGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntityDetailsResponse, [Pick<Options<CasesGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<CasesGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<CasesGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -1476,7 +1476,7 @@ export declare const casesGetByIdentifierOptions: (options: Options<CasesGetById
  * }
  */
 export declare const casesGetByIdentifierMutation: (options?: Partial<Options<CasesGetByIdentifierData>>) => UseMutationOptions<CasesGetByIdentifierResponse, AxiosError<DefaultError>, Options<CasesGetByIdentifierData>>;
-export declare const casesGetByIdsQueryKey: (options: Options<CasesGetByIdsData>) => [Pick<Options<CasesGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const casesGetByIdsQueryKey: (options: Options<CasesGetByIdsData>) => [Pick<Options<CasesGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -1516,16 +1516,16 @@ export declare const casesGetByIdsQueryKey: (options: Options<CasesGetByIdsData>
  * "ids": ["11.222.333", "44.555.66"]
  * }
  */
-export declare const casesGetByIdsOptions: (options: Options<CasesGetByIdsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<CasesGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const casesGetByIdsOptions: (options: Options<CasesGetByIdsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<CasesGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<CasesGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<CasesGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<CasesGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<CasesGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -1570,17 +1570,17 @@ export declare const casesGetByIdsInfiniteQueryKey: (options: Options<CasesGetBy
  * "ids": ["11.222.333", "44.555.66"]
  * }
  */
-export declare const casesGetByIdsInfiniteOptions: (options: Options<CasesGetByIdsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<CasesGetByIdsData>>, number | Pick<Pick<Options<CasesGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const casesGetByIdsInfiniteOptions: (options: Options<CasesGetByIdsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<CasesGetByIdsData>>, number | Pick<Pick<Options<CasesGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<CasesGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<CasesGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<CasesGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<CasesGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<CasesGetByIdsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -1624,7 +1624,7 @@ export declare const casesGetByIdsInfiniteOptions: (options: Options<CasesGetByI
  * }
  */
 export declare const casesGetByIdsMutation: (options?: Partial<Options<CasesGetByIdsData>>) => UseMutationOptions<CasesGetByIdsResponse, AxiosError<DefaultError>, Options<CasesGetByIdsData>>;
-export declare const casesGetCountQueryKey: (options: Options<CasesGetCountData>) => [Pick<Options<CasesGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const casesGetCountQueryKey: (options: Options<CasesGetCountData>) => [Pick<Options<CasesGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -1653,16 +1653,16 @@ export declare const casesGetCountQueryKey: (options: Options<CasesGetCountData>
  * ]
  * }
  */
-export declare const casesGetCountOptions: (options: Options<CasesGetCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<CasesGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const casesGetCountOptions: (options: Options<CasesGetCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<CasesGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<CasesGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<CasesGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<CasesGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<CasesGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -1696,7 +1696,7 @@ export declare const casesGetCountOptions: (options: Options<CasesGetCountData>)
  * }
  */
 export declare const casesGetCountMutation: (options?: Partial<Options<CasesGetCountData>>) => UseMutationOptions<CasesGetCountResponse, AxiosError<DefaultError>, Options<CasesGetCountData>>;
-export declare const casesGetRelationsQueryKey: (options: Options<CasesGetRelationsData>) => [Pick<Options<CasesGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const casesGetRelationsQueryKey: (options: Options<CasesGetRelationsData>) => [Pick<Options<CasesGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -1735,16 +1735,16 @@ export declare const casesGetRelationsQueryKey: (options: Options<CasesGetRelati
  * "excludePermissions": true
  * }
  */
-export declare const casesGetRelationsOptions: (options: Options<CasesGetRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<CasesGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const casesGetRelationsOptions: (options: Options<CasesGetRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<CasesGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<CasesGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<CasesGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<CasesGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<CasesGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -1788,17 +1788,17 @@ export declare const casesGetRelationsInfiniteQueryKey: (options: Options<CasesG
  * "excludePermissions": true
  * }
  */
-export declare const casesGetRelationsInfiniteOptions: (options: Options<CasesGetRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<CasesGetRelationsData>>, number | Pick<Pick<Options<CasesGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const casesGetRelationsInfiniteOptions: (options: Options<CasesGetRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<CasesGetRelationsData>>, number | Pick<Pick<Options<CasesGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<CasesGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<CasesGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<CasesGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<CasesGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<CasesGetRelationsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -1841,7 +1841,7 @@ export declare const casesGetRelationsInfiniteOptions: (options: Options<CasesGe
  * }
  */
 export declare const casesGetRelationsMutation: (options?: Partial<Options<CasesGetRelationsData>>) => UseMutationOptions<CasesGetRelationsResponse, AxiosError<DefaultError>, Options<CasesGetRelationsData>>;
-export declare const casesGetRelationsCountQueryKey: (options: Options<CasesGetRelationsCountData>) => [Pick<Options<CasesGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const casesGetRelationsCountQueryKey: (options: Options<CasesGetRelationsCountData>) => [Pick<Options<CasesGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -1870,16 +1870,16 @@ export declare const casesGetRelationsCountQueryKey: (options: Options<CasesGetR
  * ]
  * }
  */
-export declare const casesGetRelationsCountOptions: (options: Options<CasesGetRelationsCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<CasesGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const casesGetRelationsCountOptions: (options: Options<CasesGetRelationsCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<CasesGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<CasesGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<CasesGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<CasesGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<CasesGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -1913,7 +1913,7 @@ export declare const casesGetRelationsCountOptions: (options: Options<CasesGetRe
  * }
  */
 export declare const casesGetRelationsCountMutation: (options?: Partial<Options<CasesGetRelationsCountData>>) => UseMutationOptions<CasesGetRelationsCountResponse, AxiosError<DefaultError>, Options<CasesGetRelationsCountData>>;
-export declare const casesGetGroupedRelationsQueryKey: (options: Options<CasesGetGroupedRelationsData>) => [Pick<Options<CasesGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const casesGetGroupedRelationsQueryKey: (options: Options<CasesGetGroupedRelationsData>) => [Pick<Options<CasesGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -1954,16 +1954,16 @@ export declare const casesGetGroupedRelationsQueryKey: (options: Options<CasesGe
  * "groupName": "Active"
  * }
  */
-export declare const casesGetGroupedRelationsOptions: (options: Options<CasesGetGroupedRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<CasesGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const casesGetGroupedRelationsOptions: (options: Options<CasesGetGroupedRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<CasesGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<CasesGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<CasesGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<CasesGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<CasesGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -2009,17 +2009,17 @@ export declare const casesGetGroupedRelationsInfiniteQueryKey: (options: Options
  * "groupName": "Active"
  * }
  */
-export declare const casesGetGroupedRelationsInfiniteOptions: (options: Options<CasesGetGroupedRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<CasesGetGroupedRelationsData>>, number | Pick<Pick<Options<CasesGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const casesGetGroupedRelationsInfiniteOptions: (options: Options<CasesGetGroupedRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<CasesGetGroupedRelationsData>>, number | Pick<Pick<Options<CasesGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<CasesGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<CasesGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<CasesGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<CasesGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<CasesGetGroupedRelationsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>;
@@ -2064,7 +2064,7 @@ export declare const casesGetGroupedRelationsInfiniteOptions: (options: Options<
  * }
  */
 export declare const casesGetGroupedRelationsMutation: (options?: Partial<Options<CasesGetGroupedRelationsData>>) => UseMutationOptions<CasesGetGroupedRelationsResponse, AxiosError<DefaultError>, Options<CasesGetGroupedRelationsData>>;
-export declare const casesGetAvatarsQueryKey: (options: Options<CasesGetAvatarsData>) => [Pick<Options<CasesGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const casesGetAvatarsQueryKey: (options: Options<CasesGetAvatarsData>) => [Pick<Options<CasesGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -2094,16 +2094,16 @@ export declare const casesGetAvatarsQueryKey: (options: Options<CasesGetAvatarsD
  * ]
  * }
  */
-export declare const casesGetAvatarsOptions: (options: Options<CasesGetAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<CasesGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const casesGetAvatarsOptions: (options: Options<CasesGetAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<CasesGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<CasesGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<CasesGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<CasesGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<CasesGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -2138,7 +2138,7 @@ export declare const casesGetAvatarsOptions: (options: Options<CasesGetAvatarsDa
  * }
  */
 export declare const casesGetAvatarsMutation: (options?: Partial<Options<CasesGetAvatarsData>>) => UseMutationOptions<CasesGetAvatarsResponse, AxiosError<DefaultError>, Options<CasesGetAvatarsData>>;
-export declare const casesGetRelationsAvatarsQueryKey: (options: Options<CasesGetRelationsAvatarsData>) => [Pick<Options<CasesGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const casesGetRelationsAvatarsQueryKey: (options: Options<CasesGetRelationsAvatarsData>) => [Pick<Options<CasesGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -2168,16 +2168,16 @@ export declare const casesGetRelationsAvatarsQueryKey: (options: Options<CasesGe
  * ]
  * }
  */
-export declare const casesGetRelationsAvatarsOptions: (options: Options<CasesGetRelationsAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<CasesGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const casesGetRelationsAvatarsOptions: (options: Options<CasesGetRelationsAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<CasesGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<CasesGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<CasesGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<CasesGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<CasesGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -2212,7 +2212,7 @@ export declare const casesGetRelationsAvatarsOptions: (options: Options<CasesGet
  * }
  */
 export declare const casesGetRelationsAvatarsMutation: (options?: Partial<Options<CasesGetRelationsAvatarsData>>) => UseMutationOptions<CasesGetRelationsAvatarsResponse, AxiosError<DefaultError>, Options<CasesGetRelationsAvatarsData>>;
-export declare const issuesGetQueryKey: (options: Options<IssuesGetData>) => [Pick<Options<IssuesGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const issuesGetQueryKey: (options: Options<IssuesGetData>) => [Pick<Options<IssuesGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -2251,16 +2251,16 @@ export declare const issuesGetQueryKey: (options: Options<IssuesGetData>) => [Pi
  * "excludePermissions": true
  * }
  */
-export declare const issuesGetOptions: (options: Options<IssuesGetData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<IssuesGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const issuesGetOptions: (options: Options<IssuesGetData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<IssuesGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<IssuesGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<IssuesGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<IssuesGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<IssuesGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -2304,17 +2304,17 @@ export declare const issuesGetInfiniteQueryKey: (options: Options<IssuesGetData>
  * "excludePermissions": true
  * }
  */
-export declare const issuesGetInfiniteOptions: (options: Options<IssuesGetData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<IssuesGetData>>, number | Pick<Pick<Options<IssuesGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const issuesGetInfiniteOptions: (options: Options<IssuesGetData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<IssuesGetData>>, number | Pick<Pick<Options<IssuesGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<IssuesGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<IssuesGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<IssuesGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<IssuesGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<IssuesGetData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -2357,7 +2357,7 @@ export declare const issuesGetInfiniteOptions: (options: Options<IssuesGetData>)
  * }
  */
 export declare const issuesGetMutation: (options?: Partial<Options<IssuesGetData>>) => UseMutationOptions<IssuesGetResponse, AxiosError<DefaultError>, Options<IssuesGetData>>;
-export declare const issuesGetGroupedQueryKey: (options: Options<IssuesGetGroupedData>) => [Pick<Options<IssuesGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const issuesGetGroupedQueryKey: (options: Options<IssuesGetGroupedData>) => [Pick<Options<IssuesGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -2398,16 +2398,16 @@ export declare const issuesGetGroupedQueryKey: (options: Options<IssuesGetGroupe
  * "groupName": "Submitted"
  * }
  */
-export declare const issuesGetGroupedOptions: (options: Options<IssuesGetGroupedData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<IssuesGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const issuesGetGroupedOptions: (options: Options<IssuesGetGroupedData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<IssuesGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<IssuesGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<IssuesGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<IssuesGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<IssuesGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -2453,17 +2453,17 @@ export declare const issuesGetGroupedInfiniteQueryKey: (options: Options<IssuesG
  * "groupName": "Submitted"
  * }
  */
-export declare const issuesGetGroupedInfiniteOptions: (options: Options<IssuesGetGroupedData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<IssuesGetGroupedData>>, number | Pick<Pick<Options<IssuesGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const issuesGetGroupedInfiniteOptions: (options: Options<IssuesGetGroupedData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<IssuesGetGroupedData>>, number | Pick<Pick<Options<IssuesGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<IssuesGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<IssuesGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<IssuesGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<IssuesGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<IssuesGetGroupedData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>;
@@ -2508,7 +2508,7 @@ export declare const issuesGetGroupedInfiniteOptions: (options: Options<IssuesGe
  * }
  */
 export declare const issuesGetGroupedMutation: (options?: Partial<Options<IssuesGetGroupedData>>) => UseMutationOptions<IssuesGetGroupedResponse, AxiosError<DefaultError>, Options<IssuesGetGroupedData>>;
-export declare const issuesGetByIdentifierQueryKey: (options: Options<IssuesGetByIdentifierData>) => [Pick<Options<IssuesGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const issuesGetByIdentifierQueryKey: (options: Options<IssuesGetByIdentifierData>) => [Pick<Options<IssuesGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -2525,16 +2525,16 @@ export declare const issuesGetByIdentifierQueryKey: (options: Options<IssuesGetB
  * "excludePermissions": true
  * }
  */
-export declare const issuesGetByIdentifierOptions: (options: Options<IssuesGetByIdentifierData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntityDetailsResponse, Error, import("../types.gen").EntityDetailsResponse, [Pick<Options<IssuesGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const issuesGetByIdentifierOptions: (options: Options<IssuesGetByIdentifierData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntityDetailsResponse, Error, import("../types.gen").EntityDetailsResponse, [Pick<Options<IssuesGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntityDetailsResponse, [Pick<Options<IssuesGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntityDetailsResponse, [Pick<Options<IssuesGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<IssuesGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<IssuesGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -2556,7 +2556,7 @@ export declare const issuesGetByIdentifierOptions: (options: Options<IssuesGetBy
  * }
  */
 export declare const issuesGetByIdentifierMutation: (options?: Partial<Options<IssuesGetByIdentifierData>>) => UseMutationOptions<IssuesGetByIdentifierResponse, AxiosError<DefaultError>, Options<IssuesGetByIdentifierData>>;
-export declare const issuesGetByIdsQueryKey: (options: Options<IssuesGetByIdsData>) => [Pick<Options<IssuesGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const issuesGetByIdsQueryKey: (options: Options<IssuesGetByIdsData>) => [Pick<Options<IssuesGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -2596,16 +2596,16 @@ export declare const issuesGetByIdsQueryKey: (options: Options<IssuesGetByIdsDat
  * "ids": ["11.222.333", "44.555.66"]
  * }
  */
-export declare const issuesGetByIdsOptions: (options: Options<IssuesGetByIdsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<IssuesGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const issuesGetByIdsOptions: (options: Options<IssuesGetByIdsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<IssuesGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<IssuesGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<IssuesGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<IssuesGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<IssuesGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -2650,17 +2650,17 @@ export declare const issuesGetByIdsInfiniteQueryKey: (options: Options<IssuesGet
  * "ids": ["11.222.333", "44.555.66"]
  * }
  */
-export declare const issuesGetByIdsInfiniteOptions: (options: Options<IssuesGetByIdsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<IssuesGetByIdsData>>, number | Pick<Pick<Options<IssuesGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const issuesGetByIdsInfiniteOptions: (options: Options<IssuesGetByIdsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<IssuesGetByIdsData>>, number | Pick<Pick<Options<IssuesGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<IssuesGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<IssuesGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<IssuesGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<IssuesGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<IssuesGetByIdsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -2704,7 +2704,7 @@ export declare const issuesGetByIdsInfiniteOptions: (options: Options<IssuesGetB
  * }
  */
 export declare const issuesGetByIdsMutation: (options?: Partial<Options<IssuesGetByIdsData>>) => UseMutationOptions<IssuesGetByIdsResponse, AxiosError<DefaultError>, Options<IssuesGetByIdsData>>;
-export declare const issuesGetCountQueryKey: (options: Options<IssuesGetCountData>) => [Pick<Options<IssuesGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const issuesGetCountQueryKey: (options: Options<IssuesGetCountData>) => [Pick<Options<IssuesGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -2733,16 +2733,16 @@ export declare const issuesGetCountQueryKey: (options: Options<IssuesGetCountDat
  * ]
  * }
  */
-export declare const issuesGetCountOptions: (options: Options<IssuesGetCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<IssuesGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const issuesGetCountOptions: (options: Options<IssuesGetCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<IssuesGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<IssuesGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<IssuesGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<IssuesGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<IssuesGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -2776,7 +2776,7 @@ export declare const issuesGetCountOptions: (options: Options<IssuesGetCountData
  * }
  */
 export declare const issuesGetCountMutation: (options?: Partial<Options<IssuesGetCountData>>) => UseMutationOptions<IssuesGetCountResponse, AxiosError<DefaultError>, Options<IssuesGetCountData>>;
-export declare const issuesGetRelationsQueryKey: (options: Options<IssuesGetRelationsData>) => [Pick<Options<IssuesGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const issuesGetRelationsQueryKey: (options: Options<IssuesGetRelationsData>) => [Pick<Options<IssuesGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -2815,16 +2815,16 @@ export declare const issuesGetRelationsQueryKey: (options: Options<IssuesGetRela
  * "excludePermissions": true
  * }
  */
-export declare const issuesGetRelationsOptions: (options: Options<IssuesGetRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<IssuesGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const issuesGetRelationsOptions: (options: Options<IssuesGetRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<IssuesGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<IssuesGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<IssuesGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<IssuesGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<IssuesGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -2868,17 +2868,17 @@ export declare const issuesGetRelationsInfiniteQueryKey: (options: Options<Issue
  * "excludePermissions": true
  * }
  */
-export declare const issuesGetRelationsInfiniteOptions: (options: Options<IssuesGetRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<IssuesGetRelationsData>>, number | Pick<Pick<Options<IssuesGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const issuesGetRelationsInfiniteOptions: (options: Options<IssuesGetRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<IssuesGetRelationsData>>, number | Pick<Pick<Options<IssuesGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<IssuesGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<IssuesGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<IssuesGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<IssuesGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<IssuesGetRelationsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -2921,7 +2921,7 @@ export declare const issuesGetRelationsInfiniteOptions: (options: Options<Issues
  * }
  */
 export declare const issuesGetRelationsMutation: (options?: Partial<Options<IssuesGetRelationsData>>) => UseMutationOptions<IssuesGetRelationsResponse, AxiosError<DefaultError>, Options<IssuesGetRelationsData>>;
-export declare const issuesGetRelationsCountQueryKey: (options: Options<IssuesGetRelationsCountData>) => [Pick<Options<IssuesGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const issuesGetRelationsCountQueryKey: (options: Options<IssuesGetRelationsCountData>) => [Pick<Options<IssuesGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -2950,16 +2950,16 @@ export declare const issuesGetRelationsCountQueryKey: (options: Options<IssuesGe
  * ]
  * }
  */
-export declare const issuesGetRelationsCountOptions: (options: Options<IssuesGetRelationsCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<IssuesGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const issuesGetRelationsCountOptions: (options: Options<IssuesGetRelationsCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<IssuesGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<IssuesGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<IssuesGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<IssuesGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<IssuesGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -2993,7 +2993,7 @@ export declare const issuesGetRelationsCountOptions: (options: Options<IssuesGet
  * }
  */
 export declare const issuesGetRelationsCountMutation: (options?: Partial<Options<IssuesGetRelationsCountData>>) => UseMutationOptions<IssuesGetRelationsCountResponse, AxiosError<DefaultError>, Options<IssuesGetRelationsCountData>>;
-export declare const issuesGetGroupedRelationsQueryKey: (options: Options<IssuesGetGroupedRelationsData>) => [Pick<Options<IssuesGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const issuesGetGroupedRelationsQueryKey: (options: Options<IssuesGetGroupedRelationsData>) => [Pick<Options<IssuesGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -3034,16 +3034,16 @@ export declare const issuesGetGroupedRelationsQueryKey: (options: Options<Issues
  * "groupName": "Active"
  * }
  */
-export declare const issuesGetGroupedRelationsOptions: (options: Options<IssuesGetGroupedRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<IssuesGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const issuesGetGroupedRelationsOptions: (options: Options<IssuesGetGroupedRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<IssuesGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<IssuesGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<IssuesGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<IssuesGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<IssuesGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -3089,17 +3089,17 @@ export declare const issuesGetGroupedRelationsInfiniteQueryKey: (options: Option
  * "groupName": "Active"
  * }
  */
-export declare const issuesGetGroupedRelationsInfiniteOptions: (options: Options<IssuesGetGroupedRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<IssuesGetGroupedRelationsData>>, number | Pick<Pick<Options<IssuesGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const issuesGetGroupedRelationsInfiniteOptions: (options: Options<IssuesGetGroupedRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<IssuesGetGroupedRelationsData>>, number | Pick<Pick<Options<IssuesGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<IssuesGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<IssuesGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<IssuesGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<IssuesGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<IssuesGetGroupedRelationsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>;
@@ -3144,7 +3144,7 @@ export declare const issuesGetGroupedRelationsInfiniteOptions: (options: Options
  * }
  */
 export declare const issuesGetGroupedRelationsMutation: (options?: Partial<Options<IssuesGetGroupedRelationsData>>) => UseMutationOptions<IssuesGetGroupedRelationsResponse, AxiosError<DefaultError>, Options<IssuesGetGroupedRelationsData>>;
-export declare const issuesGetAvatarsQueryKey: (options: Options<IssuesGetAvatarsData>) => [Pick<Options<IssuesGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const issuesGetAvatarsQueryKey: (options: Options<IssuesGetAvatarsData>) => [Pick<Options<IssuesGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -3174,16 +3174,16 @@ export declare const issuesGetAvatarsQueryKey: (options: Options<IssuesGetAvatar
  * ]
  * }
  */
-export declare const issuesGetAvatarsOptions: (options: Options<IssuesGetAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<IssuesGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const issuesGetAvatarsOptions: (options: Options<IssuesGetAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<IssuesGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<IssuesGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<IssuesGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<IssuesGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<IssuesGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -3218,7 +3218,7 @@ export declare const issuesGetAvatarsOptions: (options: Options<IssuesGetAvatars
  * }
  */
 export declare const issuesGetAvatarsMutation: (options?: Partial<Options<IssuesGetAvatarsData>>) => UseMutationOptions<IssuesGetAvatarsResponse, AxiosError<DefaultError>, Options<IssuesGetAvatarsData>>;
-export declare const issuesGetRelationsAvatarsQueryKey: (options: Options<IssuesGetRelationsAvatarsData>) => [Pick<Options<IssuesGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const issuesGetRelationsAvatarsQueryKey: (options: Options<IssuesGetRelationsAvatarsData>) => [Pick<Options<IssuesGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -3248,16 +3248,16 @@ export declare const issuesGetRelationsAvatarsQueryKey: (options: Options<Issues
  * ]
  * }
  */
-export declare const issuesGetRelationsAvatarsOptions: (options: Options<IssuesGetRelationsAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<IssuesGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const issuesGetRelationsAvatarsOptions: (options: Options<IssuesGetRelationsAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<IssuesGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<IssuesGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<IssuesGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<IssuesGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<IssuesGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -3292,7 +3292,7 @@ export declare const issuesGetRelationsAvatarsOptions: (options: Options<IssuesG
  * }
  */
 export declare const issuesGetRelationsAvatarsMutation: (options?: Partial<Options<IssuesGetRelationsAvatarsData>>) => UseMutationOptions<IssuesGetRelationsAvatarsResponse, AxiosError<DefaultError>, Options<IssuesGetRelationsAvatarsData>>;
-export declare const requestsGetQueryKey: (options: Options<RequestsGetData>) => [Pick<Options<RequestsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const requestsGetQueryKey: (options: Options<RequestsGetData>) => [Pick<Options<RequestsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -3333,16 +3333,16 @@ export declare const requestsGetQueryKey: (options: Options<RequestsGetData>) =>
  * "excludePermissions": true
  * }
  */
-export declare const requestsGetOptions: (options: Options<RequestsGetData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<RequestsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const requestsGetOptions: (options: Options<RequestsGetData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<RequestsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<RequestsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<RequestsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<RequestsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<RequestsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -3388,17 +3388,17 @@ export declare const requestsGetInfiniteQueryKey: (options: Options<RequestsGetD
  * "excludePermissions": true
  * }
  */
-export declare const requestsGetInfiniteOptions: (options: Options<RequestsGetData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<RequestsGetData>>, number | Pick<Pick<Options<RequestsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const requestsGetInfiniteOptions: (options: Options<RequestsGetData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<RequestsGetData>>, number | Pick<Pick<Options<RequestsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<RequestsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<RequestsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<RequestsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<RequestsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<RequestsGetData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -3443,7 +3443,7 @@ export declare const requestsGetInfiniteOptions: (options: Options<RequestsGetDa
  * }
  */
 export declare const requestsGetMutation: (options?: Partial<Options<RequestsGetData>>) => UseMutationOptions<RequestsGetResponse, AxiosError<DefaultError>, Options<RequestsGetData>>;
-export declare const requestsGetGroupedQueryKey: (options: Options<RequestsGetGroupedData>) => [Pick<Options<RequestsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const requestsGetGroupedQueryKey: (options: Options<RequestsGetGroupedData>) => [Pick<Options<RequestsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -3484,16 +3484,16 @@ export declare const requestsGetGroupedQueryKey: (options: Options<RequestsGetGr
  * "groupName": "Submitted"
  * }
  */
-export declare const requestsGetGroupedOptions: (options: Options<RequestsGetGroupedData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<RequestsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const requestsGetGroupedOptions: (options: Options<RequestsGetGroupedData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<RequestsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<RequestsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<RequestsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<RequestsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<RequestsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -3539,17 +3539,17 @@ export declare const requestsGetGroupedInfiniteQueryKey: (options: Options<Reque
  * "groupName": "Submitted"
  * }
  */
-export declare const requestsGetGroupedInfiniteOptions: (options: Options<RequestsGetGroupedData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<RequestsGetGroupedData>>, number | Pick<Pick<Options<RequestsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const requestsGetGroupedInfiniteOptions: (options: Options<RequestsGetGroupedData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<RequestsGetGroupedData>>, number | Pick<Pick<Options<RequestsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<RequestsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<RequestsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<RequestsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<RequestsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<RequestsGetGroupedData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>;
@@ -3594,7 +3594,7 @@ export declare const requestsGetGroupedInfiniteOptions: (options: Options<Reques
  * }
  */
 export declare const requestsGetGroupedMutation: (options?: Partial<Options<RequestsGetGroupedData>>) => UseMutationOptions<RequestsGetGroupedResponse, AxiosError<DefaultError>, Options<RequestsGetGroupedData>>;
-export declare const requestsGetByIdentifierQueryKey: (options: Options<RequestsGetByIdentifierData>) => [Pick<Options<RequestsGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const requestsGetByIdentifierQueryKey: (options: Options<RequestsGetByIdentifierData>) => [Pick<Options<RequestsGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -3611,16 +3611,16 @@ export declare const requestsGetByIdentifierQueryKey: (options: Options<Requests
  * "excludePermissions": true
  * }
  */
-export declare const requestsGetByIdentifierOptions: (options: Options<RequestsGetByIdentifierData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntityDetailsResponse, Error, import("../types.gen").EntityDetailsResponse, [Pick<Options<RequestsGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const requestsGetByIdentifierOptions: (options: Options<RequestsGetByIdentifierData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntityDetailsResponse, Error, import("../types.gen").EntityDetailsResponse, [Pick<Options<RequestsGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntityDetailsResponse, [Pick<Options<RequestsGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntityDetailsResponse, [Pick<Options<RequestsGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<RequestsGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<RequestsGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -3642,7 +3642,7 @@ export declare const requestsGetByIdentifierOptions: (options: Options<RequestsG
  * }
  */
 export declare const requestsGetByIdentifierMutation: (options?: Partial<Options<RequestsGetByIdentifierData>>) => UseMutationOptions<RequestsGetByIdentifierResponse, AxiosError<DefaultError>, Options<RequestsGetByIdentifierData>>;
-export declare const requestsGetByIdsQueryKey: (options: Options<RequestsGetByIdsData>) => [Pick<Options<RequestsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const requestsGetByIdsQueryKey: (options: Options<RequestsGetByIdsData>) => [Pick<Options<RequestsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -3682,16 +3682,16 @@ export declare const requestsGetByIdsQueryKey: (options: Options<RequestsGetById
  * "ids": ["11.222.333", "44.555.66"]
  * }
  */
-export declare const requestsGetByIdsOptions: (options: Options<RequestsGetByIdsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<RequestsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const requestsGetByIdsOptions: (options: Options<RequestsGetByIdsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<RequestsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<RequestsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<RequestsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<RequestsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<RequestsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -3736,17 +3736,17 @@ export declare const requestsGetByIdsInfiniteQueryKey: (options: Options<Request
  * "ids": ["11.222.333", "44.555.66"]
  * }
  */
-export declare const requestsGetByIdsInfiniteOptions: (options: Options<RequestsGetByIdsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<RequestsGetByIdsData>>, number | Pick<Pick<Options<RequestsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const requestsGetByIdsInfiniteOptions: (options: Options<RequestsGetByIdsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<RequestsGetByIdsData>>, number | Pick<Pick<Options<RequestsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<RequestsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<RequestsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<RequestsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<RequestsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<RequestsGetByIdsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -3790,7 +3790,7 @@ export declare const requestsGetByIdsInfiniteOptions: (options: Options<Requests
  * }
  */
 export declare const requestsGetByIdsMutation: (options?: Partial<Options<RequestsGetByIdsData>>) => UseMutationOptions<RequestsGetByIdsResponse, AxiosError<DefaultError>, Options<RequestsGetByIdsData>>;
-export declare const requestsGetCountQueryKey: (options: Options<RequestsGetCountData>) => [Pick<Options<RequestsGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const requestsGetCountQueryKey: (options: Options<RequestsGetCountData>) => [Pick<Options<RequestsGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -3819,16 +3819,16 @@ export declare const requestsGetCountQueryKey: (options: Options<RequestsGetCoun
  * ]
  * }
  */
-export declare const requestsGetCountOptions: (options: Options<RequestsGetCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<RequestsGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const requestsGetCountOptions: (options: Options<RequestsGetCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<RequestsGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<RequestsGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<RequestsGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<RequestsGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<RequestsGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -3862,7 +3862,7 @@ export declare const requestsGetCountOptions: (options: Options<RequestsGetCount
  * }
  */
 export declare const requestsGetCountMutation: (options?: Partial<Options<RequestsGetCountData>>) => UseMutationOptions<RequestsGetCountResponse, AxiosError<DefaultError>, Options<RequestsGetCountData>>;
-export declare const requestsGetRelationsQueryKey: (options: Options<RequestsGetRelationsData>) => [Pick<Options<RequestsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const requestsGetRelationsQueryKey: (options: Options<RequestsGetRelationsData>) => [Pick<Options<RequestsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -3901,16 +3901,16 @@ export declare const requestsGetRelationsQueryKey: (options: Options<RequestsGet
  * "excludePermissions": true
  * }
  */
-export declare const requestsGetRelationsOptions: (options: Options<RequestsGetRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<RequestsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const requestsGetRelationsOptions: (options: Options<RequestsGetRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<RequestsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<RequestsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<RequestsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<RequestsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<RequestsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -3954,17 +3954,17 @@ export declare const requestsGetRelationsInfiniteQueryKey: (options: Options<Req
  * "excludePermissions": true
  * }
  */
-export declare const requestsGetRelationsInfiniteOptions: (options: Options<RequestsGetRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<RequestsGetRelationsData>>, number | Pick<Pick<Options<RequestsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const requestsGetRelationsInfiniteOptions: (options: Options<RequestsGetRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<RequestsGetRelationsData>>, number | Pick<Pick<Options<RequestsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<RequestsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<RequestsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<RequestsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<RequestsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<RequestsGetRelationsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -4007,7 +4007,7 @@ export declare const requestsGetRelationsInfiniteOptions: (options: Options<Requ
  * }
  */
 export declare const requestsGetRelationsMutation: (options?: Partial<Options<RequestsGetRelationsData>>) => UseMutationOptions<RequestsGetRelationsResponse, AxiosError<DefaultError>, Options<RequestsGetRelationsData>>;
-export declare const requestsGetRelationsCountQueryKey: (options: Options<RequestsGetRelationsCountData>) => [Pick<Options<RequestsGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const requestsGetRelationsCountQueryKey: (options: Options<RequestsGetRelationsCountData>) => [Pick<Options<RequestsGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -4036,16 +4036,16 @@ export declare const requestsGetRelationsCountQueryKey: (options: Options<Reques
  * ]
  * }
  */
-export declare const requestsGetRelationsCountOptions: (options: Options<RequestsGetRelationsCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<RequestsGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const requestsGetRelationsCountOptions: (options: Options<RequestsGetRelationsCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<RequestsGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<RequestsGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<RequestsGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<RequestsGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<RequestsGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -4079,7 +4079,7 @@ export declare const requestsGetRelationsCountOptions: (options: Options<Request
  * }
  */
 export declare const requestsGetRelationsCountMutation: (options?: Partial<Options<RequestsGetRelationsCountData>>) => UseMutationOptions<RequestsGetRelationsCountResponse, AxiosError<DefaultError>, Options<RequestsGetRelationsCountData>>;
-export declare const requestsGetGroupedRelationsQueryKey: (options: Options<RequestsGetGroupedRelationsData>) => [Pick<Options<RequestsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const requestsGetGroupedRelationsQueryKey: (options: Options<RequestsGetGroupedRelationsData>) => [Pick<Options<RequestsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -4120,16 +4120,16 @@ export declare const requestsGetGroupedRelationsQueryKey: (options: Options<Requ
  * "groupName": "Active"
  * }
  */
-export declare const requestsGetGroupedRelationsOptions: (options: Options<RequestsGetGroupedRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<RequestsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const requestsGetGroupedRelationsOptions: (options: Options<RequestsGetGroupedRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<RequestsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<RequestsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<RequestsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<RequestsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<RequestsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -4175,17 +4175,17 @@ export declare const requestsGetGroupedRelationsInfiniteQueryKey: (options: Opti
  * "groupName": "Active"
  * }
  */
-export declare const requestsGetGroupedRelationsInfiniteOptions: (options: Options<RequestsGetGroupedRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<RequestsGetGroupedRelationsData>>, number | Pick<Pick<Options<RequestsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const requestsGetGroupedRelationsInfiniteOptions: (options: Options<RequestsGetGroupedRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<RequestsGetGroupedRelationsData>>, number | Pick<Pick<Options<RequestsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<RequestsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<RequestsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<RequestsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<RequestsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<RequestsGetGroupedRelationsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>;
@@ -4230,7 +4230,7 @@ export declare const requestsGetGroupedRelationsInfiniteOptions: (options: Optio
  * }
  */
 export declare const requestsGetGroupedRelationsMutation: (options?: Partial<Options<RequestsGetGroupedRelationsData>>) => UseMutationOptions<RequestsGetGroupedRelationsResponse, AxiosError<DefaultError>, Options<RequestsGetGroupedRelationsData>>;
-export declare const requestsGetAvatarsQueryKey: (options: Options<RequestsGetAvatarsData>) => [Pick<Options<RequestsGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const requestsGetAvatarsQueryKey: (options: Options<RequestsGetAvatarsData>) => [Pick<Options<RequestsGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -4260,16 +4260,16 @@ export declare const requestsGetAvatarsQueryKey: (options: Options<RequestsGetAv
  * ]
  * }
  */
-export declare const requestsGetAvatarsOptions: (options: Options<RequestsGetAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<RequestsGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const requestsGetAvatarsOptions: (options: Options<RequestsGetAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<RequestsGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<RequestsGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<RequestsGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<RequestsGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<RequestsGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -4304,7 +4304,7 @@ export declare const requestsGetAvatarsOptions: (options: Options<RequestsGetAva
  * }
  */
 export declare const requestsGetAvatarsMutation: (options?: Partial<Options<RequestsGetAvatarsData>>) => UseMutationOptions<RequestsGetAvatarsResponse, AxiosError<DefaultError>, Options<RequestsGetAvatarsData>>;
-export declare const requestsGetRelationsAvatarsQueryKey: (options: Options<RequestsGetRelationsAvatarsData>) => [Pick<Options<RequestsGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const requestsGetRelationsAvatarsQueryKey: (options: Options<RequestsGetRelationsAvatarsData>) => [Pick<Options<RequestsGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -4334,16 +4334,16 @@ export declare const requestsGetRelationsAvatarsQueryKey: (options: Options<Requ
  * ]
  * }
  */
-export declare const requestsGetRelationsAvatarsOptions: (options: Options<RequestsGetRelationsAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<RequestsGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const requestsGetRelationsAvatarsOptions: (options: Options<RequestsGetRelationsAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<RequestsGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<RequestsGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<RequestsGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<RequestsGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<RequestsGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -4378,7 +4378,7 @@ export declare const requestsGetRelationsAvatarsOptions: (options: Options<Reque
  * }
  */
 export declare const requestsGetRelationsAvatarsMutation: (options?: Partial<Options<RequestsGetRelationsAvatarsData>>) => UseMutationOptions<RequestsGetRelationsAvatarsResponse, AxiosError<DefaultError>, Options<RequestsGetRelationsAvatarsData>>;
-export declare const risksGetQueryKey: (options: Options<RisksGetData>) => [Pick<Options<RisksGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const risksGetQueryKey: (options: Options<RisksGetData>) => [Pick<Options<RisksGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -4417,16 +4417,16 @@ export declare const risksGetQueryKey: (options: Options<RisksGetData>) => [Pick
  * "excludePermissions": true
  * }
  */
-export declare const risksGetOptions: (options: Options<RisksGetData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<RisksGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const risksGetOptions: (options: Options<RisksGetData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<RisksGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<RisksGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<RisksGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<RisksGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<RisksGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -4470,17 +4470,17 @@ export declare const risksGetInfiniteQueryKey: (options: Options<RisksGetData>) 
  * "excludePermissions": true
  * }
  */
-export declare const risksGetInfiniteOptions: (options: Options<RisksGetData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<RisksGetData>>, number | Pick<Pick<Options<RisksGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const risksGetInfiniteOptions: (options: Options<RisksGetData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<RisksGetData>>, number | Pick<Pick<Options<RisksGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<RisksGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<RisksGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<RisksGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<RisksGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<RisksGetData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -4523,7 +4523,7 @@ export declare const risksGetInfiniteOptions: (options: Options<RisksGetData>) =
  * }
  */
 export declare const risksGetMutation: (options?: Partial<Options<RisksGetData>>) => UseMutationOptions<RisksGetResponse, AxiosError<DefaultError>, Options<RisksGetData>>;
-export declare const risksGetGroupedQueryKey: (options: Options<RisksGetGroupedData>) => [Pick<Options<RisksGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const risksGetGroupedQueryKey: (options: Options<RisksGetGroupedData>) => [Pick<Options<RisksGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -4564,16 +4564,16 @@ export declare const risksGetGroupedQueryKey: (options: Options<RisksGetGroupedD
  * "groupName": "Submitted"
  * }
  */
-export declare const risksGetGroupedOptions: (options: Options<RisksGetGroupedData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<RisksGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const risksGetGroupedOptions: (options: Options<RisksGetGroupedData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<RisksGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<RisksGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<RisksGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<RisksGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<RisksGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -4619,17 +4619,17 @@ export declare const risksGetGroupedInfiniteQueryKey: (options: Options<RisksGet
  * "groupName": "Submitted"
  * }
  */
-export declare const risksGetGroupedInfiniteOptions: (options: Options<RisksGetGroupedData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<RisksGetGroupedData>>, number | Pick<Pick<Options<RisksGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const risksGetGroupedInfiniteOptions: (options: Options<RisksGetGroupedData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<RisksGetGroupedData>>, number | Pick<Pick<Options<RisksGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<RisksGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<RisksGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<RisksGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<RisksGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<RisksGetGroupedData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>;
@@ -4674,7 +4674,7 @@ export declare const risksGetGroupedInfiniteOptions: (options: Options<RisksGetG
  * }
  */
 export declare const risksGetGroupedMutation: (options?: Partial<Options<RisksGetGroupedData>>) => UseMutationOptions<RisksGetGroupedResponse, AxiosError<DefaultError>, Options<RisksGetGroupedData>>;
-export declare const risksGetByIdentifierQueryKey: (options: Options<RisksGetByIdentifierData>) => [Pick<Options<RisksGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const risksGetByIdentifierQueryKey: (options: Options<RisksGetByIdentifierData>) => [Pick<Options<RisksGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -4691,16 +4691,16 @@ export declare const risksGetByIdentifierQueryKey: (options: Options<RisksGetByI
  * "excludePermissions": true
  * }
  */
-export declare const risksGetByIdentifierOptions: (options: Options<RisksGetByIdentifierData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntityDetailsResponse, Error, import("../types.gen").EntityDetailsResponse, [Pick<Options<RisksGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const risksGetByIdentifierOptions: (options: Options<RisksGetByIdentifierData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntityDetailsResponse, Error, import("../types.gen").EntityDetailsResponse, [Pick<Options<RisksGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntityDetailsResponse, [Pick<Options<RisksGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntityDetailsResponse, [Pick<Options<RisksGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<RisksGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<RisksGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -4722,7 +4722,7 @@ export declare const risksGetByIdentifierOptions: (options: Options<RisksGetById
  * }
  */
 export declare const risksGetByIdentifierMutation: (options?: Partial<Options<RisksGetByIdentifierData>>) => UseMutationOptions<RisksGetByIdentifierResponse, AxiosError<DefaultError>, Options<RisksGetByIdentifierData>>;
-export declare const risksGetByIdsQueryKey: (options: Options<RisksGetByIdsData>) => [Pick<Options<RisksGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const risksGetByIdsQueryKey: (options: Options<RisksGetByIdsData>) => [Pick<Options<RisksGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -4762,16 +4762,16 @@ export declare const risksGetByIdsQueryKey: (options: Options<RisksGetByIdsData>
  * "ids": ["11.222.333", "44.555.66"]
  * }
  */
-export declare const risksGetByIdsOptions: (options: Options<RisksGetByIdsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<RisksGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const risksGetByIdsOptions: (options: Options<RisksGetByIdsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<RisksGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<RisksGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<RisksGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<RisksGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<RisksGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -4816,17 +4816,17 @@ export declare const risksGetByIdsInfiniteQueryKey: (options: Options<RisksGetBy
  * "ids": ["11.222.333", "44.555.66"]
  * }
  */
-export declare const risksGetByIdsInfiniteOptions: (options: Options<RisksGetByIdsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<RisksGetByIdsData>>, number | Pick<Pick<Options<RisksGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const risksGetByIdsInfiniteOptions: (options: Options<RisksGetByIdsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<RisksGetByIdsData>>, number | Pick<Pick<Options<RisksGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<RisksGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<RisksGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<RisksGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<RisksGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<RisksGetByIdsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -4870,7 +4870,7 @@ export declare const risksGetByIdsInfiniteOptions: (options: Options<RisksGetByI
  * }
  */
 export declare const risksGetByIdsMutation: (options?: Partial<Options<RisksGetByIdsData>>) => UseMutationOptions<RisksGetByIdsResponse, AxiosError<DefaultError>, Options<RisksGetByIdsData>>;
-export declare const risksGetCountQueryKey: (options: Options<RisksGetCountData>) => [Pick<Options<RisksGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const risksGetCountQueryKey: (options: Options<RisksGetCountData>) => [Pick<Options<RisksGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -4899,16 +4899,16 @@ export declare const risksGetCountQueryKey: (options: Options<RisksGetCountData>
  * ]
  * }
  */
-export declare const risksGetCountOptions: (options: Options<RisksGetCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<RisksGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const risksGetCountOptions: (options: Options<RisksGetCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<RisksGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<RisksGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<RisksGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<RisksGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<RisksGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -4942,7 +4942,7 @@ export declare const risksGetCountOptions: (options: Options<RisksGetCountData>)
  * }
  */
 export declare const risksGetCountMutation: (options?: Partial<Options<RisksGetCountData>>) => UseMutationOptions<RisksGetCountResponse, AxiosError<DefaultError>, Options<RisksGetCountData>>;
-export declare const risksGetRelationsQueryKey: (options: Options<RisksGetRelationsData>) => [Pick<Options<RisksGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const risksGetRelationsQueryKey: (options: Options<RisksGetRelationsData>) => [Pick<Options<RisksGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -4981,16 +4981,16 @@ export declare const risksGetRelationsQueryKey: (options: Options<RisksGetRelati
  * "excludePermissions": true
  * }
  */
-export declare const risksGetRelationsOptions: (options: Options<RisksGetRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<RisksGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const risksGetRelationsOptions: (options: Options<RisksGetRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<RisksGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<RisksGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<RisksGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<RisksGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<RisksGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -5034,17 +5034,17 @@ export declare const risksGetRelationsInfiniteQueryKey: (options: Options<RisksG
  * "excludePermissions": true
  * }
  */
-export declare const risksGetRelationsInfiniteOptions: (options: Options<RisksGetRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<RisksGetRelationsData>>, number | Pick<Pick<Options<RisksGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const risksGetRelationsInfiniteOptions: (options: Options<RisksGetRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<RisksGetRelationsData>>, number | Pick<Pick<Options<RisksGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<RisksGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<RisksGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<RisksGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<RisksGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<RisksGetRelationsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -5087,7 +5087,7 @@ export declare const risksGetRelationsInfiniteOptions: (options: Options<RisksGe
  * }
  */
 export declare const risksGetRelationsMutation: (options?: Partial<Options<RisksGetRelationsData>>) => UseMutationOptions<RisksGetRelationsResponse, AxiosError<DefaultError>, Options<RisksGetRelationsData>>;
-export declare const risksGetRelationsCountQueryKey: (options: Options<RisksGetRelationsCountData>) => [Pick<Options<RisksGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const risksGetRelationsCountQueryKey: (options: Options<RisksGetRelationsCountData>) => [Pick<Options<RisksGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -5116,16 +5116,16 @@ export declare const risksGetRelationsCountQueryKey: (options: Options<RisksGetR
  * ]
  * }
  */
-export declare const risksGetRelationsCountOptions: (options: Options<RisksGetRelationsCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<RisksGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const risksGetRelationsCountOptions: (options: Options<RisksGetRelationsCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<RisksGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<RisksGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<RisksGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<RisksGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<RisksGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -5159,7 +5159,7 @@ export declare const risksGetRelationsCountOptions: (options: Options<RisksGetRe
  * }
  */
 export declare const risksGetRelationsCountMutation: (options?: Partial<Options<RisksGetRelationsCountData>>) => UseMutationOptions<RisksGetRelationsCountResponse, AxiosError<DefaultError>, Options<RisksGetRelationsCountData>>;
-export declare const risksGetGroupedRelationsQueryKey: (options: Options<RisksGetGroupedRelationsData>) => [Pick<Options<RisksGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const risksGetGroupedRelationsQueryKey: (options: Options<RisksGetGroupedRelationsData>) => [Pick<Options<RisksGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -5200,16 +5200,16 @@ export declare const risksGetGroupedRelationsQueryKey: (options: Options<RisksGe
  * "groupName": "Active"
  * }
  */
-export declare const risksGetGroupedRelationsOptions: (options: Options<RisksGetGroupedRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<RisksGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const risksGetGroupedRelationsOptions: (options: Options<RisksGetGroupedRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<RisksGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<RisksGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<RisksGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<RisksGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<RisksGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -5255,17 +5255,17 @@ export declare const risksGetGroupedRelationsInfiniteQueryKey: (options: Options
  * "groupName": "Active"
  * }
  */
-export declare const risksGetGroupedRelationsInfiniteOptions: (options: Options<RisksGetGroupedRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<RisksGetGroupedRelationsData>>, number | Pick<Pick<Options<RisksGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const risksGetGroupedRelationsInfiniteOptions: (options: Options<RisksGetGroupedRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<RisksGetGroupedRelationsData>>, number | Pick<Pick<Options<RisksGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<RisksGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<RisksGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<RisksGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<RisksGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<RisksGetGroupedRelationsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>;
@@ -5310,7 +5310,7 @@ export declare const risksGetGroupedRelationsInfiniteOptions: (options: Options<
  * }
  */
 export declare const risksGetGroupedRelationsMutation: (options?: Partial<Options<RisksGetGroupedRelationsData>>) => UseMutationOptions<RisksGetGroupedRelationsResponse, AxiosError<DefaultError>, Options<RisksGetGroupedRelationsData>>;
-export declare const risksGetAvatarsQueryKey: (options: Options<RisksGetAvatarsData>) => [Pick<Options<RisksGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const risksGetAvatarsQueryKey: (options: Options<RisksGetAvatarsData>) => [Pick<Options<RisksGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -5340,16 +5340,16 @@ export declare const risksGetAvatarsQueryKey: (options: Options<RisksGetAvatarsD
  * ]
  * }
  */
-export declare const risksGetAvatarsOptions: (options: Options<RisksGetAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<RisksGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const risksGetAvatarsOptions: (options: Options<RisksGetAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<RisksGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<RisksGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<RisksGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<RisksGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<RisksGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -5384,7 +5384,7 @@ export declare const risksGetAvatarsOptions: (options: Options<RisksGetAvatarsDa
  * }
  */
 export declare const risksGetAvatarsMutation: (options?: Partial<Options<RisksGetAvatarsData>>) => UseMutationOptions<RisksGetAvatarsResponse, AxiosError<DefaultError>, Options<RisksGetAvatarsData>>;
-export declare const risksGetRelationsAvatarsQueryKey: (options: Options<RisksGetRelationsAvatarsData>) => [Pick<Options<RisksGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const risksGetRelationsAvatarsQueryKey: (options: Options<RisksGetRelationsAvatarsData>) => [Pick<Options<RisksGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -5414,16 +5414,16 @@ export declare const risksGetRelationsAvatarsQueryKey: (options: Options<RisksGe
  * ]
  * }
  */
-export declare const risksGetRelationsAvatarsOptions: (options: Options<RisksGetRelationsAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<RisksGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const risksGetRelationsAvatarsOptions: (options: Options<RisksGetRelationsAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<RisksGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<RisksGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<RisksGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<RisksGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<RisksGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -5458,7 +5458,7 @@ export declare const risksGetRelationsAvatarsOptions: (options: Options<RisksGet
  * }
  */
 export declare const risksGetRelationsAvatarsMutation: (options?: Partial<Options<RisksGetRelationsAvatarsData>>) => UseMutationOptions<RisksGetRelationsAvatarsResponse, AxiosError<DefaultError>, Options<RisksGetRelationsAvatarsData>>;
-export declare const genericEntityGetQueryKey: (options: Options<GenericEntityGetData>) => [Pick<Options<GenericEntityGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const genericEntityGetQueryKey: (options: Options<GenericEntityGetData>) => [Pick<Options<GenericEntityGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -5494,16 +5494,16 @@ export declare const genericEntityGetQueryKey: (options: Options<GenericEntityGe
  * "excludePermissions": true
  * }
  */
-export declare const genericEntityGetOptions: (options: Options<GenericEntityGetData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<GenericEntityGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const genericEntityGetOptions: (options: Options<GenericEntityGetData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<GenericEntityGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<GenericEntityGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<GenericEntityGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<GenericEntityGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<GenericEntityGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -5544,17 +5544,17 @@ export declare const genericEntityGetInfiniteQueryKey: (options: Options<Generic
  * "excludePermissions": true
  * }
  */
-export declare const genericEntityGetInfiniteOptions: (options: Options<GenericEntityGetData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<GenericEntityGetData>>, number | Pick<Pick<Options<GenericEntityGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const genericEntityGetInfiniteOptions: (options: Options<GenericEntityGetData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<GenericEntityGetData>>, number | Pick<Pick<Options<GenericEntityGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<GenericEntityGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<GenericEntityGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<GenericEntityGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<GenericEntityGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<GenericEntityGetData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -5594,7 +5594,7 @@ export declare const genericEntityGetInfiniteOptions: (options: Options<GenericE
  * }
  */
 export declare const genericEntityGetMutation: (options?: Partial<Options<GenericEntityGetData>>) => UseMutationOptions<GenericEntityGetResponse, AxiosError<DefaultError>, Options<GenericEntityGetData>>;
-export declare const genericEntityGetGroupedQueryKey: (options: Options<GenericEntityGetGroupedData>) => [Pick<Options<GenericEntityGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const genericEntityGetGroupedQueryKey: (options: Options<GenericEntityGetGroupedData>) => [Pick<Options<GenericEntityGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -5632,16 +5632,16 @@ export declare const genericEntityGetGroupedQueryKey: (options: Options<GenericE
  * "groupName": "Active"
  * }
  */
-export declare const genericEntityGetGroupedOptions: (options: Options<GenericEntityGetGroupedData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<GenericEntityGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const genericEntityGetGroupedOptions: (options: Options<GenericEntityGetGroupedData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<GenericEntityGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<GenericEntityGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<GenericEntityGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<GenericEntityGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<GenericEntityGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -5684,17 +5684,17 @@ export declare const genericEntityGetGroupedInfiniteQueryKey: (options: Options<
  * "groupName": "Active"
  * }
  */
-export declare const genericEntityGetGroupedInfiniteOptions: (options: Options<GenericEntityGetGroupedData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<GenericEntityGetGroupedData>>, number | Pick<Pick<Options<GenericEntityGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const genericEntityGetGroupedInfiniteOptions: (options: Options<GenericEntityGetGroupedData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<GenericEntityGetGroupedData>>, number | Pick<Pick<Options<GenericEntityGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<GenericEntityGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<GenericEntityGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<GenericEntityGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<GenericEntityGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<GenericEntityGetGroupedData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>;
@@ -5736,7 +5736,7 @@ export declare const genericEntityGetGroupedInfiniteOptions: (options: Options<G
  * }
  */
 export declare const genericEntityGetGroupedMutation: (options?: Partial<Options<GenericEntityGetGroupedData>>) => UseMutationOptions<GenericEntityGetGroupedResponse, AxiosError<DefaultError>, Options<GenericEntityGetGroupedData>>;
-export declare const genericEntityGetByIdentifierQueryKey: (options: Options<GenericEntityGetByIdentifierData>) => [Pick<Options<GenericEntityGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const genericEntityGetByIdentifierQueryKey: (options: Options<GenericEntityGetByIdentifierData>) => [Pick<Options<GenericEntityGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -5755,16 +5755,16 @@ export declare const genericEntityGetByIdentifierQueryKey: (options: Options<Gen
  * "excludePermissions": true
  * }
  */
-export declare const genericEntityGetByIdentifierOptions: (options: Options<GenericEntityGetByIdentifierData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntityDetailsResponse, Error, import("../types.gen").EntityDetailsResponse, [Pick<Options<GenericEntityGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const genericEntityGetByIdentifierOptions: (options: Options<GenericEntityGetByIdentifierData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntityDetailsResponse, Error, import("../types.gen").EntityDetailsResponse, [Pick<Options<GenericEntityGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntityDetailsResponse, [Pick<Options<GenericEntityGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntityDetailsResponse, [Pick<Options<GenericEntityGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<GenericEntityGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<GenericEntityGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -5788,7 +5788,7 @@ export declare const genericEntityGetByIdentifierOptions: (options: Options<Gene
  * }
  */
 export declare const genericEntityGetByIdentifierMutation: (options?: Partial<Options<GenericEntityGetByIdentifierData>>) => UseMutationOptions<GenericEntityGetByIdentifierResponse, AxiosError<DefaultError>, Options<GenericEntityGetByIdentifierData>>;
-export declare const genericEntityGetByIdsQueryKey: (options: Options<GenericEntityGetByIdsData>) => [Pick<Options<GenericEntityGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const genericEntityGetByIdsQueryKey: (options: Options<GenericEntityGetByIdsData>) => [Pick<Options<GenericEntityGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -5825,16 +5825,16 @@ export declare const genericEntityGetByIdsQueryKey: (options: Options<GenericEnt
  * "ids": ["11.222.333", "44.555.66"]
  * }
  */
-export declare const genericEntityGetByIdsOptions: (options: Options<GenericEntityGetByIdsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<GenericEntityGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const genericEntityGetByIdsOptions: (options: Options<GenericEntityGetByIdsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<GenericEntityGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<GenericEntityGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<GenericEntityGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<GenericEntityGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<GenericEntityGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -5876,17 +5876,17 @@ export declare const genericEntityGetByIdsInfiniteQueryKey: (options: Options<Ge
  * "ids": ["11.222.333", "44.555.66"]
  * }
  */
-export declare const genericEntityGetByIdsInfiniteOptions: (options: Options<GenericEntityGetByIdsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<GenericEntityGetByIdsData>>, number | Pick<Pick<Options<GenericEntityGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const genericEntityGetByIdsInfiniteOptions: (options: Options<GenericEntityGetByIdsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<GenericEntityGetByIdsData>>, number | Pick<Pick<Options<GenericEntityGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<GenericEntityGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<GenericEntityGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<GenericEntityGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<GenericEntityGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<GenericEntityGetByIdsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -5927,7 +5927,7 @@ export declare const genericEntityGetByIdsInfiniteOptions: (options: Options<Gen
  * }
  */
 export declare const genericEntityGetByIdsMutation: (options?: Partial<Options<GenericEntityGetByIdsData>>) => UseMutationOptions<GenericEntityGetByIdsResponse, AxiosError<DefaultError>, Options<GenericEntityGetByIdsData>>;
-export declare const genericEntityGetCountQueryKey: (options: Options<GenericEntityGetCountData>) => [Pick<Options<GenericEntityGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const genericEntityGetCountQueryKey: (options: Options<GenericEntityGetCountData>) => [Pick<Options<GenericEntityGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -5953,16 +5953,16 @@ export declare const genericEntityGetCountQueryKey: (options: Options<GenericEnt
  * ]
  * }
  */
-export declare const genericEntityGetCountOptions: (options: Options<GenericEntityGetCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<GenericEntityGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const genericEntityGetCountOptions: (options: Options<GenericEntityGetCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<GenericEntityGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<GenericEntityGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<GenericEntityGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<GenericEntityGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<GenericEntityGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -5993,7 +5993,7 @@ export declare const genericEntityGetCountOptions: (options: Options<GenericEnti
  * }
  */
 export declare const genericEntityGetCountMutation: (options?: Partial<Options<GenericEntityGetCountData>>) => UseMutationOptions<GenericEntityGetCountResponse, AxiosError<DefaultError>, Options<GenericEntityGetCountData>>;
-export declare const genericEntityGetRelationsQueryKey: (options: Options<GenericEntityGetRelationsData>) => [Pick<Options<GenericEntityGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const genericEntityGetRelationsQueryKey: (options: Options<GenericEntityGetRelationsData>) => [Pick<Options<GenericEntityGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -6031,16 +6031,16 @@ export declare const genericEntityGetRelationsQueryKey: (options: Options<Generi
  * "excludePermissions": true
  * }
  */
-export declare const genericEntityGetRelationsOptions: (options: Options<GenericEntityGetRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<GenericEntityGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const genericEntityGetRelationsOptions: (options: Options<GenericEntityGetRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<GenericEntityGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<GenericEntityGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<GenericEntityGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<GenericEntityGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<GenericEntityGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -6083,17 +6083,17 @@ export declare const genericEntityGetRelationsInfiniteQueryKey: (options: Option
  * "excludePermissions": true
  * }
  */
-export declare const genericEntityGetRelationsInfiniteOptions: (options: Options<GenericEntityGetRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<GenericEntityGetRelationsData>>, number | Pick<Pick<Options<GenericEntityGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const genericEntityGetRelationsInfiniteOptions: (options: Options<GenericEntityGetRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<GenericEntityGetRelationsData>>, number | Pick<Pick<Options<GenericEntityGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<GenericEntityGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<GenericEntityGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<GenericEntityGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<GenericEntityGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<GenericEntityGetRelationsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -6135,7 +6135,7 @@ export declare const genericEntityGetRelationsInfiniteOptions: (options: Options
  * }
  */
 export declare const genericEntityGetRelationsMutation: (options?: Partial<Options<GenericEntityGetRelationsData>>) => UseMutationOptions<GenericEntityGetRelationsResponse, AxiosError<DefaultError>, Options<GenericEntityGetRelationsData>>;
-export declare const genericEntityGetRelationsCountQueryKey: (options: Options<GenericEntityGetRelationsCountData>) => [Pick<Options<GenericEntityGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const genericEntityGetRelationsCountQueryKey: (options: Options<GenericEntityGetRelationsCountData>) => [Pick<Options<GenericEntityGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -6164,16 +6164,16 @@ export declare const genericEntityGetRelationsCountQueryKey: (options: Options<G
  * ]
  * }
  */
-export declare const genericEntityGetRelationsCountOptions: (options: Options<GenericEntityGetRelationsCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<GenericEntityGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const genericEntityGetRelationsCountOptions: (options: Options<GenericEntityGetRelationsCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<GenericEntityGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<GenericEntityGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<GenericEntityGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<GenericEntityGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<GenericEntityGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -6207,7 +6207,7 @@ export declare const genericEntityGetRelationsCountOptions: (options: Options<Ge
  * }
  */
 export declare const genericEntityGetRelationsCountMutation: (options?: Partial<Options<GenericEntityGetRelationsCountData>>) => UseMutationOptions<GenericEntityGetRelationsCountResponse, AxiosError<DefaultError>, Options<GenericEntityGetRelationsCountData>>;
-export declare const genericEntityGetGroupedRelationsQueryKey: (options: Options<GenericEntityGetGroupedRelationsData>) => [Pick<Options<GenericEntityGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const genericEntityGetGroupedRelationsQueryKey: (options: Options<GenericEntityGetGroupedRelationsData>) => [Pick<Options<GenericEntityGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -6247,16 +6247,16 @@ export declare const genericEntityGetGroupedRelationsQueryKey: (options: Options
  * "groupName": "Active"
  * }
  */
-export declare const genericEntityGetGroupedRelationsOptions: (options: Options<GenericEntityGetGroupedRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<GenericEntityGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const genericEntityGetGroupedRelationsOptions: (options: Options<GenericEntityGetGroupedRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<GenericEntityGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<GenericEntityGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<GenericEntityGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<GenericEntityGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<GenericEntityGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -6301,17 +6301,17 @@ export declare const genericEntityGetGroupedRelationsInfiniteQueryKey: (options:
  * "groupName": "Active"
  * }
  */
-export declare const genericEntityGetGroupedRelationsInfiniteOptions: (options: Options<GenericEntityGetGroupedRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<GenericEntityGetGroupedRelationsData>>, number | Pick<Pick<Options<GenericEntityGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const genericEntityGetGroupedRelationsInfiniteOptions: (options: Options<GenericEntityGetGroupedRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<GenericEntityGetGroupedRelationsData>>, number | Pick<Pick<Options<GenericEntityGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<GenericEntityGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<GenericEntityGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<GenericEntityGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<GenericEntityGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<GenericEntityGetGroupedRelationsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>;
@@ -6355,23 +6355,23 @@ export declare const genericEntityGetGroupedRelationsInfiniteOptions: (options: 
  * }
  */
 export declare const genericEntityGetGroupedRelationsMutation: (options?: Partial<Options<GenericEntityGetGroupedRelationsData>>) => UseMutationOptions<GenericEntityGetGroupedRelationsResponse, AxiosError<DefaultError>, Options<GenericEntityGetGroupedRelationsData>>;
-export declare const genericEntityGetEntityPicklistQueryKey: (options: Options<GenericEntityGetEntityPicklistData>) => [Pick<Options<GenericEntityGetEntityPicklistData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const genericEntityGetEntityPicklistQueryKey: (options: Options<GenericEntityGetEntityPicklistData>) => [Pick<Options<GenericEntityGetEntityPicklistData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
 /**
  * Returns picklist options honoring dependent field value.
  */
-export declare const genericEntityGetEntityPicklistOptions: (options: Options<GenericEntityGetEntityPicklistData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").PicklistData, Error, import("../types.gen").PicklistData, [Pick<Options<GenericEntityGetEntityPicklistData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const genericEntityGetEntityPicklistOptions: (options: Options<GenericEntityGetEntityPicklistData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").PicklistData, Error, import("../types.gen").PicklistData, [Pick<Options<GenericEntityGetEntityPicklistData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").PicklistData, [Pick<Options<GenericEntityGetEntityPicklistData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").PicklistData, [Pick<Options<GenericEntityGetEntityPicklistData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<GenericEntityGetEntityPicklistData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<GenericEntityGetEntityPicklistData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -6379,7 +6379,7 @@ export declare const genericEntityGetEntityPicklistOptions: (options: Options<Ge
         [dataTagErrorSymbol]: Error;
     };
 };
-export declare const genericEntityGetSwimlanesQueryKey: (options: Options<GenericEntityGetSwimlanesData>) => [Pick<Options<GenericEntityGetSwimlanesData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const genericEntityGetSwimlanesQueryKey: (options: Options<GenericEntityGetSwimlanesData>) => [Pick<Options<GenericEntityGetSwimlanesData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -6402,16 +6402,16 @@ export declare const genericEntityGetSwimlanesQueryKey: (options: Options<Generi
  * "groupName": "Active"
  * }
  */
-export declare const genericEntityGetSwimlanesOptions: (options: Options<GenericEntityGetSwimlanesData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").SwimlaneResponse, Error, import("../types.gen").SwimlaneResponse, [Pick<Options<GenericEntityGetSwimlanesData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const genericEntityGetSwimlanesOptions: (options: Options<GenericEntityGetSwimlanesData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").SwimlaneResponse, Error, import("../types.gen").SwimlaneResponse, [Pick<Options<GenericEntityGetSwimlanesData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").SwimlaneResponse, [Pick<Options<GenericEntityGetSwimlanesData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").SwimlaneResponse, [Pick<Options<GenericEntityGetSwimlanesData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<GenericEntityGetSwimlanesData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<GenericEntityGetSwimlanesData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -6439,17 +6439,17 @@ export declare const genericEntityGetSwimlanesInfiniteQueryKey: (options: Option
  * "groupName": "Active"
  * }
  */
-export declare const genericEntityGetSwimlanesInfiniteOptions: (options: Options<GenericEntityGetSwimlanesData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").SwimlaneResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").SwimlaneResponse, unknown>, import("../types.gen").SwimlaneResponse, QueryKey<Options<GenericEntityGetSwimlanesData>>, number | Pick<Pick<Options<GenericEntityGetSwimlanesData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const genericEntityGetSwimlanesInfiniteOptions: (options: Options<GenericEntityGetSwimlanesData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").SwimlaneResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").SwimlaneResponse, unknown>, import("../types.gen").SwimlaneResponse, QueryKey<Options<GenericEntityGetSwimlanesData>>, number | Pick<Pick<Options<GenericEntityGetSwimlanesData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").SwimlaneResponse, number | Pick<Pick<Options<GenericEntityGetSwimlanesData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").SwimlaneResponse, number | Pick<Pick<Options<GenericEntityGetSwimlanesData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").SwimlaneResponse, number | Pick<Pick<Options<GenericEntityGetSwimlanesData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").SwimlaneResponse, number | Pick<Pick<Options<GenericEntityGetSwimlanesData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<GenericEntityGetSwimlanesData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").SwimlaneResponse, unknown>;
@@ -6476,7 +6476,7 @@ export declare const genericEntityGetSwimlanesInfiniteOptions: (options: Options
  * }
  */
 export declare const genericEntityGetSwimlanesMutation: (options?: Partial<Options<GenericEntityGetSwimlanesData>>) => UseMutationOptions<GenericEntityGetSwimlanesResponse, AxiosError<DefaultError>, Options<GenericEntityGetSwimlanesData>>;
-export declare const genericEntityGetAvatarsQueryKey: (options: Options<GenericEntityGetAvatarsData>) => [Pick<Options<GenericEntityGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const genericEntityGetAvatarsQueryKey: (options: Options<GenericEntityGetAvatarsData>) => [Pick<Options<GenericEntityGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -6489,16 +6489,16 @@ export declare const genericEntityGetAvatarsQueryKey: (options: Options<GenericE
  * "dataFilters": []
  * }
  */
-export declare const genericEntityGetAvatarsOptions: (options: Options<GenericEntityGetAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<GenericEntityGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const genericEntityGetAvatarsOptions: (options: Options<GenericEntityGetAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<GenericEntityGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<GenericEntityGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<GenericEntityGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<GenericEntityGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<GenericEntityGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -6516,7 +6516,7 @@ export declare const genericEntityGetAvatarsOptions: (options: Options<GenericEn
  * }
  */
 export declare const genericEntityGetAvatarsMutation: (options?: Partial<Options<GenericEntityGetAvatarsData>>) => UseMutationOptions<GenericEntityGetAvatarsResponse, AxiosError<DefaultError>, Options<GenericEntityGetAvatarsData>>;
-export declare const genericEntityGetRelationAvatarsQueryKey: (options: Options<GenericEntityGetRelationAvatarsData>) => [Pick<Options<GenericEntityGetRelationAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const genericEntityGetRelationAvatarsQueryKey: (options: Options<GenericEntityGetRelationAvatarsData>) => [Pick<Options<GenericEntityGetRelationAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -6532,16 +6532,16 @@ export declare const genericEntityGetRelationAvatarsQueryKey: (options: Options<
  * "dataFilters": []
  * }
  */
-export declare const genericEntityGetRelationAvatarsOptions: (options: Options<GenericEntityGetRelationAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<GenericEntityGetRelationAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const genericEntityGetRelationAvatarsOptions: (options: Options<GenericEntityGetRelationAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<GenericEntityGetRelationAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<GenericEntityGetRelationAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<GenericEntityGetRelationAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<GenericEntityGetRelationAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<GenericEntityGetRelationAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -6562,23 +6562,23 @@ export declare const genericEntityGetRelationAvatarsOptions: (options: Options<G
  * }
  */
 export declare const genericEntityGetRelationAvatarsMutation: (options?: Partial<Options<GenericEntityGetRelationAvatarsData>>) => UseMutationOptions<GenericEntityGetRelationAvatarsResponse, AxiosError<DefaultError>, Options<GenericEntityGetRelationAvatarsData>>;
-export declare const genericEntityGetCustomPanelByIdentifierQueryKey: (options: Options<GenericEntityGetCustomPanelByIdentifierData>) => [Pick<Options<GenericEntityGetCustomPanelByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const genericEntityGetCustomPanelByIdentifierQueryKey: (options: Options<GenericEntityGetCustomPanelByIdentifierData>) => [Pick<Options<GenericEntityGetCustomPanelByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
 /**
  * Retrieves list of custom panel associated with Entity
  */
-export declare const genericEntityGetCustomPanelByIdentifierOptions: (options: Options<GenericEntityGetCustomPanelByIdentifierData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CustomPanel[], Error, import("../types.gen").CustomPanel[], [Pick<Options<GenericEntityGetCustomPanelByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const genericEntityGetCustomPanelByIdentifierOptions: (options: Options<GenericEntityGetCustomPanelByIdentifierData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CustomPanel[], Error, import("../types.gen").CustomPanel[], [Pick<Options<GenericEntityGetCustomPanelByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CustomPanel[], [Pick<Options<GenericEntityGetCustomPanelByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CustomPanel[], [Pick<Options<GenericEntityGetCustomPanelByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<GenericEntityGetCustomPanelByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<GenericEntityGetCustomPanelByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -6586,20 +6586,20 @@ export declare const genericEntityGetCustomPanelByIdentifierOptions: (options: O
         [dataTagErrorSymbol]: Error;
     };
 };
-export declare const genericEntityGetSwimlanesByRelationIdentifierQueryKey: (options: Options<GenericEntityGetSwimlanesByRelationIdentifierData>) => [Pick<Options<GenericEntityGetSwimlanesByRelationIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const genericEntityGetSwimlanesByRelationIdentifierQueryKey: (options: Options<GenericEntityGetSwimlanesByRelationIdentifierData>) => [Pick<Options<GenericEntityGetSwimlanesByRelationIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
-export declare const genericEntityGetSwimlanesByRelationIdentifierOptions: (options: Options<GenericEntityGetSwimlanesByRelationIdentifierData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").SwimlaneResponse, Error, import("../types.gen").SwimlaneResponse, [Pick<Options<GenericEntityGetSwimlanesByRelationIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const genericEntityGetSwimlanesByRelationIdentifierOptions: (options: Options<GenericEntityGetSwimlanesByRelationIdentifierData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").SwimlaneResponse, Error, import("../types.gen").SwimlaneResponse, [Pick<Options<GenericEntityGetSwimlanesByRelationIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").SwimlaneResponse, [Pick<Options<GenericEntityGetSwimlanesByRelationIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").SwimlaneResponse, [Pick<Options<GenericEntityGetSwimlanesByRelationIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<GenericEntityGetSwimlanesByRelationIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<GenericEntityGetSwimlanesByRelationIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -6608,17 +6608,17 @@ export declare const genericEntityGetSwimlanesByRelationIdentifierOptions: (opti
     };
 };
 export declare const genericEntityGetSwimlanesByRelationIdentifierInfiniteQueryKey: (options: Options<GenericEntityGetSwimlanesByRelationIdentifierData>) => QueryKey<Options<GenericEntityGetSwimlanesByRelationIdentifierData>>;
-export declare const genericEntityGetSwimlanesByRelationIdentifierInfiniteOptions: (options: Options<GenericEntityGetSwimlanesByRelationIdentifierData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").SwimlaneResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").SwimlaneResponse, unknown>, import("../types.gen").SwimlaneResponse, QueryKey<Options<GenericEntityGetSwimlanesByRelationIdentifierData>>, number | Pick<Pick<Options<GenericEntityGetSwimlanesByRelationIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const genericEntityGetSwimlanesByRelationIdentifierInfiniteOptions: (options: Options<GenericEntityGetSwimlanesByRelationIdentifierData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").SwimlaneResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").SwimlaneResponse, unknown>, import("../types.gen").SwimlaneResponse, QueryKey<Options<GenericEntityGetSwimlanesByRelationIdentifierData>>, number | Pick<Pick<Options<GenericEntityGetSwimlanesByRelationIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").SwimlaneResponse, number | Pick<Pick<Options<GenericEntityGetSwimlanesByRelationIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").SwimlaneResponse, number | Pick<Pick<Options<GenericEntityGetSwimlanesByRelationIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").SwimlaneResponse, number | Pick<Pick<Options<GenericEntityGetSwimlanesByRelationIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").SwimlaneResponse, number | Pick<Pick<Options<GenericEntityGetSwimlanesByRelationIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<GenericEntityGetSwimlanesByRelationIdentifierData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").SwimlaneResponse, unknown>;
@@ -6626,20 +6626,20 @@ export declare const genericEntityGetSwimlanesByRelationIdentifierInfiniteOption
     };
 };
 export declare const genericEntityGetSwimlanesByRelationIdentifierMutation: (options?: Partial<Options<GenericEntityGetSwimlanesByRelationIdentifierData>>) => UseMutationOptions<GenericEntityGetSwimlanesByRelationIdentifierResponse, AxiosError<DefaultError>, Options<GenericEntityGetSwimlanesByRelationIdentifierData>>;
-export declare const genericEntityGetAvailableEntitiesQueryKey: (options: Options<GenericEntityGetAvailableEntitiesData>) => [Pick<Options<GenericEntityGetAvailableEntitiesData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const genericEntityGetAvailableEntitiesQueryKey: (options: Options<GenericEntityGetAvailableEntitiesData>) => [Pick<Options<GenericEntityGetAvailableEntitiesData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
-export declare const genericEntityGetAvailableEntitiesOptions: (options: Options<GenericEntityGetAvailableEntitiesData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<GenericEntityGetAvailableEntitiesData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const genericEntityGetAvailableEntitiesOptions: (options: Options<GenericEntityGetAvailableEntitiesData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<GenericEntityGetAvailableEntitiesData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<GenericEntityGetAvailableEntitiesData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<GenericEntityGetAvailableEntitiesData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<GenericEntityGetAvailableEntitiesData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<GenericEntityGetAvailableEntitiesData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -6648,17 +6648,17 @@ export declare const genericEntityGetAvailableEntitiesOptions: (options: Options
     };
 };
 export declare const genericEntityGetAvailableEntitiesInfiniteQueryKey: (options: Options<GenericEntityGetAvailableEntitiesData>) => QueryKey<Options<GenericEntityGetAvailableEntitiesData>>;
-export declare const genericEntityGetAvailableEntitiesInfiniteOptions: (options: Options<GenericEntityGetAvailableEntitiesData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<GenericEntityGetAvailableEntitiesData>>, number | Pick<Pick<Options<GenericEntityGetAvailableEntitiesData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const genericEntityGetAvailableEntitiesInfiniteOptions: (options: Options<GenericEntityGetAvailableEntitiesData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<GenericEntityGetAvailableEntitiesData>>, number | Pick<Pick<Options<GenericEntityGetAvailableEntitiesData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<GenericEntityGetAvailableEntitiesData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<GenericEntityGetAvailableEntitiesData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<GenericEntityGetAvailableEntitiesData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<GenericEntityGetAvailableEntitiesData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<GenericEntityGetAvailableEntitiesData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -6666,7 +6666,7 @@ export declare const genericEntityGetAvailableEntitiesInfiniteOptions: (options:
     };
 };
 export declare const genericEntityGetAvailableEntitiesMutation: (options?: Partial<Options<GenericEntityGetAvailableEntitiesData>>) => UseMutationOptions<GenericEntityGetAvailableEntitiesResponse, AxiosError<DefaultError>, Options<GenericEntityGetAvailableEntitiesData>>;
-export declare const metadataGetPicklistQueryKey: (options: Options<MetadataGetPicklistData>) => [Pick<Options<MetadataGetPicklistData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const metadataGetPicklistQueryKey: (options: Options<MetadataGetPicklistData>) => [Pick<Options<MetadataGetPicklistData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -6682,16 +6682,16 @@ export declare const metadataGetPicklistQueryKey: (options: Options<MetadataGetP
  * ]
  * }
  */
-export declare const metadataGetPicklistOptions: (options: Options<MetadataGetPicklistData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").PicklistData[], Error, import("../types.gen").PicklistData[], [Pick<Options<MetadataGetPicklistData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const metadataGetPicklistOptions: (options: Options<MetadataGetPicklistData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").PicklistData[], Error, import("../types.gen").PicklistData[], [Pick<Options<MetadataGetPicklistData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").PicklistData[], [Pick<Options<MetadataGetPicklistData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").PicklistData[], [Pick<Options<MetadataGetPicklistData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<MetadataGetPicklistData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<MetadataGetPicklistData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -6712,7 +6712,7 @@ export declare const metadataGetPicklistOptions: (options: Options<MetadataGetPi
  * }
  */
 export declare const metadataGetPicklistMutation: (options?: Partial<Options<MetadataGetPicklistData>>) => UseMutationOptions<MetadataGetPicklistResponse, AxiosError<DefaultError>, Options<MetadataGetPicklistData>>;
-export declare const metadataGetFieldsQueryKey: (options: Options<MetadataGetFieldsData>) => [Pick<Options<MetadataGetFieldsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const metadataGetFieldsQueryKey: (options: Options<MetadataGetFieldsData>) => [Pick<Options<MetadataGetFieldsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -6733,16 +6733,16 @@ export declare const metadataGetFieldsQueryKey: (options: Options<MetadataGetFie
  * "includeRelations": true
  * }
  */
-export declare const metadataGetFieldsOptions: (options: Options<MetadataGetFieldsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").FieldsResponse[], Error, import("../types.gen").FieldsResponse[], [Pick<Options<MetadataGetFieldsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const metadataGetFieldsOptions: (options: Options<MetadataGetFieldsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").FieldsResponse[], Error, import("../types.gen").FieldsResponse[], [Pick<Options<MetadataGetFieldsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").FieldsResponse[], [Pick<Options<MetadataGetFieldsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").FieldsResponse[], [Pick<Options<MetadataGetFieldsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<MetadataGetFieldsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<MetadataGetFieldsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -6768,23 +6768,23 @@ export declare const metadataGetFieldsOptions: (options: Options<MetadataGetFiel
  * }
  */
 export declare const metadataGetFieldsMutation: (options?: Partial<Options<MetadataGetFieldsData>>) => UseMutationOptions<MetadataGetFieldsResponse, AxiosError<DefaultError>, Options<MetadataGetFieldsData>>;
-export declare const metadataGetSystemSettingsQueryKey: (options?: Options<MetadataGetSystemSettingsData>) => [Pick<Options<MetadataGetSystemSettingsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const metadataGetSystemSettingsQueryKey: (options?: Options<MetadataGetSystemSettingsData>) => [Pick<Options<MetadataGetSystemSettingsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
 /**
  * Returns basic system settings.
  */
-export declare const metadataGetSystemSettingsOptions: (options?: Options<MetadataGetSystemSettingsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").SystemSettingsResponse, Error, import("../types.gen").SystemSettingsResponse, [Pick<Options<MetadataGetSystemSettingsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const metadataGetSystemSettingsOptions: (options?: Options<MetadataGetSystemSettingsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").SystemSettingsResponse, Error, import("../types.gen").SystemSettingsResponse, [Pick<Options<MetadataGetSystemSettingsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").SystemSettingsResponse, [Pick<Options<MetadataGetSystemSettingsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").SystemSettingsResponse, [Pick<Options<MetadataGetSystemSettingsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<MetadataGetSystemSettingsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<MetadataGetSystemSettingsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -6792,23 +6792,23 @@ export declare const metadataGetSystemSettingsOptions: (options?: Options<Metada
         [dataTagErrorSymbol]: Error;
     };
 };
-export declare const metadataGetOrganizationSettingsQueryKey: (options?: Options<MetadataGetOrganizationSettingsData>) => [Pick<Options<MetadataGetOrganizationSettingsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const metadataGetOrganizationSettingsQueryKey: (options?: Options<MetadataGetOrganizationSettingsData>) => [Pick<Options<MetadataGetOrganizationSettingsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
 /**
  * Returns general organization settings.
  */
-export declare const metadataGetOrganizationSettingsOptions: (options?: Options<MetadataGetOrganizationSettingsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").OrganizationSettingsResponse, Error, import("../types.gen").OrganizationSettingsResponse, [Pick<Options<MetadataGetOrganizationSettingsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const metadataGetOrganizationSettingsOptions: (options?: Options<MetadataGetOrganizationSettingsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").OrganizationSettingsResponse, Error, import("../types.gen").OrganizationSettingsResponse, [Pick<Options<MetadataGetOrganizationSettingsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").OrganizationSettingsResponse, [Pick<Options<MetadataGetOrganizationSettingsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").OrganizationSettingsResponse, [Pick<Options<MetadataGetOrganizationSettingsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<MetadataGetOrganizationSettingsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<MetadataGetOrganizationSettingsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -6816,23 +6816,23 @@ export declare const metadataGetOrganizationSettingsOptions: (options?: Options<
         [dataTagErrorSymbol]: Error;
     };
 };
-export declare const metadataGetEntitiesDescriptionQueryKey: (options: Options<MetadataGetEntitiesDescriptionData>) => [Pick<Options<MetadataGetEntitiesDescriptionData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const metadataGetEntitiesDescriptionQueryKey: (options: Options<MetadataGetEntitiesDescriptionData>) => [Pick<Options<MetadataGetEntitiesDescriptionData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
 /**
  * Returns information about the entity types in your organization.
  */
-export declare const metadataGetEntitiesDescriptionOptions: (options: Options<MetadataGetEntitiesDescriptionData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").DescribeEntitiesResponse, Error, import("../types.gen").DescribeEntitiesResponse, [Pick<Options<MetadataGetEntitiesDescriptionData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const metadataGetEntitiesDescriptionOptions: (options: Options<MetadataGetEntitiesDescriptionData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").DescribeEntitiesResponse, Error, import("../types.gen").DescribeEntitiesResponse, [Pick<Options<MetadataGetEntitiesDescriptionData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").DescribeEntitiesResponse, [Pick<Options<MetadataGetEntitiesDescriptionData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").DescribeEntitiesResponse, [Pick<Options<MetadataGetEntitiesDescriptionData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<MetadataGetEntitiesDescriptionData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<MetadataGetEntitiesDescriptionData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -6844,23 +6844,23 @@ export declare const metadataGetEntitiesDescriptionOptions: (options: Options<Me
  * Returns information about the entity types in your organization.
  */
 export declare const metadataGetEntitiesDescriptionMutation: (options?: Partial<Options<MetadataGetEntitiesDescriptionData>>) => UseMutationOptions<MetadataGetEntitiesDescriptionResponse, AxiosError<DefaultError>, Options<MetadataGetEntitiesDescriptionData>>;
-export declare const metadataGetAvailableFieldsQueryKey: (options: Options<MetadataGetAvailableFieldsData>) => [Pick<Options<MetadataGetAvailableFieldsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const metadataGetAvailableFieldsQueryKey: (options: Options<MetadataGetAvailableFieldsData>) => [Pick<Options<MetadataGetAvailableFieldsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
 /**
  * Returns available fields for a specific entity and it's children.
  */
-export declare const metadataGetAvailableFieldsOptions: (options: Options<MetadataGetAvailableFieldsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").FieldsResponse[], Error, import("../types.gen").FieldsResponse[], [Pick<Options<MetadataGetAvailableFieldsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const metadataGetAvailableFieldsOptions: (options: Options<MetadataGetAvailableFieldsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").FieldsResponse[], Error, import("../types.gen").FieldsResponse[], [Pick<Options<MetadataGetAvailableFieldsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").FieldsResponse[], [Pick<Options<MetadataGetAvailableFieldsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").FieldsResponse[], [Pick<Options<MetadataGetAvailableFieldsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<MetadataGetAvailableFieldsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<MetadataGetAvailableFieldsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -6872,23 +6872,23 @@ export declare const metadataGetAvailableFieldsOptions: (options: Options<Metada
  * Returns available fields for a specific entity and it's children.
  */
 export declare const metadataGetAvailableFieldsMutation: (options?: Partial<Options<MetadataGetAvailableFieldsData>>) => UseMutationOptions<MetadataGetAvailableFieldsResponse, AxiosError<DefaultError>, Options<MetadataGetAvailableFieldsData>>;
-export declare const metadataGetRelationViewerFieldsQueryKey: (options: Options<MetadataGetRelationViewerFieldsData>) => [Pick<Options<MetadataGetRelationViewerFieldsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const metadataGetRelationViewerFieldsQueryKey: (options: Options<MetadataGetRelationViewerFieldsData>) => [Pick<Options<MetadataGetRelationViewerFieldsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
 /**
  * Returns available fields for a specific realtion.
  */
-export declare const metadataGetRelationViewerFieldsOptions: (options: Options<MetadataGetRelationViewerFieldsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").RelationFieldsResponse[], Error, import("../types.gen").RelationFieldsResponse[], [Pick<Options<MetadataGetRelationViewerFieldsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const metadataGetRelationViewerFieldsOptions: (options: Options<MetadataGetRelationViewerFieldsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").RelationFieldsResponse[], Error, import("../types.gen").RelationFieldsResponse[], [Pick<Options<MetadataGetRelationViewerFieldsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").RelationFieldsResponse[], [Pick<Options<MetadataGetRelationViewerFieldsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").RelationFieldsResponse[], [Pick<Options<MetadataGetRelationViewerFieldsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<MetadataGetRelationViewerFieldsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<MetadataGetRelationViewerFieldsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -6900,7 +6900,7 @@ export declare const metadataGetRelationViewerFieldsOptions: (options: Options<M
  * Returns available fields for a specific realtion.
  */
 export declare const metadataGetRelationViewerFieldsMutation: (options?: Partial<Options<MetadataGetRelationViewerFieldsData>>) => UseMutationOptions<MetadataGetRelationViewerFieldsResponse, AxiosError<DefaultError>, Options<MetadataGetRelationViewerFieldsData>>;
-export declare const portfoliosGetQueryKey: (options: Options<PortfoliosGetData>) => [Pick<Options<PortfoliosGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const portfoliosGetQueryKey: (options: Options<PortfoliosGetData>) => [Pick<Options<PortfoliosGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -6936,16 +6936,16 @@ export declare const portfoliosGetQueryKey: (options: Options<PortfoliosGetData>
  * "excludePermissions": true
  * }
  */
-export declare const portfoliosGetOptions: (options: Options<PortfoliosGetData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<PortfoliosGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const portfoliosGetOptions: (options: Options<PortfoliosGetData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<PortfoliosGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<PortfoliosGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<PortfoliosGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<PortfoliosGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<PortfoliosGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -6986,17 +6986,17 @@ export declare const portfoliosGetInfiniteQueryKey: (options: Options<Portfolios
  * "excludePermissions": true
  * }
  */
-export declare const portfoliosGetInfiniteOptions: (options: Options<PortfoliosGetData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<PortfoliosGetData>>, number | Pick<Pick<Options<PortfoliosGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const portfoliosGetInfiniteOptions: (options: Options<PortfoliosGetData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<PortfoliosGetData>>, number | Pick<Pick<Options<PortfoliosGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<PortfoliosGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<PortfoliosGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<PortfoliosGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<PortfoliosGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<PortfoliosGetData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -7036,7 +7036,7 @@ export declare const portfoliosGetInfiniteOptions: (options: Options<PortfoliosG
  * }
  */
 export declare const portfoliosGetMutation: (options?: Partial<Options<PortfoliosGetData>>) => UseMutationOptions<PortfoliosGetResponse, AxiosError<DefaultError>, Options<PortfoliosGetData>>;
-export declare const portfoliosGetGroupedQueryKey: (options: Options<PortfoliosGetGroupedData>) => [Pick<Options<PortfoliosGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const portfoliosGetGroupedQueryKey: (options: Options<PortfoliosGetGroupedData>) => [Pick<Options<PortfoliosGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -7074,16 +7074,16 @@ export declare const portfoliosGetGroupedQueryKey: (options: Options<PortfoliosG
  * "groupName": "Active"
  * }
  */
-export declare const portfoliosGetGroupedOptions: (options: Options<PortfoliosGetGroupedData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<PortfoliosGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const portfoliosGetGroupedOptions: (options: Options<PortfoliosGetGroupedData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<PortfoliosGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<PortfoliosGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<PortfoliosGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<PortfoliosGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<PortfoliosGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -7126,17 +7126,17 @@ export declare const portfoliosGetGroupedInfiniteQueryKey: (options: Options<Por
  * "groupName": "Active"
  * }
  */
-export declare const portfoliosGetGroupedInfiniteOptions: (options: Options<PortfoliosGetGroupedData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<PortfoliosGetGroupedData>>, number | Pick<Pick<Options<PortfoliosGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const portfoliosGetGroupedInfiniteOptions: (options: Options<PortfoliosGetGroupedData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<PortfoliosGetGroupedData>>, number | Pick<Pick<Options<PortfoliosGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<PortfoliosGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<PortfoliosGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<PortfoliosGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<PortfoliosGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<PortfoliosGetGroupedData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>;
@@ -7178,7 +7178,7 @@ export declare const portfoliosGetGroupedInfiniteOptions: (options: Options<Port
  * }
  */
 export declare const portfoliosGetGroupedMutation: (options?: Partial<Options<PortfoliosGetGroupedData>>) => UseMutationOptions<PortfoliosGetGroupedResponse, AxiosError<DefaultError>, Options<PortfoliosGetGroupedData>>;
-export declare const portfoliosGetByIdentifierQueryKey: (options: Options<PortfoliosGetByIdentifierData>) => [Pick<Options<PortfoliosGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const portfoliosGetByIdentifierQueryKey: (options: Options<PortfoliosGetByIdentifierData>) => [Pick<Options<PortfoliosGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -7195,16 +7195,16 @@ export declare const portfoliosGetByIdentifierQueryKey: (options: Options<Portfo
  * "excludePermissions": true
  * }
  */
-export declare const portfoliosGetByIdentifierOptions: (options: Options<PortfoliosGetByIdentifierData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntityDetailsResponse, Error, import("../types.gen").EntityDetailsResponse, [Pick<Options<PortfoliosGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const portfoliosGetByIdentifierOptions: (options: Options<PortfoliosGetByIdentifierData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntityDetailsResponse, Error, import("../types.gen").EntityDetailsResponse, [Pick<Options<PortfoliosGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntityDetailsResponse, [Pick<Options<PortfoliosGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntityDetailsResponse, [Pick<Options<PortfoliosGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<PortfoliosGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<PortfoliosGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -7226,7 +7226,7 @@ export declare const portfoliosGetByIdentifierOptions: (options: Options<Portfol
  * }
  */
 export declare const portfoliosGetByIdentifierMutation: (options?: Partial<Options<PortfoliosGetByIdentifierData>>) => UseMutationOptions<PortfoliosGetByIdentifierResponse, AxiosError<DefaultError>, Options<PortfoliosGetByIdentifierData>>;
-export declare const portfoliosGetByIdsQueryKey: (options: Options<PortfoliosGetByIdsData>) => [Pick<Options<PortfoliosGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const portfoliosGetByIdsQueryKey: (options: Options<PortfoliosGetByIdsData>) => [Pick<Options<PortfoliosGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -7263,16 +7263,16 @@ export declare const portfoliosGetByIdsQueryKey: (options: Options<PortfoliosGet
  * "ids": ["11.222.333", "44.555.66"]
  * }
  */
-export declare const portfoliosGetByIdsOptions: (options: Options<PortfoliosGetByIdsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<PortfoliosGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const portfoliosGetByIdsOptions: (options: Options<PortfoliosGetByIdsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<PortfoliosGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<PortfoliosGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<PortfoliosGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<PortfoliosGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<PortfoliosGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -7314,17 +7314,17 @@ export declare const portfoliosGetByIdsInfiniteQueryKey: (options: Options<Portf
  * "ids": ["11.222.333", "44.555.66"]
  * }
  */
-export declare const portfoliosGetByIdsInfiniteOptions: (options: Options<PortfoliosGetByIdsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<PortfoliosGetByIdsData>>, number | Pick<Pick<Options<PortfoliosGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const portfoliosGetByIdsInfiniteOptions: (options: Options<PortfoliosGetByIdsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<PortfoliosGetByIdsData>>, number | Pick<Pick<Options<PortfoliosGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<PortfoliosGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<PortfoliosGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<PortfoliosGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<PortfoliosGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<PortfoliosGetByIdsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -7365,7 +7365,7 @@ export declare const portfoliosGetByIdsInfiniteOptions: (options: Options<Portfo
  * }
  */
 export declare const portfoliosGetByIdsMutation: (options?: Partial<Options<PortfoliosGetByIdsData>>) => UseMutationOptions<PortfoliosGetByIdsResponse, AxiosError<DefaultError>, Options<PortfoliosGetByIdsData>>;
-export declare const portfoliosGetCountQueryKey: (options: Options<PortfoliosGetCountData>) => [Pick<Options<PortfoliosGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const portfoliosGetCountQueryKey: (options: Options<PortfoliosGetCountData>) => [Pick<Options<PortfoliosGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -7391,16 +7391,16 @@ export declare const portfoliosGetCountQueryKey: (options: Options<PortfoliosGet
  * ]
  * }
  */
-export declare const portfoliosGetCountOptions: (options: Options<PortfoliosGetCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<PortfoliosGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const portfoliosGetCountOptions: (options: Options<PortfoliosGetCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<PortfoliosGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<PortfoliosGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<PortfoliosGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<PortfoliosGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<PortfoliosGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -7431,7 +7431,7 @@ export declare const portfoliosGetCountOptions: (options: Options<PortfoliosGetC
  * }
  */
 export declare const portfoliosGetCountMutation: (options?: Partial<Options<PortfoliosGetCountData>>) => UseMutationOptions<PortfoliosGetCountResponse, AxiosError<DefaultError>, Options<PortfoliosGetCountData>>;
-export declare const portfoliosGetRelationsQueryKey: (options: Options<PortfoliosGetRelationsData>) => [Pick<Options<PortfoliosGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const portfoliosGetRelationsQueryKey: (options: Options<PortfoliosGetRelationsData>) => [Pick<Options<PortfoliosGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -7469,16 +7469,16 @@ export declare const portfoliosGetRelationsQueryKey: (options: Options<Portfolio
  * "excludePermissions": true
  * }
  */
-export declare const portfoliosGetRelationsOptions: (options: Options<PortfoliosGetRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<PortfoliosGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const portfoliosGetRelationsOptions: (options: Options<PortfoliosGetRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<PortfoliosGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<PortfoliosGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<PortfoliosGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<PortfoliosGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<PortfoliosGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -7521,17 +7521,17 @@ export declare const portfoliosGetRelationsInfiniteQueryKey: (options: Options<P
  * "excludePermissions": true
  * }
  */
-export declare const portfoliosGetRelationsInfiniteOptions: (options: Options<PortfoliosGetRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<PortfoliosGetRelationsData>>, number | Pick<Pick<Options<PortfoliosGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const portfoliosGetRelationsInfiniteOptions: (options: Options<PortfoliosGetRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<PortfoliosGetRelationsData>>, number | Pick<Pick<Options<PortfoliosGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<PortfoliosGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<PortfoliosGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<PortfoliosGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<PortfoliosGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<PortfoliosGetRelationsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -7573,7 +7573,7 @@ export declare const portfoliosGetRelationsInfiniteOptions: (options: Options<Po
  * }
  */
 export declare const portfoliosGetRelationsMutation: (options?: Partial<Options<PortfoliosGetRelationsData>>) => UseMutationOptions<PortfoliosGetRelationsResponse, AxiosError<DefaultError>, Options<PortfoliosGetRelationsData>>;
-export declare const portfoliosGetRelationsCountQueryKey: (options: Options<PortfoliosGetRelationsCountData>) => [Pick<Options<PortfoliosGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const portfoliosGetRelationsCountQueryKey: (options: Options<PortfoliosGetRelationsCountData>) => [Pick<Options<PortfoliosGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -7602,16 +7602,16 @@ export declare const portfoliosGetRelationsCountQueryKey: (options: Options<Port
  * ]
  * }
  */
-export declare const portfoliosGetRelationsCountOptions: (options: Options<PortfoliosGetRelationsCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<PortfoliosGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const portfoliosGetRelationsCountOptions: (options: Options<PortfoliosGetRelationsCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<PortfoliosGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<PortfoliosGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<PortfoliosGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<PortfoliosGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<PortfoliosGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -7645,7 +7645,7 @@ export declare const portfoliosGetRelationsCountOptions: (options: Options<Portf
  * }
  */
 export declare const portfoliosGetRelationsCountMutation: (options?: Partial<Options<PortfoliosGetRelationsCountData>>) => UseMutationOptions<PortfoliosGetRelationsCountResponse, AxiosError<DefaultError>, Options<PortfoliosGetRelationsCountData>>;
-export declare const portfoliosGetGroupedRelationsQueryKey: (options: Options<PortfoliosGetGroupedRelationsData>) => [Pick<Options<PortfoliosGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const portfoliosGetGroupedRelationsQueryKey: (options: Options<PortfoliosGetGroupedRelationsData>) => [Pick<Options<PortfoliosGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -7685,16 +7685,16 @@ export declare const portfoliosGetGroupedRelationsQueryKey: (options: Options<Po
  * "groupName": "Active"
  * }
  */
-export declare const portfoliosGetGroupedRelationsOptions: (options: Options<PortfoliosGetGroupedRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<PortfoliosGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const portfoliosGetGroupedRelationsOptions: (options: Options<PortfoliosGetGroupedRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<PortfoliosGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<PortfoliosGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<PortfoliosGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<PortfoliosGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<PortfoliosGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -7739,17 +7739,17 @@ export declare const portfoliosGetGroupedRelationsInfiniteQueryKey: (options: Op
  * "groupName": "Active"
  * }
  */
-export declare const portfoliosGetGroupedRelationsInfiniteOptions: (options: Options<PortfoliosGetGroupedRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<PortfoliosGetGroupedRelationsData>>, number | Pick<Pick<Options<PortfoliosGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const portfoliosGetGroupedRelationsInfiniteOptions: (options: Options<PortfoliosGetGroupedRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<PortfoliosGetGroupedRelationsData>>, number | Pick<Pick<Options<PortfoliosGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<PortfoliosGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<PortfoliosGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<PortfoliosGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<PortfoliosGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<PortfoliosGetGroupedRelationsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>;
@@ -7793,7 +7793,7 @@ export declare const portfoliosGetGroupedRelationsInfiniteOptions: (options: Opt
  * }
  */
 export declare const portfoliosGetGroupedRelationsMutation: (options?: Partial<Options<PortfoliosGetGroupedRelationsData>>) => UseMutationOptions<PortfoliosGetGroupedRelationsResponse, AxiosError<DefaultError>, Options<PortfoliosGetGroupedRelationsData>>;
-export declare const portfoliosGetAvatarsQueryKey: (options: Options<PortfoliosGetAvatarsData>) => [Pick<Options<PortfoliosGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const portfoliosGetAvatarsQueryKey: (options: Options<PortfoliosGetAvatarsData>) => [Pick<Options<PortfoliosGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -7823,16 +7823,16 @@ export declare const portfoliosGetAvatarsQueryKey: (options: Options<PortfoliosG
  * ]
  * }
  */
-export declare const portfoliosGetAvatarsOptions: (options: Options<PortfoliosGetAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<PortfoliosGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const portfoliosGetAvatarsOptions: (options: Options<PortfoliosGetAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<PortfoliosGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<PortfoliosGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<PortfoliosGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<PortfoliosGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<PortfoliosGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -7867,7 +7867,7 @@ export declare const portfoliosGetAvatarsOptions: (options: Options<PortfoliosGe
  * }
  */
 export declare const portfoliosGetAvatarsMutation: (options?: Partial<Options<PortfoliosGetAvatarsData>>) => UseMutationOptions<PortfoliosGetAvatarsResponse, AxiosError<DefaultError>, Options<PortfoliosGetAvatarsData>>;
-export declare const portfoliosGetRelationsAvatarsQueryKey: (options: Options<PortfoliosGetRelationsAvatarsData>) => [Pick<Options<PortfoliosGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const portfoliosGetRelationsAvatarsQueryKey: (options: Options<PortfoliosGetRelationsAvatarsData>) => [Pick<Options<PortfoliosGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -7897,16 +7897,16 @@ export declare const portfoliosGetRelationsAvatarsQueryKey: (options: Options<Po
  * ]
  * }
  */
-export declare const portfoliosGetRelationsAvatarsOptions: (options: Options<PortfoliosGetRelationsAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<PortfoliosGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const portfoliosGetRelationsAvatarsOptions: (options: Options<PortfoliosGetRelationsAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<PortfoliosGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<PortfoliosGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<PortfoliosGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<PortfoliosGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<PortfoliosGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -7941,23 +7941,23 @@ export declare const portfoliosGetRelationsAvatarsOptions: (options: Options<Por
  * }
  */
 export declare const portfoliosGetRelationsAvatarsMutation: (options?: Partial<Options<PortfoliosGetRelationsAvatarsData>>) => UseMutationOptions<PortfoliosGetRelationsAvatarsResponse, AxiosError<DefaultError>, Options<PortfoliosGetRelationsAvatarsData>>;
-export declare const propertyCardLayoutGetPropertyCardLayoutQueryKey: (options: Options<PropertyCardLayoutGetPropertyCardLayoutData>) => [Pick<Options<PropertyCardLayoutGetPropertyCardLayoutData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const propertyCardLayoutGetPropertyCardLayoutQueryKey: (options: Options<PropertyCardLayoutGetPropertyCardLayoutData>) => [Pick<Options<PropertyCardLayoutGetPropertyCardLayoutData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
 /**
  * Returns a Property Card layout for the specific entity type.
  */
-export declare const propertyCardLayoutGetPropertyCardLayoutOptions: (options: Options<PropertyCardLayoutGetPropertyCardLayoutData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").PropertyCardLayoutResponse, Error, import("../types.gen").PropertyCardLayoutResponse, [Pick<Options<PropertyCardLayoutGetPropertyCardLayoutData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const propertyCardLayoutGetPropertyCardLayoutOptions: (options: Options<PropertyCardLayoutGetPropertyCardLayoutData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").PropertyCardLayoutResponse, Error, import("../types.gen").PropertyCardLayoutResponse, [Pick<Options<PropertyCardLayoutGetPropertyCardLayoutData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").PropertyCardLayoutResponse, [Pick<Options<PropertyCardLayoutGetPropertyCardLayoutData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").PropertyCardLayoutResponse, [Pick<Options<PropertyCardLayoutGetPropertyCardLayoutData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<PropertyCardLayoutGetPropertyCardLayoutData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<PropertyCardLayoutGetPropertyCardLayoutData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -7965,23 +7965,23 @@ export declare const propertyCardLayoutGetPropertyCardLayoutOptions: (options: O
         [dataTagErrorSymbol]: Error;
     };
 };
-export declare const propertyCardLayoutGetPropertyCardLayoutByEntityIdQueryKey: (options: Options<PropertyCardLayoutGetPropertyCardLayoutByEntityIdData>) => [Pick<Options<PropertyCardLayoutGetPropertyCardLayoutByEntityIdData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const propertyCardLayoutGetPropertyCardLayoutByEntityIdQueryKey: (options: Options<PropertyCardLayoutGetPropertyCardLayoutByEntityIdData>) => [Pick<Options<PropertyCardLayoutGetPropertyCardLayoutByEntityIdData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
 /**
  * Returns a Property Card layout for the specific internal id of the entity.
  */
-export declare const propertyCardLayoutGetPropertyCardLayoutByEntityIdOptions: (options: Options<PropertyCardLayoutGetPropertyCardLayoutByEntityIdData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").PropertyCardLayoutResponse, Error, import("../types.gen").PropertyCardLayoutResponse, [Pick<Options<PropertyCardLayoutGetPropertyCardLayoutByEntityIdData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const propertyCardLayoutGetPropertyCardLayoutByEntityIdOptions: (options: Options<PropertyCardLayoutGetPropertyCardLayoutByEntityIdData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").PropertyCardLayoutResponse, Error, import("../types.gen").PropertyCardLayoutResponse, [Pick<Options<PropertyCardLayoutGetPropertyCardLayoutByEntityIdData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").PropertyCardLayoutResponse, [Pick<Options<PropertyCardLayoutGetPropertyCardLayoutByEntityIdData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").PropertyCardLayoutResponse, [Pick<Options<PropertyCardLayoutGetPropertyCardLayoutByEntityIdData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<PropertyCardLayoutGetPropertyCardLayoutByEntityIdData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<PropertyCardLayoutGetPropertyCardLayoutByEntityIdData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -7989,7 +7989,7 @@ export declare const propertyCardLayoutGetPropertyCardLayoutByEntityIdOptions: (
         [dataTagErrorSymbol]: Error;
     };
 };
-export declare const jobTitlesGetCountQueryKey: (options: Options<JobTitlesGetCountData>) => [Pick<Options<JobTitlesGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const jobTitlesGetCountQueryKey: (options: Options<JobTitlesGetCountData>) => [Pick<Options<JobTitlesGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -8018,16 +8018,16 @@ export declare const jobTitlesGetCountQueryKey: (options: Options<JobTitlesGetCo
  * ]
  * }
  */
-export declare const jobTitlesGetCountOptions: (options: Options<JobTitlesGetCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<JobTitlesGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const jobTitlesGetCountOptions: (options: Options<JobTitlesGetCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<JobTitlesGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<JobTitlesGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<JobTitlesGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<JobTitlesGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<JobTitlesGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -8061,7 +8061,7 @@ export declare const jobTitlesGetCountOptions: (options: Options<JobTitlesGetCou
  * }
  */
 export declare const jobTitlesGetCountMutation: (options?: Partial<Options<JobTitlesGetCountData>>) => UseMutationOptions<JobTitlesGetCountResponse, AxiosError<DefaultError>, Options<JobTitlesGetCountData>>;
-export declare const jobTitlesGetRelationsCountQueryKey: (options: Options<JobTitlesGetRelationsCountData>) => [Pick<Options<JobTitlesGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const jobTitlesGetRelationsCountQueryKey: (options: Options<JobTitlesGetRelationsCountData>) => [Pick<Options<JobTitlesGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -8090,16 +8090,16 @@ export declare const jobTitlesGetRelationsCountQueryKey: (options: Options<JobTi
  * ]
  * }
  */
-export declare const jobTitlesGetRelationsCountOptions: (options: Options<JobTitlesGetRelationsCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<JobTitlesGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const jobTitlesGetRelationsCountOptions: (options: Options<JobTitlesGetRelationsCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<JobTitlesGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<JobTitlesGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<JobTitlesGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<JobTitlesGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<JobTitlesGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -8133,7 +8133,7 @@ export declare const jobTitlesGetRelationsCountOptions: (options: Options<JobTit
  * }
  */
 export declare const jobTitlesGetRelationsCountMutation: (options?: Partial<Options<JobTitlesGetRelationsCountData>>) => UseMutationOptions<JobTitlesGetRelationsCountResponse, AxiosError<DefaultError>, Options<JobTitlesGetRelationsCountData>>;
-export declare const jobTitlesGetQueryKey: (options: Options<JobTitlesGetData>) => [Pick<Options<JobTitlesGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const jobTitlesGetQueryKey: (options: Options<JobTitlesGetData>) => [Pick<Options<JobTitlesGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -8171,16 +8171,16 @@ export declare const jobTitlesGetQueryKey: (options: Options<JobTitlesGetData>) 
  * "excludePermissions": true
  * }
  */
-export declare const jobTitlesGetOptions: (options: Options<JobTitlesGetData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<JobTitlesGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const jobTitlesGetOptions: (options: Options<JobTitlesGetData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<JobTitlesGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<JobTitlesGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<JobTitlesGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<JobTitlesGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<JobTitlesGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -8223,17 +8223,17 @@ export declare const jobTitlesGetInfiniteQueryKey: (options: Options<JobTitlesGe
  * "excludePermissions": true
  * }
  */
-export declare const jobTitlesGetInfiniteOptions: (options: Options<JobTitlesGetData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<JobTitlesGetData>>, number | Pick<Pick<Options<JobTitlesGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const jobTitlesGetInfiniteOptions: (options: Options<JobTitlesGetData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<JobTitlesGetData>>, number | Pick<Pick<Options<JobTitlesGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<JobTitlesGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<JobTitlesGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<JobTitlesGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<JobTitlesGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<JobTitlesGetData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -8275,7 +8275,7 @@ export declare const jobTitlesGetInfiniteOptions: (options: Options<JobTitlesGet
  * }
  */
 export declare const jobTitlesGetMutation: (options?: Partial<Options<JobTitlesGetData>>) => UseMutationOptions<JobTitlesGetResponse, AxiosError<DefaultError>, Options<JobTitlesGetData>>;
-export declare const jobTitlesGetGroupedQueryKey: (options: Options<JobTitlesGetGroupedData>) => [Pick<Options<JobTitlesGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const jobTitlesGetGroupedQueryKey: (options: Options<JobTitlesGetGroupedData>) => [Pick<Options<JobTitlesGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -8315,16 +8315,16 @@ export declare const jobTitlesGetGroupedQueryKey: (options: Options<JobTitlesGet
  * "groupName": "Active"
  * }
  */
-export declare const jobTitlesGetGroupedOptions: (options: Options<JobTitlesGetGroupedData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<JobTitlesGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const jobTitlesGetGroupedOptions: (options: Options<JobTitlesGetGroupedData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<JobTitlesGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<JobTitlesGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<JobTitlesGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<JobTitlesGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<JobTitlesGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -8369,17 +8369,17 @@ export declare const jobTitlesGetGroupedInfiniteQueryKey: (options: Options<JobT
  * "groupName": "Active"
  * }
  */
-export declare const jobTitlesGetGroupedInfiniteOptions: (options: Options<JobTitlesGetGroupedData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<JobTitlesGetGroupedData>>, number | Pick<Pick<Options<JobTitlesGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const jobTitlesGetGroupedInfiniteOptions: (options: Options<JobTitlesGetGroupedData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<JobTitlesGetGroupedData>>, number | Pick<Pick<Options<JobTitlesGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<JobTitlesGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<JobTitlesGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<JobTitlesGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<JobTitlesGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<JobTitlesGetGroupedData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>;
@@ -8423,7 +8423,7 @@ export declare const jobTitlesGetGroupedInfiniteOptions: (options: Options<JobTi
  * }
  */
 export declare const jobTitlesGetGroupedMutation: (options?: Partial<Options<JobTitlesGetGroupedData>>) => UseMutationOptions<JobTitlesGetGroupedResponse, AxiosError<DefaultError>, Options<JobTitlesGetGroupedData>>;
-export declare const jobTitlesGetByIdentifierQueryKey: (options: Options<JobTitlesGetByIdentifierData>) => [Pick<Options<JobTitlesGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const jobTitlesGetByIdentifierQueryKey: (options: Options<JobTitlesGetByIdentifierData>) => [Pick<Options<JobTitlesGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -8439,16 +8439,16 @@ export declare const jobTitlesGetByIdentifierQueryKey: (options: Options<JobTitl
  * "excludePermissions": true
  * }
  */
-export declare const jobTitlesGetByIdentifierOptions: (options: Options<JobTitlesGetByIdentifierData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntityDetailsResponse, Error, import("../types.gen").EntityDetailsResponse, [Pick<Options<JobTitlesGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const jobTitlesGetByIdentifierOptions: (options: Options<JobTitlesGetByIdentifierData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntityDetailsResponse, Error, import("../types.gen").EntityDetailsResponse, [Pick<Options<JobTitlesGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntityDetailsResponse, [Pick<Options<JobTitlesGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntityDetailsResponse, [Pick<Options<JobTitlesGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<JobTitlesGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<JobTitlesGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -8469,7 +8469,7 @@ export declare const jobTitlesGetByIdentifierOptions: (options: Options<JobTitle
  * }
  */
 export declare const jobTitlesGetByIdentifierMutation: (options?: Partial<Options<JobTitlesGetByIdentifierData>>) => UseMutationOptions<JobTitlesGetByIdentifierResponse, AxiosError<DefaultError>, Options<JobTitlesGetByIdentifierData>>;
-export declare const jobTitlesGetByIdsQueryKey: (options: Options<JobTitlesGetByIdsData>) => [Pick<Options<JobTitlesGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const jobTitlesGetByIdsQueryKey: (options: Options<JobTitlesGetByIdsData>) => [Pick<Options<JobTitlesGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -8508,16 +8508,16 @@ export declare const jobTitlesGetByIdsQueryKey: (options: Options<JobTitlesGetBy
  * "ids": ["11.222.333", "44.555.66"]
  * }
  */
-export declare const jobTitlesGetByIdsOptions: (options: Options<JobTitlesGetByIdsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<JobTitlesGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const jobTitlesGetByIdsOptions: (options: Options<JobTitlesGetByIdsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<JobTitlesGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<JobTitlesGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<JobTitlesGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<JobTitlesGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<JobTitlesGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -8561,17 +8561,17 @@ export declare const jobTitlesGetByIdsInfiniteQueryKey: (options: Options<JobTit
  * "ids": ["11.222.333", "44.555.66"]
  * }
  */
-export declare const jobTitlesGetByIdsInfiniteOptions: (options: Options<JobTitlesGetByIdsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<JobTitlesGetByIdsData>>, number | Pick<Pick<Options<JobTitlesGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const jobTitlesGetByIdsInfiniteOptions: (options: Options<JobTitlesGetByIdsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<JobTitlesGetByIdsData>>, number | Pick<Pick<Options<JobTitlesGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<JobTitlesGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<JobTitlesGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<JobTitlesGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<JobTitlesGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<JobTitlesGetByIdsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -8614,7 +8614,7 @@ export declare const jobTitlesGetByIdsInfiniteOptions: (options: Options<JobTitl
  * }
  */
 export declare const jobTitlesGetByIdsMutation: (options?: Partial<Options<JobTitlesGetByIdsData>>) => UseMutationOptions<JobTitlesGetByIdsResponse, AxiosError<DefaultError>, Options<JobTitlesGetByIdsData>>;
-export declare const jobTitlesGetRelationsQueryKey: (options: Options<JobTitlesGetRelationsData>) => [Pick<Options<JobTitlesGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const jobTitlesGetRelationsQueryKey: (options: Options<JobTitlesGetRelationsData>) => [Pick<Options<JobTitlesGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -8653,16 +8653,16 @@ export declare const jobTitlesGetRelationsQueryKey: (options: Options<JobTitlesG
  * "excludePermissions": true
  * }
  */
-export declare const jobTitlesGetRelationsOptions: (options: Options<JobTitlesGetRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<JobTitlesGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const jobTitlesGetRelationsOptions: (options: Options<JobTitlesGetRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<JobTitlesGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<JobTitlesGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<JobTitlesGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<JobTitlesGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<JobTitlesGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -8706,17 +8706,17 @@ export declare const jobTitlesGetRelationsInfiniteQueryKey: (options: Options<Jo
  * "excludePermissions": true
  * }
  */
-export declare const jobTitlesGetRelationsInfiniteOptions: (options: Options<JobTitlesGetRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<JobTitlesGetRelationsData>>, number | Pick<Pick<Options<JobTitlesGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const jobTitlesGetRelationsInfiniteOptions: (options: Options<JobTitlesGetRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<JobTitlesGetRelationsData>>, number | Pick<Pick<Options<JobTitlesGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<JobTitlesGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<JobTitlesGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<JobTitlesGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<JobTitlesGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<JobTitlesGetRelationsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -8759,7 +8759,7 @@ export declare const jobTitlesGetRelationsInfiniteOptions: (options: Options<Job
  * }
  */
 export declare const jobTitlesGetRelationsMutation: (options?: Partial<Options<JobTitlesGetRelationsData>>) => UseMutationOptions<JobTitlesGetRelationsResponse, AxiosError<DefaultError>, Options<JobTitlesGetRelationsData>>;
-export declare const jobTitlesGetGroupedRelationsQueryKey: (options: Options<JobTitlesGetGroupedRelationsData>) => [Pick<Options<JobTitlesGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const jobTitlesGetGroupedRelationsQueryKey: (options: Options<JobTitlesGetGroupedRelationsData>) => [Pick<Options<JobTitlesGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -8800,16 +8800,16 @@ export declare const jobTitlesGetGroupedRelationsQueryKey: (options: Options<Job
  * "groupName": "Active"
  * }
  */
-export declare const jobTitlesGetGroupedRelationsOptions: (options: Options<JobTitlesGetGroupedRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<JobTitlesGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const jobTitlesGetGroupedRelationsOptions: (options: Options<JobTitlesGetGroupedRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<JobTitlesGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<JobTitlesGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<JobTitlesGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<JobTitlesGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<JobTitlesGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -8855,17 +8855,17 @@ export declare const jobTitlesGetGroupedRelationsInfiniteQueryKey: (options: Opt
  * "groupName": "Active"
  * }
  */
-export declare const jobTitlesGetGroupedRelationsInfiniteOptions: (options: Options<JobTitlesGetGroupedRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<JobTitlesGetGroupedRelationsData>>, number | Pick<Pick<Options<JobTitlesGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const jobTitlesGetGroupedRelationsInfiniteOptions: (options: Options<JobTitlesGetGroupedRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<JobTitlesGetGroupedRelationsData>>, number | Pick<Pick<Options<JobTitlesGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<JobTitlesGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<JobTitlesGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<JobTitlesGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<JobTitlesGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<JobTitlesGetGroupedRelationsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>;
@@ -8910,7 +8910,7 @@ export declare const jobTitlesGetGroupedRelationsInfiniteOptions: (options: Opti
  * }
  */
 export declare const jobTitlesGetGroupedRelationsMutation: (options?: Partial<Options<JobTitlesGetGroupedRelationsData>>) => UseMutationOptions<JobTitlesGetGroupedRelationsResponse, AxiosError<DefaultError>, Options<JobTitlesGetGroupedRelationsData>>;
-export declare const membersGetAllMembersQueryKey: (options: Options<MembersGetAllMembersData>) => [Pick<Options<MembersGetAllMembersData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const membersGetAllMembersQueryKey: (options: Options<MembersGetAllMembersData>) => [Pick<Options<MembersGetAllMembersData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -8945,16 +8945,16 @@ export declare const membersGetAllMembersQueryKey: (options: Options<MembersGetA
  * "excludePermissions": true
  * }
  */
-export declare const membersGetAllMembersOptions: (options: Options<MembersGetAllMembersData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<MembersGetAllMembersData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const membersGetAllMembersOptions: (options: Options<MembersGetAllMembersData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<MembersGetAllMembersData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<MembersGetAllMembersData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<MembersGetAllMembersData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<MembersGetAllMembersData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<MembersGetAllMembersData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -8994,17 +8994,17 @@ export declare const membersGetAllMembersInfiniteQueryKey: (options: Options<Mem
  * "excludePermissions": true
  * }
  */
-export declare const membersGetAllMembersInfiniteOptions: (options: Options<MembersGetAllMembersData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<MembersGetAllMembersData>>, number | Pick<Pick<Options<MembersGetAllMembersData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const membersGetAllMembersInfiniteOptions: (options: Options<MembersGetAllMembersData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<MembersGetAllMembersData>>, number | Pick<Pick<Options<MembersGetAllMembersData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<MembersGetAllMembersData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<MembersGetAllMembersData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<MembersGetAllMembersData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<MembersGetAllMembersData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<MembersGetAllMembersData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -9043,7 +9043,7 @@ export declare const membersGetAllMembersInfiniteOptions: (options: Options<Memb
  * }
  */
 export declare const membersGetAllMembersMutation: (options?: Partial<Options<MembersGetAllMembersData>>) => UseMutationOptions<MembersGetAllMembersResponse, AxiosError<DefaultError>, Options<MembersGetAllMembersData>>;
-export declare const profilesGetCountQueryKey: (options: Options<ProfilesGetCountData>) => [Pick<Options<ProfilesGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const profilesGetCountQueryKey: (options: Options<ProfilesGetCountData>) => [Pick<Options<ProfilesGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -9069,16 +9069,16 @@ export declare const profilesGetCountQueryKey: (options: Options<ProfilesGetCoun
  * ]
  * }
  */
-export declare const profilesGetCountOptions: (options: Options<ProfilesGetCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<ProfilesGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const profilesGetCountOptions: (options: Options<ProfilesGetCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<ProfilesGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<ProfilesGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<ProfilesGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<ProfilesGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<ProfilesGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -9109,7 +9109,7 @@ export declare const profilesGetCountOptions: (options: Options<ProfilesGetCount
  * }
  */
 export declare const profilesGetCountMutation: (options?: Partial<Options<ProfilesGetCountData>>) => UseMutationOptions<ProfilesGetCountResponse, AxiosError<DefaultError>, Options<ProfilesGetCountData>>;
-export declare const profilesGetQueryKey: (options: Options<ProfilesGetData>) => [Pick<Options<ProfilesGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const profilesGetQueryKey: (options: Options<ProfilesGetData>) => [Pick<Options<ProfilesGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -9144,16 +9144,16 @@ export declare const profilesGetQueryKey: (options: Options<ProfilesGetData>) =>
  * "excludePermissions": true
  * }
  */
-export declare const profilesGetOptions: (options: Options<ProfilesGetData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<ProfilesGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const profilesGetOptions: (options: Options<ProfilesGetData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<ProfilesGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<ProfilesGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<ProfilesGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<ProfilesGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<ProfilesGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -9193,17 +9193,17 @@ export declare const profilesGetInfiniteQueryKey: (options: Options<ProfilesGetD
  * "excludePermissions": true
  * }
  */
-export declare const profilesGetInfiniteOptions: (options: Options<ProfilesGetData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<ProfilesGetData>>, number | Pick<Pick<Options<ProfilesGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const profilesGetInfiniteOptions: (options: Options<ProfilesGetData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<ProfilesGetData>>, number | Pick<Pick<Options<ProfilesGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<ProfilesGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<ProfilesGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<ProfilesGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<ProfilesGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<ProfilesGetData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -9242,7 +9242,7 @@ export declare const profilesGetInfiniteOptions: (options: Options<ProfilesGetDa
  * }
  */
 export declare const profilesGetMutation: (options?: Partial<Options<ProfilesGetData>>) => UseMutationOptions<ProfilesGetResponse, AxiosError<DefaultError>, Options<ProfilesGetData>>;
-export declare const profilesGetByIdentifierQueryKey: (options: Options<ProfilesGetByIdentifierData>) => [Pick<Options<ProfilesGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const profilesGetByIdentifierQueryKey: (options: Options<ProfilesGetByIdentifierData>) => [Pick<Options<ProfilesGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -9258,16 +9258,16 @@ export declare const profilesGetByIdentifierQueryKey: (options: Options<Profiles
  * "excludePermissions": true
  * }
  */
-export declare const profilesGetByIdentifierOptions: (options: Options<ProfilesGetByIdentifierData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntityDetailsResponse, Error, import("../types.gen").EntityDetailsResponse, [Pick<Options<ProfilesGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const profilesGetByIdentifierOptions: (options: Options<ProfilesGetByIdentifierData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntityDetailsResponse, Error, import("../types.gen").EntityDetailsResponse, [Pick<Options<ProfilesGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntityDetailsResponse, [Pick<Options<ProfilesGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntityDetailsResponse, [Pick<Options<ProfilesGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<ProfilesGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<ProfilesGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -9288,7 +9288,7 @@ export declare const profilesGetByIdentifierOptions: (options: Options<ProfilesG
  * }
  */
 export declare const profilesGetByIdentifierMutation: (options?: Partial<Options<ProfilesGetByIdentifierData>>) => UseMutationOptions<ProfilesGetByIdentifierResponse, AxiosError<DefaultError>, Options<ProfilesGetByIdentifierData>>;
-export declare const profilesGetByIdsQueryKey: (options: Options<ProfilesGetByIdsData>) => [Pick<Options<ProfilesGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const profilesGetByIdsQueryKey: (options: Options<ProfilesGetByIdsData>) => [Pick<Options<ProfilesGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -9324,16 +9324,16 @@ export declare const profilesGetByIdsQueryKey: (options: Options<ProfilesGetById
  * "ids": ["11.222.333", "44.555.66"]
  * }
  */
-export declare const profilesGetByIdsOptions: (options: Options<ProfilesGetByIdsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<ProfilesGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const profilesGetByIdsOptions: (options: Options<ProfilesGetByIdsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<ProfilesGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<ProfilesGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<ProfilesGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<ProfilesGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<ProfilesGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -9374,17 +9374,17 @@ export declare const profilesGetByIdsInfiniteQueryKey: (options: Options<Profile
  * "ids": ["11.222.333", "44.555.66"]
  * }
  */
-export declare const profilesGetByIdsInfiniteOptions: (options: Options<ProfilesGetByIdsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<ProfilesGetByIdsData>>, number | Pick<Pick<Options<ProfilesGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const profilesGetByIdsInfiniteOptions: (options: Options<ProfilesGetByIdsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<ProfilesGetByIdsData>>, number | Pick<Pick<Options<ProfilesGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<ProfilesGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<ProfilesGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<ProfilesGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<ProfilesGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<ProfilesGetByIdsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -9424,23 +9424,23 @@ export declare const profilesGetByIdsInfiniteOptions: (options: Options<Profiles
  * }
  */
 export declare const profilesGetByIdsMutation: (options?: Partial<Options<ProfilesGetByIdsData>>) => UseMutationOptions<ProfilesGetByIdsResponse, AxiosError<DefaultError>, Options<ProfilesGetByIdsData>>;
-export declare const profilesGetUserProfilesQueryKey: (options: Options<ProfilesGetUserProfilesData>) => [Pick<Options<ProfilesGetUserProfilesData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const profilesGetUserProfilesQueryKey: (options: Options<ProfilesGetUserProfilesData>) => [Pick<Options<ProfilesGetUserProfilesData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
 /**
  * Returns a list of Profiles which are assigned to User.
  */
-export declare const profilesGetUserProfilesOptions: (options: Options<ProfilesGetUserProfilesData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").ProfilesResponse, Error, import("../types.gen").ProfilesResponse, [Pick<Options<ProfilesGetUserProfilesData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const profilesGetUserProfilesOptions: (options: Options<ProfilesGetUserProfilesData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").ProfilesResponse, Error, import("../types.gen").ProfilesResponse, [Pick<Options<ProfilesGetUserProfilesData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").ProfilesResponse, [Pick<Options<ProfilesGetUserProfilesData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").ProfilesResponse, [Pick<Options<ProfilesGetUserProfilesData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<ProfilesGetUserProfilesData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<ProfilesGetUserProfilesData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -9448,7 +9448,7 @@ export declare const profilesGetUserProfilesOptions: (options: Options<ProfilesG
         [dataTagErrorSymbol]: Error;
     };
 };
-export declare const skillsGetQueryKey: (options: Options<SkillsGetData>) => [Pick<Options<SkillsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const skillsGetQueryKey: (options: Options<SkillsGetData>) => [Pick<Options<SkillsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -9483,16 +9483,16 @@ export declare const skillsGetQueryKey: (options: Options<SkillsGetData>) => [Pi
  * "excludePermissions": true
  * }
  */
-export declare const skillsGetOptions: (options: Options<SkillsGetData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<SkillsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const skillsGetOptions: (options: Options<SkillsGetData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<SkillsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<SkillsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<SkillsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<SkillsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<SkillsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -9532,17 +9532,17 @@ export declare const skillsGetInfiniteQueryKey: (options: Options<SkillsGetData>
  * "excludePermissions": true
  * }
  */
-export declare const skillsGetInfiniteOptions: (options: Options<SkillsGetData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<SkillsGetData>>, number | Pick<Pick<Options<SkillsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const skillsGetInfiniteOptions: (options: Options<SkillsGetData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<SkillsGetData>>, number | Pick<Pick<Options<SkillsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<SkillsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<SkillsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<SkillsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<SkillsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<SkillsGetData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -9581,7 +9581,7 @@ export declare const skillsGetInfiniteOptions: (options: Options<SkillsGetData>)
  * }
  */
 export declare const skillsGetMutation: (options?: Partial<Options<SkillsGetData>>) => UseMutationOptions<SkillsGetResponse, AxiosError<DefaultError>, Options<SkillsGetData>>;
-export declare const skillsGetGroupedQueryKey: (options: Options<SkillsGetGroupedData>) => [Pick<Options<SkillsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const skillsGetGroupedQueryKey: (options: Options<SkillsGetGroupedData>) => [Pick<Options<SkillsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -9618,16 +9618,16 @@ export declare const skillsGetGroupedQueryKey: (options: Options<SkillsGetGroupe
  * "groupName": "Active"
  * }
  */
-export declare const skillsGetGroupedOptions: (options: Options<SkillsGetGroupedData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<SkillsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const skillsGetGroupedOptions: (options: Options<SkillsGetGroupedData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<SkillsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<SkillsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<SkillsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<SkillsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<SkillsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -9669,17 +9669,17 @@ export declare const skillsGetGroupedInfiniteQueryKey: (options: Options<SkillsG
  * "groupName": "Active"
  * }
  */
-export declare const skillsGetGroupedInfiniteOptions: (options: Options<SkillsGetGroupedData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<SkillsGetGroupedData>>, number | Pick<Pick<Options<SkillsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const skillsGetGroupedInfiniteOptions: (options: Options<SkillsGetGroupedData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<SkillsGetGroupedData>>, number | Pick<Pick<Options<SkillsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<SkillsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<SkillsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<SkillsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<SkillsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<SkillsGetGroupedData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>;
@@ -9720,7 +9720,7 @@ export declare const skillsGetGroupedInfiniteOptions: (options: Options<SkillsGe
  * }
  */
 export declare const skillsGetGroupedMutation: (options?: Partial<Options<SkillsGetGroupedData>>) => UseMutationOptions<SkillsGetGroupedResponse, AxiosError<DefaultError>, Options<SkillsGetGroupedData>>;
-export declare const skillsGetByIdentifierQueryKey: (options: Options<SkillsGetByIdentifierData>) => [Pick<Options<SkillsGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const skillsGetByIdentifierQueryKey: (options: Options<SkillsGetByIdentifierData>) => [Pick<Options<SkillsGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -9736,16 +9736,16 @@ export declare const skillsGetByIdentifierQueryKey: (options: Options<SkillsGetB
  * "excludePermissions": true
  * }
  */
-export declare const skillsGetByIdentifierOptions: (options: Options<SkillsGetByIdentifierData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntityDetailsResponse, Error, import("../types.gen").EntityDetailsResponse, [Pick<Options<SkillsGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const skillsGetByIdentifierOptions: (options: Options<SkillsGetByIdentifierData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntityDetailsResponse, Error, import("../types.gen").EntityDetailsResponse, [Pick<Options<SkillsGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntityDetailsResponse, [Pick<Options<SkillsGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntityDetailsResponse, [Pick<Options<SkillsGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<SkillsGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<SkillsGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -9766,7 +9766,7 @@ export declare const skillsGetByIdentifierOptions: (options: Options<SkillsGetBy
  * }
  */
 export declare const skillsGetByIdentifierMutation: (options?: Partial<Options<SkillsGetByIdentifierData>>) => UseMutationOptions<SkillsGetByIdentifierResponse, AxiosError<DefaultError>, Options<SkillsGetByIdentifierData>>;
-export declare const skillsGetByIdsQueryKey: (options: Options<SkillsGetByIdsData>) => [Pick<Options<SkillsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const skillsGetByIdsQueryKey: (options: Options<SkillsGetByIdsData>) => [Pick<Options<SkillsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -9802,16 +9802,16 @@ export declare const skillsGetByIdsQueryKey: (options: Options<SkillsGetByIdsDat
  * "ids": ["11.222.333", "44.555.66"]
  * }
  */
-export declare const skillsGetByIdsOptions: (options: Options<SkillsGetByIdsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<SkillsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const skillsGetByIdsOptions: (options: Options<SkillsGetByIdsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<SkillsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<SkillsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<SkillsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<SkillsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<SkillsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -9852,17 +9852,17 @@ export declare const skillsGetByIdsInfiniteQueryKey: (options: Options<SkillsGet
  * "ids": ["11.222.333", "44.555.66"]
  * }
  */
-export declare const skillsGetByIdsInfiniteOptions: (options: Options<SkillsGetByIdsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<SkillsGetByIdsData>>, number | Pick<Pick<Options<SkillsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const skillsGetByIdsInfiniteOptions: (options: Options<SkillsGetByIdsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<SkillsGetByIdsData>>, number | Pick<Pick<Options<SkillsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<SkillsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<SkillsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<SkillsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<SkillsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<SkillsGetByIdsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -9902,7 +9902,7 @@ export declare const skillsGetByIdsInfiniteOptions: (options: Options<SkillsGetB
  * }
  */
 export declare const skillsGetByIdsMutation: (options?: Partial<Options<SkillsGetByIdsData>>) => UseMutationOptions<SkillsGetByIdsResponse, AxiosError<DefaultError>, Options<SkillsGetByIdsData>>;
-export declare const skillsGetCountQueryKey: (options: Options<SkillsGetCountData>) => [Pick<Options<SkillsGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const skillsGetCountQueryKey: (options: Options<SkillsGetCountData>) => [Pick<Options<SkillsGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -9928,16 +9928,16 @@ export declare const skillsGetCountQueryKey: (options: Options<SkillsGetCountDat
  * ]
  * }
  */
-export declare const skillsGetCountOptions: (options: Options<SkillsGetCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<SkillsGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const skillsGetCountOptions: (options: Options<SkillsGetCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<SkillsGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<SkillsGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<SkillsGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<SkillsGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<SkillsGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -9968,7 +9968,7 @@ export declare const skillsGetCountOptions: (options: Options<SkillsGetCountData
  * }
  */
 export declare const skillsGetCountMutation: (options?: Partial<Options<SkillsGetCountData>>) => UseMutationOptions<SkillsGetCountResponse, AxiosError<DefaultError>, Options<SkillsGetCountData>>;
-export declare const skillsGetRelationsQueryKey: (options: Options<SkillsGetRelationsData>) => [Pick<Options<SkillsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const skillsGetRelationsQueryKey: (options: Options<SkillsGetRelationsData>) => [Pick<Options<SkillsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -10004,16 +10004,16 @@ export declare const skillsGetRelationsQueryKey: (options: Options<SkillsGetRela
  * "excludePermissions": true
  * }
  */
-export declare const skillsGetRelationsOptions: (options: Options<SkillsGetRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<SkillsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const skillsGetRelationsOptions: (options: Options<SkillsGetRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<SkillsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<SkillsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<SkillsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<SkillsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<SkillsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -10054,17 +10054,17 @@ export declare const skillsGetRelationsInfiniteQueryKey: (options: Options<Skill
  * "excludePermissions": true
  * }
  */
-export declare const skillsGetRelationsInfiniteOptions: (options: Options<SkillsGetRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<SkillsGetRelationsData>>, number | Pick<Pick<Options<SkillsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const skillsGetRelationsInfiniteOptions: (options: Options<SkillsGetRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<SkillsGetRelationsData>>, number | Pick<Pick<Options<SkillsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<SkillsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<SkillsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<SkillsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<SkillsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<SkillsGetRelationsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -10104,7 +10104,7 @@ export declare const skillsGetRelationsInfiniteOptions: (options: Options<Skills
  * }
  */
 export declare const skillsGetRelationsMutation: (options?: Partial<Options<SkillsGetRelationsData>>) => UseMutationOptions<SkillsGetRelationsResponse, AxiosError<DefaultError>, Options<SkillsGetRelationsData>>;
-export declare const skillsGetRelationsCountQueryKey: (options: Options<SkillsGetRelationsCountData>) => [Pick<Options<SkillsGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const skillsGetRelationsCountQueryKey: (options: Options<SkillsGetRelationsCountData>) => [Pick<Options<SkillsGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -10130,16 +10130,16 @@ export declare const skillsGetRelationsCountQueryKey: (options: Options<SkillsGe
  * ]
  * }
  */
-export declare const skillsGetRelationsCountOptions: (options: Options<SkillsGetRelationsCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<SkillsGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const skillsGetRelationsCountOptions: (options: Options<SkillsGetRelationsCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<SkillsGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<SkillsGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<SkillsGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<SkillsGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<SkillsGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -10170,7 +10170,7 @@ export declare const skillsGetRelationsCountOptions: (options: Options<SkillsGet
  * }
  */
 export declare const skillsGetRelationsCountMutation: (options?: Partial<Options<SkillsGetRelationsCountData>>) => UseMutationOptions<SkillsGetRelationsCountResponse, AxiosError<DefaultError>, Options<SkillsGetRelationsCountData>>;
-export declare const skillsGetGroupedRelationsQueryKey: (options: Options<SkillsGetGroupedRelationsData>) => [Pick<Options<SkillsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const skillsGetGroupedRelationsQueryKey: (options: Options<SkillsGetGroupedRelationsData>) => [Pick<Options<SkillsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -10208,16 +10208,16 @@ export declare const skillsGetGroupedRelationsQueryKey: (options: Options<Skills
  * "groupName": "Active"
  * }
  */
-export declare const skillsGetGroupedRelationsOptions: (options: Options<SkillsGetGroupedRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<SkillsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const skillsGetGroupedRelationsOptions: (options: Options<SkillsGetGroupedRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<SkillsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<SkillsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<SkillsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<SkillsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<SkillsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -10260,17 +10260,17 @@ export declare const skillsGetGroupedRelationsInfiniteQueryKey: (options: Option
  * "groupName": "Active"
  * }
  */
-export declare const skillsGetGroupedRelationsInfiniteOptions: (options: Options<SkillsGetGroupedRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<SkillsGetGroupedRelationsData>>, number | Pick<Pick<Options<SkillsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const skillsGetGroupedRelationsInfiniteOptions: (options: Options<SkillsGetGroupedRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<SkillsGetGroupedRelationsData>>, number | Pick<Pick<Options<SkillsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<SkillsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<SkillsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<SkillsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<SkillsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<SkillsGetGroupedRelationsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>;
@@ -10312,7 +10312,7 @@ export declare const skillsGetGroupedRelationsInfiniteOptions: (options: Options
  * }
  */
 export declare const skillsGetGroupedRelationsMutation: (options?: Partial<Options<SkillsGetGroupedRelationsData>>) => UseMutationOptions<SkillsGetGroupedRelationsResponse, AxiosError<DefaultError>, Options<SkillsGetGroupedRelationsData>>;
-export declare const userGroupsGetQueryKey: (options: Options<UserGroupsGetData>) => [Pick<Options<UserGroupsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const userGroupsGetQueryKey: (options: Options<UserGroupsGetData>) => [Pick<Options<UserGroupsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -10350,16 +10350,16 @@ export declare const userGroupsGetQueryKey: (options: Options<UserGroupsGetData>
  * "excludePermissions": true
  * }
  */
-export declare const userGroupsGetOptions: (options: Options<UserGroupsGetData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<UserGroupsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const userGroupsGetOptions: (options: Options<UserGroupsGetData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<UserGroupsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<UserGroupsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<UserGroupsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<UserGroupsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<UserGroupsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -10402,17 +10402,17 @@ export declare const userGroupsGetInfiniteQueryKey: (options: Options<UserGroups
  * "excludePermissions": true
  * }
  */
-export declare const userGroupsGetInfiniteOptions: (options: Options<UserGroupsGetData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<UserGroupsGetData>>, number | Pick<Pick<Options<UserGroupsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const userGroupsGetInfiniteOptions: (options: Options<UserGroupsGetData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<UserGroupsGetData>>, number | Pick<Pick<Options<UserGroupsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<UserGroupsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<UserGroupsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<UserGroupsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<UserGroupsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<UserGroupsGetData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -10454,7 +10454,7 @@ export declare const userGroupsGetInfiniteOptions: (options: Options<UserGroupsG
  * }
  */
 export declare const userGroupsGetMutation: (options?: Partial<Options<UserGroupsGetData>>) => UseMutationOptions<UserGroupsGetResponse, AxiosError<DefaultError>, Options<UserGroupsGetData>>;
-export declare const userGroupsGetGroupedQueryKey: (options: Options<UserGroupsGetGroupedData>) => [Pick<Options<UserGroupsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const userGroupsGetGroupedQueryKey: (options: Options<UserGroupsGetGroupedData>) => [Pick<Options<UserGroupsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -10494,16 +10494,16 @@ export declare const userGroupsGetGroupedQueryKey: (options: Options<UserGroupsG
  * "groupName": "Active"
  * }
  */
-export declare const userGroupsGetGroupedOptions: (options: Options<UserGroupsGetGroupedData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<UserGroupsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const userGroupsGetGroupedOptions: (options: Options<UserGroupsGetGroupedData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<UserGroupsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<UserGroupsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<UserGroupsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<UserGroupsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<UserGroupsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -10548,17 +10548,17 @@ export declare const userGroupsGetGroupedInfiniteQueryKey: (options: Options<Use
  * "groupName": "Active"
  * }
  */
-export declare const userGroupsGetGroupedInfiniteOptions: (options: Options<UserGroupsGetGroupedData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<UserGroupsGetGroupedData>>, number | Pick<Pick<Options<UserGroupsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const userGroupsGetGroupedInfiniteOptions: (options: Options<UserGroupsGetGroupedData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<UserGroupsGetGroupedData>>, number | Pick<Pick<Options<UserGroupsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<UserGroupsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<UserGroupsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<UserGroupsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<UserGroupsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<UserGroupsGetGroupedData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>;
@@ -10602,7 +10602,7 @@ export declare const userGroupsGetGroupedInfiniteOptions: (options: Options<User
  * }
  */
 export declare const userGroupsGetGroupedMutation: (options?: Partial<Options<UserGroupsGetGroupedData>>) => UseMutationOptions<UserGroupsGetGroupedResponse, AxiosError<DefaultError>, Options<UserGroupsGetGroupedData>>;
-export declare const userGroupsGetByIdentifierQueryKey: (options: Options<UserGroupsGetByIdentifierData>) => [Pick<Options<UserGroupsGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const userGroupsGetByIdentifierQueryKey: (options: Options<UserGroupsGetByIdentifierData>) => [Pick<Options<UserGroupsGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -10618,16 +10618,16 @@ export declare const userGroupsGetByIdentifierQueryKey: (options: Options<UserGr
  * "excludePermissions": true
  * }
  */
-export declare const userGroupsGetByIdentifierOptions: (options: Options<UserGroupsGetByIdentifierData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntityDetailsResponse, Error, import("../types.gen").EntityDetailsResponse, [Pick<Options<UserGroupsGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const userGroupsGetByIdentifierOptions: (options: Options<UserGroupsGetByIdentifierData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntityDetailsResponse, Error, import("../types.gen").EntityDetailsResponse, [Pick<Options<UserGroupsGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntityDetailsResponse, [Pick<Options<UserGroupsGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntityDetailsResponse, [Pick<Options<UserGroupsGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<UserGroupsGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<UserGroupsGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -10648,7 +10648,7 @@ export declare const userGroupsGetByIdentifierOptions: (options: Options<UserGro
  * }
  */
 export declare const userGroupsGetByIdentifierMutation: (options?: Partial<Options<UserGroupsGetByIdentifierData>>) => UseMutationOptions<UserGroupsGetByIdentifierResponse, AxiosError<DefaultError>, Options<UserGroupsGetByIdentifierData>>;
-export declare const userGroupsGetByIdsQueryKey: (options: Options<UserGroupsGetByIdsData>) => [Pick<Options<UserGroupsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const userGroupsGetByIdsQueryKey: (options: Options<UserGroupsGetByIdsData>) => [Pick<Options<UserGroupsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -10687,16 +10687,16 @@ export declare const userGroupsGetByIdsQueryKey: (options: Options<UserGroupsGet
  * "ids": ["11.222.333", "44.555.66"]
  * }
  */
-export declare const userGroupsGetByIdsOptions: (options: Options<UserGroupsGetByIdsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<UserGroupsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const userGroupsGetByIdsOptions: (options: Options<UserGroupsGetByIdsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<UserGroupsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<UserGroupsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<UserGroupsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<UserGroupsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<UserGroupsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -10740,17 +10740,17 @@ export declare const userGroupsGetByIdsInfiniteQueryKey: (options: Options<UserG
  * "ids": ["11.222.333", "44.555.66"]
  * }
  */
-export declare const userGroupsGetByIdsInfiniteOptions: (options: Options<UserGroupsGetByIdsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<UserGroupsGetByIdsData>>, number | Pick<Pick<Options<UserGroupsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const userGroupsGetByIdsInfiniteOptions: (options: Options<UserGroupsGetByIdsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<UserGroupsGetByIdsData>>, number | Pick<Pick<Options<UserGroupsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<UserGroupsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<UserGroupsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<UserGroupsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<UserGroupsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<UserGroupsGetByIdsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -10793,7 +10793,7 @@ export declare const userGroupsGetByIdsInfiniteOptions: (options: Options<UserGr
  * }
  */
 export declare const userGroupsGetByIdsMutation: (options?: Partial<Options<UserGroupsGetByIdsData>>) => UseMutationOptions<UserGroupsGetByIdsResponse, AxiosError<DefaultError>, Options<UserGroupsGetByIdsData>>;
-export declare const userGroupsGetCountQueryKey: (options: Options<UserGroupsGetCountData>) => [Pick<Options<UserGroupsGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const userGroupsGetCountQueryKey: (options: Options<UserGroupsGetCountData>) => [Pick<Options<UserGroupsGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -10822,16 +10822,16 @@ export declare const userGroupsGetCountQueryKey: (options: Options<UserGroupsGet
  * ]
  * }
  */
-export declare const userGroupsGetCountOptions: (options: Options<UserGroupsGetCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<UserGroupsGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const userGroupsGetCountOptions: (options: Options<UserGroupsGetCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<UserGroupsGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<UserGroupsGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<UserGroupsGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<UserGroupsGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<UserGroupsGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -10865,7 +10865,7 @@ export declare const userGroupsGetCountOptions: (options: Options<UserGroupsGetC
  * }
  */
 export declare const userGroupsGetCountMutation: (options?: Partial<Options<UserGroupsGetCountData>>) => UseMutationOptions<UserGroupsGetCountResponse, AxiosError<DefaultError>, Options<UserGroupsGetCountData>>;
-export declare const userGroupsGetRelationsQueryKey: (options: Options<UserGroupsGetRelationsData>) => [Pick<Options<UserGroupsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const userGroupsGetRelationsQueryKey: (options: Options<UserGroupsGetRelationsData>) => [Pick<Options<UserGroupsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -10904,16 +10904,16 @@ export declare const userGroupsGetRelationsQueryKey: (options: Options<UserGroup
  * "excludePermissions": true
  * }
  */
-export declare const userGroupsGetRelationsOptions: (options: Options<UserGroupsGetRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<UserGroupsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const userGroupsGetRelationsOptions: (options: Options<UserGroupsGetRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<UserGroupsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<UserGroupsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<UserGroupsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<UserGroupsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<UserGroupsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -10957,17 +10957,17 @@ export declare const userGroupsGetRelationsInfiniteQueryKey: (options: Options<U
  * "excludePermissions": true
  * }
  */
-export declare const userGroupsGetRelationsInfiniteOptions: (options: Options<UserGroupsGetRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<UserGroupsGetRelationsData>>, number | Pick<Pick<Options<UserGroupsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const userGroupsGetRelationsInfiniteOptions: (options: Options<UserGroupsGetRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<UserGroupsGetRelationsData>>, number | Pick<Pick<Options<UserGroupsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<UserGroupsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<UserGroupsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<UserGroupsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<UserGroupsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<UserGroupsGetRelationsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -11010,7 +11010,7 @@ export declare const userGroupsGetRelationsInfiniteOptions: (options: Options<Us
  * }
  */
 export declare const userGroupsGetRelationsMutation: (options?: Partial<Options<UserGroupsGetRelationsData>>) => UseMutationOptions<UserGroupsGetRelationsResponse, AxiosError<DefaultError>, Options<UserGroupsGetRelationsData>>;
-export declare const userGroupsGetRelationsCountQueryKey: (options: Options<UserGroupsGetRelationsCountData>) => [Pick<Options<UserGroupsGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const userGroupsGetRelationsCountQueryKey: (options: Options<UserGroupsGetRelationsCountData>) => [Pick<Options<UserGroupsGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -11039,16 +11039,16 @@ export declare const userGroupsGetRelationsCountQueryKey: (options: Options<User
  * ]
  * }
  */
-export declare const userGroupsGetRelationsCountOptions: (options: Options<UserGroupsGetRelationsCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<UserGroupsGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const userGroupsGetRelationsCountOptions: (options: Options<UserGroupsGetRelationsCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<UserGroupsGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<UserGroupsGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<UserGroupsGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<UserGroupsGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<UserGroupsGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -11082,7 +11082,7 @@ export declare const userGroupsGetRelationsCountOptions: (options: Options<UserG
  * }
  */
 export declare const userGroupsGetRelationsCountMutation: (options?: Partial<Options<UserGroupsGetRelationsCountData>>) => UseMutationOptions<UserGroupsGetRelationsCountResponse, AxiosError<DefaultError>, Options<UserGroupsGetRelationsCountData>>;
-export declare const userGroupsGetGroupedRelationsQueryKey: (options: Options<UserGroupsGetGroupedRelationsData>) => [Pick<Options<UserGroupsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const userGroupsGetGroupedRelationsQueryKey: (options: Options<UserGroupsGetGroupedRelationsData>) => [Pick<Options<UserGroupsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -11123,16 +11123,16 @@ export declare const userGroupsGetGroupedRelationsQueryKey: (options: Options<Us
  * "groupName": "Active"
  * }
  */
-export declare const userGroupsGetGroupedRelationsOptions: (options: Options<UserGroupsGetGroupedRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<UserGroupsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const userGroupsGetGroupedRelationsOptions: (options: Options<UserGroupsGetGroupedRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<UserGroupsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<UserGroupsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<UserGroupsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<UserGroupsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<UserGroupsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -11178,17 +11178,17 @@ export declare const userGroupsGetGroupedRelationsInfiniteQueryKey: (options: Op
  * "groupName": "Active"
  * }
  */
-export declare const userGroupsGetGroupedRelationsInfiniteOptions: (options: Options<UserGroupsGetGroupedRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<UserGroupsGetGroupedRelationsData>>, number | Pick<Pick<Options<UserGroupsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const userGroupsGetGroupedRelationsInfiniteOptions: (options: Options<UserGroupsGetGroupedRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<UserGroupsGetGroupedRelationsData>>, number | Pick<Pick<Options<UserGroupsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<UserGroupsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<UserGroupsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<UserGroupsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<UserGroupsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<UserGroupsGetGroupedRelationsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>;
@@ -11233,23 +11233,23 @@ export declare const userGroupsGetGroupedRelationsInfiniteOptions: (options: Opt
  * }
  */
 export declare const userGroupsGetGroupedRelationsMutation: (options?: Partial<Options<UserGroupsGetGroupedRelationsData>>) => UseMutationOptions<UserGroupsGetGroupedRelationsResponse, AxiosError<DefaultError>, Options<UserGroupsGetGroupedRelationsData>>;
-export declare const userGroupsGetAuthorizationGroupsQueryKey: (options?: Options<UserGroupsGetAuthorizationGroupsData>) => [Pick<Options<UserGroupsGetAuthorizationGroupsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const userGroupsGetAuthorizationGroupsQueryKey: (options?: Options<UserGroupsGetAuthorizationGroupsData>) => [Pick<Options<UserGroupsGetAuthorizationGroupsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
 /**
  * Returns a list of Authorization Groups.
  */
-export declare const userGroupsGetAuthorizationGroupsOptions: (options?: Options<UserGroupsGetAuthorizationGroupsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AuthorizationGroupsResponse, Error, import("../types.gen").AuthorizationGroupsResponse, [Pick<Options<UserGroupsGetAuthorizationGroupsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const userGroupsGetAuthorizationGroupsOptions: (options?: Options<UserGroupsGetAuthorizationGroupsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AuthorizationGroupsResponse, Error, import("../types.gen").AuthorizationGroupsResponse, [Pick<Options<UserGroupsGetAuthorizationGroupsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AuthorizationGroupsResponse, [Pick<Options<UserGroupsGetAuthorizationGroupsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AuthorizationGroupsResponse, [Pick<Options<UserGroupsGetAuthorizationGroupsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<UserGroupsGetAuthorizationGroupsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<UserGroupsGetAuthorizationGroupsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -11257,7 +11257,7 @@ export declare const userGroupsGetAuthorizationGroupsOptions: (options?: Options
         [dataTagErrorSymbol]: Error;
     };
 };
-export declare const userGroupsGetRelatedGroupsForUserQueryKey: (options: Options<UserGroupsGetRelatedGroupsForUserData>) => [Pick<Options<UserGroupsGetRelatedGroupsForUserData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const userGroupsGetRelatedGroupsForUserQueryKey: (options: Options<UserGroupsGetRelatedGroupsForUserData>) => [Pick<Options<UserGroupsGetRelatedGroupsForUserData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -11295,16 +11295,16 @@ export declare const userGroupsGetRelatedGroupsForUserQueryKey: (options: Option
  * "excludePermissions": true
  * }
  */
-export declare const userGroupsGetRelatedGroupsForUserOptions: (options: Options<UserGroupsGetRelatedGroupsForUserData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<UserGroupsGetRelatedGroupsForUserData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const userGroupsGetRelatedGroupsForUserOptions: (options: Options<UserGroupsGetRelatedGroupsForUserData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<UserGroupsGetRelatedGroupsForUserData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<UserGroupsGetRelatedGroupsForUserData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<UserGroupsGetRelatedGroupsForUserData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<UserGroupsGetRelatedGroupsForUserData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<UserGroupsGetRelatedGroupsForUserData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -11347,17 +11347,17 @@ export declare const userGroupsGetRelatedGroupsForUserInfiniteQueryKey: (options
  * "excludePermissions": true
  * }
  */
-export declare const userGroupsGetRelatedGroupsForUserInfiniteOptions: (options: Options<UserGroupsGetRelatedGroupsForUserData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<UserGroupsGetRelatedGroupsForUserData>>, number | Pick<Pick<Options<UserGroupsGetRelatedGroupsForUserData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const userGroupsGetRelatedGroupsForUserInfiniteOptions: (options: Options<UserGroupsGetRelatedGroupsForUserData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<UserGroupsGetRelatedGroupsForUserData>>, number | Pick<Pick<Options<UserGroupsGetRelatedGroupsForUserData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<UserGroupsGetRelatedGroupsForUserData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<UserGroupsGetRelatedGroupsForUserData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<UserGroupsGetRelatedGroupsForUserData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<UserGroupsGetRelatedGroupsForUserData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<UserGroupsGetRelatedGroupsForUserData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -11399,7 +11399,7 @@ export declare const userGroupsGetRelatedGroupsForUserInfiniteOptions: (options:
  * }
  */
 export declare const userGroupsGetRelatedGroupsForUserMutation: (options?: Partial<Options<UserGroupsGetRelatedGroupsForUserData>>) => UseMutationOptions<UserGroupsGetRelatedGroupsForUserResponse, AxiosError<DefaultError>, Options<UserGroupsGetRelatedGroupsForUserData>>;
-export declare const usersGetQueryKey: (options: Options<UsersGetData>) => [Pick<Options<UsersGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const usersGetQueryKey: (options: Options<UsersGetData>) => [Pick<Options<UsersGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -11437,16 +11437,16 @@ export declare const usersGetQueryKey: (options: Options<UsersGetData>) => [Pick
  * "excludePermissions": true
  * }
  */
-export declare const usersGetOptions: (options: Options<UsersGetData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<UsersGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const usersGetOptions: (options: Options<UsersGetData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<UsersGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<UsersGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<UsersGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<UsersGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<UsersGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -11489,17 +11489,17 @@ export declare const usersGetInfiniteQueryKey: (options: Options<UsersGetData>) 
  * "excludePermissions": true
  * }
  */
-export declare const usersGetInfiniteOptions: (options: Options<UsersGetData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<UsersGetData>>, number | Pick<Pick<Options<UsersGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const usersGetInfiniteOptions: (options: Options<UsersGetData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<UsersGetData>>, number | Pick<Pick<Options<UsersGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<UsersGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<UsersGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<UsersGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<UsersGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<UsersGetData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -11541,7 +11541,7 @@ export declare const usersGetInfiniteOptions: (options: Options<UsersGetData>) =
  * }
  */
 export declare const usersGetMutation: (options?: Partial<Options<UsersGetData>>) => UseMutationOptions<UsersGetResponse, AxiosError<DefaultError>, Options<UsersGetData>>;
-export declare const usersGetGroupedQueryKey: (options: Options<UsersGetGroupedData>) => [Pick<Options<UsersGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const usersGetGroupedQueryKey: (options: Options<UsersGetGroupedData>) => [Pick<Options<UsersGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -11581,16 +11581,16 @@ export declare const usersGetGroupedQueryKey: (options: Options<UsersGetGroupedD
  * "groupName": "Active"
  * }
  */
-export declare const usersGetGroupedOptions: (options: Options<UsersGetGroupedData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<UsersGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const usersGetGroupedOptions: (options: Options<UsersGetGroupedData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<UsersGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<UsersGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<UsersGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<UsersGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<UsersGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -11635,17 +11635,17 @@ export declare const usersGetGroupedInfiniteQueryKey: (options: Options<UsersGet
  * "groupName": "Active"
  * }
  */
-export declare const usersGetGroupedInfiniteOptions: (options: Options<UsersGetGroupedData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<UsersGetGroupedData>>, number | Pick<Pick<Options<UsersGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const usersGetGroupedInfiniteOptions: (options: Options<UsersGetGroupedData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<UsersGetGroupedData>>, number | Pick<Pick<Options<UsersGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<UsersGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<UsersGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<UsersGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<UsersGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<UsersGetGroupedData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>;
@@ -11689,7 +11689,7 @@ export declare const usersGetGroupedInfiniteOptions: (options: Options<UsersGetG
  * }
  */
 export declare const usersGetGroupedMutation: (options?: Partial<Options<UsersGetGroupedData>>) => UseMutationOptions<UsersGetGroupedResponse, AxiosError<DefaultError>, Options<UsersGetGroupedData>>;
-export declare const usersGetByIdentifierQueryKey: (options: Options<UsersGetByIdentifierData>) => [Pick<Options<UsersGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const usersGetByIdentifierQueryKey: (options: Options<UsersGetByIdentifierData>) => [Pick<Options<UsersGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -11705,16 +11705,16 @@ export declare const usersGetByIdentifierQueryKey: (options: Options<UsersGetByI
  * "excludePermissions": true
  * }
  */
-export declare const usersGetByIdentifierOptions: (options: Options<UsersGetByIdentifierData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntityDetailsResponse, Error, import("../types.gen").EntityDetailsResponse, [Pick<Options<UsersGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const usersGetByIdentifierOptions: (options: Options<UsersGetByIdentifierData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntityDetailsResponse, Error, import("../types.gen").EntityDetailsResponse, [Pick<Options<UsersGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntityDetailsResponse, [Pick<Options<UsersGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntityDetailsResponse, [Pick<Options<UsersGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<UsersGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<UsersGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -11735,7 +11735,7 @@ export declare const usersGetByIdentifierOptions: (options: Options<UsersGetById
  * }
  */
 export declare const usersGetByIdentifierMutation: (options?: Partial<Options<UsersGetByIdentifierData>>) => UseMutationOptions<UsersGetByIdentifierResponse, AxiosError<DefaultError>, Options<UsersGetByIdentifierData>>;
-export declare const usersGetByIdsQueryKey: (options: Options<UsersGetByIdsData>) => [Pick<Options<UsersGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const usersGetByIdsQueryKey: (options: Options<UsersGetByIdsData>) => [Pick<Options<UsersGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -11774,16 +11774,16 @@ export declare const usersGetByIdsQueryKey: (options: Options<UsersGetByIdsData>
  * "ids": ["11.222.333", "44.555.66"]
  * }
  */
-export declare const usersGetByIdsOptions: (options: Options<UsersGetByIdsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<UsersGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const usersGetByIdsOptions: (options: Options<UsersGetByIdsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<UsersGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<UsersGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<UsersGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<UsersGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<UsersGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -11827,17 +11827,17 @@ export declare const usersGetByIdsInfiniteQueryKey: (options: Options<UsersGetBy
  * "ids": ["11.222.333", "44.555.66"]
  * }
  */
-export declare const usersGetByIdsInfiniteOptions: (options: Options<UsersGetByIdsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<UsersGetByIdsData>>, number | Pick<Pick<Options<UsersGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const usersGetByIdsInfiniteOptions: (options: Options<UsersGetByIdsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<UsersGetByIdsData>>, number | Pick<Pick<Options<UsersGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<UsersGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<UsersGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<UsersGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<UsersGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<UsersGetByIdsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -11880,7 +11880,7 @@ export declare const usersGetByIdsInfiniteOptions: (options: Options<UsersGetByI
  * }
  */
 export declare const usersGetByIdsMutation: (options?: Partial<Options<UsersGetByIdsData>>) => UseMutationOptions<UsersGetByIdsResponse, AxiosError<DefaultError>, Options<UsersGetByIdsData>>;
-export declare const usersGetCountQueryKey: (options: Options<UsersGetCountData>) => [Pick<Options<UsersGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const usersGetCountQueryKey: (options: Options<UsersGetCountData>) => [Pick<Options<UsersGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -11909,16 +11909,16 @@ export declare const usersGetCountQueryKey: (options: Options<UsersGetCountData>
  * ]
  * }
  */
-export declare const usersGetCountOptions: (options: Options<UsersGetCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<UsersGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const usersGetCountOptions: (options: Options<UsersGetCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<UsersGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<UsersGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<UsersGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<UsersGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<UsersGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -11952,7 +11952,7 @@ export declare const usersGetCountOptions: (options: Options<UsersGetCountData>)
  * }
  */
 export declare const usersGetCountMutation: (options?: Partial<Options<UsersGetCountData>>) => UseMutationOptions<UsersGetCountResponse, AxiosError<DefaultError>, Options<UsersGetCountData>>;
-export declare const usersGetRelationsQueryKey: (options: Options<UsersGetRelationsData>) => [Pick<Options<UsersGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const usersGetRelationsQueryKey: (options: Options<UsersGetRelationsData>) => [Pick<Options<UsersGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -11991,16 +11991,16 @@ export declare const usersGetRelationsQueryKey: (options: Options<UsersGetRelati
  * "excludePermissions": true
  * }
  */
-export declare const usersGetRelationsOptions: (options: Options<UsersGetRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<UsersGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const usersGetRelationsOptions: (options: Options<UsersGetRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<UsersGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<UsersGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<UsersGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<UsersGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<UsersGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -12044,17 +12044,17 @@ export declare const usersGetRelationsInfiniteQueryKey: (options: Options<UsersG
  * "excludePermissions": true
  * }
  */
-export declare const usersGetRelationsInfiniteOptions: (options: Options<UsersGetRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<UsersGetRelationsData>>, number | Pick<Pick<Options<UsersGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const usersGetRelationsInfiniteOptions: (options: Options<UsersGetRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<UsersGetRelationsData>>, number | Pick<Pick<Options<UsersGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<UsersGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<UsersGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<UsersGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<UsersGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<UsersGetRelationsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -12097,7 +12097,7 @@ export declare const usersGetRelationsInfiniteOptions: (options: Options<UsersGe
  * }
  */
 export declare const usersGetRelationsMutation: (options?: Partial<Options<UsersGetRelationsData>>) => UseMutationOptions<UsersGetRelationsResponse, AxiosError<DefaultError>, Options<UsersGetRelationsData>>;
-export declare const usersGetRelationsCountQueryKey: (options: Options<UsersGetRelationsCountData>) => [Pick<Options<UsersGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const usersGetRelationsCountQueryKey: (options: Options<UsersGetRelationsCountData>) => [Pick<Options<UsersGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -12126,16 +12126,16 @@ export declare const usersGetRelationsCountQueryKey: (options: Options<UsersGetR
  * ]
  * }
  */
-export declare const usersGetRelationsCountOptions: (options: Options<UsersGetRelationsCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<UsersGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const usersGetRelationsCountOptions: (options: Options<UsersGetRelationsCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<UsersGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<UsersGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<UsersGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<UsersGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<UsersGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -12169,7 +12169,7 @@ export declare const usersGetRelationsCountOptions: (options: Options<UsersGetRe
  * }
  */
 export declare const usersGetRelationsCountMutation: (options?: Partial<Options<UsersGetRelationsCountData>>) => UseMutationOptions<UsersGetRelationsCountResponse, AxiosError<DefaultError>, Options<UsersGetRelationsCountData>>;
-export declare const usersGetGroupedRelationsQueryKey: (options: Options<UsersGetGroupedRelationsData>) => [Pick<Options<UsersGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const usersGetGroupedRelationsQueryKey: (options: Options<UsersGetGroupedRelationsData>) => [Pick<Options<UsersGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -12210,16 +12210,16 @@ export declare const usersGetGroupedRelationsQueryKey: (options: Options<UsersGe
  * "groupName": "Active"
  * }
  */
-export declare const usersGetGroupedRelationsOptions: (options: Options<UsersGetGroupedRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<UsersGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const usersGetGroupedRelationsOptions: (options: Options<UsersGetGroupedRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<UsersGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<UsersGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<UsersGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<UsersGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<UsersGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -12265,17 +12265,17 @@ export declare const usersGetGroupedRelationsInfiniteQueryKey: (options: Options
  * "groupName": "Active"
  * }
  */
-export declare const usersGetGroupedRelationsInfiniteOptions: (options: Options<UsersGetGroupedRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<UsersGetGroupedRelationsData>>, number | Pick<Pick<Options<UsersGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const usersGetGroupedRelationsInfiniteOptions: (options: Options<UsersGetGroupedRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<UsersGetGroupedRelationsData>>, number | Pick<Pick<Options<UsersGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<UsersGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<UsersGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<UsersGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<UsersGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<UsersGetGroupedRelationsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>;
@@ -12320,7 +12320,7 @@ export declare const usersGetGroupedRelationsInfiniteOptions: (options: Options<
  * }
  */
 export declare const usersGetGroupedRelationsMutation: (options?: Partial<Options<UsersGetGroupedRelationsData>>) => UseMutationOptions<UsersGetGroupedRelationsResponse, AxiosError<DefaultError>, Options<UsersGetGroupedRelationsData>>;
-export declare const ribbonActionsGetRibbonActionsQueryKey: (options: Options<RibbonActionsGetRibbonActionsData>) => [Pick<Options<RibbonActionsGetRibbonActionsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const ribbonActionsGetRibbonActionsQueryKey: (options: Options<RibbonActionsGetRibbonActionsData>) => [Pick<Options<RibbonActionsGetRibbonActionsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -12336,16 +12336,16 @@ export declare const ribbonActionsGetRibbonActionsQueryKey: (options: Options<Ri
  * "ParentEntityId": ""
  * }
  */
-export declare const ribbonActionsGetRibbonActionsOptions: (options: Options<RibbonActionsGetRibbonActionsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").RibbonActionsResponse, Error, import("../types.gen").RibbonActionsResponse, [Pick<Options<RibbonActionsGetRibbonActionsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const ribbonActionsGetRibbonActionsOptions: (options: Options<RibbonActionsGetRibbonActionsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").RibbonActionsResponse, Error, import("../types.gen").RibbonActionsResponse, [Pick<Options<RibbonActionsGetRibbonActionsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").RibbonActionsResponse, [Pick<Options<RibbonActionsGetRibbonActionsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").RibbonActionsResponse, [Pick<Options<RibbonActionsGetRibbonActionsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<RibbonActionsGetRibbonActionsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<RibbonActionsGetRibbonActionsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -12366,23 +12366,23 @@ export declare const ribbonActionsGetRibbonActionsOptions: (options: Options<Rib
  * }
  */
 export declare const ribbonActionsGetRibbonActionsMutation: (options?: Partial<Options<RibbonActionsGetRibbonActionsData>>) => UseMutationOptions<RibbonActionsGetRibbonActionsResponse, AxiosError<DefaultError>, Options<RibbonActionsGetRibbonActionsData>>;
-export declare const ribbonActionsGetContextMenusQueryKey: (options: Options<RibbonActionsGetContextMenusData>) => [Pick<Options<RibbonActionsGetContextMenusData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const ribbonActionsGetContextMenusQueryKey: (options: Options<RibbonActionsGetContextMenusData>) => [Pick<Options<RibbonActionsGetContextMenusData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
 /**
  * Return context menus for a related entity
  */
-export declare const ribbonActionsGetContextMenusOptions: (options: Options<RibbonActionsGetContextMenusData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").ContextMenusResponse, Error, import("../types.gen").ContextMenusResponse, [Pick<Options<RibbonActionsGetContextMenusData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const ribbonActionsGetContextMenusOptions: (options: Options<RibbonActionsGetContextMenusData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").ContextMenusResponse, Error, import("../types.gen").ContextMenusResponse, [Pick<Options<RibbonActionsGetContextMenusData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").ContextMenusResponse, [Pick<Options<RibbonActionsGetContextMenusData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").ContextMenusResponse, [Pick<Options<RibbonActionsGetContextMenusData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<RibbonActionsGetContextMenusData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<RibbonActionsGetContextMenusData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -12394,7 +12394,7 @@ export declare const ribbonActionsGetContextMenusOptions: (options: Options<Ribb
  * Return context menus for a related entity
  */
 export declare const ribbonActionsGetContextMenusMutation: (options?: Partial<Options<RibbonActionsGetContextMenusData>>) => UseMutationOptions<RibbonActionsGetContextMenusResponse, AxiosError<DefaultError>, Options<RibbonActionsGetContextMenusData>>;
-export declare const milestonesGetQueryKey: (options: Options<MilestonesGetData>) => [Pick<Options<MilestonesGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const milestonesGetQueryKey: (options: Options<MilestonesGetData>) => [Pick<Options<MilestonesGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -12433,16 +12433,16 @@ export declare const milestonesGetQueryKey: (options: Options<MilestonesGetData>
  * "excludePermissions": true
  * }
  */
-export declare const milestonesGetOptions: (options: Options<MilestonesGetData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<MilestonesGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const milestonesGetOptions: (options: Options<MilestonesGetData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<MilestonesGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<MilestonesGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<MilestonesGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<MilestonesGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<MilestonesGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -12486,17 +12486,17 @@ export declare const milestonesGetInfiniteQueryKey: (options: Options<Milestones
  * "excludePermissions": true
  * }
  */
-export declare const milestonesGetInfiniteOptions: (options: Options<MilestonesGetData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<MilestonesGetData>>, number | Pick<Pick<Options<MilestonesGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const milestonesGetInfiniteOptions: (options: Options<MilestonesGetData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<MilestonesGetData>>, number | Pick<Pick<Options<MilestonesGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<MilestonesGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<MilestonesGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<MilestonesGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<MilestonesGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<MilestonesGetData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -12539,7 +12539,7 @@ export declare const milestonesGetInfiniteOptions: (options: Options<MilestonesG
  * }
  */
 export declare const milestonesGetMutation: (options?: Partial<Options<MilestonesGetData>>) => UseMutationOptions<MilestonesGetResponse, AxiosError<DefaultError>, Options<MilestonesGetData>>;
-export declare const milestonesGetGroupedQueryKey: (options: Options<MilestonesGetGroupedData>) => [Pick<Options<MilestonesGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const milestonesGetGroupedQueryKey: (options: Options<MilestonesGetGroupedData>) => [Pick<Options<MilestonesGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -12580,16 +12580,16 @@ export declare const milestonesGetGroupedQueryKey: (options: Options<MilestonesG
  * "groupName": "Active"
  * }
  */
-export declare const milestonesGetGroupedOptions: (options: Options<MilestonesGetGroupedData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<MilestonesGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const milestonesGetGroupedOptions: (options: Options<MilestonesGetGroupedData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<MilestonesGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<MilestonesGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<MilestonesGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<MilestonesGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<MilestonesGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -12635,17 +12635,17 @@ export declare const milestonesGetGroupedInfiniteQueryKey: (options: Options<Mil
  * "groupName": "Active"
  * }
  */
-export declare const milestonesGetGroupedInfiniteOptions: (options: Options<MilestonesGetGroupedData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<MilestonesGetGroupedData>>, number | Pick<Pick<Options<MilestonesGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const milestonesGetGroupedInfiniteOptions: (options: Options<MilestonesGetGroupedData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<MilestonesGetGroupedData>>, number | Pick<Pick<Options<MilestonesGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<MilestonesGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<MilestonesGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<MilestonesGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<MilestonesGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<MilestonesGetGroupedData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>;
@@ -12690,7 +12690,7 @@ export declare const milestonesGetGroupedInfiniteOptions: (options: Options<Mile
  * }
  */
 export declare const milestonesGetGroupedMutation: (options?: Partial<Options<MilestonesGetGroupedData>>) => UseMutationOptions<MilestonesGetGroupedResponse, AxiosError<DefaultError>, Options<MilestonesGetGroupedData>>;
-export declare const milestonesGetByIdentifierQueryKey: (options: Options<MilestonesGetByIdentifierData>) => [Pick<Options<MilestonesGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const milestonesGetByIdentifierQueryKey: (options: Options<MilestonesGetByIdentifierData>) => [Pick<Options<MilestonesGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -12707,16 +12707,16 @@ export declare const milestonesGetByIdentifierQueryKey: (options: Options<Milest
  * "excludePermissions": true
  * }
  */
-export declare const milestonesGetByIdentifierOptions: (options: Options<MilestonesGetByIdentifierData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntityDetailsResponse, Error, import("../types.gen").EntityDetailsResponse, [Pick<Options<MilestonesGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const milestonesGetByIdentifierOptions: (options: Options<MilestonesGetByIdentifierData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntityDetailsResponse, Error, import("../types.gen").EntityDetailsResponse, [Pick<Options<MilestonesGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntityDetailsResponse, [Pick<Options<MilestonesGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntityDetailsResponse, [Pick<Options<MilestonesGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<MilestonesGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<MilestonesGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -12738,7 +12738,7 @@ export declare const milestonesGetByIdentifierOptions: (options: Options<Milesto
  * }
  */
 export declare const milestonesGetByIdentifierMutation: (options?: Partial<Options<MilestonesGetByIdentifierData>>) => UseMutationOptions<MilestonesGetByIdentifierResponse, AxiosError<DefaultError>, Options<MilestonesGetByIdentifierData>>;
-export declare const milestonesGetByIdsQueryKey: (options: Options<MilestonesGetByIdsData>) => [Pick<Options<MilestonesGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const milestonesGetByIdsQueryKey: (options: Options<MilestonesGetByIdsData>) => [Pick<Options<MilestonesGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -12778,16 +12778,16 @@ export declare const milestonesGetByIdsQueryKey: (options: Options<MilestonesGet
  * "ids": ["11.222.333", "44.555.66"]
  * }
  */
-export declare const milestonesGetByIdsOptions: (options: Options<MilestonesGetByIdsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<MilestonesGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const milestonesGetByIdsOptions: (options: Options<MilestonesGetByIdsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<MilestonesGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<MilestonesGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<MilestonesGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<MilestonesGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<MilestonesGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -12832,17 +12832,17 @@ export declare const milestonesGetByIdsInfiniteQueryKey: (options: Options<Miles
  * "ids": ["11.222.333", "44.555.66"]
  * }
  */
-export declare const milestonesGetByIdsInfiniteOptions: (options: Options<MilestonesGetByIdsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<MilestonesGetByIdsData>>, number | Pick<Pick<Options<MilestonesGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const milestonesGetByIdsInfiniteOptions: (options: Options<MilestonesGetByIdsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<MilestonesGetByIdsData>>, number | Pick<Pick<Options<MilestonesGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<MilestonesGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<MilestonesGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<MilestonesGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<MilestonesGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<MilestonesGetByIdsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -12886,7 +12886,7 @@ export declare const milestonesGetByIdsInfiniteOptions: (options: Options<Milest
  * }
  */
 export declare const milestonesGetByIdsMutation: (options?: Partial<Options<MilestonesGetByIdsData>>) => UseMutationOptions<MilestonesGetByIdsResponse, AxiosError<DefaultError>, Options<MilestonesGetByIdsData>>;
-export declare const milestonesGetCountQueryKey: (options: Options<MilestonesGetCountData>) => [Pick<Options<MilestonesGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const milestonesGetCountQueryKey: (options: Options<MilestonesGetCountData>) => [Pick<Options<MilestonesGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -12915,16 +12915,16 @@ export declare const milestonesGetCountQueryKey: (options: Options<MilestonesGet
  * ]
  * }
  */
-export declare const milestonesGetCountOptions: (options: Options<MilestonesGetCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<MilestonesGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const milestonesGetCountOptions: (options: Options<MilestonesGetCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<MilestonesGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<MilestonesGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<MilestonesGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<MilestonesGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<MilestonesGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -12958,7 +12958,7 @@ export declare const milestonesGetCountOptions: (options: Options<MilestonesGetC
  * }
  */
 export declare const milestonesGetCountMutation: (options?: Partial<Options<MilestonesGetCountData>>) => UseMutationOptions<MilestonesGetCountResponse, AxiosError<DefaultError>, Options<MilestonesGetCountData>>;
-export declare const milestonesGetRelationsQueryKey: (options: Options<MilestonesGetRelationsData>) => [Pick<Options<MilestonesGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const milestonesGetRelationsQueryKey: (options: Options<MilestonesGetRelationsData>) => [Pick<Options<MilestonesGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -12997,16 +12997,16 @@ export declare const milestonesGetRelationsQueryKey: (options: Options<Milestone
  * "excludePermissions": true
  * }
  */
-export declare const milestonesGetRelationsOptions: (options: Options<MilestonesGetRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<MilestonesGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const milestonesGetRelationsOptions: (options: Options<MilestonesGetRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<MilestonesGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<MilestonesGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<MilestonesGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<MilestonesGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<MilestonesGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -13050,17 +13050,17 @@ export declare const milestonesGetRelationsInfiniteQueryKey: (options: Options<M
  * "excludePermissions": true
  * }
  */
-export declare const milestonesGetRelationsInfiniteOptions: (options: Options<MilestonesGetRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<MilestonesGetRelationsData>>, number | Pick<Pick<Options<MilestonesGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const milestonesGetRelationsInfiniteOptions: (options: Options<MilestonesGetRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<MilestonesGetRelationsData>>, number | Pick<Pick<Options<MilestonesGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<MilestonesGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<MilestonesGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<MilestonesGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<MilestonesGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<MilestonesGetRelationsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -13103,7 +13103,7 @@ export declare const milestonesGetRelationsInfiniteOptions: (options: Options<Mi
  * }
  */
 export declare const milestonesGetRelationsMutation: (options?: Partial<Options<MilestonesGetRelationsData>>) => UseMutationOptions<MilestonesGetRelationsResponse, AxiosError<DefaultError>, Options<MilestonesGetRelationsData>>;
-export declare const milestonesGetRelationsCountQueryKey: (options: Options<MilestonesGetRelationsCountData>) => [Pick<Options<MilestonesGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const milestonesGetRelationsCountQueryKey: (options: Options<MilestonesGetRelationsCountData>) => [Pick<Options<MilestonesGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -13132,16 +13132,16 @@ export declare const milestonesGetRelationsCountQueryKey: (options: Options<Mile
  * ]
  * }
  */
-export declare const milestonesGetRelationsCountOptions: (options: Options<MilestonesGetRelationsCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<MilestonesGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const milestonesGetRelationsCountOptions: (options: Options<MilestonesGetRelationsCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<MilestonesGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<MilestonesGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<MilestonesGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<MilestonesGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<MilestonesGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -13175,7 +13175,7 @@ export declare const milestonesGetRelationsCountOptions: (options: Options<Miles
  * }
  */
 export declare const milestonesGetRelationsCountMutation: (options?: Partial<Options<MilestonesGetRelationsCountData>>) => UseMutationOptions<MilestonesGetRelationsCountResponse, AxiosError<DefaultError>, Options<MilestonesGetRelationsCountData>>;
-export declare const milestonesGetGroupedRelationsQueryKey: (options: Options<MilestonesGetGroupedRelationsData>) => [Pick<Options<MilestonesGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const milestonesGetGroupedRelationsQueryKey: (options: Options<MilestonesGetGroupedRelationsData>) => [Pick<Options<MilestonesGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -13216,16 +13216,16 @@ export declare const milestonesGetGroupedRelationsQueryKey: (options: Options<Mi
  * "groupName": "Submitted"
  * }
  */
-export declare const milestonesGetGroupedRelationsOptions: (options: Options<MilestonesGetGroupedRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<MilestonesGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const milestonesGetGroupedRelationsOptions: (options: Options<MilestonesGetGroupedRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<MilestonesGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<MilestonesGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<MilestonesGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<MilestonesGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<MilestonesGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -13271,17 +13271,17 @@ export declare const milestonesGetGroupedRelationsInfiniteQueryKey: (options: Op
  * "groupName": "Submitted"
  * }
  */
-export declare const milestonesGetGroupedRelationsInfiniteOptions: (options: Options<MilestonesGetGroupedRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<MilestonesGetGroupedRelationsData>>, number | Pick<Pick<Options<MilestonesGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const milestonesGetGroupedRelationsInfiniteOptions: (options: Options<MilestonesGetGroupedRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<MilestonesGetGroupedRelationsData>>, number | Pick<Pick<Options<MilestonesGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<MilestonesGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<MilestonesGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<MilestonesGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<MilestonesGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<MilestonesGetGroupedRelationsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>;
@@ -13326,7 +13326,7 @@ export declare const milestonesGetGroupedRelationsInfiniteOptions: (options: Opt
  * }
  */
 export declare const milestonesGetGroupedRelationsMutation: (options?: Partial<Options<MilestonesGetGroupedRelationsData>>) => UseMutationOptions<MilestonesGetGroupedRelationsResponse, AxiosError<DefaultError>, Options<MilestonesGetGroupedRelationsData>>;
-export declare const milestonesGetAvatarsQueryKey: (options: Options<MilestonesGetAvatarsData>) => [Pick<Options<MilestonesGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const milestonesGetAvatarsQueryKey: (options: Options<MilestonesGetAvatarsData>) => [Pick<Options<MilestonesGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -13356,16 +13356,16 @@ export declare const milestonesGetAvatarsQueryKey: (options: Options<MilestonesG
  * ]
  * }
  */
-export declare const milestonesGetAvatarsOptions: (options: Options<MilestonesGetAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<MilestonesGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const milestonesGetAvatarsOptions: (options: Options<MilestonesGetAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<MilestonesGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<MilestonesGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<MilestonesGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<MilestonesGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<MilestonesGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -13400,7 +13400,7 @@ export declare const milestonesGetAvatarsOptions: (options: Options<MilestonesGe
  * }
  */
 export declare const milestonesGetAvatarsMutation: (options?: Partial<Options<MilestonesGetAvatarsData>>) => UseMutationOptions<MilestonesGetAvatarsResponse, AxiosError<DefaultError>, Options<MilestonesGetAvatarsData>>;
-export declare const milestonesGetRelationsAvatarsQueryKey: (options: Options<MilestonesGetRelationsAvatarsData>) => [Pick<Options<MilestonesGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const milestonesGetRelationsAvatarsQueryKey: (options: Options<MilestonesGetRelationsAvatarsData>) => [Pick<Options<MilestonesGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -13430,16 +13430,16 @@ export declare const milestonesGetRelationsAvatarsQueryKey: (options: Options<Mi
  * ]
  * }
  */
-export declare const milestonesGetRelationsAvatarsOptions: (options: Options<MilestonesGetRelationsAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<MilestonesGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const milestonesGetRelationsAvatarsOptions: (options: Options<MilestonesGetRelationsAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<MilestonesGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<MilestonesGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<MilestonesGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<MilestonesGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<MilestonesGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -13474,7 +13474,7 @@ export declare const milestonesGetRelationsAvatarsOptions: (options: Options<Mil
  * }
  */
 export declare const milestonesGetRelationsAvatarsMutation: (options?: Partial<Options<MilestonesGetRelationsAvatarsData>>) => UseMutationOptions<MilestonesGetRelationsAvatarsResponse, AxiosError<DefaultError>, Options<MilestonesGetRelationsAvatarsData>>;
-export declare const programsGetQueryKey: (options: Options<ProgramsGetData>) => [Pick<Options<ProgramsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const programsGetQueryKey: (options: Options<ProgramsGetData>) => [Pick<Options<ProgramsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -13513,16 +13513,16 @@ export declare const programsGetQueryKey: (options: Options<ProgramsGetData>) =>
  * "excludePermissions": true
  * }
  */
-export declare const programsGetOptions: (options: Options<ProgramsGetData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<ProgramsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const programsGetOptions: (options: Options<ProgramsGetData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<ProgramsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<ProgramsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<ProgramsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<ProgramsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<ProgramsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -13566,17 +13566,17 @@ export declare const programsGetInfiniteQueryKey: (options: Options<ProgramsGetD
  * "excludePermissions": true
  * }
  */
-export declare const programsGetInfiniteOptions: (options: Options<ProgramsGetData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<ProgramsGetData>>, number | Pick<Pick<Options<ProgramsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const programsGetInfiniteOptions: (options: Options<ProgramsGetData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<ProgramsGetData>>, number | Pick<Pick<Options<ProgramsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<ProgramsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<ProgramsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<ProgramsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<ProgramsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<ProgramsGetData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -13619,7 +13619,7 @@ export declare const programsGetInfiniteOptions: (options: Options<ProgramsGetDa
  * }
  */
 export declare const programsGetMutation: (options?: Partial<Options<ProgramsGetData>>) => UseMutationOptions<ProgramsGetResponse, AxiosError<DefaultError>, Options<ProgramsGetData>>;
-export declare const programsGetGroupedQueryKey: (options: Options<ProgramsGetGroupedData>) => [Pick<Options<ProgramsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const programsGetGroupedQueryKey: (options: Options<ProgramsGetGroupedData>) => [Pick<Options<ProgramsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -13660,16 +13660,16 @@ export declare const programsGetGroupedQueryKey: (options: Options<ProgramsGetGr
  * "groupName": "Active"
  * }
  */
-export declare const programsGetGroupedOptions: (options: Options<ProgramsGetGroupedData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<ProgramsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const programsGetGroupedOptions: (options: Options<ProgramsGetGroupedData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<ProgramsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<ProgramsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<ProgramsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<ProgramsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<ProgramsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -13715,17 +13715,17 @@ export declare const programsGetGroupedInfiniteQueryKey: (options: Options<Progr
  * "groupName": "Active"
  * }
  */
-export declare const programsGetGroupedInfiniteOptions: (options: Options<ProgramsGetGroupedData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<ProgramsGetGroupedData>>, number | Pick<Pick<Options<ProgramsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const programsGetGroupedInfiniteOptions: (options: Options<ProgramsGetGroupedData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<ProgramsGetGroupedData>>, number | Pick<Pick<Options<ProgramsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<ProgramsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<ProgramsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<ProgramsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<ProgramsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<ProgramsGetGroupedData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>;
@@ -13770,7 +13770,7 @@ export declare const programsGetGroupedInfiniteOptions: (options: Options<Progra
  * }
  */
 export declare const programsGetGroupedMutation: (options?: Partial<Options<ProgramsGetGroupedData>>) => UseMutationOptions<ProgramsGetGroupedResponse, AxiosError<DefaultError>, Options<ProgramsGetGroupedData>>;
-export declare const programsGetByIdentifierQueryKey: (options: Options<ProgramsGetByIdentifierData>) => [Pick<Options<ProgramsGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const programsGetByIdentifierQueryKey: (options: Options<ProgramsGetByIdentifierData>) => [Pick<Options<ProgramsGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -13787,16 +13787,16 @@ export declare const programsGetByIdentifierQueryKey: (options: Options<Programs
  * "excludePermissions": true
  * }
  */
-export declare const programsGetByIdentifierOptions: (options: Options<ProgramsGetByIdentifierData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntityDetailsResponse, Error, import("../types.gen").EntityDetailsResponse, [Pick<Options<ProgramsGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const programsGetByIdentifierOptions: (options: Options<ProgramsGetByIdentifierData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntityDetailsResponse, Error, import("../types.gen").EntityDetailsResponse, [Pick<Options<ProgramsGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntityDetailsResponse, [Pick<Options<ProgramsGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntityDetailsResponse, [Pick<Options<ProgramsGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<ProgramsGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<ProgramsGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -13818,7 +13818,7 @@ export declare const programsGetByIdentifierOptions: (options: Options<ProgramsG
  * }
  */
 export declare const programsGetByIdentifierMutation: (options?: Partial<Options<ProgramsGetByIdentifierData>>) => UseMutationOptions<ProgramsGetByIdentifierResponse, AxiosError<DefaultError>, Options<ProgramsGetByIdentifierData>>;
-export declare const programsGetByIdsQueryKey: (options: Options<ProgramsGetByIdsData>) => [Pick<Options<ProgramsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const programsGetByIdsQueryKey: (options: Options<ProgramsGetByIdsData>) => [Pick<Options<ProgramsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -13858,16 +13858,16 @@ export declare const programsGetByIdsQueryKey: (options: Options<ProgramsGetById
  * "ids": ["11.222.333", "44.555.66"]
  * }
  */
-export declare const programsGetByIdsOptions: (options: Options<ProgramsGetByIdsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<ProgramsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const programsGetByIdsOptions: (options: Options<ProgramsGetByIdsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<ProgramsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<ProgramsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<ProgramsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<ProgramsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<ProgramsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -13912,17 +13912,17 @@ export declare const programsGetByIdsInfiniteQueryKey: (options: Options<Program
  * "ids": ["11.222.333", "44.555.66"]
  * }
  */
-export declare const programsGetByIdsInfiniteOptions: (options: Options<ProgramsGetByIdsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<ProgramsGetByIdsData>>, number | Pick<Pick<Options<ProgramsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const programsGetByIdsInfiniteOptions: (options: Options<ProgramsGetByIdsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<ProgramsGetByIdsData>>, number | Pick<Pick<Options<ProgramsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<ProgramsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<ProgramsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<ProgramsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<ProgramsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<ProgramsGetByIdsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -13966,7 +13966,7 @@ export declare const programsGetByIdsInfiniteOptions: (options: Options<Programs
  * }
  */
 export declare const programsGetByIdsMutation: (options?: Partial<Options<ProgramsGetByIdsData>>) => UseMutationOptions<ProgramsGetByIdsResponse, AxiosError<DefaultError>, Options<ProgramsGetByIdsData>>;
-export declare const programsGetCountQueryKey: (options: Options<ProgramsGetCountData>) => [Pick<Options<ProgramsGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const programsGetCountQueryKey: (options: Options<ProgramsGetCountData>) => [Pick<Options<ProgramsGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -13995,16 +13995,16 @@ export declare const programsGetCountQueryKey: (options: Options<ProgramsGetCoun
  * ]
  * }
  */
-export declare const programsGetCountOptions: (options: Options<ProgramsGetCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<ProgramsGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const programsGetCountOptions: (options: Options<ProgramsGetCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<ProgramsGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<ProgramsGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<ProgramsGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<ProgramsGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<ProgramsGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -14038,7 +14038,7 @@ export declare const programsGetCountOptions: (options: Options<ProgramsGetCount
  * }
  */
 export declare const programsGetCountMutation: (options?: Partial<Options<ProgramsGetCountData>>) => UseMutationOptions<ProgramsGetCountResponse, AxiosError<DefaultError>, Options<ProgramsGetCountData>>;
-export declare const programsGetRelationsQueryKey: (options: Options<ProgramsGetRelationsData>) => [Pick<Options<ProgramsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const programsGetRelationsQueryKey: (options: Options<ProgramsGetRelationsData>) => [Pick<Options<ProgramsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -14077,16 +14077,16 @@ export declare const programsGetRelationsQueryKey: (options: Options<ProgramsGet
  * "excludePermissions": true
  * }
  */
-export declare const programsGetRelationsOptions: (options: Options<ProgramsGetRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<ProgramsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const programsGetRelationsOptions: (options: Options<ProgramsGetRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<ProgramsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<ProgramsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<ProgramsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<ProgramsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<ProgramsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -14130,17 +14130,17 @@ export declare const programsGetRelationsInfiniteQueryKey: (options: Options<Pro
  * "excludePermissions": true
  * }
  */
-export declare const programsGetRelationsInfiniteOptions: (options: Options<ProgramsGetRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<ProgramsGetRelationsData>>, number | Pick<Pick<Options<ProgramsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const programsGetRelationsInfiniteOptions: (options: Options<ProgramsGetRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<ProgramsGetRelationsData>>, number | Pick<Pick<Options<ProgramsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<ProgramsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<ProgramsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<ProgramsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<ProgramsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<ProgramsGetRelationsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -14183,7 +14183,7 @@ export declare const programsGetRelationsInfiniteOptions: (options: Options<Prog
  * }
  */
 export declare const programsGetRelationsMutation: (options?: Partial<Options<ProgramsGetRelationsData>>) => UseMutationOptions<ProgramsGetRelationsResponse, AxiosError<DefaultError>, Options<ProgramsGetRelationsData>>;
-export declare const programsGetRelationsCountQueryKey: (options: Options<ProgramsGetRelationsCountData>) => [Pick<Options<ProgramsGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const programsGetRelationsCountQueryKey: (options: Options<ProgramsGetRelationsCountData>) => [Pick<Options<ProgramsGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -14212,16 +14212,16 @@ export declare const programsGetRelationsCountQueryKey: (options: Options<Progra
  * ]
  * }
  */
-export declare const programsGetRelationsCountOptions: (options: Options<ProgramsGetRelationsCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<ProgramsGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const programsGetRelationsCountOptions: (options: Options<ProgramsGetRelationsCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<ProgramsGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<ProgramsGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<ProgramsGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<ProgramsGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<ProgramsGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -14255,7 +14255,7 @@ export declare const programsGetRelationsCountOptions: (options: Options<Program
  * }
  */
 export declare const programsGetRelationsCountMutation: (options?: Partial<Options<ProgramsGetRelationsCountData>>) => UseMutationOptions<ProgramsGetRelationsCountResponse, AxiosError<DefaultError>, Options<ProgramsGetRelationsCountData>>;
-export declare const programsGetGroupedRelationsQueryKey: (options: Options<ProgramsGetGroupedRelationsData>) => [Pick<Options<ProgramsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const programsGetGroupedRelationsQueryKey: (options: Options<ProgramsGetGroupedRelationsData>) => [Pick<Options<ProgramsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -14296,16 +14296,16 @@ export declare const programsGetGroupedRelationsQueryKey: (options: Options<Prog
  * "groupName": "Submitted"
  * }
  */
-export declare const programsGetGroupedRelationsOptions: (options: Options<ProgramsGetGroupedRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<ProgramsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const programsGetGroupedRelationsOptions: (options: Options<ProgramsGetGroupedRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<ProgramsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<ProgramsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<ProgramsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<ProgramsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<ProgramsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -14351,17 +14351,17 @@ export declare const programsGetGroupedRelationsInfiniteQueryKey: (options: Opti
  * "groupName": "Submitted"
  * }
  */
-export declare const programsGetGroupedRelationsInfiniteOptions: (options: Options<ProgramsGetGroupedRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<ProgramsGetGroupedRelationsData>>, number | Pick<Pick<Options<ProgramsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const programsGetGroupedRelationsInfiniteOptions: (options: Options<ProgramsGetGroupedRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<ProgramsGetGroupedRelationsData>>, number | Pick<Pick<Options<ProgramsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<ProgramsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<ProgramsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<ProgramsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<ProgramsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<ProgramsGetGroupedRelationsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>;
@@ -14406,7 +14406,7 @@ export declare const programsGetGroupedRelationsInfiniteOptions: (options: Optio
  * }
  */
 export declare const programsGetGroupedRelationsMutation: (options?: Partial<Options<ProgramsGetGroupedRelationsData>>) => UseMutationOptions<ProgramsGetGroupedRelationsResponse, AxiosError<DefaultError>, Options<ProgramsGetGroupedRelationsData>>;
-export declare const programsGetAvatarsQueryKey: (options: Options<ProgramsGetAvatarsData>) => [Pick<Options<ProgramsGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const programsGetAvatarsQueryKey: (options: Options<ProgramsGetAvatarsData>) => [Pick<Options<ProgramsGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -14436,16 +14436,16 @@ export declare const programsGetAvatarsQueryKey: (options: Options<ProgramsGetAv
  * ]
  * }
  */
-export declare const programsGetAvatarsOptions: (options: Options<ProgramsGetAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<ProgramsGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const programsGetAvatarsOptions: (options: Options<ProgramsGetAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<ProgramsGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<ProgramsGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<ProgramsGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<ProgramsGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<ProgramsGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -14480,7 +14480,7 @@ export declare const programsGetAvatarsOptions: (options: Options<ProgramsGetAva
  * }
  */
 export declare const programsGetAvatarsMutation: (options?: Partial<Options<ProgramsGetAvatarsData>>) => UseMutationOptions<ProgramsGetAvatarsResponse, AxiosError<DefaultError>, Options<ProgramsGetAvatarsData>>;
-export declare const programsGetRelationsAvatarsQueryKey: (options: Options<ProgramsGetRelationsAvatarsData>) => [Pick<Options<ProgramsGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const programsGetRelationsAvatarsQueryKey: (options: Options<ProgramsGetRelationsAvatarsData>) => [Pick<Options<ProgramsGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -14510,16 +14510,16 @@ export declare const programsGetRelationsAvatarsQueryKey: (options: Options<Prog
  * ]
  * }
  */
-export declare const programsGetRelationsAvatarsOptions: (options: Options<ProgramsGetRelationsAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<ProgramsGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const programsGetRelationsAvatarsOptions: (options: Options<ProgramsGetRelationsAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<ProgramsGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<ProgramsGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<ProgramsGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<ProgramsGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<ProgramsGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -14554,7 +14554,7 @@ export declare const programsGetRelationsAvatarsOptions: (options: Options<Progr
  * }
  */
 export declare const programsGetRelationsAvatarsMutation: (options?: Partial<Options<ProgramsGetRelationsAvatarsData>>) => UseMutationOptions<ProgramsGetRelationsAvatarsResponse, AxiosError<DefaultError>, Options<ProgramsGetRelationsAvatarsData>>;
-export declare const projectsGetQueryKey: (options: Options<ProjectsGetData>) => [Pick<Options<ProjectsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const projectsGetQueryKey: (options: Options<ProjectsGetData>) => [Pick<Options<ProjectsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -14593,16 +14593,16 @@ export declare const projectsGetQueryKey: (options: Options<ProjectsGetData>) =>
  * "excludePermissions": true
  * }
  */
-export declare const projectsGetOptions: (options: Options<ProjectsGetData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<ProjectsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const projectsGetOptions: (options: Options<ProjectsGetData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<ProjectsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<ProjectsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<ProjectsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<ProjectsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<ProjectsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -14646,17 +14646,17 @@ export declare const projectsGetInfiniteQueryKey: (options: Options<ProjectsGetD
  * "excludePermissions": true
  * }
  */
-export declare const projectsGetInfiniteOptions: (options: Options<ProjectsGetData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<ProjectsGetData>>, number | Pick<Pick<Options<ProjectsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const projectsGetInfiniteOptions: (options: Options<ProjectsGetData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<ProjectsGetData>>, number | Pick<Pick<Options<ProjectsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<ProjectsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<ProjectsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<ProjectsGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<ProjectsGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<ProjectsGetData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -14699,7 +14699,7 @@ export declare const projectsGetInfiniteOptions: (options: Options<ProjectsGetDa
  * }
  */
 export declare const projectsGetMutation: (options?: Partial<Options<ProjectsGetData>>) => UseMutationOptions<ProjectsGetResponse, AxiosError<DefaultError>, Options<ProjectsGetData>>;
-export declare const projectsGetGroupedQueryKey: (options: Options<ProjectsGetGroupedData>) => [Pick<Options<ProjectsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const projectsGetGroupedQueryKey: (options: Options<ProjectsGetGroupedData>) => [Pick<Options<ProjectsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -14740,16 +14740,16 @@ export declare const projectsGetGroupedQueryKey: (options: Options<ProjectsGetGr
  * "groupName": "Active"
  * }
  */
-export declare const projectsGetGroupedOptions: (options: Options<ProjectsGetGroupedData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<ProjectsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const projectsGetGroupedOptions: (options: Options<ProjectsGetGroupedData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<ProjectsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<ProjectsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<ProjectsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<ProjectsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<ProjectsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -14795,17 +14795,17 @@ export declare const projectsGetGroupedInfiniteQueryKey: (options: Options<Proje
  * "groupName": "Active"
  * }
  */
-export declare const projectsGetGroupedInfiniteOptions: (options: Options<ProjectsGetGroupedData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<ProjectsGetGroupedData>>, number | Pick<Pick<Options<ProjectsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const projectsGetGroupedInfiniteOptions: (options: Options<ProjectsGetGroupedData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<ProjectsGetGroupedData>>, number | Pick<Pick<Options<ProjectsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<ProjectsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<ProjectsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<ProjectsGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<ProjectsGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<ProjectsGetGroupedData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>;
@@ -14850,7 +14850,7 @@ export declare const projectsGetGroupedInfiniteOptions: (options: Options<Projec
  * }
  */
 export declare const projectsGetGroupedMutation: (options?: Partial<Options<ProjectsGetGroupedData>>) => UseMutationOptions<ProjectsGetGroupedResponse, AxiosError<DefaultError>, Options<ProjectsGetGroupedData>>;
-export declare const projectsGetByIdentifierQueryKey: (options: Options<ProjectsGetByIdentifierData>) => [Pick<Options<ProjectsGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const projectsGetByIdentifierQueryKey: (options: Options<ProjectsGetByIdentifierData>) => [Pick<Options<ProjectsGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -14867,16 +14867,16 @@ export declare const projectsGetByIdentifierQueryKey: (options: Options<Projects
  * "excludePermissions": true
  * }
  */
-export declare const projectsGetByIdentifierOptions: (options: Options<ProjectsGetByIdentifierData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntityDetailsResponse, Error, import("../types.gen").EntityDetailsResponse, [Pick<Options<ProjectsGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const projectsGetByIdentifierOptions: (options: Options<ProjectsGetByIdentifierData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntityDetailsResponse, Error, import("../types.gen").EntityDetailsResponse, [Pick<Options<ProjectsGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntityDetailsResponse, [Pick<Options<ProjectsGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntityDetailsResponse, [Pick<Options<ProjectsGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<ProjectsGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<ProjectsGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -14898,7 +14898,7 @@ export declare const projectsGetByIdentifierOptions: (options: Options<ProjectsG
  * }
  */
 export declare const projectsGetByIdentifierMutation: (options?: Partial<Options<ProjectsGetByIdentifierData>>) => UseMutationOptions<ProjectsGetByIdentifierResponse, AxiosError<DefaultError>, Options<ProjectsGetByIdentifierData>>;
-export declare const projectsGetByIdsQueryKey: (options: Options<ProjectsGetByIdsData>) => [Pick<Options<ProjectsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const projectsGetByIdsQueryKey: (options: Options<ProjectsGetByIdsData>) => [Pick<Options<ProjectsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -14938,16 +14938,16 @@ export declare const projectsGetByIdsQueryKey: (options: Options<ProjectsGetById
  * "ids": ["11.222.333", "44.555.66"]
  * }
  */
-export declare const projectsGetByIdsOptions: (options: Options<ProjectsGetByIdsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<ProjectsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const projectsGetByIdsOptions: (options: Options<ProjectsGetByIdsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<ProjectsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<ProjectsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<ProjectsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<ProjectsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<ProjectsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -14992,17 +14992,17 @@ export declare const projectsGetByIdsInfiniteQueryKey: (options: Options<Project
  * "ids": ["11.222.333", "44.555.66"]
  * }
  */
-export declare const projectsGetByIdsInfiniteOptions: (options: Options<ProjectsGetByIdsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<ProjectsGetByIdsData>>, number | Pick<Pick<Options<ProjectsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const projectsGetByIdsInfiniteOptions: (options: Options<ProjectsGetByIdsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<ProjectsGetByIdsData>>, number | Pick<Pick<Options<ProjectsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<ProjectsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<ProjectsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<ProjectsGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<ProjectsGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<ProjectsGetByIdsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -15046,7 +15046,7 @@ export declare const projectsGetByIdsInfiniteOptions: (options: Options<Projects
  * }
  */
 export declare const projectsGetByIdsMutation: (options?: Partial<Options<ProjectsGetByIdsData>>) => UseMutationOptions<ProjectsGetByIdsResponse, AxiosError<DefaultError>, Options<ProjectsGetByIdsData>>;
-export declare const projectsGetCountQueryKey: (options: Options<ProjectsGetCountData>) => [Pick<Options<ProjectsGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const projectsGetCountQueryKey: (options: Options<ProjectsGetCountData>) => [Pick<Options<ProjectsGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -15075,16 +15075,16 @@ export declare const projectsGetCountQueryKey: (options: Options<ProjectsGetCoun
  * ]
  * }
  */
-export declare const projectsGetCountOptions: (options: Options<ProjectsGetCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<ProjectsGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const projectsGetCountOptions: (options: Options<ProjectsGetCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<ProjectsGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<ProjectsGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<ProjectsGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<ProjectsGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<ProjectsGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -15118,7 +15118,7 @@ export declare const projectsGetCountOptions: (options: Options<ProjectsGetCount
  * }
  */
 export declare const projectsGetCountMutation: (options?: Partial<Options<ProjectsGetCountData>>) => UseMutationOptions<ProjectsGetCountResponse, AxiosError<DefaultError>, Options<ProjectsGetCountData>>;
-export declare const projectsGetRelationsQueryKey: (options: Options<ProjectsGetRelationsData>) => [Pick<Options<ProjectsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const projectsGetRelationsQueryKey: (options: Options<ProjectsGetRelationsData>) => [Pick<Options<ProjectsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -15157,16 +15157,16 @@ export declare const projectsGetRelationsQueryKey: (options: Options<ProjectsGet
  * "excludePermissions": true
  * }
  */
-export declare const projectsGetRelationsOptions: (options: Options<ProjectsGetRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<ProjectsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const projectsGetRelationsOptions: (options: Options<ProjectsGetRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<ProjectsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<ProjectsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<ProjectsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<ProjectsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<ProjectsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -15210,17 +15210,17 @@ export declare const projectsGetRelationsInfiniteQueryKey: (options: Options<Pro
  * "excludePermissions": true
  * }
  */
-export declare const projectsGetRelationsInfiniteOptions: (options: Options<ProjectsGetRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<ProjectsGetRelationsData>>, number | Pick<Pick<Options<ProjectsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const projectsGetRelationsInfiniteOptions: (options: Options<ProjectsGetRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<ProjectsGetRelationsData>>, number | Pick<Pick<Options<ProjectsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<ProjectsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<ProjectsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<ProjectsGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<ProjectsGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<ProjectsGetRelationsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -15263,7 +15263,7 @@ export declare const projectsGetRelationsInfiniteOptions: (options: Options<Proj
  * }
  */
 export declare const projectsGetRelationsMutation: (options?: Partial<Options<ProjectsGetRelationsData>>) => UseMutationOptions<ProjectsGetRelationsResponse, AxiosError<DefaultError>, Options<ProjectsGetRelationsData>>;
-export declare const projectsGetRelationsCountQueryKey: (options: Options<ProjectsGetRelationsCountData>) => [Pick<Options<ProjectsGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const projectsGetRelationsCountQueryKey: (options: Options<ProjectsGetRelationsCountData>) => [Pick<Options<ProjectsGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -15292,16 +15292,16 @@ export declare const projectsGetRelationsCountQueryKey: (options: Options<Projec
  * ]
  * }
  */
-export declare const projectsGetRelationsCountOptions: (options: Options<ProjectsGetRelationsCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<ProjectsGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const projectsGetRelationsCountOptions: (options: Options<ProjectsGetRelationsCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<ProjectsGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<ProjectsGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<ProjectsGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<ProjectsGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<ProjectsGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -15335,7 +15335,7 @@ export declare const projectsGetRelationsCountOptions: (options: Options<Project
  * }
  */
 export declare const projectsGetRelationsCountMutation: (options?: Partial<Options<ProjectsGetRelationsCountData>>) => UseMutationOptions<ProjectsGetRelationsCountResponse, AxiosError<DefaultError>, Options<ProjectsGetRelationsCountData>>;
-export declare const projectsGetGroupedRelationsQueryKey: (options: Options<ProjectsGetGroupedRelationsData>) => [Pick<Options<ProjectsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const projectsGetGroupedRelationsQueryKey: (options: Options<ProjectsGetGroupedRelationsData>) => [Pick<Options<ProjectsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -15376,16 +15376,16 @@ export declare const projectsGetGroupedRelationsQueryKey: (options: Options<Proj
  * "groupName": "Submitted"
  * }
  */
-export declare const projectsGetGroupedRelationsOptions: (options: Options<ProjectsGetGroupedRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<ProjectsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const projectsGetGroupedRelationsOptions: (options: Options<ProjectsGetGroupedRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<ProjectsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<ProjectsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<ProjectsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<ProjectsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<ProjectsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -15431,17 +15431,17 @@ export declare const projectsGetGroupedRelationsInfiniteQueryKey: (options: Opti
  * "groupName": "Submitted"
  * }
  */
-export declare const projectsGetGroupedRelationsInfiniteOptions: (options: Options<ProjectsGetGroupedRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<ProjectsGetGroupedRelationsData>>, number | Pick<Pick<Options<ProjectsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const projectsGetGroupedRelationsInfiniteOptions: (options: Options<ProjectsGetGroupedRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<ProjectsGetGroupedRelationsData>>, number | Pick<Pick<Options<ProjectsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<ProjectsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<ProjectsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<ProjectsGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<ProjectsGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<ProjectsGetGroupedRelationsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>;
@@ -15486,7 +15486,7 @@ export declare const projectsGetGroupedRelationsInfiniteOptions: (options: Optio
  * }
  */
 export declare const projectsGetGroupedRelationsMutation: (options?: Partial<Options<ProjectsGetGroupedRelationsData>>) => UseMutationOptions<ProjectsGetGroupedRelationsResponse, AxiosError<DefaultError>, Options<ProjectsGetGroupedRelationsData>>;
-export declare const projectsGetAvatarsQueryKey: (options: Options<ProjectsGetAvatarsData>) => [Pick<Options<ProjectsGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const projectsGetAvatarsQueryKey: (options: Options<ProjectsGetAvatarsData>) => [Pick<Options<ProjectsGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -15516,16 +15516,16 @@ export declare const projectsGetAvatarsQueryKey: (options: Options<ProjectsGetAv
  * ]
  * }
  */
-export declare const projectsGetAvatarsOptions: (options: Options<ProjectsGetAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<ProjectsGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const projectsGetAvatarsOptions: (options: Options<ProjectsGetAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<ProjectsGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<ProjectsGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<ProjectsGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<ProjectsGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<ProjectsGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -15560,7 +15560,7 @@ export declare const projectsGetAvatarsOptions: (options: Options<ProjectsGetAva
  * }
  */
 export declare const projectsGetAvatarsMutation: (options?: Partial<Options<ProjectsGetAvatarsData>>) => UseMutationOptions<ProjectsGetAvatarsResponse, AxiosError<DefaultError>, Options<ProjectsGetAvatarsData>>;
-export declare const projectsGetRelationsAvatarsQueryKey: (options: Options<ProjectsGetRelationsAvatarsData>) => [Pick<Options<ProjectsGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const projectsGetRelationsAvatarsQueryKey: (options: Options<ProjectsGetRelationsAvatarsData>) => [Pick<Options<ProjectsGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -15590,16 +15590,16 @@ export declare const projectsGetRelationsAvatarsQueryKey: (options: Options<Proj
  * ]
  * }
  */
-export declare const projectsGetRelationsAvatarsOptions: (options: Options<ProjectsGetRelationsAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<ProjectsGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const projectsGetRelationsAvatarsOptions: (options: Options<ProjectsGetRelationsAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<ProjectsGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<ProjectsGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<ProjectsGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<ProjectsGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<ProjectsGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -15634,7 +15634,7 @@ export declare const projectsGetRelationsAvatarsOptions: (options: Options<Proje
  * }
  */
 export declare const projectsGetRelationsAvatarsMutation: (options?: Partial<Options<ProjectsGetRelationsAvatarsData>>) => UseMutationOptions<ProjectsGetRelationsAvatarsResponse, AxiosError<DefaultError>, Options<ProjectsGetRelationsAvatarsData>>;
-export declare const tasksGetQueryKey: (options: Options<TasksGetData>) => [Pick<Options<TasksGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const tasksGetQueryKey: (options: Options<TasksGetData>) => [Pick<Options<TasksGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -15673,16 +15673,16 @@ export declare const tasksGetQueryKey: (options: Options<TasksGetData>) => [Pick
  * "excludePermissions": true
  * }
  */
-export declare const tasksGetOptions: (options: Options<TasksGetData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<TasksGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const tasksGetOptions: (options: Options<TasksGetData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<TasksGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<TasksGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<TasksGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<TasksGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<TasksGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -15726,17 +15726,17 @@ export declare const tasksGetInfiniteQueryKey: (options: Options<TasksGetData>) 
  * "excludePermissions": true
  * }
  */
-export declare const tasksGetInfiniteOptions: (options: Options<TasksGetData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<TasksGetData>>, number | Pick<Pick<Options<TasksGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const tasksGetInfiniteOptions: (options: Options<TasksGetData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<TasksGetData>>, number | Pick<Pick<Options<TasksGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<TasksGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<TasksGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<TasksGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<TasksGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<TasksGetData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -15779,7 +15779,7 @@ export declare const tasksGetInfiniteOptions: (options: Options<TasksGetData>) =
  * }
  */
 export declare const tasksGetMutation: (options?: Partial<Options<TasksGetData>>) => UseMutationOptions<TasksGetResponse, AxiosError<DefaultError>, Options<TasksGetData>>;
-export declare const tasksGetGroupedQueryKey: (options: Options<TasksGetGroupedData>) => [Pick<Options<TasksGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const tasksGetGroupedQueryKey: (options: Options<TasksGetGroupedData>) => [Pick<Options<TasksGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -15820,16 +15820,16 @@ export declare const tasksGetGroupedQueryKey: (options: Options<TasksGetGroupedD
  * "groupName": "Active"
  * }
  */
-export declare const tasksGetGroupedOptions: (options: Options<TasksGetGroupedData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<TasksGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const tasksGetGroupedOptions: (options: Options<TasksGetGroupedData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<TasksGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<TasksGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<TasksGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<TasksGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<TasksGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -15875,17 +15875,17 @@ export declare const tasksGetGroupedInfiniteQueryKey: (options: Options<TasksGet
  * "groupName": "Active"
  * }
  */
-export declare const tasksGetGroupedInfiniteOptions: (options: Options<TasksGetGroupedData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<TasksGetGroupedData>>, number | Pick<Pick<Options<TasksGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const tasksGetGroupedInfiniteOptions: (options: Options<TasksGetGroupedData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<TasksGetGroupedData>>, number | Pick<Pick<Options<TasksGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<TasksGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<TasksGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<TasksGetGroupedData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<TasksGetGroupedData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<TasksGetGroupedData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>;
@@ -15930,7 +15930,7 @@ export declare const tasksGetGroupedInfiniteOptions: (options: Options<TasksGetG
  * }
  */
 export declare const tasksGetGroupedMutation: (options?: Partial<Options<TasksGetGroupedData>>) => UseMutationOptions<TasksGetGroupedResponse, AxiosError<DefaultError>, Options<TasksGetGroupedData>>;
-export declare const tasksGetByIdentifierQueryKey: (options: Options<TasksGetByIdentifierData>) => [Pick<Options<TasksGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const tasksGetByIdentifierQueryKey: (options: Options<TasksGetByIdentifierData>) => [Pick<Options<TasksGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -15947,16 +15947,16 @@ export declare const tasksGetByIdentifierQueryKey: (options: Options<TasksGetByI
  * "excludePermissions": true
  * }
  */
-export declare const tasksGetByIdentifierOptions: (options: Options<TasksGetByIdentifierData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntityDetailsResponse, Error, import("../types.gen").EntityDetailsResponse, [Pick<Options<TasksGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const tasksGetByIdentifierOptions: (options: Options<TasksGetByIdentifierData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntityDetailsResponse, Error, import("../types.gen").EntityDetailsResponse, [Pick<Options<TasksGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntityDetailsResponse, [Pick<Options<TasksGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntityDetailsResponse, [Pick<Options<TasksGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<TasksGetByIdentifierData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<TasksGetByIdentifierData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -15978,7 +15978,7 @@ export declare const tasksGetByIdentifierOptions: (options: Options<TasksGetById
  * }
  */
 export declare const tasksGetByIdentifierMutation: (options?: Partial<Options<TasksGetByIdentifierData>>) => UseMutationOptions<TasksGetByIdentifierResponse, AxiosError<DefaultError>, Options<TasksGetByIdentifierData>>;
-export declare const tasksGetByIdsQueryKey: (options: Options<TasksGetByIdsData>) => [Pick<Options<TasksGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const tasksGetByIdsQueryKey: (options: Options<TasksGetByIdsData>) => [Pick<Options<TasksGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -16018,16 +16018,16 @@ export declare const tasksGetByIdsQueryKey: (options: Options<TasksGetByIdsData>
  * "ids": ["11.222.333", "44.555.66"]
  * }
  */
-export declare const tasksGetByIdsOptions: (options: Options<TasksGetByIdsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<TasksGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const tasksGetByIdsOptions: (options: Options<TasksGetByIdsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<TasksGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<TasksGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<TasksGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<TasksGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<TasksGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -16072,17 +16072,17 @@ export declare const tasksGetByIdsInfiniteQueryKey: (options: Options<TasksGetBy
  * "ids": ["11.222.333", "44.555.66"]
  * }
  */
-export declare const tasksGetByIdsInfiniteOptions: (options: Options<TasksGetByIdsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<TasksGetByIdsData>>, number | Pick<Pick<Options<TasksGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const tasksGetByIdsInfiniteOptions: (options: Options<TasksGetByIdsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<TasksGetByIdsData>>, number | Pick<Pick<Options<TasksGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<TasksGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<TasksGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<TasksGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<TasksGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<TasksGetByIdsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -16126,7 +16126,7 @@ export declare const tasksGetByIdsInfiniteOptions: (options: Options<TasksGetByI
  * }
  */
 export declare const tasksGetByIdsMutation: (options?: Partial<Options<TasksGetByIdsData>>) => UseMutationOptions<TasksGetByIdsResponse, AxiosError<DefaultError>, Options<TasksGetByIdsData>>;
-export declare const tasksGetCountQueryKey: (options: Options<TasksGetCountData>) => [Pick<Options<TasksGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const tasksGetCountQueryKey: (options: Options<TasksGetCountData>) => [Pick<Options<TasksGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -16155,16 +16155,16 @@ export declare const tasksGetCountQueryKey: (options: Options<TasksGetCountData>
  * ]
  * }
  */
-export declare const tasksGetCountOptions: (options: Options<TasksGetCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<TasksGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const tasksGetCountOptions: (options: Options<TasksGetCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<TasksGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<TasksGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<TasksGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<TasksGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<TasksGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -16198,7 +16198,7 @@ export declare const tasksGetCountOptions: (options: Options<TasksGetCountData>)
  * }
  */
 export declare const tasksGetCountMutation: (options?: Partial<Options<TasksGetCountData>>) => UseMutationOptions<TasksGetCountResponse, AxiosError<DefaultError>, Options<TasksGetCountData>>;
-export declare const tasksGetRelationsQueryKey: (options: Options<TasksGetRelationsData>) => [Pick<Options<TasksGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const tasksGetRelationsQueryKey: (options: Options<TasksGetRelationsData>) => [Pick<Options<TasksGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -16237,16 +16237,16 @@ export declare const tasksGetRelationsQueryKey: (options: Options<TasksGetRelati
  * "excludePermissions": true
  * }
  */
-export declare const tasksGetRelationsOptions: (options: Options<TasksGetRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<TasksGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const tasksGetRelationsOptions: (options: Options<TasksGetRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").EntitiesResponse, Error, import("../types.gen").EntitiesResponse, [Pick<Options<TasksGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<TasksGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").EntitiesResponse, [Pick<Options<TasksGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<TasksGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<TasksGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -16290,17 +16290,17 @@ export declare const tasksGetRelationsInfiniteQueryKey: (options: Options<TasksG
  * "excludePermissions": true
  * }
  */
-export declare const tasksGetRelationsInfiniteOptions: (options: Options<TasksGetRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<TasksGetRelationsData>>, number | Pick<Pick<Options<TasksGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const tasksGetRelationsInfiniteOptions: (options: Options<TasksGetRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").EntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").EntitiesResponse, unknown>, import("../types.gen").EntitiesResponse, QueryKey<Options<TasksGetRelationsData>>, number | Pick<Pick<Options<TasksGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<TasksGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<TasksGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<TasksGetRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").EntitiesResponse, number | Pick<Pick<Options<TasksGetRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<TasksGetRelationsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").EntitiesResponse, unknown>;
@@ -16343,7 +16343,7 @@ export declare const tasksGetRelationsInfiniteOptions: (options: Options<TasksGe
  * }
  */
 export declare const tasksGetRelationsMutation: (options?: Partial<Options<TasksGetRelationsData>>) => UseMutationOptions<TasksGetRelationsResponse, AxiosError<DefaultError>, Options<TasksGetRelationsData>>;
-export declare const tasksGetRelationsCountQueryKey: (options: Options<TasksGetRelationsCountData>) => [Pick<Options<TasksGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const tasksGetRelationsCountQueryKey: (options: Options<TasksGetRelationsCountData>) => [Pick<Options<TasksGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -16372,16 +16372,16 @@ export declare const tasksGetRelationsCountQueryKey: (options: Options<TasksGetR
  * ]
  * }
  */
-export declare const tasksGetRelationsCountOptions: (options: Options<TasksGetRelationsCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<TasksGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const tasksGetRelationsCountOptions: (options: Options<TasksGetRelationsCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<TasksGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<TasksGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<TasksGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<TasksGetRelationsCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<TasksGetRelationsCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -16415,7 +16415,7 @@ export declare const tasksGetRelationsCountOptions: (options: Options<TasksGetRe
  * }
  */
 export declare const tasksGetRelationsCountMutation: (options?: Partial<Options<TasksGetRelationsCountData>>) => UseMutationOptions<TasksGetRelationsCountResponse, AxiosError<DefaultError>, Options<TasksGetRelationsCountData>>;
-export declare const tasksGetGroupedRelationsQueryKey: (options: Options<TasksGetGroupedRelationsData>) => [Pick<Options<TasksGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const tasksGetGroupedRelationsQueryKey: (options: Options<TasksGetGroupedRelationsData>) => [Pick<Options<TasksGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -16456,16 +16456,16 @@ export declare const tasksGetGroupedRelationsQueryKey: (options: Options<TasksGe
  * "groupName": "Submitted"
  * }
  */
-export declare const tasksGetGroupedRelationsOptions: (options: Options<TasksGetGroupedRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<TasksGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const tasksGetGroupedRelationsOptions: (options: Options<TasksGetGroupedRelationsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GroupedEntitiesResponse, Error, import("../types.gen").GroupedEntitiesResponse, [Pick<Options<TasksGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<TasksGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GroupedEntitiesResponse, [Pick<Options<TasksGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<TasksGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<TasksGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -16511,17 +16511,17 @@ export declare const tasksGetGroupedRelationsInfiniteQueryKey: (options: Options
  * "groupName": "Submitted"
  * }
  */
-export declare const tasksGetGroupedRelationsInfiniteOptions: (options: Options<TasksGetGroupedRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<TasksGetGroupedRelationsData>>, number | Pick<Pick<Options<TasksGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const tasksGetGroupedRelationsInfiniteOptions: (options: Options<TasksGetGroupedRelationsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").GroupedEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>, import("../types.gen").GroupedEntitiesResponse, QueryKey<Options<TasksGetGroupedRelationsData>>, number | Pick<Pick<Options<TasksGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<TasksGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<TasksGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<TasksGetGroupedRelationsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").GroupedEntitiesResponse, number | Pick<Pick<Options<TasksGetGroupedRelationsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<TasksGetGroupedRelationsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").GroupedEntitiesResponse, unknown>;
@@ -16566,7 +16566,7 @@ export declare const tasksGetGroupedRelationsInfiniteOptions: (options: Options<
  * }
  */
 export declare const tasksGetGroupedRelationsMutation: (options?: Partial<Options<TasksGetGroupedRelationsData>>) => UseMutationOptions<TasksGetGroupedRelationsResponse, AxiosError<DefaultError>, Options<TasksGetGroupedRelationsData>>;
-export declare const tasksGetAvatarsQueryKey: (options: Options<TasksGetAvatarsData>) => [Pick<Options<TasksGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const tasksGetAvatarsQueryKey: (options: Options<TasksGetAvatarsData>) => [Pick<Options<TasksGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -16596,16 +16596,16 @@ export declare const tasksGetAvatarsQueryKey: (options: Options<TasksGetAvatarsD
  * ]
  * }
  */
-export declare const tasksGetAvatarsOptions: (options: Options<TasksGetAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<TasksGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const tasksGetAvatarsOptions: (options: Options<TasksGetAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<TasksGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<TasksGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<TasksGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<TasksGetAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<TasksGetAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -16640,7 +16640,7 @@ export declare const tasksGetAvatarsOptions: (options: Options<TasksGetAvatarsDa
  * }
  */
 export declare const tasksGetAvatarsMutation: (options?: Partial<Options<TasksGetAvatarsData>>) => UseMutationOptions<TasksGetAvatarsResponse, AxiosError<DefaultError>, Options<TasksGetAvatarsData>>;
-export declare const tasksGetRelationsAvatarsQueryKey: (options: Options<TasksGetRelationsAvatarsData>) => [Pick<Options<TasksGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const tasksGetRelationsAvatarsQueryKey: (options: Options<TasksGetRelationsAvatarsData>) => [Pick<Options<TasksGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -16670,16 +16670,16 @@ export declare const tasksGetRelationsAvatarsQueryKey: (options: Options<TasksGe
  * ]
  * }
  */
-export declare const tasksGetRelationsAvatarsOptions: (options: Options<TasksGetRelationsAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<TasksGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const tasksGetRelationsAvatarsOptions: (options: Options<TasksGetRelationsAvatarsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").AvatarsResponse, Error, import("../types.gen").AvatarsResponse, [Pick<Options<TasksGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<TasksGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").AvatarsResponse, [Pick<Options<TasksGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<TasksGetRelationsAvatarsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<TasksGetRelationsAvatarsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -16714,20 +16714,20 @@ export declare const tasksGetRelationsAvatarsOptions: (options: Options<TasksGet
  * }
  */
 export declare const tasksGetRelationsAvatarsMutation: (options?: Partial<Options<TasksGetRelationsAvatarsData>>) => UseMutationOptions<TasksGetRelationsAvatarsResponse, AxiosError<DefaultError>, Options<TasksGetRelationsAvatarsData>>;
-export declare const dataWarehouseEntityGetCountQueryKey: (options: Options<DataWarehouseEntityGetCountData>) => [Pick<Options<DataWarehouseEntityGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const dataWarehouseEntityGetCountQueryKey: (options: Options<DataWarehouseEntityGetCountData>) => [Pick<Options<DataWarehouseEntityGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
-export declare const dataWarehouseEntityGetCountOptions: (options: Options<DataWarehouseEntityGetCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<DataWarehouseEntityGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const dataWarehouseEntityGetCountOptions: (options: Options<DataWarehouseEntityGetCountData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CountResponse, Error, import("../types.gen").CountResponse, [Pick<Options<DataWarehouseEntityGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<DataWarehouseEntityGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CountResponse, [Pick<Options<DataWarehouseEntityGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<DataWarehouseEntityGetCountData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<DataWarehouseEntityGetCountData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -16736,20 +16736,20 @@ export declare const dataWarehouseEntityGetCountOptions: (options: Options<DataW
     };
 };
 export declare const dataWarehouseEntityGetCountMutation: (options?: Partial<Options<DataWarehouseEntityGetCountData>>) => UseMutationOptions<DataWarehouseEntityGetCountResponse, AxiosError<DefaultError>, Options<DataWarehouseEntityGetCountData>>;
-export declare const dataWarehouseEntityGetByIdsQueryKey: (options: Options<DataWarehouseEntityGetByIdsData>) => [Pick<Options<DataWarehouseEntityGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const dataWarehouseEntityGetByIdsQueryKey: (options: Options<DataWarehouseEntityGetByIdsData>) => [Pick<Options<DataWarehouseEntityGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
-export declare const dataWarehouseEntityGetByIdsOptions: (options: Options<DataWarehouseEntityGetByIdsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").DataWarehouseEntitiesByIdsResponse, Error, import("../types.gen").DataWarehouseEntitiesByIdsResponse, [Pick<Options<DataWarehouseEntityGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const dataWarehouseEntityGetByIdsOptions: (options: Options<DataWarehouseEntityGetByIdsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").DataWarehouseEntitiesByIdsResponse, Error, import("../types.gen").DataWarehouseEntitiesByIdsResponse, [Pick<Options<DataWarehouseEntityGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").DataWarehouseEntitiesByIdsResponse, [Pick<Options<DataWarehouseEntityGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").DataWarehouseEntitiesByIdsResponse, [Pick<Options<DataWarehouseEntityGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<DataWarehouseEntityGetByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<DataWarehouseEntityGetByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -16758,20 +16758,20 @@ export declare const dataWarehouseEntityGetByIdsOptions: (options: Options<DataW
     };
 };
 export declare const dataWarehouseEntityGetByIdsMutation: (options?: Partial<Options<DataWarehouseEntityGetByIdsData>>) => UseMutationOptions<DataWarehouseEntityGetByIdsResponse, AxiosError<DefaultError>, Options<DataWarehouseEntityGetByIdsData>>;
-export declare const dataWarehouseEntityGetIdsQueryKey: (options: Options<DataWarehouseEntityGetIdsData>) => [Pick<Options<DataWarehouseEntityGetIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const dataWarehouseEntityGetIdsQueryKey: (options: Options<DataWarehouseEntityGetIdsData>) => [Pick<Options<DataWarehouseEntityGetIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
-export declare const dataWarehouseEntityGetIdsOptions: (options: Options<DataWarehouseEntityGetIdsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").DataWarehouseGetIdsResponse, Error, import("../types.gen").DataWarehouseGetIdsResponse, [Pick<Options<DataWarehouseEntityGetIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const dataWarehouseEntityGetIdsOptions: (options: Options<DataWarehouseEntityGetIdsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").DataWarehouseGetIdsResponse, Error, import("../types.gen").DataWarehouseGetIdsResponse, [Pick<Options<DataWarehouseEntityGetIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").DataWarehouseGetIdsResponse, [Pick<Options<DataWarehouseEntityGetIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").DataWarehouseGetIdsResponse, [Pick<Options<DataWarehouseEntityGetIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<DataWarehouseEntityGetIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<DataWarehouseEntityGetIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -16780,20 +16780,20 @@ export declare const dataWarehouseEntityGetIdsOptions: (options: Options<DataWar
     };
 };
 export declare const dataWarehouseEntityGetIdsMutation: (options?: Partial<Options<DataWarehouseEntityGetIdsData>>) => UseMutationOptions<DataWarehouseEntityGetIdsResponse, AxiosError<DefaultError>, Options<DataWarehouseEntityGetIdsData>>;
-export declare const configurationGetConfigurationQueryKey: (options: Options<ConfigurationGetConfigurationData>) => [Pick<Options<ConfigurationGetConfigurationData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const configurationGetConfigurationQueryKey: (options: Options<ConfigurationGetConfigurationData>) => [Pick<Options<ConfigurationGetConfigurationData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
-export declare const configurationGetConfigurationOptions: (options: Options<ConfigurationGetConfigurationData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").DataWarehouseEntityDetailsResponseOfBiConfiguration, Error, import("../types.gen").DataWarehouseEntityDetailsResponseOfBiConfiguration, [Pick<Options<ConfigurationGetConfigurationData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const configurationGetConfigurationOptions: (options: Options<ConfigurationGetConfigurationData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").DataWarehouseEntityDetailsResponseOfBiConfiguration, Error, import("../types.gen").DataWarehouseEntityDetailsResponseOfBiConfiguration, [Pick<Options<ConfigurationGetConfigurationData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").DataWarehouseEntityDetailsResponseOfBiConfiguration, [Pick<Options<ConfigurationGetConfigurationData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").DataWarehouseEntityDetailsResponseOfBiConfiguration, [Pick<Options<ConfigurationGetConfigurationData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<ConfigurationGetConfigurationData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<ConfigurationGetConfigurationData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -16803,20 +16803,20 @@ export declare const configurationGetConfigurationOptions: (options: Options<Con
 };
 export declare const configurationGetConfigurationMutation: (options?: Partial<Options<ConfigurationGetConfigurationData>>) => UseMutationOptions<ConfigurationGetConfigurationResponse, AxiosError<DefaultError>, Options<ConfigurationGetConfigurationData>>;
 export declare const configurationUpdateConfigurationMutation: (options?: Partial<Options<ConfigurationUpdateConfigurationData>>) => UseMutationOptions<unknown, AxiosError<DefaultError>, Options<ConfigurationUpdateConfigurationData>>;
-export declare const storageConnectionsTestAzureBlobConnectionQueryKey: (options: Options<StorageConnectionsTestAzureBlobConnectionData>) => [Pick<Options<StorageConnectionsTestAzureBlobConnectionData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const storageConnectionsTestAzureBlobConnectionQueryKey: (options: Options<StorageConnectionsTestAzureBlobConnectionData>) => [Pick<Options<StorageConnectionsTestAzureBlobConnectionData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
-export declare const storageConnectionsTestAzureBlobConnectionOptions: (options: Options<StorageConnectionsTestAzureBlobConnectionData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").StorageConnectionResponse, Error, import("../types.gen").StorageConnectionResponse, [Pick<Options<StorageConnectionsTestAzureBlobConnectionData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const storageConnectionsTestAzureBlobConnectionOptions: (options: Options<StorageConnectionsTestAzureBlobConnectionData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").StorageConnectionResponse, Error, import("../types.gen").StorageConnectionResponse, [Pick<Options<StorageConnectionsTestAzureBlobConnectionData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").StorageConnectionResponse, [Pick<Options<StorageConnectionsTestAzureBlobConnectionData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").StorageConnectionResponse, [Pick<Options<StorageConnectionsTestAzureBlobConnectionData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<StorageConnectionsTestAzureBlobConnectionData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<StorageConnectionsTestAzureBlobConnectionData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -16825,20 +16825,20 @@ export declare const storageConnectionsTestAzureBlobConnectionOptions: (options:
     };
 };
 export declare const storageConnectionsTestAzureBlobConnectionMutation: (options?: Partial<Options<StorageConnectionsTestAzureBlobConnectionData>>) => UseMutationOptions<StorageConnectionsTestAzureBlobConnectionResponse, AxiosError<DefaultError>, Options<StorageConnectionsTestAzureBlobConnectionData>>;
-export declare const triggerExportTriggerExportQueryKey: (options?: Options<TriggerExportTriggerExportData>) => [Pick<Options<TriggerExportTriggerExportData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const triggerExportTriggerExportQueryKey: (options?: Options<TriggerExportTriggerExportData>) => [Pick<Options<TriggerExportTriggerExportData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
-export declare const triggerExportTriggerExportOptions: (options?: Options<TriggerExportTriggerExportData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<unknown, Error, unknown, [Pick<Options<TriggerExportTriggerExportData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const triggerExportTriggerExportOptions: (options?: Options<TriggerExportTriggerExportData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<unknown, Error, unknown, [Pick<Options<TriggerExportTriggerExportData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<unknown, [Pick<Options<TriggerExportTriggerExportData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<unknown, [Pick<Options<TriggerExportTriggerExportData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<TriggerExportTriggerExportData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<TriggerExportTriggerExportData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -16847,20 +16847,20 @@ export declare const triggerExportTriggerExportOptions: (options?: Options<Trigg
     };
 };
 export declare const triggerExportTriggerExportMutation: (options?: Partial<Options<TriggerExportTriggerExportData>>) => UseMutationOptions<unknown, AxiosError<DefaultError>, Options<TriggerExportTriggerExportData>>;
-export declare const planviewAdminVerifyConnectQueryKey: (options: Options<PlanviewAdminVerifyConnectData>) => [Pick<Options<PlanviewAdminVerifyConnectData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const planviewAdminVerifyConnectQueryKey: (options: Options<PlanviewAdminVerifyConnectData>) => [Pick<Options<PlanviewAdminVerifyConnectData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
-export declare const planviewAdminVerifyConnectOptions: (options: Options<PlanviewAdminVerifyConnectData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<unknown, Error, unknown, [Pick<Options<PlanviewAdminVerifyConnectData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const planviewAdminVerifyConnectOptions: (options: Options<PlanviewAdminVerifyConnectData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<unknown, Error, unknown, [Pick<Options<PlanviewAdminVerifyConnectData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<unknown, [Pick<Options<PlanviewAdminVerifyConnectData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<unknown, [Pick<Options<PlanviewAdminVerifyConnectData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<PlanviewAdminVerifyConnectData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<PlanviewAdminVerifyConnectData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -16869,20 +16869,20 @@ export declare const planviewAdminVerifyConnectOptions: (options: Options<Planvi
     };
 };
 export declare const planviewAdminVerifyConnectMutation: (options?: Partial<Options<PlanviewAdminVerifyConnectData>>) => UseMutationOptions<unknown, AxiosError<DefaultError>, Options<PlanviewAdminVerifyConnectData>>;
-export declare const planviewAdminGetUsersQueryKey: (options?: Options<PlanviewAdminGetUsersData>) => [Pick<Options<PlanviewAdminGetUsersData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const planviewAdminGetUsersQueryKey: (options?: Options<PlanviewAdminGetUsersData>) => [Pick<Options<PlanviewAdminGetUsersData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
-export declare const planviewAdminGetUsersOptions: (options?: Options<PlanviewAdminGetUsersData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GetUsersResponse, Error, import("../types.gen").GetUsersResponse, [Pick<Options<PlanviewAdminGetUsersData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const planviewAdminGetUsersOptions: (options?: Options<PlanviewAdminGetUsersData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GetUsersResponse, Error, import("../types.gen").GetUsersResponse, [Pick<Options<PlanviewAdminGetUsersData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GetUsersResponse, [Pick<Options<PlanviewAdminGetUsersData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GetUsersResponse, [Pick<Options<PlanviewAdminGetUsersData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<PlanviewAdminGetUsersData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<PlanviewAdminGetUsersData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -16890,20 +16890,20 @@ export declare const planviewAdminGetUsersOptions: (options?: Options<PlanviewAd
         [dataTagErrorSymbol]: Error;
     };
 };
-export declare const planviewAdminGetQueryKey: (options?: Options<PlanviewAdminGetData>) => [Pick<Options<PlanviewAdminGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const planviewAdminGetQueryKey: (options?: Options<PlanviewAdminGetData>) => [Pick<Options<PlanviewAdminGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
-export declare const planviewAdminGetOptions: (options?: Options<PlanviewAdminGetData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GetTenantResponse, Error, import("../types.gen").GetTenantResponse, [Pick<Options<PlanviewAdminGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const planviewAdminGetOptions: (options?: Options<PlanviewAdminGetData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GetTenantResponse, Error, import("../types.gen").GetTenantResponse, [Pick<Options<PlanviewAdminGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GetTenantResponse, [Pick<Options<PlanviewAdminGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GetTenantResponse, [Pick<Options<PlanviewAdminGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<PlanviewAdminGetData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<PlanviewAdminGetData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -16911,20 +16911,20 @@ export declare const planviewAdminGetOptions: (options?: Options<PlanviewAdminGe
         [dataTagErrorSymbol]: Error;
     };
 };
-export declare const planviewAdminRegisterQueryKey: (options: Options<PlanviewAdminRegisterData>) => [Pick<Options<PlanviewAdminRegisterData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const planviewAdminRegisterQueryKey: (options: Options<PlanviewAdminRegisterData>) => [Pick<Options<PlanviewAdminRegisterData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
-export declare const planviewAdminRegisterOptions: (options: Options<PlanviewAdminRegisterData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<unknown, Error, unknown, [Pick<Options<PlanviewAdminRegisterData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const planviewAdminRegisterOptions: (options: Options<PlanviewAdminRegisterData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<unknown, Error, unknown, [Pick<Options<PlanviewAdminRegisterData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<unknown, [Pick<Options<PlanviewAdminRegisterData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<unknown, [Pick<Options<PlanviewAdminRegisterData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<PlanviewAdminRegisterData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<PlanviewAdminRegisterData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -16933,20 +16933,20 @@ export declare const planviewAdminRegisterOptions: (options: Options<PlanviewAdm
     };
 };
 export declare const planviewAdminRegisterMutation: (options?: Partial<Options<PlanviewAdminRegisterData>>) => UseMutationOptions<unknown, AxiosError<DefaultError>, Options<PlanviewAdminRegisterData>>;
-export declare const planviewTokenServiceGetPtsTokenForCoPilotQueryKey: (options?: Options<PlanviewTokenServiceGetPtsTokenForCoPilotData>) => [Pick<Options<PlanviewTokenServiceGetPtsTokenForCoPilotData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const planviewTokenServiceGetPtsTokenForCoPilotQueryKey: (options?: Options<PlanviewTokenServiceGetPtsTokenForCoPilotData>) => [Pick<Options<PlanviewTokenServiceGetPtsTokenForCoPilotData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
-export declare const planviewTokenServiceGetPtsTokenForCoPilotOptions: (options?: Options<PlanviewTokenServiceGetPtsTokenForCoPilotData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GetTokenResponse, Error, import("../types.gen").GetTokenResponse, [Pick<Options<PlanviewTokenServiceGetPtsTokenForCoPilotData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const planviewTokenServiceGetPtsTokenForCoPilotOptions: (options?: Options<PlanviewTokenServiceGetPtsTokenForCoPilotData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GetTokenResponse, Error, import("../types.gen").GetTokenResponse, [Pick<Options<PlanviewTokenServiceGetPtsTokenForCoPilotData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GetTokenResponse, [Pick<Options<PlanviewTokenServiceGetPtsTokenForCoPilotData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GetTokenResponse, [Pick<Options<PlanviewTokenServiceGetPtsTokenForCoPilotData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<PlanviewTokenServiceGetPtsTokenForCoPilotData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<PlanviewTokenServiceGetPtsTokenForCoPilotData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -16954,20 +16954,20 @@ export declare const planviewTokenServiceGetPtsTokenForCoPilotOptions: (options?
         [dataTagErrorSymbol]: Error;
     };
 };
-export declare const planviewTokenServiceGetPtsTokenInternalQueryKey: (options?: Options<PlanviewTokenServiceGetPtsTokenInternalData>) => [Pick<Options<PlanviewTokenServiceGetPtsTokenInternalData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const planviewTokenServiceGetPtsTokenInternalQueryKey: (options?: Options<PlanviewTokenServiceGetPtsTokenInternalData>) => [Pick<Options<PlanviewTokenServiceGetPtsTokenInternalData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
-export declare const planviewTokenServiceGetPtsTokenInternalOptions: (options?: Options<PlanviewTokenServiceGetPtsTokenInternalData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GetTokenResponse, Error, import("../types.gen").GetTokenResponse, [Pick<Options<PlanviewTokenServiceGetPtsTokenInternalData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const planviewTokenServiceGetPtsTokenInternalOptions: (options?: Options<PlanviewTokenServiceGetPtsTokenInternalData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GetTokenResponse, Error, import("../types.gen").GetTokenResponse, [Pick<Options<PlanviewTokenServiceGetPtsTokenInternalData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GetTokenResponse, [Pick<Options<PlanviewTokenServiceGetPtsTokenInternalData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GetTokenResponse, [Pick<Options<PlanviewTokenServiceGetPtsTokenInternalData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<PlanviewTokenServiceGetPtsTokenInternalData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<PlanviewTokenServiceGetPtsTokenInternalData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -16975,20 +16975,20 @@ export declare const planviewTokenServiceGetPtsTokenInternalOptions: (options?: 
         [dataTagErrorSymbol]: Error;
     };
 };
-export declare const sentimentAnalysisServiceCalculateSentimentQueryKey: (options: Options<SentimentAnalysisServiceCalculateSentimentData>) => [Pick<Options<SentimentAnalysisServiceCalculateSentimentData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const sentimentAnalysisServiceCalculateSentimentQueryKey: (options: Options<SentimentAnalysisServiceCalculateSentimentData>) => [Pick<Options<SentimentAnalysisServiceCalculateSentimentData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
-export declare const sentimentAnalysisServiceCalculateSentimentOptions: (options: Options<SentimentAnalysisServiceCalculateSentimentData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CalculateSentimentResponse, Error, import("../types.gen").CalculateSentimentResponse, [Pick<Options<SentimentAnalysisServiceCalculateSentimentData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const sentimentAnalysisServiceCalculateSentimentOptions: (options: Options<SentimentAnalysisServiceCalculateSentimentData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").CalculateSentimentResponse, Error, import("../types.gen").CalculateSentimentResponse, [Pick<Options<SentimentAnalysisServiceCalculateSentimentData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CalculateSentimentResponse, [Pick<Options<SentimentAnalysisServiceCalculateSentimentData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").CalculateSentimentResponse, [Pick<Options<SentimentAnalysisServiceCalculateSentimentData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<SentimentAnalysisServiceCalculateSentimentData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<SentimentAnalysisServiceCalculateSentimentData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -16997,20 +16997,20 @@ export declare const sentimentAnalysisServiceCalculateSentimentOptions: (options
     };
 };
 export declare const sentimentAnalysisServiceCalculateSentimentMutation: (options?: Partial<Options<SentimentAnalysisServiceCalculateSentimentData>>) => UseMutationOptions<SentimentAnalysisServiceCalculateSentimentResponse, AxiosError<DefaultError>, Options<SentimentAnalysisServiceCalculateSentimentData>>;
-export declare const whiteboardPtsTokenForWhiteboardQueryKey: (options: Options<WhiteboardPtsTokenForWhiteboardData>) => [Pick<Options<WhiteboardPtsTokenForWhiteboardData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const whiteboardPtsTokenForWhiteboardQueryKey: (options: Options<WhiteboardPtsTokenForWhiteboardData>) => [Pick<Options<WhiteboardPtsTokenForWhiteboardData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
-export declare const whiteboardPtsTokenForWhiteboardOptions: (options: Options<WhiteboardPtsTokenForWhiteboardData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").WhiteboardTokenResponse, Error, import("../types.gen").WhiteboardTokenResponse, [Pick<Options<WhiteboardPtsTokenForWhiteboardData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const whiteboardPtsTokenForWhiteboardOptions: (options: Options<WhiteboardPtsTokenForWhiteboardData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").WhiteboardTokenResponse, Error, import("../types.gen").WhiteboardTokenResponse, [Pick<Options<WhiteboardPtsTokenForWhiteboardData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").WhiteboardTokenResponse, [Pick<Options<WhiteboardPtsTokenForWhiteboardData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").WhiteboardTokenResponse, [Pick<Options<WhiteboardPtsTokenForWhiteboardData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<WhiteboardPtsTokenForWhiteboardData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<WhiteboardPtsTokenForWhiteboardData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -17018,7 +17018,7 @@ export declare const whiteboardPtsTokenForWhiteboardOptions: (options: Options<W
         [dataTagErrorSymbol]: Error;
     };
 };
-export declare const workloadGetWorkloadResourcesQueryKey: (options: Options<WorkloadGetWorkloadResourcesData>) => [Pick<Options<WorkloadGetWorkloadResourcesData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const workloadGetWorkloadResourcesQueryKey: (options: Options<WorkloadGetWorkloadResourcesData>) => [Pick<Options<WorkloadGetWorkloadResourcesData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -17053,16 +17053,16 @@ export declare const workloadGetWorkloadResourcesQueryKey: (options: Options<Wor
  * "limit": 25
  * }
  */
-export declare const workloadGetWorkloadResourcesOptions: (options: Options<WorkloadGetWorkloadResourcesData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").WorkloadEntitiesResponse, Error, import("../types.gen").WorkloadEntitiesResponse, [Pick<Options<WorkloadGetWorkloadResourcesData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const workloadGetWorkloadResourcesOptions: (options: Options<WorkloadGetWorkloadResourcesData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").WorkloadEntitiesResponse, Error, import("../types.gen").WorkloadEntitiesResponse, [Pick<Options<WorkloadGetWorkloadResourcesData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").WorkloadEntitiesResponse, [Pick<Options<WorkloadGetWorkloadResourcesData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").WorkloadEntitiesResponse, [Pick<Options<WorkloadGetWorkloadResourcesData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<WorkloadGetWorkloadResourcesData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<WorkloadGetWorkloadResourcesData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -17102,17 +17102,17 @@ export declare const workloadGetWorkloadResourcesInfiniteQueryKey: (options: Opt
  * "limit": 25
  * }
  */
-export declare const workloadGetWorkloadResourcesInfiniteOptions: (options: Options<WorkloadGetWorkloadResourcesData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").WorkloadEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").WorkloadEntitiesResponse, unknown>, import("../types.gen").WorkloadEntitiesResponse, QueryKey<Options<WorkloadGetWorkloadResourcesData>>, number | Pick<Pick<Options<WorkloadGetWorkloadResourcesData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const workloadGetWorkloadResourcesInfiniteOptions: (options: Options<WorkloadGetWorkloadResourcesData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").WorkloadEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").WorkloadEntitiesResponse, unknown>, import("../types.gen").WorkloadEntitiesResponse, QueryKey<Options<WorkloadGetWorkloadResourcesData>>, number | Pick<Pick<Options<WorkloadGetWorkloadResourcesData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").WorkloadEntitiesResponse, number | Pick<Pick<Options<WorkloadGetWorkloadResourcesData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").WorkloadEntitiesResponse, number | Pick<Pick<Options<WorkloadGetWorkloadResourcesData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").WorkloadEntitiesResponse, number | Pick<Pick<Options<WorkloadGetWorkloadResourcesData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").WorkloadEntitiesResponse, number | Pick<Pick<Options<WorkloadGetWorkloadResourcesData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<WorkloadGetWorkloadResourcesData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").WorkloadEntitiesResponse, unknown>;
@@ -17151,7 +17151,7 @@ export declare const workloadGetWorkloadResourcesInfiniteOptions: (options: Opti
  * }
  */
 export declare const workloadGetWorkloadResourcesMutation: (options?: Partial<Options<WorkloadGetWorkloadResourcesData>>) => UseMutationOptions<WorkloadGetWorkloadResourcesResponse, AxiosError<DefaultError>, Options<WorkloadGetWorkloadResourcesData>>;
-export declare const workloadGetWorkloadProjectsQueryKey: (options: Options<WorkloadGetWorkloadProjectsData>) => [Pick<Options<WorkloadGetWorkloadProjectsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const workloadGetWorkloadProjectsQueryKey: (options: Options<WorkloadGetWorkloadProjectsData>) => [Pick<Options<WorkloadGetWorkloadProjectsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -17177,16 +17177,16 @@ export declare const workloadGetWorkloadProjectsQueryKey: (options: Options<Work
  * "limit": 25
  * }
  */
-export declare const workloadGetWorkloadProjectsOptions: (options: Options<WorkloadGetWorkloadProjectsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").WorkloadEntitiesResponse, Error, import("../types.gen").WorkloadEntitiesResponse, [Pick<Options<WorkloadGetWorkloadProjectsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const workloadGetWorkloadProjectsOptions: (options: Options<WorkloadGetWorkloadProjectsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").WorkloadEntitiesResponse, Error, import("../types.gen").WorkloadEntitiesResponse, [Pick<Options<WorkloadGetWorkloadProjectsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").WorkloadEntitiesResponse, [Pick<Options<WorkloadGetWorkloadProjectsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").WorkloadEntitiesResponse, [Pick<Options<WorkloadGetWorkloadProjectsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<WorkloadGetWorkloadProjectsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<WorkloadGetWorkloadProjectsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -17217,17 +17217,17 @@ export declare const workloadGetWorkloadProjectsInfiniteQueryKey: (options: Opti
  * "limit": 25
  * }
  */
-export declare const workloadGetWorkloadProjectsInfiniteOptions: (options: Options<WorkloadGetWorkloadProjectsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").WorkloadEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").WorkloadEntitiesResponse, unknown>, import("../types.gen").WorkloadEntitiesResponse, QueryKey<Options<WorkloadGetWorkloadProjectsData>>, number | Pick<Pick<Options<WorkloadGetWorkloadProjectsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const workloadGetWorkloadProjectsInfiniteOptions: (options: Options<WorkloadGetWorkloadProjectsData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").WorkloadEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").WorkloadEntitiesResponse, unknown>, import("../types.gen").WorkloadEntitiesResponse, QueryKey<Options<WorkloadGetWorkloadProjectsData>>, number | Pick<Pick<Options<WorkloadGetWorkloadProjectsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").WorkloadEntitiesResponse, number | Pick<Pick<Options<WorkloadGetWorkloadProjectsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").WorkloadEntitiesResponse, number | Pick<Pick<Options<WorkloadGetWorkloadProjectsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").WorkloadEntitiesResponse, number | Pick<Pick<Options<WorkloadGetWorkloadProjectsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").WorkloadEntitiesResponse, number | Pick<Pick<Options<WorkloadGetWorkloadProjectsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<WorkloadGetWorkloadProjectsData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").WorkloadEntitiesResponse, unknown>;
@@ -17257,7 +17257,7 @@ export declare const workloadGetWorkloadProjectsInfiniteOptions: (options: Optio
  * }
  */
 export declare const workloadGetWorkloadProjectsMutation: (options?: Partial<Options<WorkloadGetWorkloadProjectsData>>) => UseMutationOptions<WorkloadGetWorkloadProjectsResponse, AxiosError<DefaultError>, Options<WorkloadGetWorkloadProjectsData>>;
-export declare const workloadGetWorkloadTasksQueryKey: (options: Options<WorkloadGetWorkloadTasksData>) => [Pick<Options<WorkloadGetWorkloadTasksData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const workloadGetWorkloadTasksQueryKey: (options: Options<WorkloadGetWorkloadTasksData>) => [Pick<Options<WorkloadGetWorkloadTasksData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
@@ -17284,16 +17284,16 @@ export declare const workloadGetWorkloadTasksQueryKey: (options: Options<Workloa
  * "limit": 25,
  * }
  */
-export declare const workloadGetWorkloadTasksOptions: (options: Options<WorkloadGetWorkloadTasksData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").WorkloadEntitiesResponse, Error, import("../types.gen").WorkloadEntitiesResponse, [Pick<Options<WorkloadGetWorkloadTasksData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const workloadGetWorkloadTasksOptions: (options: Options<WorkloadGetWorkloadTasksData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").WorkloadEntitiesResponse, Error, import("../types.gen").WorkloadEntitiesResponse, [Pick<Options<WorkloadGetWorkloadTasksData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").WorkloadEntitiesResponse, [Pick<Options<WorkloadGetWorkloadTasksData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").WorkloadEntitiesResponse, [Pick<Options<WorkloadGetWorkloadTasksData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<WorkloadGetWorkloadTasksData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<WorkloadGetWorkloadTasksData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -17325,17 +17325,17 @@ export declare const workloadGetWorkloadTasksInfiniteQueryKey: (options: Options
  * "limit": 25,
  * }
  */
-export declare const workloadGetWorkloadTasksInfiniteOptions: (options: Options<WorkloadGetWorkloadTasksData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").WorkloadEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").WorkloadEntitiesResponse, unknown>, import("../types.gen").WorkloadEntitiesResponse, QueryKey<Options<WorkloadGetWorkloadTasksData>>, number | Pick<Pick<Options<WorkloadGetWorkloadTasksData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const workloadGetWorkloadTasksInfiniteOptions: (options: Options<WorkloadGetWorkloadTasksData>) => import("@tanstack/react-query").UseInfiniteQueryOptions<import("../types.gen").WorkloadEntitiesResponse, AxiosError<Error, any>, InfiniteData<import("../types.gen").WorkloadEntitiesResponse, unknown>, import("../types.gen").WorkloadEntitiesResponse, QueryKey<Options<WorkloadGetWorkloadTasksData>>, number | Pick<Pick<Options<WorkloadGetWorkloadTasksData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
-}, "body" | "path" | "query" | "headers">> & {
-    initialData: InfiniteData<import("../types.gen").WorkloadEntitiesResponse, number | Pick<Pick<Options<WorkloadGetWorkloadTasksData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+}, "body" | "path" | "headers" | "query">> & {
+    initialData: InfiniteData<import("../types.gen").WorkloadEntitiesResponse, number | Pick<Pick<Options<WorkloadGetWorkloadTasksData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">> | (() => InfiniteData<import("../types.gen").WorkloadEntitiesResponse, number | Pick<Pick<Options<WorkloadGetWorkloadTasksData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    }, "body" | "path" | "headers" | "query">> | (() => InfiniteData<import("../types.gen").WorkloadEntitiesResponse, number | Pick<Pick<Options<WorkloadGetWorkloadTasksData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
-    }, "body" | "path" | "query" | "headers">>) | undefined;
+    }, "body" | "path" | "headers" | "query">>) | undefined;
 } & {
     queryKey: QueryKey<Options<WorkloadGetWorkloadTasksData>> & {
         [dataTagSymbol]: InfiniteData<import("../types.gen").WorkloadEntitiesResponse, unknown>;
@@ -17366,20 +17366,20 @@ export declare const workloadGetWorkloadTasksInfiniteOptions: (options: Options<
  * }
  */
 export declare const workloadGetWorkloadTasksMutation: (options?: Partial<Options<WorkloadGetWorkloadTasksData>>) => UseMutationOptions<WorkloadGetWorkloadTasksResponse, AxiosError<DefaultError>, Options<WorkloadGetWorkloadTasksData>>;
-export declare const publicisGetReportableWorkItemsPerUserQueryKey: (options: Options<PublicisGetReportableWorkItemsPerUserData>) => [Pick<Options<PublicisGetReportableWorkItemsPerUserData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const publicisGetReportableWorkItemsPerUserQueryKey: (options: Options<PublicisGetReportableWorkItemsPerUserData>) => [Pick<Options<PublicisGetReportableWorkItemsPerUserData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
-export declare const publicisGetReportableWorkItemsPerUserOptions: (options: Options<PublicisGetReportableWorkItemsPerUserData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GetReportableWorkItemsResponse, Error, import("../types.gen").GetReportableWorkItemsResponse, [Pick<Options<PublicisGetReportableWorkItemsPerUserData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const publicisGetReportableWorkItemsPerUserOptions: (options: Options<PublicisGetReportableWorkItemsPerUserData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GetReportableWorkItemsResponse, Error, import("../types.gen").GetReportableWorkItemsResponse, [Pick<Options<PublicisGetReportableWorkItemsPerUserData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GetReportableWorkItemsResponse, [Pick<Options<PublicisGetReportableWorkItemsPerUserData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GetReportableWorkItemsResponse, [Pick<Options<PublicisGetReportableWorkItemsPerUserData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<PublicisGetReportableWorkItemsPerUserData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<PublicisGetReportableWorkItemsPerUserData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -17388,20 +17388,20 @@ export declare const publicisGetReportableWorkItemsPerUserOptions: (options: Opt
     };
 };
 export declare const publicisGetReportableWorkItemsPerUserMutation: (options?: Partial<Options<PublicisGetReportableWorkItemsPerUserData>>) => UseMutationOptions<PublicisGetReportableWorkItemsPerUserResponse, AxiosError<DefaultError>, Options<PublicisGetReportableWorkItemsPerUserData>>;
-export declare const publicisGetReportableTasksByIdsQueryKey: (options: Options<PublicisGetReportableTasksByIdsData>) => [Pick<Options<PublicisGetReportableTasksByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const publicisGetReportableTasksByIdsQueryKey: (options: Options<PublicisGetReportableTasksByIdsData>) => [Pick<Options<PublicisGetReportableTasksByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
-export declare const publicisGetReportableTasksByIdsOptions: (options: Options<PublicisGetReportableTasksByIdsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GetReportableTasksByIdsResponse, Error, import("../types.gen").GetReportableTasksByIdsResponse, [Pick<Options<PublicisGetReportableTasksByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const publicisGetReportableTasksByIdsOptions: (options: Options<PublicisGetReportableTasksByIdsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GetReportableTasksByIdsResponse, Error, import("../types.gen").GetReportableTasksByIdsResponse, [Pick<Options<PublicisGetReportableTasksByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GetReportableTasksByIdsResponse, [Pick<Options<PublicisGetReportableTasksByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GetReportableTasksByIdsResponse, [Pick<Options<PublicisGetReportableTasksByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<PublicisGetReportableTasksByIdsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<PublicisGetReportableTasksByIdsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -17410,20 +17410,20 @@ export declare const publicisGetReportableTasksByIdsOptions: (options: Options<P
     };
 };
 export declare const publicisGetReportableTasksByIdsMutation: (options?: Partial<Options<PublicisGetReportableTasksByIdsData>>) => UseMutationOptions<PublicisGetReportableTasksByIdsResponse, AxiosError<DefaultError>, Options<PublicisGetReportableTasksByIdsData>>;
-export declare const publicisGetReportableTasksByIds2QueryKey: (options: Options<PublicisGetReportableTasksByIds2Data>) => [Pick<Options<PublicisGetReportableTasksByIds2Data>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const publicisGetReportableTasksByIds2QueryKey: (options: Options<PublicisGetReportableTasksByIds2Data>) => [Pick<Options<PublicisGetReportableTasksByIds2Data>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
-export declare const publicisGetReportableTasksByIds2Options: (options: Options<PublicisGetReportableTasksByIds2Data>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GetReportableTasksByIdsResponse, Error, import("../types.gen").GetReportableTasksByIdsResponse, [Pick<Options<PublicisGetReportableTasksByIds2Data>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const publicisGetReportableTasksByIds2Options: (options: Options<PublicisGetReportableTasksByIds2Data>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GetReportableTasksByIdsResponse, Error, import("../types.gen").GetReportableTasksByIdsResponse, [Pick<Options<PublicisGetReportableTasksByIds2Data>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GetReportableTasksByIdsResponse, [Pick<Options<PublicisGetReportableTasksByIds2Data>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GetReportableTasksByIdsResponse, [Pick<Options<PublicisGetReportableTasksByIds2Data>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<PublicisGetReportableTasksByIds2Data>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<PublicisGetReportableTasksByIds2Data>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -17432,20 +17432,20 @@ export declare const publicisGetReportableTasksByIds2Options: (options: Options<
     };
 };
 export declare const publicisGetReportableTasksByIds2Mutation: (options?: Partial<Options<PublicisGetReportableTasksByIds2Data>>) => UseMutationOptions<PublicisGetReportableTasksByIds2Response, AxiosError<DefaultError>, Options<PublicisGetReportableTasksByIds2Data>>;
-export declare const publicisGetAssignmentsPerUsersQueryKey: (options: Options<PublicisGetAssignmentsPerUsersData>) => [Pick<Options<PublicisGetAssignmentsPerUsersData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const publicisGetAssignmentsPerUsersQueryKey: (options: Options<PublicisGetAssignmentsPerUsersData>) => [Pick<Options<PublicisGetAssignmentsPerUsersData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
-export declare const publicisGetAssignmentsPerUsersOptions: (options: Options<PublicisGetAssignmentsPerUsersData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GetAssignmentsPerUsersResponse, Error, import("../types.gen").GetAssignmentsPerUsersResponse, [Pick<Options<PublicisGetAssignmentsPerUsersData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const publicisGetAssignmentsPerUsersOptions: (options: Options<PublicisGetAssignmentsPerUsersData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GetAssignmentsPerUsersResponse, Error, import("../types.gen").GetAssignmentsPerUsersResponse, [Pick<Options<PublicisGetAssignmentsPerUsersData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GetAssignmentsPerUsersResponse, [Pick<Options<PublicisGetAssignmentsPerUsersData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GetAssignmentsPerUsersResponse, [Pick<Options<PublicisGetAssignmentsPerUsersData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<PublicisGetAssignmentsPerUsersData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<PublicisGetAssignmentsPerUsersData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -17454,20 +17454,20 @@ export declare const publicisGetAssignmentsPerUsersOptions: (options: Options<Pu
     };
 };
 export declare const publicisGetAssignmentsPerUsersMutation: (options?: Partial<Options<PublicisGetAssignmentsPerUsersData>>) => UseMutationOptions<PublicisGetAssignmentsPerUsersResponse, AxiosError<DefaultError>, Options<PublicisGetAssignmentsPerUsersData>>;
-export declare const publicisGetUsersWorkingHoursQueryKey: (options: Options<PublicisGetUsersWorkingHoursData>) => [Pick<Options<PublicisGetUsersWorkingHoursData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const publicisGetUsersWorkingHoursQueryKey: (options: Options<PublicisGetUsersWorkingHoursData>) => [Pick<Options<PublicisGetUsersWorkingHoursData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
-export declare const publicisGetUsersWorkingHoursOptions: (options: Options<PublicisGetUsersWorkingHoursData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GetUsersWorkingHoursResponse, Error, import("../types.gen").GetUsersWorkingHoursResponse, [Pick<Options<PublicisGetUsersWorkingHoursData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const publicisGetUsersWorkingHoursOptions: (options: Options<PublicisGetUsersWorkingHoursData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GetUsersWorkingHoursResponse, Error, import("../types.gen").GetUsersWorkingHoursResponse, [Pick<Options<PublicisGetUsersWorkingHoursData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GetUsersWorkingHoursResponse, [Pick<Options<PublicisGetUsersWorkingHoursData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GetUsersWorkingHoursResponse, [Pick<Options<PublicisGetUsersWorkingHoursData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<PublicisGetUsersWorkingHoursData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<PublicisGetUsersWorkingHoursData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -17476,20 +17476,20 @@ export declare const publicisGetUsersWorkingHoursOptions: (options: Options<Publ
     };
 };
 export declare const publicisGetUsersWorkingHoursMutation: (options?: Partial<Options<PublicisGetUsersWorkingHoursData>>) => UseMutationOptions<PublicisGetUsersWorkingHoursResponse, AxiosError<DefaultError>, Options<PublicisGetUsersWorkingHoursData>>;
-export declare const publicisGetGroupMembershipLinksQueryKey: (options: Options<PublicisGetGroupMembershipLinksData>) => [Pick<Options<PublicisGetGroupMembershipLinksData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const publicisGetGroupMembershipLinksQueryKey: (options: Options<PublicisGetGroupMembershipLinksData>) => [Pick<Options<PublicisGetGroupMembershipLinksData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
-export declare const publicisGetGroupMembershipLinksOptions: (options: Options<PublicisGetGroupMembershipLinksData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GetGroupMembershipLinksResponse, Error, import("../types.gen").GetGroupMembershipLinksResponse, [Pick<Options<PublicisGetGroupMembershipLinksData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const publicisGetGroupMembershipLinksOptions: (options: Options<PublicisGetGroupMembershipLinksData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GetGroupMembershipLinksResponse, Error, import("../types.gen").GetGroupMembershipLinksResponse, [Pick<Options<PublicisGetGroupMembershipLinksData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GetGroupMembershipLinksResponse, [Pick<Options<PublicisGetGroupMembershipLinksData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GetGroupMembershipLinksResponse, [Pick<Options<PublicisGetGroupMembershipLinksData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<PublicisGetGroupMembershipLinksData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<PublicisGetGroupMembershipLinksData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {
@@ -17498,20 +17498,20 @@ export declare const publicisGetGroupMembershipLinksOptions: (options: Options<P
     };
 };
 export declare const publicisGetGroupMembershipLinksMutation: (options?: Partial<Options<PublicisGetGroupMembershipLinksData>>) => UseMutationOptions<PublicisGetGroupMembershipLinksResponse, AxiosError<DefaultError>, Options<PublicisGetGroupMembershipLinksData>>;
-export declare const publicisGetResourceProjectsQueryKey: (options: Options<PublicisGetResourceProjectsData>) => [Pick<Options<PublicisGetResourceProjectsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const publicisGetResourceProjectsQueryKey: (options: Options<PublicisGetResourceProjectsData>) => [Pick<Options<PublicisGetResourceProjectsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }];
-export declare const publicisGetResourceProjectsOptions: (options: Options<PublicisGetResourceProjectsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GetResourceProjectsResponse, Error, import("../types.gen").GetResourceProjectsResponse, [Pick<Options<PublicisGetResourceProjectsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+export declare const publicisGetResourceProjectsOptions: (options: Options<PublicisGetResourceProjectsData>) => import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<import("../types.gen").GetResourceProjectsResponse, Error, import("../types.gen").GetResourceProjectsResponse, [Pick<Options<PublicisGetResourceProjectsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GetResourceProjectsResponse, [Pick<Options<PublicisGetResourceProjectsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<import("../types.gen").GetResourceProjectsResponse, [Pick<Options<PublicisGetResourceProjectsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<Options<PublicisGetResourceProjectsData>, "body" | "path" | "query" | "baseURL" | "headers"> & {
+    queryKey: [Pick<Options<PublicisGetResourceProjectsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {

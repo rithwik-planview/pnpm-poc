@@ -12,9 +12,6 @@ export default defineConfig({
         tsconfigPath: './tsconfig.build.json',
         define: publicVars,
     },
-    output: {
-        assetPrefix: './',
-    },
     html: {
         title: 'Unity Module Federation (UMD) POC',
         tags: [
@@ -28,5 +25,12 @@ export default defineConfig({
     },
     server: {
         port: getPortFromName(name),
+    },
+    tools: {
+        rspack: {
+            output: {
+                publicPath: './',
+            },
+        },
     },
 });

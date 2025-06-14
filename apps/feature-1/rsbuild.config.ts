@@ -15,9 +15,6 @@ export default defineConfig(({ env }) => ({
     html: {
         title: 'Feature-1 Demo',
     },
-    output: {
-        assetPrefix: './',
-    },
     plugins: [
         pluginReact(),
         pluginModuleFederation(
@@ -26,5 +23,12 @@ export default defineConfig(({ env }) => ({
     ],
     server: {
         port: getPortFromName(name),
+    },
+    tools: {
+        rspack: {
+            output: {
+                publicPath: './',
+            },
+        },
     },
 }));

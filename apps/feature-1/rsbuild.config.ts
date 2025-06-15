@@ -24,11 +24,4 @@ export default defineConfig(({ env }) => ({
     server: {
         port: getPortFromName(name),
     },
-    tools: {
-        rspack: {
-            output: {
-                publicPath: './',
-            },
-        },
-    },
 }));

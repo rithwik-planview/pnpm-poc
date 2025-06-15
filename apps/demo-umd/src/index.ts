@@ -25,14 +25,14 @@ if (rootEl) {
     const feature_1_element: HTMLDivElement = document.querySelector('#feature-1-id')!;
     const feature_1_module = await window.Unity_Shell.loadRemote({
         remoteName: FEATURES.FEATURE_1.name,
-        baseUrl: import.meta.env.PUBLIC_BASE_URL,
+        baseUrl: import.meta.env.BASE_URL,
     });
     feature_1_module?.default.render(feature_1_element, {});
 
     const feature_2_element: HTMLDivElement = document.querySelector('#feature-2-id')!;
     const feature_2_module = await window.Unity_Shell.loadRemote({
         remoteName: FEATURES.FEATURE_2.name,
-        baseUrl: import.meta.env.PUBLIC_BASE_URL,
+        baseUrl: import.meta.env.BASE_URL,
     });
     feature_2_module?.default.render(feature_2_element, {});
 }

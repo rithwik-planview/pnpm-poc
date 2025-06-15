@@ -1,30 +1,23 @@
-import { defineConfig, loadEnv } from '@rsbuild/core';
+import { defineConfig } from '@rsbuild/core';
 import { pluginReact } from '@rsbuild/plugin-react';
-import path from 'path';
 import { name } from './package.json';
-import { getDirname } from '@unity/tools';
 import { getPortFromName } from '@unity/shared.utils';
-
-const envDir = path.join(getDirname(import.meta.url), '../../env');
-const { publicVars } = loadEnv({ cwd: envDir });
 
 export default defineConfig({
     source: {
         tsconfigPath: './tsconfig.build.json',
-        define: publicVars,
+        define: {
+            'process.env': JSON.stringify({}),
+        },
     },
     html: {
         title: 'Unity Module Federation POC',
     },
+    output: {
+        assetPrefix: 'auto',
+    },
     plugins: [pluginReact()],
     server: {
         port: getPortFromName(name),
-    },
-    tools: {
-        rspack: {
-            output: {
-                publicPath: './',
-            },
-        },
     },
 });

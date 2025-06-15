@@ -15,7 +15,7 @@ const FEATURES = {
 let baseUrl: string;
 try {
     if (!import.meta.env.DEV) {
-        baseUrl = import.meta.env.PUBLIC_BASE_URL;
+        baseUrl = import.meta.env.BASE_URL;
     }
 } catch (error) {
     console.log('Running in local mode', error);

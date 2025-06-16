@@ -5,10 +5,12 @@
         "rootDir": "./src",
         "baseUrl": "./",
         "paths": {
-            "@unity/shared.utils": ["../../shared/utils/src"]
-        }
+            "@unity/shared.utils": ["../../shared/utils/src"],
+            "WorkloadApp": ["./downloads/WorkloadApp"]
+        },
+        "typeRoots": ["./node_modules/@types", "./src/types"]
     },
-    "include": ["./src", "src/types"],
+    "include": ["./src"],
     "exclude": ["node_modules", "dist"],
     "references": [{ "path": "../../shared/utils/tsconfig.build.json" }]
 }

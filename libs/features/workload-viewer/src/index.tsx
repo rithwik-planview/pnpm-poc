@@ -1,8 +1,8 @@
 import { createRef, forwardRef } from 'react';
 import ReactDOM from 'react-dom';
 
-import './components/workload_static/main.css';
-import { RemoteWorkload } from './components/RemoteWorkload';
+import { Workload } from 'WorkloadApp';
+import '../downloads/WorkloadApp.css';
 
 export enum AppState {
     BasePath = 'basePath',
@@ -29,7 +29,7 @@ type WorkloadViewerProps = Parameters<typeof WorkloadViewer>[0];
 
 const WorkloadViewer = forwardRef<WorkloadViewerHandle, AppProps>(function (props, ref) {
     console.log('WorkloadViewer props:', props);
-    return <RemoteWorkload {...props} ref={ref} />;
+    return <Workload {...props} ref={ref} />;
 });
 
 type Args = WorkloadViewerProps & { element: HTMLElement };

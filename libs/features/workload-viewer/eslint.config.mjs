@@ -1,2 +1,2 @@
-import web from '../../../configs/eslint/web.mjs';
-export default web;
+import react from '../../../configs/eslint/react.mjs';
+export default react;

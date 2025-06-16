@@ -21,12 +21,21 @@ const P = styled.p`
 
 const App = () => {
     const fullName = decodeToken(localStorage.getItem('sessionId'))?.clzUserName ?? '';
-    const origin = import.meta.env?.PUBLIC_HYBRID_AUTH_ORIGIN || 'https://qaapp1.clarizen.com';
-    const basePath = import.meta.env?.PUBLIC_HYBRID_AUTH_BASE_PATH || 'release.latest';
-    const hybridBasePath =
-        import.meta.env?.PUBLIC_HYBRID_AUTH_HYBRID_BASE_PATH || 'HybridSolutions';
-    const username = import.meta.env?.PUBLIC_HYBRID_AUTH_USERNAME || 'Admin_User';
-    const password = import.meta.env?.PUBLIC_HYBRID_AUTH_PASSWORD || 'Password1!';
+    let origin, basePath, hybridBasePath, username, password;
+    try {
+        origin = import.meta.env.PUBLIC_HYBRID_AUTH_ORIGIN;
+        basePath = import.meta.env.PUBLIC_HYBRID_AUTH_BASE_PATH;
+        hybridBasePath = import.meta.env.PUBLIC_HYBRID_AUTH_HYBRID_BASE_PATH;
+        username = import.meta.env.PUBLIC_HYBRID_AUTH_USERNAME;
+        password = import.meta.env.PUBLIC_HYBRID_AUTH_PASSWORD;
+    } catch (error) {
+        console.error('Some environment variables not set, using defaults:', error);
+        origin = origin || 'https://qaapp1.clarizen.com';
+        basePath = basePath || 'release.latest';
+        hybridBasePath = hybridBasePath || 'HybridSolutions';
+        username = username || 'Admin_User';
+        password = password || 'Password1!';
+    }
     return (
         <HybridAppShell
             origin={origin}

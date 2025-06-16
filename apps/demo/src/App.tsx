@@ -1,6 +1,7 @@
 import { useCallback, useState } from 'react';
 import './App.css';
 import { loadRemote } from '@unity/core.shell';
+import { getUnityBasePath } from '@unity/shared.utils';
 
 type ModuleReturn = Awaited<ReturnType<typeof loadRemote>>;
 const FEATURES = {
@@ -15,7 +16,7 @@ const FEATURES = {
 let baseUrl: string;
 try {
     if (!import.meta.env.DEV) {
-        baseUrl = import.meta.env.BASE_URL;
+        baseUrl = getUnityBasePath();
     }
 } catch (error) {
     console.log('Running in local mode', error);

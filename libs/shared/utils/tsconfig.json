@@ -3,7 +3,8 @@
     "compilerOptions": {
         "noEmit": true,
         "declarationDir": "./dist/types",
-        "rootDir": "./"
+        "rootDir": "./",
+        "lib": ["dom"]
     },
     "include": ["./src", "*.config.ts", "**/*.json"],
     "exclude": ["node_modules", "dist"]

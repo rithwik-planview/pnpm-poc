@@ -27,20 +27,6 @@ export default defineConfig({
                     ignore: ['*.LICENSE.txt'],
                 },
             },
-            {
-                from: '../../libs/features/feature-1/dist/mf/',
-                to: '@unity/features.feature-1/mf/',
-                globOptions: {
-                    ignore: ['*.LICENSE.txt'],
-                },
-            },
-            {
-                from: '../../libs/features/feature-2/dist/mf/',
-                to: '@unity/features.feature-2/mf/',
-                globOptions: {
-                    ignore: ['*.LICENSE.txt'],
-                },
-            },
         ],
     },
     server: {

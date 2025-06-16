@@ -101,7 +101,7 @@ pipeline {
                     sh """
                     set +x && . /home/jenkins/.profile
 					nvm use
-                    pnpm -r typecheck
+                    pnpm -r typecheck:all
                     """
                 }
             }

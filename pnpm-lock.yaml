@@ -167,12 +167,6 @@ importers:
       '@rspack/core':
         specifier: ^1.3.11
         version: 1.3.11(@swc/helpers@0.5.17)
-      '@unity/features.feature-1':
-        specifier: workspace:*
-        version: link:../../libs/features/feature-1
-      '@unity/features.feature-2':
-        specifier: workspace:*
-        version: link:../../libs/features/feature-2
       '@unity/shared.utils':
         specifier: workspace:*
         version: link:../../libs/shared/utils

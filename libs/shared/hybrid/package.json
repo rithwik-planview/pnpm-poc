@@ -29,8 +29,6 @@
         "@unity/core.data-access": "workspace:*",
         "axios": "^1.9.0",
         "lodash.debounce": "^4.0.8",
-        "react-intl": "^7.1.11",
-        "styled-components": "^6.1.18",
         "zod": "^3.25.28"
     },
     "devDependencies": {
@@ -43,7 +41,14 @@
         "@types/react-dom": "^19.1.5",
         "@unity/shared.ui": "workspace:*",
         "@unity/tools": "workspace:*",
-        "react": "^19.1.0"
+        "react": "^19.1.0",
+        "react-intl": "^7.1.11",
+        "styled-components": "^6.1.18"
+    },
+    "peerDependencies": {
+        "react": "^19.1.0",
+        "react-intl": "^7.1.11",
+        "styled-components": "^6.1.18"
     },
     "exports": {
         ".": {

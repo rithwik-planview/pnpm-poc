@@ -1,7 +1,9 @@
 import { pluginReact } from '@rsbuild/plugin-react';
 import { defineConfig } from '@rslib/core';
+import { peerDependencies } from './package.json';
 
-const externals = ['react', 'react-intl', 'styled-components'];
+const externals = Object.keys(peerDependencies);
+
 export default defineConfig({
     source: {
         tsconfigPath: './tsconfig.build.json',

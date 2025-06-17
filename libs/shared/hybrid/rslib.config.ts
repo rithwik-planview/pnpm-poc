@@ -1,5 +1,8 @@
 import { pluginReact } from '@rsbuild/plugin-react';
 import { defineConfig } from '@rslib/core';
+import { peerDependencies } from './package.json';
+
+const externals = Object.keys(peerDependencies);
 
 export default defineConfig({
     source: {
@@ -13,6 +16,7 @@ export default defineConfig({
                 distPath: {
                     root: './dist/esm',
                 },
+                externals,
             },
         },
         {
@@ -21,6 +25,7 @@ export default defineConfig({
                 distPath: {
                     root: './dist/cjs',
                 },
+                externals,
             },
         },
     ],

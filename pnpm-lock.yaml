@@ -402,6 +402,9 @@ importers:
       '@unity/shared.utils':
         specifier: workspace:*
         version: link:../../libs/shared/utils
+      '@unity/tools':
+        specifier: workspace:*
+        version: link:../../tools
       globals:
         specifier: ^16.2.0
         version: 16.2.0

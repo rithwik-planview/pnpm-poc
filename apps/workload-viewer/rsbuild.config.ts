@@ -7,6 +7,7 @@ export default defineConfig({
         tsconfigPath: './tsconfig.build.json',
     },
     output: {
+        assetPrefix: 'auto',
         copy: [
             {
                 from: '../../libs/features/workload-viewer/dist/umd/index.js',
@@ -19,7 +20,7 @@ export default defineConfig({
         ],
     },
     html: {
-        title: 'Unity Workload (UMD) POC',
+        title: 'Workload Application',
         tags: [
             {
                 tag: 'script',
@@ -31,7 +32,7 @@ export default defineConfig({
                 tag: 'link',
                 attrs: {
                     rel: 'stylesheet',
-                    href: '/static/css/@unity.workload.css',
+                    href: 'static/css/@unity.workload.css',
                 },
             },
         ],

@@ -9,7 +9,8 @@
         "lint": "eslint .",
         "typecheck": "pnpm typecheck:all && pnpm typecheck:build",
         "typecheck:all": "tsc -b tsconfig.json",
-        "typecheck:build": "tsc -b tsconfig.build.json"
+        "typecheck:build": "tsc -b tsconfig.build.json",
+        "deploy-package": "deploy-package @unity/features.workload-viewer"
     },
     "type": "module",
     "dependencies": {

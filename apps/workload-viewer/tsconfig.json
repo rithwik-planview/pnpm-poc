@@ -2,13 +2,8 @@
     "extends": "../../configs/tsconfig/react.json",
     "compilerOptions": {
         "outDir": "./dist",
-        "rootDir": "./src",
-        "baseUrl": "./",
-        "paths": {
-            "@unity/core.shell": ["../../libs/core/shell/src"]
-        }
+        "rootDir": "./src"
     },
     "include": ["./src"],
-    "exclude": ["node_modules", "dist"],
-    "references": [{ "path": "../../libs/core/shell/tsconfig.build.json" }]
+    "exclude": ["node_modules", "dist"]
 }

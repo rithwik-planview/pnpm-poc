@@ -5,6 +5,7 @@
     "scripts": {
         "build": "rsbuild build",
         "dev": "rsbuild dev --port 3000 --open",
+        "deploy-package": "deploy-package @unity/apps.workload-viewer",
         "format": "prettier --write .",
         "lint": "eslint .",
         "mf-dev": "rsbuild mf-dev --open",
@@ -14,14 +15,14 @@
         "typecheck:build": "tsc -b tsconfig.build.json"
     },
     "type": "module",
-    "dependencies": {
-        "@unity/core.shell": "workspace:*"
-    },
+    "dependencies": {},
     "devDependencies": {
         "@rsbuild/core": "^1.3.21",
         "@rsbuild/plugin-stylus": "^1.1.1",
         "@rspack/core": "^1.3.11",
+        "@unity/features.workload-viewer": "workspace:*",
         "@unity/shared.utils": "workspace:*",
+        "@unity/tools": "workspace:*",
         "globals": "^16.2.0",
         "typescript": "^5.8.3"
     }

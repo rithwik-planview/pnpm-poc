@@ -1,0 +1,2884 @@
+export type EntitiesResponse = {
+    entities: Array<EntityModel>;
+    limit: bigint;
+    offset: bigint;
+    hasMore: boolean;
+    grandTotal: number;
+};
+export type EntityModel = {
+    id?: string;
+    internalId?: string;
+    entityTypeApiName?: string;
+    relationLinkId?: string;
+    permissions?: Permissions;
+    extensionData?: {
+        [key: string]: unknown;
+    };
+};
+export type Permissions = {
+    objectPermissions: Array<ObjectPermissionType>;
+    fieldPermissions: Array<FieldPermissions>;
+};
+export type ObjectPermissionType = 'Delete' | 'Update';
+export type FieldPermissions = {
+    fieldName: string;
+    permissions: FieldPermissionsType;
+};
+export type FieldPermissionsType = 'Read' | 'ReadWrite' | 'None';
+export type EntitiesRequest = {
+    fields: Array<string>;
+    relations: Array<string>;
+    dataFilters: Array<FilterRequest>;
+    limit: number;
+    offset: number;
+    sortBy?: string;
+    sortStrategy: EntitySortStrategy;
+    excludePermissions: boolean;
+};
+export type FilterRequest = {
+    field: FilterField;
+    operator: OperatorId;
+    filterValueType: FilterValueItemType;
+    values: Array<BaseFilterValue>;
+};
+export type FilterField = {
+    entityType: string;
+    fieldName: string;
+};
+export type OperatorId = 'None' | 'Equals' | 'NotEqual' | 'In' | 'NotIn' | 'GreaterThan' | 'LessThan' | 'Before' | 'After' | 'BeginsWith' | 'EndsWith' | 'TextualContains' | 'Between' | 'Contains' | 'DoesNotContain' | 'NotBetween' | 'GreaterOrEqual' | 'LessOrEqual' | 'Match' | 'AfterOrEqualsOf' | 'BeforeOrEqualsOf' | 'Blanks' | 'MatchesCurrency' | 'NotMatchedCurrency' | 'IsUnassignedOrEquals' | 'NonBlanks' | 'Is' | 'IsNot' | 'InTheFollowing' | 'DuringThePrevious' | 'PreviousDay' | 'Today' | 'NextDay' | 'LastWeek' | 'ThisWeek' | 'NextWeek' | 'LastMonth' | 'ThisMonth' | 'NextMonth' | 'LastQuarter' | 'ThisQuarter' | 'NextQuarter' | 'LastYear' | 'ThisYear' | 'NextYear' | 'Me' | 'MyManager' | 'MyDirectReports' | 'EqualsMulti' | 'NotEqualsMulti';
+export type FilterValueItemType = 'None' | 'Numeric' | 'NumericWithUnit' | 'PickList' | 'Date' | 'ReferenceToObject' | 'Checkbox' | 'Text' | 'TextArea' | 'RelativeDate' | 'ContextualDate';
+export type BaseFilterValue = {
+    [key: string]: unknown;
+};
+export type CheckboxFilterValue = {
+    value: boolean;
+};
+export type ContextualDateFilterValue = {
+    value: ContextualDate;
+};
+export type ContextualDate = 'Today' | 'ThisWeek' | 'NextWeek' | 'ThisMonth' | 'NextMonth' | 'ThisQuarter' | 'NextQuarter' | 'ThisYear' | 'NextYear';
+export type DateFilterValue = {
+    value: Date;
+};
+export type NumericFilterValue = {
+    value: number;
+};
+export type NumericWithUnitFilterValue = {
+    value: AmountAndUnit;
+};
+export type AmountAndUnit = {
+    amount: number;
+    unit: string;
+};
+export type PickListFilterValue = {
+    value: string;
+};
+export type ReferenceToObjectFilterValue = {
+    value: string;
+};
+export type RelativeDateFilterValue = {
+    value: RelativeDateValue;
+};
+export type RelativeDateValue = {
+    dateUnit: RelativeDateUnit;
+    amount: number;
+};
+export type RelativeDateUnit = 'Days' | 'Weeks' | 'Months' | 'Quarters' | 'Years';
+export type TextFilterValue = {
+    value: string;
+};
+export type EntitySortStrategy = 'Asc' | 'Desc';
+export type GroupedEntitiesResponse = {
+    grandTotal: number;
+    groupedEntities: Array<GroupedEntityListOfEntityModel>;
+};
+export type GroupedEntityListOfEntityModel = {
+    entities: Array<EntityModel>;
+    limit: bigint;
+    offset: bigint;
+    hasMore: boolean;
+    groupName: string;
+    totalRecords: bigint;
+};
+export type GroupedEntitiesRequest = {
+    fields: Array<string>;
+    relations: Array<string>;
+    dataFilters: Array<FilterRequest>;
+    limit: number;
+    offset: number;
+    sortBy?: string;
+    sortStrategy: EntitySortStrategy;
+    excludePermissions: boolean;
+    groupBy: string;
+    groupName?: string;
+};
+export type EntityDetailsResponse = {
+    id?: string;
+    internalId?: string;
+    entityTypeApiName?: string;
+    permissions?: Permissions;
+    extensionData?: {
+        [key: string]: unknown;
+    };
+};
+export type EntityDetailsRequest = {
+    fields: Array<string>;
+    relations: Array<string>;
+    excludePermissions: boolean;
+};
+export type EntitiesByIdsRequest = {
+    fields: Array<string>;
+    relations: Array<string>;
+    dataFilters: Array<FilterRequest>;
+    limit: number;
+    offset: number;
+    sortBy?: string;
+    sortStrategy: EntitySortStrategy;
+    excludePermissions: boolean;
+    ids: Array<string>;
+};
+export type CountResponse = {
+    totalCount: number;
+};
+export type CountRequest = {
+    dataFilters: Array<FilterRequest>;
+};
+export type RelatedEntitiesRequest = {
+    fields: Array<string>;
+    relations: Array<string>;
+    dataFilters: Array<FilterRequest>;
+    limit: number;
+    offset: number;
+    sortBy?: string;
+    sortStrategy: EntitySortStrategy;
+    excludePermissions: boolean;
+};
+export type GroupedRelationsRequest = {
+    fields: Array<string>;
+    relations: Array<string>;
+    dataFilters: Array<FilterRequest>;
+    limit: number;
+    offset: number;
+    sortBy?: string;
+    sortStrategy: EntitySortStrategy;
+    excludePermissions: boolean;
+    groupBy: string;
+    groupName?: string;
+};
+export type AvatarsResponse = {
+    resourceEntities: Array<ResourceEntity>;
+};
+export type ResourceEntity = {
+    internalId?: string;
+    entityTypeApiName?: string;
+    email?: string;
+    id?: string;
+    description?: string;
+    name?: string;
+    entityType?: string;
+    imageUrl?: string;
+    state?: unknown;
+};
+export type AvatarsRequest = {
+    fieldName?: string;
+    relation?: Relation;
+    dataFilters?: Array<FilterRequest>;
+};
+export type Relation = {
+    name: string;
+    filteredEntityType?: string;
+};
+export type PicklistData = {
+    propertyName?: string;
+    dependsOnPicklist?: string;
+    options?: Array<PicklistOptionData>;
+};
+export type PicklistOptionData = {
+    internalId: string;
+    value?: string;
+    displayName?: string;
+    description?: string;
+    color?: string;
+    imageUrl?: string;
+};
+export type ProblemDetails = {
+    type?: string;
+    title?: string;
+    status?: number;
+    detail?: string;
+    instance?: string;
+    extensions: {
+        [key: string]: unknown;
+    };
+    [key: string]: unknown | string | number | {
+        [key: string]: unknown;
+    } | undefined;
+};
+export type SwimlaneResponse = {
+    grandTotal: number;
+    swimlanes: Array<SwimlaneData>;
+    groupedEntitiesCount: Array<SwimlaneGroupedEntitiesCount>;
+};
+export type SwimlaneData = {
+    swimlaneValue?: ResourceEntity;
+};
+export type SwimlaneGroupedEntitiesCount = {
+    groupName: string;
+    totalRecords: bigint;
+};
+export type CustomPanel = {
+    id: string;
+    apiName: string;
+    name: string;
+    description: string;
+    isUrl: boolean;
+    url: string;
+    order: number;
+};
+export type MetadataRequest = {
+    entityType: string;
+    propertyNames: Array<string>;
+};
+export type FieldsResponse = {
+    name?: string;
+    type?: string;
+    label?: string;
+    description?: string;
+    tooltip?: string;
+    presentationType?: string;
+    manuallySetFieldName?: string;
+    isCalculated: boolean;
+    isCreateOnly: boolean;
+    isCustom: boolean;
+    isFilterable: boolean;
+    isManuallySet: boolean;
+    isNullable: boolean;
+    isSortable: boolean;
+    isUpdateable: boolean;
+    isVisible: boolean;
+    isFinancial: boolean;
+    decimalPlaces?: number;
+    referenceTypes?: Array<ReferenceType>;
+    isSpecialCustomRelation: boolean;
+};
+export type ReferenceType = {
+    type?: string;
+    displayField?: string;
+};
+export type MetadataEntitiesRequest = {
+    entityType: string;
+    propertyNames: Array<string>;
+    relationNames: Array<string>;
+    includeFields: boolean;
+    includeRelations: boolean;
+};
+export type SystemSettingsResponse = {
+    numericFormat?: string;
+    shortDateFormat?: string;
+    showEffortRelatedTimeInHours?: boolean;
+    onlyAdminsCanCreateGridViews?: boolean;
+    enableSupportOfMultiCurrency?: boolean;
+};
+export type OrganizationSettingsResponse = {
+    currencies: CurrenciesData;
+    entityTypeFilterValues?: {
+        [key: string]: Array<string>;
+    };
+    entityTypes?: {
+        [key: string]: EntityTypeDetails;
+    };
+};
+export type CurrenciesData = {
+    baseCurrency: NameAndValue;
+    managedCurrencies: Array<NameAndValue>;
+};
+export type NameAndValue = {
+    name: string;
+    value: string;
+};
+export type EntityTypeDetails = {
+    label?: string;
+};
+export type DescribeEntitiesResponse = {
+    entityDescriptions?: Array<EntityDescriptionResponse>;
+};
+export type EntityDescriptionResponse = {
+    typeName?: string;
+    fields?: Array<FieldsResponse>;
+    validStates?: Array<string>;
+    label?: string;
+    labelPlural?: string;
+    parentEntity?: string;
+    displayField?: string;
+    disabled: boolean;
+};
+export type DescribeEntitiesRequest = {
+    entityType: Array<string>;
+};
+export type AvailableFieldsRequest = {
+    entityType: string;
+    includeRelations: boolean;
+};
+export type RelationFieldsResponse = {
+    entityType: string;
+    fields: Array<FieldsResponse>;
+};
+export type RelationFieldsRequest = {
+    entityType: string;
+    relationName: string;
+};
+export type PropertyCardLayoutResponse = {
+    dimension: number;
+    sections?: Array<Section>;
+};
+export type Section = {
+    type?: string;
+    id?: string;
+    name?: string;
+    titleType?: string;
+    objectFieldName?: string;
+    access?: string;
+    showPath: boolean;
+    fields?: Array<LayoutSectionField>;
+    order: number;
+};
+export type LayoutSectionField = {
+    column?: number;
+    row?: number;
+    wholeRow?: boolean;
+    locations?: string;
+    name?: string;
+    type?: string;
+    presentationType?: string;
+    label?: string;
+    isSortable?: boolean;
+    isFilterable?: boolean;
+    isNullable?: boolean;
+    isUpdateable?: boolean;
+    isCustom?: boolean;
+    isCreateOnly?: boolean;
+    isVisible?: boolean;
+    isCalculated?: boolean;
+    referenceTypes?: Array<ReferenceType>;
+};
+export type ProfilesResponse = {
+    profiles: Array<Profile>;
+};
+export type Profile = {
+    internalId?: string;
+    entityTypeApiName?: string;
+    externalId?: string;
+    name?: string;
+    description?: string;
+    imageUrl?: string;
+    type?: string;
+};
+export type AuthorizationGroupsResponse = {
+    authorizationGroups: Array<AuthorizationGroup>;
+};
+export type AuthorizationGroup = {
+    id?: string;
+    name?: string;
+    entityTypeApiName?: string;
+    description?: string;
+    email?: string;
+    imageUrl?: string;
+    type?: string;
+};
+export type RibbonActionsResponse = {
+    actions?: Array<IRibbonActionItem>;
+};
+export type IRibbonActionItem = {
+    id?: string;
+    name?: string;
+    enabled: boolean;
+    childActions?: Array<IRibbonActionItem>;
+};
+export type RibbonActionsRequest = {
+    ids: Array<string>;
+    ribbonType: string;
+    entityType: string;
+    mainEntityId?: string;
+    parentEntityId?: string;
+    queryName?: string;
+    relationName?: string;
+};
+export type ContextMenusResponse = {
+    menus: Array<ContextMenu>;
+};
+export type ContextMenu = {
+    id: string;
+    name: string;
+    enabled: boolean;
+    subMenus?: Array<ContextMenu>;
+    additionalData?: boolean;
+};
+export type ContextMenusRequest = {
+    selectedLinkId?: string;
+    selectedRelatedEntityId: string;
+    mainEntityId: string;
+    relationName: string;
+};
+export type DataWarehouseCountRequest = {
+    leftBound?: Date;
+    rightBound: Date;
+};
+export type DataWarehouseEntitiesByIdsResponse = {
+    entities?: Array<{
+        [key: string]: unknown;
+    }>;
+};
+export type DataWarehouseEntitiesByIdsRequest = {
+    ids: Array<string>;
+    fields: Array<string>;
+};
+export type DataWarehouseGetIdsResponse = {
+    ids: Array<string>;
+};
+export type DataWarehouseGetIdsRequest = {
+    leftBound?: Date;
+    rightBound: Date;
+};
+export type DataWarehouseEntityDetailsResponseOfBiConfiguration = {
+    entities: Array<BiConfiguration>;
+};
+export type BiConfiguration = {
+    configuration?: string;
+    id?: string;
+    running?: boolean;
+    runningPhase?: string;
+    runningEntity?: string;
+    runningPid?: string;
+    lastSyncData?: string;
+    lastSyncDate?: string;
+    accessToken?: string;
+    refreshToken?: string;
+    currentSyncDate?: string;
+    currentExportDate?: string;
+};
+export type ConfigurationRequest = {
+    typeName: string;
+    fields: Array<string>;
+};
+export type UpdateConfigurationRequest = {
+    id: string;
+    configuration?: string;
+    running?: boolean;
+    runningPId?: string;
+};
+export type StorageConnectionResponse = {
+    message?: string;
+    isSuccess: boolean;
+    error?: string;
+};
+export type BlobConnectionRequest = {
+    blob_connection_string: string;
+    blob_connection_type: string;
+};
+export type VerifyConnectRequest = {
+    url?: string;
+    token?: string;
+};
+export type GetUsersResponse = {
+    tenantId: string;
+    users: Array<PlanviewAdminUser>;
+};
+export type PlanviewAdminUser = {
+    userId?: string;
+    login?: string;
+    email?: string;
+    firstName?: string;
+    lastName?: string;
+    active: boolean;
+};
+export type GetTenantResponse = {
+    id?: string;
+    name?: string;
+    url?: string;
+    region: Region;
+    supports: Array<string>;
+    planviewIdActivated: boolean;
+    isSandbox: boolean;
+};
+export type Region = 'US' | 'EU' | 'AP';
+export type RegisterTenantRequest = {
+    state: boolean;
+};
+export type GetTokenResponse = {
+    idToken?: string;
+    expiresAt: Date;
+};
+export type CalculateSentimentResponse = {
+    objectId: string;
+    sentimentScore?: number;
+    sentimentStatus?: SentimentStatus;
+};
+export type SentimentStatus = 'None' | 'Positive' | 'Neutral' | 'Negative';
+export type CalculateSentimentRequest = {
+    objectId: string;
+    fieldNames: Array<string>;
+};
+export type WhiteboardTokenResponse = {
+    idToken: string;
+    expiresAt: Date;
+};
+export type IdentifierType = 'Entity';
+export type WorkloadEntitiesResponse = {
+    workloadEntities: Array<WorkloadEntity>;
+    grandTotal: number;
+    limit: bigint;
+    offset: bigint;
+    hasMore: boolean;
+};
+export type WorkloadEntity = {
+    [key: string]: unknown;
+};
+export type ResourceWorkloadRequest = {
+    dataFilters: Array<FilterRequest>;
+    workloadSettings: WorkloadRequest;
+    limit: number;
+    offset: number;
+    sourceEntity: SourceEntity;
+};
+export type WorkloadRequest = {
+    loadBaseType: LoadBase;
+    measureType: MeasureType;
+    slicePeriodType: SlicePeriodType;
+    slicesAmount: number;
+    sliceStartDate: Date;
+    aggregationTypes: ResourceManagementAggregationTypes;
+};
+export type LoadBase = 'ProjectAssignment' | 'TaskAssignment';
+export type MeasureType = 'Hours' | 'Units' | 'FTE' | 'PersonDays';
+export type SlicePeriodType = 'Day' | 'Week' | 'Month' | 'Quarter' | 'Year';
+export type ResourceManagementAggregationTypes = 'None' | 'RootObjectLevel' | 'ProjectLevel' | 'ProjectLevelDetailed' | 'UseCapacity' | 'UseProjectPool' | 'UseCurrentPeriodActualAndPlanned' | 'UseProjectsWithNoTaskAssignment';
+export type SourceEntity = {
+    entityKeys: Array<EntityKey>;
+    entityType: string;
+};
+export type EntityKey = {
+    entityId: string;
+    businessUnitId?: string;
+};
+export type EntityWorkloadRequest = {
+    dataFilters: Array<FilterRequest>;
+    workloadSettings: WorkloadRequest;
+    limit: number;
+    offset: number;
+    resourceEntityKey: EntityKey;
+};
+export type GetReportableWorkItemsResponse = {
+    reportableWorkItems: Array<ReportableWorkItem>;
+};
+export type ReportableWorkItem = {
+    [key: string]: unknown;
+};
+export type GetReportableWorkItemsRequest = {
+    startDate: Date;
+    dueDate: Date;
+    fields: Array<string>;
+    excludeCrossBUResources: boolean;
+};
+export type GetReportableTasksByIdsResponse = {
+    reportableTasks: Array<ReportableTask>;
+};
+export type ReportableTask = {
+    [key: string]: unknown;
+};
+export type GetReportableTasksByIdsRequest = {
+    identifiers: Array<string>;
+    fields: Array<string>;
+};
+export type GetAssignmentsPerUsersResponse = {
+    workItems: Array<{
+        [key: string]: unknown;
+    }>;
+    assignedWork: AssignedWork;
+};
+export type AssignedWork = {
+    workByDay: Array<WorkByDayAssignment>;
+    rlTimePhaseDaily: Array<RlTimePhaseDailyAssignment>;
+};
+export type WorkByDayAssignment = {
+    work: WorkUnit;
+    date: Date;
+    durationInDaysInt: number;
+    workItemId: string;
+    resourceId: string;
+    id: string;
+    resourceLinkId: string;
+};
+export type WorkUnit = {
+    unit: string;
+    value: number;
+};
+export type RlTimePhaseDailyAssignment = {
+    work: WorkUnit;
+    date: Date;
+    durationInDaysInt: number;
+    workItemId: string;
+    resourceId: string;
+    ids: Array<string>;
+};
+export type GetAssignmentsPerUsersRequest = {
+    startDate: Date;
+    dueDate: Date;
+    resourceIds: Array<string>;
+    fields: Array<string>;
+    workItemType: string;
+    optionalFilter?: GetAssignmentsPerUsersRequestFilter;
+};
+export type GetAssignmentsPerUsersRequestFilter = {
+    workItemIsManagedByMiddleware?: string;
+    resourceLinkState?: Array<string>;
+    workItemIsStaffingPlan?: string;
+    workItemProjectIsStaffingPlan?: string;
+};
+export type GetUsersWorkingHoursResponse = {
+    usersWorkingHours: Array<UserWorkingHours>;
+    calendarExceptions: Array<UsersWorkingHoursCalendarExcept>;
+};
+export type UserWorkingHours = {
+    id: string;
+    resourceId: string;
+    date: Date;
+    workingHours: WorkUnit;
+    capacity: WorkUnit;
+    calendarExceptionId?: string;
+};
+export type UsersWorkingHoursCalendarExcept = {
+    id: string;
+    name: string;
+    resourceId: string;
+    workingDay: boolean;
+    startDate: Date;
+    endDate: Date;
+    exceptionType: UsersWorkingHoursExceptionType;
+};
+export type UsersWorkingHoursExceptionType = {
+    id: string;
+    name: string;
+};
+export type GetUsersWorkingHoursRequest = {
+    startDate: Date;
+    dueDate: Date;
+    resourceIds: Array<string>;
+};
+export type GetGroupMembershipLinksResponse = {
+    groupMembershipLinks: Array<GroupMembershipLink>;
+};
+export type GroupMembershipLink = {
+    id: string;
+    member: ObjectInfo;
+    container: ObjectInfo;
+};
+export type ObjectInfo = {
+    id: string;
+    name: string;
+};
+export type GetGroupMembershipLinksRequest = {
+    resourceManagerId: string;
+    directManagerId?: string;
+};
+export type GetResourceProjectsResponse = {
+    projects: Array<{
+        [key: string]: unknown;
+    }>;
+};
+export type GetResourceProjectsRequest = {
+    resourceId: string;
+    fields: Array<string>;
+    optionalFilter?: GetResourceProjectsRequestFilter;
+};
+export type GetResourceProjectsRequestFilter = {
+    wiIsStaffingPlan?: string;
+};
+export type BugsGetData = {
+    body: EntitiesRequest;
+    path?: never;
+    query?: never;
+    url: '/bugs';
+};
+export type BugsGetResponses = {
+    200: EntitiesResponse;
+};
+export type BugsGetResponse = BugsGetResponses[keyof BugsGetResponses];
+export type BugsGetGroupedData = {
+    body: GroupedEntitiesRequest;
+    path?: never;
+    query?: never;
+    url: '/bugs/grouped';
+};
+export type BugsGetGroupedResponses = {
+    200: GroupedEntitiesResponse;
+};
+export type BugsGetGroupedResponse = BugsGetGroupedResponses[keyof BugsGetGroupedResponses];
+export type BugsGetByIdentifierData = {
+    body: EntityDetailsRequest;
+    path: {
+        identifier: string;
+    };
+    query?: never;
+    url: '/bugs/{identifier}';
+};
+export type BugsGetByIdentifierResponses = {
+    200: EntityDetailsResponse;
+};
+export type BugsGetByIdentifierResponse = BugsGetByIdentifierResponses[keyof BugsGetByIdentifierResponses];
+export type BugsGetByIdsData = {
+    body: EntitiesByIdsRequest;
+    path?: never;
+    query?: never;
+    url: '/bugs/ids';
+};
+export type BugsGetByIdsResponses = {
+    200: EntitiesResponse;
+};
+export type BugsGetByIdsResponse = BugsGetByIdsResponses[keyof BugsGetByIdsResponses];
+export type BugsGetCountData = {
+    body: CountRequest;
+    path?: never;
+    query?: never;
+    url: '/bugs/count';
+};
+export type BugsGetCountResponses = {
+    200: CountResponse;
+};
+export type BugsGetCountResponse = BugsGetCountResponses[keyof BugsGetCountResponses];
+export type BugsGetRelationsData = {
+    body: RelatedEntitiesRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/bugs/{entityId}/relations/{relationName}';
+};
+export type BugsGetRelationsResponses = {
+    200: EntitiesResponse;
+};
+export type BugsGetRelationsResponse = BugsGetRelationsResponses[keyof BugsGetRelationsResponses];
+export type BugsGetRelationsCountData = {
+    body: CountRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/bugs/{entityId}/relations/{relationName}/count';
+};
+export type BugsGetRelationsCountResponses = {
+    200: CountResponse;
+};
+export type BugsGetRelationsCountResponse = BugsGetRelationsCountResponses[keyof BugsGetRelationsCountResponses];
+export type BugsGetGroupedRelationsData = {
+    body: GroupedRelationsRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/bugs/{entityId}/relations/{relationName}/grouped';
+};
+export type BugsGetGroupedRelationsResponses = {
+    200: GroupedEntitiesResponse;
+};
+export type BugsGetGroupedRelationsResponse = BugsGetGroupedRelationsResponses[keyof BugsGetGroupedRelationsResponses];
+export type BugsGetAvatarsData = {
+    body: AvatarsRequest;
+    path?: never;
+    query?: never;
+    url: '/bugs/avatars';
+};
+export type BugsGetAvatarsResponses = {
+    200: AvatarsResponse;
+};
+export type BugsGetAvatarsResponse = BugsGetAvatarsResponses[keyof BugsGetAvatarsResponses];
+export type BugsGetRelationsAvatarsData = {
+    body: AvatarsRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/bugs/{entityId}/relations/{relationName}/avatars';
+};
+export type BugsGetRelationsAvatarsResponses = {
+    200: AvatarsResponse;
+};
+export type BugsGetRelationsAvatarsResponse = BugsGetRelationsAvatarsResponses[keyof BugsGetRelationsAvatarsResponses];
+export type CasesGetData = {
+    body: EntitiesRequest;
+    path?: never;
+    query?: never;
+    url: '/cases';
+};
+export type CasesGetResponses = {
+    200: EntitiesResponse;
+};
+export type CasesGetResponse = CasesGetResponses[keyof CasesGetResponses];
+export type CasesGetGroupedData = {
+    body: GroupedEntitiesRequest;
+    path?: never;
+    query?: never;
+    url: '/cases/grouped';
+};
+export type CasesGetGroupedResponses = {
+    200: GroupedEntitiesResponse;
+};
+export type CasesGetGroupedResponse = CasesGetGroupedResponses[keyof CasesGetGroupedResponses];
+export type CasesGetByIdentifierData = {
+    body: EntityDetailsRequest;
+    path: {
+        identifier: string;
+    };
+    query?: never;
+    url: '/cases/{identifier}';
+};
+export type CasesGetByIdentifierResponses = {
+    200: EntityDetailsResponse;
+};
+export type CasesGetByIdentifierResponse = CasesGetByIdentifierResponses[keyof CasesGetByIdentifierResponses];
+export type CasesGetByIdsData = {
+    body: EntitiesByIdsRequest;
+    path?: never;
+    query?: never;
+    url: '/cases/ids';
+};
+export type CasesGetByIdsResponses = {
+    200: EntitiesResponse;
+};
+export type CasesGetByIdsResponse = CasesGetByIdsResponses[keyof CasesGetByIdsResponses];
+export type CasesGetCountData = {
+    body: CountRequest;
+    path?: never;
+    query?: never;
+    url: '/cases/count';
+};
+export type CasesGetCountResponses = {
+    200: CountResponse;
+};
+export type CasesGetCountResponse = CasesGetCountResponses[keyof CasesGetCountResponses];
+export type CasesGetRelationsData = {
+    body: RelatedEntitiesRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/cases/{entityId}/relations/{relationName}';
+};
+export type CasesGetRelationsResponses = {
+    200: EntitiesResponse;
+};
+export type CasesGetRelationsResponse = CasesGetRelationsResponses[keyof CasesGetRelationsResponses];
+export type CasesGetRelationsCountData = {
+    body: CountRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/cases/{entityId}/relations/{relationName}/count';
+};
+export type CasesGetRelationsCountResponses = {
+    200: CountResponse;
+};
+export type CasesGetRelationsCountResponse = CasesGetRelationsCountResponses[keyof CasesGetRelationsCountResponses];
+export type CasesGetGroupedRelationsData = {
+    body: GroupedRelationsRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/cases/{entityId}/relations/{relationName}/grouped';
+};
+export type CasesGetGroupedRelationsResponses = {
+    200: GroupedEntitiesResponse;
+};
+export type CasesGetGroupedRelationsResponse = CasesGetGroupedRelationsResponses[keyof CasesGetGroupedRelationsResponses];
+export type CasesGetAvatarsData = {
+    body: AvatarsRequest;
+    path?: never;
+    query?: never;
+    url: '/cases/avatars';
+};
+export type CasesGetAvatarsResponses = {
+    200: AvatarsResponse;
+};
+export type CasesGetAvatarsResponse = CasesGetAvatarsResponses[keyof CasesGetAvatarsResponses];
+export type CasesGetRelationsAvatarsData = {
+    body: AvatarsRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/cases/{entityId}/relations/{relationName}/avatars';
+};
+export type CasesGetRelationsAvatarsResponses = {
+    200: AvatarsResponse;
+};
+export type CasesGetRelationsAvatarsResponse = CasesGetRelationsAvatarsResponses[keyof CasesGetRelationsAvatarsResponses];
+export type IssuesGetData = {
+    body: EntitiesRequest;
+    path?: never;
+    query?: never;
+    url: '/issues';
+};
+export type IssuesGetResponses = {
+    200: EntitiesResponse;
+};
+export type IssuesGetResponse = IssuesGetResponses[keyof IssuesGetResponses];
+export type IssuesGetGroupedData = {
+    body: GroupedEntitiesRequest;
+    path?: never;
+    query?: never;
+    url: '/issues/grouped';
+};
+export type IssuesGetGroupedResponses = {
+    200: GroupedEntitiesResponse;
+};
+export type IssuesGetGroupedResponse = IssuesGetGroupedResponses[keyof IssuesGetGroupedResponses];
+export type IssuesGetByIdentifierData = {
+    body: EntityDetailsRequest;
+    path: {
+        identifier: string;
+    };
+    query?: never;
+    url: '/issues/{identifier}';
+};
+export type IssuesGetByIdentifierResponses = {
+    200: EntityDetailsResponse;
+};
+export type IssuesGetByIdentifierResponse = IssuesGetByIdentifierResponses[keyof IssuesGetByIdentifierResponses];
+export type IssuesGetByIdsData = {
+    body: EntitiesByIdsRequest;
+    path?: never;
+    query?: never;
+    url: '/issues/ids';
+};
+export type IssuesGetByIdsResponses = {
+    200: EntitiesResponse;
+};
+export type IssuesGetByIdsResponse = IssuesGetByIdsResponses[keyof IssuesGetByIdsResponses];
+export type IssuesGetCountData = {
+    body: CountRequest;
+    path?: never;
+    query?: never;
+    url: '/issues/count';
+};
+export type IssuesGetCountResponses = {
+    200: CountResponse;
+};
+export type IssuesGetCountResponse = IssuesGetCountResponses[keyof IssuesGetCountResponses];
+export type IssuesGetRelationsData = {
+    body: RelatedEntitiesRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/issues/{entityId}/relations/{relationName}';
+};
+export type IssuesGetRelationsResponses = {
+    200: EntitiesResponse;
+};
+export type IssuesGetRelationsResponse = IssuesGetRelationsResponses[keyof IssuesGetRelationsResponses];
+export type IssuesGetRelationsCountData = {
+    body: CountRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/issues/{entityId}/relations/{relationName}/count';
+};
+export type IssuesGetRelationsCountResponses = {
+    200: CountResponse;
+};
+export type IssuesGetRelationsCountResponse = IssuesGetRelationsCountResponses[keyof IssuesGetRelationsCountResponses];
+export type IssuesGetGroupedRelationsData = {
+    body: GroupedRelationsRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/issues/{entityId}/relations/{relationName}/grouped';
+};
+export type IssuesGetGroupedRelationsResponses = {
+    200: GroupedEntitiesResponse;
+};
+export type IssuesGetGroupedRelationsResponse = IssuesGetGroupedRelationsResponses[keyof IssuesGetGroupedRelationsResponses];
+export type IssuesGetAvatarsData = {
+    body: AvatarsRequest;
+    path?: never;
+    query?: never;
+    url: '/issues/avatars';
+};
+export type IssuesGetAvatarsResponses = {
+    200: AvatarsResponse;
+};
+export type IssuesGetAvatarsResponse = IssuesGetAvatarsResponses[keyof IssuesGetAvatarsResponses];
+export type IssuesGetRelationsAvatarsData = {
+    body: AvatarsRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/issues/{entityId}/relations/{relationName}/avatars';
+};
+export type IssuesGetRelationsAvatarsResponses = {
+    200: AvatarsResponse;
+};
+export type IssuesGetRelationsAvatarsResponse = IssuesGetRelationsAvatarsResponses[keyof IssuesGetRelationsAvatarsResponses];
+export type RequestsGetData = {
+    body: EntitiesRequest;
+    path?: never;
+    query?: never;
+    url: '/requests';
+};
+export type RequestsGetResponses = {
+    200: EntitiesResponse;
+};
+export type RequestsGetResponse = RequestsGetResponses[keyof RequestsGetResponses];
+export type RequestsGetGroupedData = {
+    body: GroupedEntitiesRequest;
+    path?: never;
+    query?: never;
+    url: '/requests/grouped';
+};
+export type RequestsGetGroupedResponses = {
+    200: GroupedEntitiesResponse;
+};
+export type RequestsGetGroupedResponse = RequestsGetGroupedResponses[keyof RequestsGetGroupedResponses];
+export type RequestsGetByIdentifierData = {
+    body: EntityDetailsRequest;
+    path: {
+        identifier: string;
+    };
+    query?: never;
+    url: '/requests/{identifier}';
+};
+export type RequestsGetByIdentifierResponses = {
+    200: EntityDetailsResponse;
+};
+export type RequestsGetByIdentifierResponse = RequestsGetByIdentifierResponses[keyof RequestsGetByIdentifierResponses];
+export type RequestsGetByIdsData = {
+    body: EntitiesByIdsRequest;
+    path?: never;
+    query?: never;
+    url: '/requests/ids';
+};
+export type RequestsGetByIdsResponses = {
+    200: EntitiesResponse;
+};
+export type RequestsGetByIdsResponse = RequestsGetByIdsResponses[keyof RequestsGetByIdsResponses];
+export type RequestsGetCountData = {
+    body: CountRequest;
+    path?: never;
+    query?: never;
+    url: '/requests/count';
+};
+export type RequestsGetCountResponses = {
+    200: CountResponse;
+};
+export type RequestsGetCountResponse = RequestsGetCountResponses[keyof RequestsGetCountResponses];
+export type RequestsGetRelationsData = {
+    body: RelatedEntitiesRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/requests/{entityId}/relations/{relationName}';
+};
+export type RequestsGetRelationsResponses = {
+    200: EntitiesResponse;
+};
+export type RequestsGetRelationsResponse = RequestsGetRelationsResponses[keyof RequestsGetRelationsResponses];
+export type RequestsGetRelationsCountData = {
+    body: CountRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/requests/{entityId}/relations/{relationName}/count';
+};
+export type RequestsGetRelationsCountResponses = {
+    200: CountResponse;
+};
+export type RequestsGetRelationsCountResponse = RequestsGetRelationsCountResponses[keyof RequestsGetRelationsCountResponses];
+export type RequestsGetGroupedRelationsData = {
+    body: GroupedRelationsRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/requests/{entityId}/relations/{relationName}/grouped';
+};
+export type RequestsGetGroupedRelationsResponses = {
+    200: GroupedEntitiesResponse;
+};
+export type RequestsGetGroupedRelationsResponse = RequestsGetGroupedRelationsResponses[keyof RequestsGetGroupedRelationsResponses];
+export type RequestsGetAvatarsData = {
+    body: AvatarsRequest;
+    path?: never;
+    query?: never;
+    url: '/requests/avatars';
+};
+export type RequestsGetAvatarsResponses = {
+    200: AvatarsResponse;
+};
+export type RequestsGetAvatarsResponse = RequestsGetAvatarsResponses[keyof RequestsGetAvatarsResponses];
+export type RequestsGetRelationsAvatarsData = {
+    body: AvatarsRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/requests/{entityId}/relations/{relationName}/avatars';
+};
+export type RequestsGetRelationsAvatarsResponses = {
+    200: AvatarsResponse;
+};
+export type RequestsGetRelationsAvatarsResponse = RequestsGetRelationsAvatarsResponses[keyof RequestsGetRelationsAvatarsResponses];
+export type RisksGetData = {
+    body: EntitiesRequest;
+    path?: never;
+    query?: never;
+    url: '/risks';
+};
+export type RisksGetResponses = {
+    200: EntitiesResponse;
+};
+export type RisksGetResponse = RisksGetResponses[keyof RisksGetResponses];
+export type RisksGetGroupedData = {
+    body: GroupedEntitiesRequest;
+    path?: never;
+    query?: never;
+    url: '/risks/grouped';
+};
+export type RisksGetGroupedResponses = {
+    200: GroupedEntitiesResponse;
+};
+export type RisksGetGroupedResponse = RisksGetGroupedResponses[keyof RisksGetGroupedResponses];
+export type RisksGetByIdentifierData = {
+    body: EntityDetailsRequest;
+    path: {
+        identifier: string;
+    };
+    query?: never;
+    url: '/risks/{identifier}';
+};
+export type RisksGetByIdentifierResponses = {
+    200: EntityDetailsResponse;
+};
+export type RisksGetByIdentifierResponse = RisksGetByIdentifierResponses[keyof RisksGetByIdentifierResponses];
+export type RisksGetByIdsData = {
+    body: EntitiesByIdsRequest;
+    path?: never;
+    query?: never;
+    url: '/risks/ids';
+};
+export type RisksGetByIdsResponses = {
+    200: EntitiesResponse;
+};
+export type RisksGetByIdsResponse = RisksGetByIdsResponses[keyof RisksGetByIdsResponses];
+export type RisksGetCountData = {
+    body: CountRequest;
+    path?: never;
+    query?: never;
+    url: '/risks/count';
+};
+export type RisksGetCountResponses = {
+    200: CountResponse;
+};
+export type RisksGetCountResponse = RisksGetCountResponses[keyof RisksGetCountResponses];
+export type RisksGetRelationsData = {
+    body: RelatedEntitiesRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/risks/{entityId}/relations/{relationName}';
+};
+export type RisksGetRelationsResponses = {
+    200: EntitiesResponse;
+};
+export type RisksGetRelationsResponse = RisksGetRelationsResponses[keyof RisksGetRelationsResponses];
+export type RisksGetRelationsCountData = {
+    body: CountRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/risks/{entityId}/relations/{relationName}/count';
+};
+export type RisksGetRelationsCountResponses = {
+    200: CountResponse;
+};
+export type RisksGetRelationsCountResponse = RisksGetRelationsCountResponses[keyof RisksGetRelationsCountResponses];
+export type RisksGetGroupedRelationsData = {
+    body: GroupedRelationsRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/risks/{entityId}/relations/{relationName}/grouped';
+};
+export type RisksGetGroupedRelationsResponses = {
+    200: GroupedEntitiesResponse;
+};
+export type RisksGetGroupedRelationsResponse = RisksGetGroupedRelationsResponses[keyof RisksGetGroupedRelationsResponses];
+export type RisksGetAvatarsData = {
+    body: AvatarsRequest;
+    path?: never;
+    query?: never;
+    url: '/risks/avatars';
+};
+export type RisksGetAvatarsResponses = {
+    200: AvatarsResponse;
+};
+export type RisksGetAvatarsResponse = RisksGetAvatarsResponses[keyof RisksGetAvatarsResponses];
+export type RisksGetRelationsAvatarsData = {
+    body: AvatarsRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/risks/{entityId}/relations/{relationName}/avatars';
+};
+export type RisksGetRelationsAvatarsResponses = {
+    200: AvatarsResponse;
+};
+export type RisksGetRelationsAvatarsResponse = RisksGetRelationsAvatarsResponses[keyof RisksGetRelationsAvatarsResponses];
+export type GenericEntityGetData = {
+    body: EntitiesRequest;
+    path: {
+        entityType: string;
+    };
+    query?: never;
+    url: '/entity/{entityType}';
+};
+export type GenericEntityGetResponses = {
+    200: EntitiesResponse;
+};
+export type GenericEntityGetResponse = GenericEntityGetResponses[keyof GenericEntityGetResponses];
+export type GenericEntityGetGroupedData = {
+    body: GroupedEntitiesRequest;
+    path: {
+        entityType: string;
+    };
+    query?: never;
+    url: '/entity/{entityType}/grouped';
+};
+export type GenericEntityGetGroupedResponses = {
+    200: GroupedEntitiesResponse;
+};
+export type GenericEntityGetGroupedResponse = GenericEntityGetGroupedResponses[keyof GenericEntityGetGroupedResponses];
+export type GenericEntityGetByIdentifierData = {
+    body: EntityDetailsRequest;
+    path: {
+        entityType: string;
+        identifier: string;
+    };
+    query?: never;
+    url: '/entity/{entityType}/{identifier}';
+};
+export type GenericEntityGetByIdentifierResponses = {
+    200: EntityDetailsResponse;
+};
+export type GenericEntityGetByIdentifierResponse = GenericEntityGetByIdentifierResponses[keyof GenericEntityGetByIdentifierResponses];
+export type GenericEntityGetByIdsData = {
+    body: EntitiesByIdsRequest;
+    path: {
+        entityType: string;
+    };
+    query?: never;
+    url: '/entity/{entityType}/ids';
+};
+export type GenericEntityGetByIdsResponses = {
+    200: EntitiesResponse;
+};
+export type GenericEntityGetByIdsResponse = GenericEntityGetByIdsResponses[keyof GenericEntityGetByIdsResponses];
+export type GenericEntityGetCountData = {
+    body: CountRequest;
+    path: {
+        entityType: string;
+    };
+    query?: never;
+    url: '/entity/{entityType}/count';
+};
+export type GenericEntityGetCountResponses = {
+    200: CountResponse;
+};
+export type GenericEntityGetCountResponse = GenericEntityGetCountResponses[keyof GenericEntityGetCountResponses];
+export type GenericEntityGetRelationsData = {
+    body: RelatedEntitiesRequest;
+    path: {
+        entityType: string;
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/entity/{entityType}/{entityId}/relations/{relationName}';
+};
+export type GenericEntityGetRelationsResponses = {
+    200: EntitiesResponse;
+};
+export type GenericEntityGetRelationsResponse = GenericEntityGetRelationsResponses[keyof GenericEntityGetRelationsResponses];
+export type GenericEntityGetRelationsCountData = {
+    body: CountRequest;
+    path: {
+        entityType: string;
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/entity/{entityType}/{entityId}/relations/{relationName}/count';
+};
+export type GenericEntityGetRelationsCountResponses = {
+    200: CountResponse;
+};
+export type GenericEntityGetRelationsCountResponse = GenericEntityGetRelationsCountResponses[keyof GenericEntityGetRelationsCountResponses];
+export type GenericEntityGetGroupedRelationsData = {
+    body: GroupedRelationsRequest;
+    path: {
+        entityType: string;
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/entity/{entityType}/{entityId}/relations/{relationName}/grouped';
+};
+export type GenericEntityGetGroupedRelationsResponses = {
+    200: GroupedEntitiesResponse;
+};
+export type GenericEntityGetGroupedRelationsResponse = GenericEntityGetGroupedRelationsResponses[keyof GenericEntityGetGroupedRelationsResponses];
+export type GenericEntityGetEntityPicklistData = {
+    body?: never;
+    path: {
+        /**
+         * InternalId reference for which picklist is needed. Passing ExternalId will respond with 400 bad request.
+         */
+        entityId: string;
+        /**
+         * Name of the field on given entity.
+         */
+        fieldName: string;
+    };
+    query?: never;
+    url: '/entity/{entityId}/picklist/{fieldName}';
+};
+export type GenericEntityGetEntityPicklistErrors = {
+    400: ProblemDetails;
+};
+export type GenericEntityGetEntityPicklistError = GenericEntityGetEntityPicklistErrors[keyof GenericEntityGetEntityPicklistErrors];
+export type GenericEntityGetEntityPicklistResponses = {
+    200: PicklistData;
+};
+export type GenericEntityGetEntityPicklistResponse = GenericEntityGetEntityPicklistResponses[keyof GenericEntityGetEntityPicklistResponses];
+export type GenericEntityGetSwimlanesData = {
+    body: GroupedEntitiesRequest;
+    path: {
+        entityType: string;
+        swimlaneRelationName: string;
+    };
+    query?: never;
+    url: '/entity/{entityType}/swimlanes/{swimlaneRelationName}';
+};
+export type GenericEntityGetSwimlanesResponses = {
+    200: SwimlaneResponse;
+};
+export type GenericEntityGetSwimlanesResponse = GenericEntityGetSwimlanesResponses[keyof GenericEntityGetSwimlanesResponses];
+export type GenericEntityGetAvatarsData = {
+    body: AvatarsRequest;
+    path: {
+        entityType: string;
+    };
+    query?: never;
+    url: '/entity/{entityType}/avatars';
+};
+export type GenericEntityGetAvatarsResponses = {
+    200: AvatarsResponse;
+};
+export type GenericEntityGetAvatarsResponse = GenericEntityGetAvatarsResponses[keyof GenericEntityGetAvatarsResponses];
+export type GenericEntityGetRelationAvatarsData = {
+    body: AvatarsRequest;
+    path: {
+        entityType: string;
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/entity/{entityType}/{entityId}/relations/{relationName}/avatars';
+};
+export type GenericEntityGetRelationAvatarsResponses = {
+    200: AvatarsResponse;
+};
+export type GenericEntityGetRelationAvatarsResponse = GenericEntityGetRelationAvatarsResponses[keyof GenericEntityGetRelationAvatarsResponses];
+export type GenericEntityGetCustomPanelByIdentifierData = {
+    body?: never;
+    path: {
+        entityType: string;
+        entityId: string;
+    };
+    query?: never;
+    url: '/entity/{entityType}/{entityId}/custom-panels';
+};
+export type GenericEntityGetCustomPanelByIdentifierResponses = {
+    200: Array<CustomPanel>;
+};
+export type GenericEntityGetCustomPanelByIdentifierResponse = GenericEntityGetCustomPanelByIdentifierResponses[keyof GenericEntityGetCustomPanelByIdentifierResponses];
+export type GenericEntityGetSwimlanesByRelationIdentifierData = {
+    body: GroupedRelationsRequest;
+    path: {
+        entityType: string;
+        entityId: string;
+        relationName: string;
+        swimlaneRelationName: string;
+    };
+    query?: never;
+    url: '/entity/{entityType}/{entityId}/relations/{relationName}/swimlanes/{swimlaneRelationName}';
+};
+export type GenericEntityGetSwimlanesByRelationIdentifierResponses = {
+    200: SwimlaneResponse;
+};
+export type GenericEntityGetSwimlanesByRelationIdentifierResponse = GenericEntityGetSwimlanesByRelationIdentifierResponses[keyof GenericEntityGetSwimlanesByRelationIdentifierResponses];
+export type GenericEntityGetAvailableEntitiesData = {
+    body: EntitiesRequest;
+    path: {
+        entityType: string;
+        entityId: string;
+        linkableRelationName: string;
+    };
+    query?: never;
+    url: '/entity/{entityType}/{entityId}/available/{linkableRelationName}';
+};
+export type GenericEntityGetAvailableEntitiesResponses = {
+    200: EntitiesResponse;
+};
+export type GenericEntityGetAvailableEntitiesResponse = GenericEntityGetAvailableEntitiesResponses[keyof GenericEntityGetAvailableEntitiesResponses];
+export type MetadataGetPicklistData = {
+    body: MetadataRequest;
+    path?: never;
+    query?: never;
+    url: '/metadata/picklists';
+};
+export type MetadataGetPicklistResponses = {
+    200: Array<PicklistData>;
+};
+export type MetadataGetPicklistResponse = MetadataGetPicklistResponses[keyof MetadataGetPicklistResponses];
+export type MetadataGetFieldsData = {
+    body: MetadataEntitiesRequest;
+    path?: never;
+    query?: never;
+    url: '/metadata/fields';
+};
+export type MetadataGetFieldsResponses = {
+    200: Array<FieldsResponse>;
+};
+export type MetadataGetFieldsResponse = MetadataGetFieldsResponses[keyof MetadataGetFieldsResponses];
+export type MetadataGetSystemSettingsData = {
+    body?: never;
+    path?: never;
+    query?: never;
+    url: '/metadata/systemsettings';
+};
+export type MetadataGetSystemSettingsResponses = {
+    200: SystemSettingsResponse;
+};
+export type MetadataGetSystemSettingsResponse = MetadataGetSystemSettingsResponses[keyof MetadataGetSystemSettingsResponses];
+export type MetadataGetOrganizationSettingsData = {
+    body?: never;
+    path?: never;
+    query?: never;
+    url: '/metadata/organizationsettings';
+};
+export type MetadataGetOrganizationSettingsResponses = {
+    200: OrganizationSettingsResponse;
+};
+export type MetadataGetOrganizationSettingsResponse = MetadataGetOrganizationSettingsResponses[keyof MetadataGetOrganizationSettingsResponses];
+export type MetadataGetEntitiesDescriptionData = {
+    body: DescribeEntitiesRequest;
+    path?: never;
+    query?: never;
+    url: '/metadata/describeEntities';
+};
+export type MetadataGetEntitiesDescriptionResponses = {
+    200: DescribeEntitiesResponse;
+};
+export type MetadataGetEntitiesDescriptionResponse = MetadataGetEntitiesDescriptionResponses[keyof MetadataGetEntitiesDescriptionResponses];
+export type MetadataGetAvailableFieldsData = {
+    body: AvailableFieldsRequest;
+    path?: never;
+    query?: never;
+    url: '/metadata/availablefields';
+};
+export type MetadataGetAvailableFieldsResponses = {
+    200: Array<FieldsResponse>;
+};
+export type MetadataGetAvailableFieldsResponse = MetadataGetAvailableFieldsResponses[keyof MetadataGetAvailableFieldsResponses];
+export type MetadataGetRelationViewerFieldsData = {
+    body: RelationFieldsRequest;
+    path?: never;
+    query?: never;
+    url: '/metadata/relationfields';
+};
+export type MetadataGetRelationViewerFieldsResponses = {
+    200: Array<RelationFieldsResponse>;
+};
+export type MetadataGetRelationViewerFieldsResponse = MetadataGetRelationViewerFieldsResponses[keyof MetadataGetRelationViewerFieldsResponses];
+export type PortfoliosGetData = {
+    body: EntitiesRequest;
+    path?: never;
+    query?: never;
+    url: '/portfolio';
+};
+export type PortfoliosGetResponses = {
+    200: EntitiesResponse;
+};
+export type PortfoliosGetResponse = PortfoliosGetResponses[keyof PortfoliosGetResponses];
+export type PortfoliosGetGroupedData = {
+    body: GroupedEntitiesRequest;
+    path?: never;
+    query?: never;
+    url: '/portfolio/grouped';
+};
+export type PortfoliosGetGroupedResponses = {
+    200: GroupedEntitiesResponse;
+};
+export type PortfoliosGetGroupedResponse = PortfoliosGetGroupedResponses[keyof PortfoliosGetGroupedResponses];
+export type PortfoliosGetByIdentifierData = {
+    body: EntityDetailsRequest;
+    path: {
+        identifier: string;
+    };
+    query?: never;
+    url: '/portfolio/{identifier}';
+};
+export type PortfoliosGetByIdentifierResponses = {
+    200: EntityDetailsResponse;
+};
+export type PortfoliosGetByIdentifierResponse = PortfoliosGetByIdentifierResponses[keyof PortfoliosGetByIdentifierResponses];
+export type PortfoliosGetByIdsData = {
+    body: EntitiesByIdsRequest;
+    path?: never;
+    query?: never;
+    url: '/portfolio/ids';
+};
+export type PortfoliosGetByIdsResponses = {
+    200: EntitiesResponse;
+};
+export type PortfoliosGetByIdsResponse = PortfoliosGetByIdsResponses[keyof PortfoliosGetByIdsResponses];
+export type PortfoliosGetCountData = {
+    body: CountRequest;
+    path?: never;
+    query?: never;
+    url: '/portfolio/count';
+};
+export type PortfoliosGetCountResponses = {
+    200: CountResponse;
+};
+export type PortfoliosGetCountResponse = PortfoliosGetCountResponses[keyof PortfoliosGetCountResponses];
+export type PortfoliosGetRelationsData = {
+    body: RelatedEntitiesRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/portfolio/{entityId}/relations/{relationName}';
+};
+export type PortfoliosGetRelationsResponses = {
+    200: EntitiesResponse;
+};
+export type PortfoliosGetRelationsResponse = PortfoliosGetRelationsResponses[keyof PortfoliosGetRelationsResponses];
+export type PortfoliosGetRelationsCountData = {
+    body: CountRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/portfolio/{entityId}/relations/{relationName}/count';
+};
+export type PortfoliosGetRelationsCountResponses = {
+    200: CountResponse;
+};
+export type PortfoliosGetRelationsCountResponse = PortfoliosGetRelationsCountResponses[keyof PortfoliosGetRelationsCountResponses];
+export type PortfoliosGetGroupedRelationsData = {
+    body: GroupedRelationsRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/portfolio/{entityId}/relations/{relationName}/grouped';
+};
+export type PortfoliosGetGroupedRelationsResponses = {
+    200: GroupedEntitiesResponse;
+};
+export type PortfoliosGetGroupedRelationsResponse = PortfoliosGetGroupedRelationsResponses[keyof PortfoliosGetGroupedRelationsResponses];
+export type PortfoliosGetAvatarsData = {
+    body: AvatarsRequest;
+    path?: never;
+    query?: never;
+    url: '/portfolio/avatars';
+};
+export type PortfoliosGetAvatarsResponses = {
+    200: AvatarsResponse;
+};
+export type PortfoliosGetAvatarsResponse = PortfoliosGetAvatarsResponses[keyof PortfoliosGetAvatarsResponses];
+export type PortfoliosGetRelationsAvatarsData = {
+    body: AvatarsRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/portfolio/{entityId}/relations/{relationName}/avatars';
+};
+export type PortfoliosGetRelationsAvatarsResponses = {
+    200: AvatarsResponse;
+};
+export type PortfoliosGetRelationsAvatarsResponse = PortfoliosGetRelationsAvatarsResponses[keyof PortfoliosGetRelationsAvatarsResponses];
+export type PropertyCardLayoutGetPropertyCardLayoutData = {
+    body?: never;
+    path: {
+        entityType: string;
+    };
+    query?: never;
+    url: '/propertycardlayout/{entityType}';
+};
+export type PropertyCardLayoutGetPropertyCardLayoutResponses = {
+    200: PropertyCardLayoutResponse;
+};
+export type PropertyCardLayoutGetPropertyCardLayoutResponse = PropertyCardLayoutGetPropertyCardLayoutResponses[keyof PropertyCardLayoutGetPropertyCardLayoutResponses];
+export type PropertyCardLayoutGetPropertyCardLayoutByEntityIdData = {
+    body?: never;
+    path: {
+        entityId: string;
+    };
+    query?: never;
+    url: '/propertycardlayout/entity/{entityId}';
+};
+export type PropertyCardLayoutGetPropertyCardLayoutByEntityIdResponses = {
+    200: PropertyCardLayoutResponse;
+};
+export type PropertyCardLayoutGetPropertyCardLayoutByEntityIdResponse = PropertyCardLayoutGetPropertyCardLayoutByEntityIdResponses[keyof PropertyCardLayoutGetPropertyCardLayoutByEntityIdResponses];
+export type JobTitlesGetCountData = {
+    body: CountRequest;
+    path?: never;
+    query?: never;
+    url: '/jobtitles/count';
+};
+export type JobTitlesGetCountResponses = {
+    200: CountResponse;
+};
+export type JobTitlesGetCountResponse = JobTitlesGetCountResponses[keyof JobTitlesGetCountResponses];
+export type JobTitlesGetRelationsCountData = {
+    body: CountRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/jobtitles/{entityId}/relations/{relationName}/count';
+};
+export type JobTitlesGetRelationsCountResponses = {
+    200: CountResponse;
+};
+export type JobTitlesGetRelationsCountResponse = JobTitlesGetRelationsCountResponses[keyof JobTitlesGetRelationsCountResponses];
+export type JobTitlesGetData = {
+    body: EntitiesRequest;
+    path?: never;
+    query?: never;
+    url: '/jobtitles';
+};
+export type JobTitlesGetResponses = {
+    200: EntitiesResponse;
+};
+export type JobTitlesGetResponse = JobTitlesGetResponses[keyof JobTitlesGetResponses];
+export type JobTitlesGetGroupedData = {
+    body: GroupedEntitiesRequest;
+    path?: never;
+    query?: never;
+    url: '/jobtitles/grouped';
+};
+export type JobTitlesGetGroupedResponses = {
+    200: GroupedEntitiesResponse;
+};
+export type JobTitlesGetGroupedResponse = JobTitlesGetGroupedResponses[keyof JobTitlesGetGroupedResponses];
+export type JobTitlesGetByIdentifierData = {
+    body: EntityDetailsRequest;
+    path: {
+        identifier: string;
+    };
+    query?: never;
+    url: '/jobtitles/{identifier}';
+};
+export type JobTitlesGetByIdentifierResponses = {
+    200: EntityDetailsResponse;
+};
+export type JobTitlesGetByIdentifierResponse = JobTitlesGetByIdentifierResponses[keyof JobTitlesGetByIdentifierResponses];
+export type JobTitlesGetByIdsData = {
+    body: EntitiesByIdsRequest;
+    path?: never;
+    query?: never;
+    url: '/jobtitles/ids';
+};
+export type JobTitlesGetByIdsResponses = {
+    200: EntitiesResponse;
+};
+export type JobTitlesGetByIdsResponse = JobTitlesGetByIdsResponses[keyof JobTitlesGetByIdsResponses];
+export type JobTitlesGetRelationsData = {
+    body: RelatedEntitiesRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/jobtitles/{entityId}/relations/{relationName}';
+};
+export type JobTitlesGetRelationsResponses = {
+    200: EntitiesResponse;
+};
+export type JobTitlesGetRelationsResponse = JobTitlesGetRelationsResponses[keyof JobTitlesGetRelationsResponses];
+export type JobTitlesGetGroupedRelationsData = {
+    body: GroupedRelationsRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/jobtitles/{entityId}/relations/{relationName}/grouped';
+};
+export type JobTitlesGetGroupedRelationsResponses = {
+    200: GroupedEntitiesResponse;
+};
+export type JobTitlesGetGroupedRelationsResponse = JobTitlesGetGroupedRelationsResponses[keyof JobTitlesGetGroupedRelationsResponses];
+export type MembersGetAllMembersData = {
+    body: EntitiesRequest;
+    path?: never;
+    query?: never;
+    url: '/members';
+};
+export type MembersGetAllMembersResponses = {
+    200: EntitiesResponse;
+};
+export type MembersGetAllMembersResponse = MembersGetAllMembersResponses[keyof MembersGetAllMembersResponses];
+export type ProfilesGetCountData = {
+    body: CountRequest;
+    path?: never;
+    query?: never;
+    url: '/profiles/count';
+};
+export type ProfilesGetCountResponses = {
+    200: CountResponse;
+};
+export type ProfilesGetCountResponse = ProfilesGetCountResponses[keyof ProfilesGetCountResponses];
+export type ProfilesGetData = {
+    body: EntitiesRequest;
+    path?: never;
+    query?: never;
+    url: '/profiles';
+};
+export type ProfilesGetResponses = {
+    200: EntitiesResponse;
+};
+export type ProfilesGetResponse = ProfilesGetResponses[keyof ProfilesGetResponses];
+export type ProfilesGetByIdentifierData = {
+    body: EntityDetailsRequest;
+    path: {
+        identifier: string;
+    };
+    query?: never;
+    url: '/profiles/{identifier}';
+};
+export type ProfilesGetByIdentifierResponses = {
+    200: EntityDetailsResponse;
+};
+export type ProfilesGetByIdentifierResponse = ProfilesGetByIdentifierResponses[keyof ProfilesGetByIdentifierResponses];
+export type ProfilesGetByIdsData = {
+    body: EntitiesByIdsRequest;
+    path?: never;
+    query?: never;
+    url: '/profiles/ids';
+};
+export type ProfilesGetByIdsResponses = {
+    200: EntitiesResponse;
+};
+export type ProfilesGetByIdsResponse = ProfilesGetByIdsResponses[keyof ProfilesGetByIdsResponses];
+export type ProfilesGetUserProfilesData = {
+    body?: never;
+    path: {
+        userId: string;
+    };
+    query?: never;
+    url: '/profiles/user/{userId}';
+};
+export type ProfilesGetUserProfilesResponses = {
+    200: ProfilesResponse;
+};
+export type ProfilesGetUserProfilesResponse = ProfilesGetUserProfilesResponses[keyof ProfilesGetUserProfilesResponses];
+export type SkillsGetData = {
+    body: EntitiesRequest;
+    path?: never;
+    query?: never;
+    url: '/skills';
+};
+export type SkillsGetResponses = {
+    200: EntitiesResponse;
+};
+export type SkillsGetResponse = SkillsGetResponses[keyof SkillsGetResponses];
+export type SkillsGetGroupedData = {
+    body: GroupedEntitiesRequest;
+    path?: never;
+    query?: never;
+    url: '/skills/grouped';
+};
+export type SkillsGetGroupedResponses = {
+    200: GroupedEntitiesResponse;
+};
+export type SkillsGetGroupedResponse = SkillsGetGroupedResponses[keyof SkillsGetGroupedResponses];
+export type SkillsGetByIdentifierData = {
+    body: EntityDetailsRequest;
+    path: {
+        identifier: string;
+    };
+    query?: never;
+    url: '/skills/{identifier}';
+};
+export type SkillsGetByIdentifierResponses = {
+    200: EntityDetailsResponse;
+};
+export type SkillsGetByIdentifierResponse = SkillsGetByIdentifierResponses[keyof SkillsGetByIdentifierResponses];
+export type SkillsGetByIdsData = {
+    body: EntitiesByIdsRequest;
+    path?: never;
+    query?: never;
+    url: '/skills/ids';
+};
+export type SkillsGetByIdsResponses = {
+    200: EntitiesResponse;
+};
+export type SkillsGetByIdsResponse = SkillsGetByIdsResponses[keyof SkillsGetByIdsResponses];
+export type SkillsGetCountData = {
+    body: CountRequest;
+    path?: never;
+    query?: never;
+    url: '/skills/count';
+};
+export type SkillsGetCountResponses = {
+    200: CountResponse;
+};
+export type SkillsGetCountResponse = SkillsGetCountResponses[keyof SkillsGetCountResponses];
+export type SkillsGetRelationsData = {
+    body: RelatedEntitiesRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/skills/{entityId}/relations/{relationName}';
+};
+export type SkillsGetRelationsResponses = {
+    200: EntitiesResponse;
+};
+export type SkillsGetRelationsResponse = SkillsGetRelationsResponses[keyof SkillsGetRelationsResponses];
+export type SkillsGetRelationsCountData = {
+    body: CountRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/skills/{entityId}/relations/{relationName}/count';
+};
+export type SkillsGetRelationsCountResponses = {
+    200: CountResponse;
+};
+export type SkillsGetRelationsCountResponse = SkillsGetRelationsCountResponses[keyof SkillsGetRelationsCountResponses];
+export type SkillsGetGroupedRelationsData = {
+    body: GroupedRelationsRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/skills/{entityId}/relations/{relationName}/grouped';
+};
+export type SkillsGetGroupedRelationsResponses = {
+    200: GroupedEntitiesResponse;
+};
+export type SkillsGetGroupedRelationsResponse = SkillsGetGroupedRelationsResponses[keyof SkillsGetGroupedRelationsResponses];
+export type UserGroupsGetData = {
+    body: EntitiesRequest;
+    path?: never;
+    query?: never;
+    url: '/usergroups';
+};
+export type UserGroupsGetResponses = {
+    200: EntitiesResponse;
+};
+export type UserGroupsGetResponse = UserGroupsGetResponses[keyof UserGroupsGetResponses];
+export type UserGroupsGetGroupedData = {
+    body: GroupedEntitiesRequest;
+    path?: never;
+    query?: never;
+    url: '/usergroups/grouped';
+};
+export type UserGroupsGetGroupedResponses = {
+    200: GroupedEntitiesResponse;
+};
+export type UserGroupsGetGroupedResponse = UserGroupsGetGroupedResponses[keyof UserGroupsGetGroupedResponses];
+export type UserGroupsGetByIdentifierData = {
+    body: EntityDetailsRequest;
+    path: {
+        identifier: string;
+    };
+    query?: never;
+    url: '/usergroups/{identifier}';
+};
+export type UserGroupsGetByIdentifierResponses = {
+    200: EntityDetailsResponse;
+};
+export type UserGroupsGetByIdentifierResponse = UserGroupsGetByIdentifierResponses[keyof UserGroupsGetByIdentifierResponses];
+export type UserGroupsGetByIdsData = {
+    body: EntitiesByIdsRequest;
+    path?: never;
+    query?: never;
+    url: '/usergroups/ids';
+};
+export type UserGroupsGetByIdsResponses = {
+    200: EntitiesResponse;
+};
+export type UserGroupsGetByIdsResponse = UserGroupsGetByIdsResponses[keyof UserGroupsGetByIdsResponses];
+export type UserGroupsGetCountData = {
+    body: CountRequest;
+    path?: never;
+    query?: never;
+    url: '/usergroups/count';
+};
+export type UserGroupsGetCountResponses = {
+    200: CountResponse;
+};
+export type UserGroupsGetCountResponse = UserGroupsGetCountResponses[keyof UserGroupsGetCountResponses];
+export type UserGroupsGetRelationsData = {
+    body: RelatedEntitiesRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/usergroups/{entityId}/relations/{relationName}';
+};
+export type UserGroupsGetRelationsResponses = {
+    200: EntitiesResponse;
+};
+export type UserGroupsGetRelationsResponse = UserGroupsGetRelationsResponses[keyof UserGroupsGetRelationsResponses];
+export type UserGroupsGetRelationsCountData = {
+    body: CountRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/usergroups/{entityId}/relations/{relationName}/count';
+};
+export type UserGroupsGetRelationsCountResponses = {
+    200: CountResponse;
+};
+export type UserGroupsGetRelationsCountResponse = UserGroupsGetRelationsCountResponses[keyof UserGroupsGetRelationsCountResponses];
+export type UserGroupsGetGroupedRelationsData = {
+    body: GroupedRelationsRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/usergroups/{entityId}/relations/{relationName}/grouped';
+};
+export type UserGroupsGetGroupedRelationsResponses = {
+    200: GroupedEntitiesResponse;
+};
+export type UserGroupsGetGroupedRelationsResponse = UserGroupsGetGroupedRelationsResponses[keyof UserGroupsGetGroupedRelationsResponses];
+export type UserGroupsGetAuthorizationGroupsData = {
+    body?: never;
+    path?: never;
+    query?: never;
+    url: '/usergroups/authorizationgroups';
+};
+export type UserGroupsGetAuthorizationGroupsResponses = {
+    200: AuthorizationGroupsResponse;
+};
+export type UserGroupsGetAuthorizationGroupsResponse = UserGroupsGetAuthorizationGroupsResponses[keyof UserGroupsGetAuthorizationGroupsResponses];
+export type UserGroupsGetRelatedGroupsForUserData = {
+    body: EntitiesRequest;
+    path: {
+        userId: string;
+    };
+    query?: never;
+    url: '/usergroups/user/{userId}';
+};
+export type UserGroupsGetRelatedGroupsForUserResponses = {
+    200: EntitiesResponse;
+};
+export type UserGroupsGetRelatedGroupsForUserResponse = UserGroupsGetRelatedGroupsForUserResponses[keyof UserGroupsGetRelatedGroupsForUserResponses];
+export type UsersGetData = {
+    body: EntitiesRequest;
+    path?: never;
+    query?: never;
+    url: '/users';
+};
+export type UsersGetResponses = {
+    200: EntitiesResponse;
+};
+export type UsersGetResponse = UsersGetResponses[keyof UsersGetResponses];
+export type UsersGetGroupedData = {
+    body: GroupedEntitiesRequest;
+    path?: never;
+    query?: never;
+    url: '/users/grouped';
+};
+export type UsersGetGroupedResponses = {
+    200: GroupedEntitiesResponse;
+};
+export type UsersGetGroupedResponse = UsersGetGroupedResponses[keyof UsersGetGroupedResponses];
+export type UsersGetByIdentifierData = {
+    body: EntityDetailsRequest;
+    path: {
+        identifier: string;
+    };
+    query?: never;
+    url: '/users/{identifier}';
+};
+export type UsersGetByIdentifierResponses = {
+    200: EntityDetailsResponse;
+};
+export type UsersGetByIdentifierResponse = UsersGetByIdentifierResponses[keyof UsersGetByIdentifierResponses];
+export type UsersGetByIdsData = {
+    body: EntitiesByIdsRequest;
+    path?: never;
+    query?: never;
+    url: '/users/ids';
+};
+export type UsersGetByIdsResponses = {
+    200: EntitiesResponse;
+};
+export type UsersGetByIdsResponse = UsersGetByIdsResponses[keyof UsersGetByIdsResponses];
+export type UsersGetCountData = {
+    body: CountRequest;
+    path?: never;
+    query?: never;
+    url: '/users/count';
+};
+export type UsersGetCountResponses = {
+    200: CountResponse;
+};
+export type UsersGetCountResponse = UsersGetCountResponses[keyof UsersGetCountResponses];
+export type UsersGetRelationsData = {
+    body: RelatedEntitiesRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/users/{entityId}/relations/{relationName}';
+};
+export type UsersGetRelationsResponses = {
+    200: EntitiesResponse;
+};
+export type UsersGetRelationsResponse = UsersGetRelationsResponses[keyof UsersGetRelationsResponses];
+export type UsersGetRelationsCountData = {
+    body: CountRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/users/{entityId}/relations/{relationName}/count';
+};
+export type UsersGetRelationsCountResponses = {
+    200: CountResponse;
+};
+export type UsersGetRelationsCountResponse = UsersGetRelationsCountResponses[keyof UsersGetRelationsCountResponses];
+export type UsersGetGroupedRelationsData = {
+    body: GroupedRelationsRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/users/{entityId}/relations/{relationName}/grouped';
+};
+export type UsersGetGroupedRelationsResponses = {
+    200: GroupedEntitiesResponse;
+};
+export type UsersGetGroupedRelationsResponse = UsersGetGroupedRelationsResponses[keyof UsersGetGroupedRelationsResponses];
+export type RibbonActionsGetRibbonActionsData = {
+    body: RibbonActionsRequest;
+    path?: never;
+    query?: never;
+    url: '/ribbonactions';
+};
+export type RibbonActionsGetRibbonActionsResponses = {
+    200: RibbonActionsResponse;
+};
+export type RibbonActionsGetRibbonActionsResponse = RibbonActionsGetRibbonActionsResponses[keyof RibbonActionsGetRibbonActionsResponses];
+export type RibbonActionsGetContextMenusData = {
+    body: ContextMenusRequest;
+    path?: never;
+    query?: never;
+    url: '/ribbonactions/contextmenus';
+};
+export type RibbonActionsGetContextMenusResponses = {
+    200: ContextMenusResponse;
+};
+export type RibbonActionsGetContextMenusResponse = RibbonActionsGetContextMenusResponses[keyof RibbonActionsGetContextMenusResponses];
+export type MilestonesGetData = {
+    body: EntitiesRequest;
+    path?: never;
+    query?: never;
+    url: '/milestones';
+};
+export type MilestonesGetResponses = {
+    200: EntitiesResponse;
+};
+export type MilestonesGetResponse = MilestonesGetResponses[keyof MilestonesGetResponses];
+export type MilestonesGetGroupedData = {
+    body: GroupedEntitiesRequest;
+    path?: never;
+    query?: never;
+    url: '/milestones/grouped';
+};
+export type MilestonesGetGroupedResponses = {
+    200: GroupedEntitiesResponse;
+};
+export type MilestonesGetGroupedResponse = MilestonesGetGroupedResponses[keyof MilestonesGetGroupedResponses];
+export type MilestonesGetByIdentifierData = {
+    body: EntityDetailsRequest;
+    path: {
+        identifier: string;
+    };
+    query?: never;
+    url: '/milestones/{identifier}';
+};
+export type MilestonesGetByIdentifierResponses = {
+    200: EntityDetailsResponse;
+};
+export type MilestonesGetByIdentifierResponse = MilestonesGetByIdentifierResponses[keyof MilestonesGetByIdentifierResponses];
+export type MilestonesGetByIdsData = {
+    body: EntitiesByIdsRequest;
+    path?: never;
+    query?: never;
+    url: '/milestones/ids';
+};
+export type MilestonesGetByIdsResponses = {
+    200: EntitiesResponse;
+};
+export type MilestonesGetByIdsResponse = MilestonesGetByIdsResponses[keyof MilestonesGetByIdsResponses];
+export type MilestonesGetCountData = {
+    body: CountRequest;
+    path?: never;
+    query?: never;
+    url: '/milestones/count';
+};
+export type MilestonesGetCountResponses = {
+    200: CountResponse;
+};
+export type MilestonesGetCountResponse = MilestonesGetCountResponses[keyof MilestonesGetCountResponses];
+export type MilestonesGetRelationsData = {
+    body: RelatedEntitiesRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/milestones/{entityId}/relations/{relationName}';
+};
+export type MilestonesGetRelationsResponses = {
+    200: EntitiesResponse;
+};
+export type MilestonesGetRelationsResponse = MilestonesGetRelationsResponses[keyof MilestonesGetRelationsResponses];
+export type MilestonesGetRelationsCountData = {
+    body: CountRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/milestones/{entityId}/relations/{relationName}/count';
+};
+export type MilestonesGetRelationsCountResponses = {
+    200: CountResponse;
+};
+export type MilestonesGetRelationsCountResponse = MilestonesGetRelationsCountResponses[keyof MilestonesGetRelationsCountResponses];
+export type MilestonesGetGroupedRelationsData = {
+    body: GroupedRelationsRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/milestones/{entityId}/relations/{relationName}/grouped';
+};
+export type MilestonesGetGroupedRelationsResponses = {
+    200: GroupedEntitiesResponse;
+};
+export type MilestonesGetGroupedRelationsResponse = MilestonesGetGroupedRelationsResponses[keyof MilestonesGetGroupedRelationsResponses];
+export type MilestonesGetAvatarsData = {
+    body: AvatarsRequest;
+    path?: never;
+    query?: never;
+    url: '/milestones/avatars';
+};
+export type MilestonesGetAvatarsResponses = {
+    200: AvatarsResponse;
+};
+export type MilestonesGetAvatarsResponse = MilestonesGetAvatarsResponses[keyof MilestonesGetAvatarsResponses];
+export type MilestonesGetRelationsAvatarsData = {
+    body: AvatarsRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/milestones/{entityId}/relations/{relationName}/avatars';
+};
+export type MilestonesGetRelationsAvatarsResponses = {
+    200: AvatarsResponse;
+};
+export type MilestonesGetRelationsAvatarsResponse = MilestonesGetRelationsAvatarsResponses[keyof MilestonesGetRelationsAvatarsResponses];
+export type ProgramsGetData = {
+    body: EntitiesRequest;
+    path?: never;
+    query?: never;
+    url: '/programs';
+};
+export type ProgramsGetResponses = {
+    200: EntitiesResponse;
+};
+export type ProgramsGetResponse = ProgramsGetResponses[keyof ProgramsGetResponses];
+export type ProgramsGetGroupedData = {
+    body: GroupedEntitiesRequest;
+    path?: never;
+    query?: never;
+    url: '/programs/grouped';
+};
+export type ProgramsGetGroupedResponses = {
+    200: GroupedEntitiesResponse;
+};
+export type ProgramsGetGroupedResponse = ProgramsGetGroupedResponses[keyof ProgramsGetGroupedResponses];
+export type ProgramsGetByIdentifierData = {
+    body: EntityDetailsRequest;
+    path: {
+        identifier: string;
+    };
+    query?: never;
+    url: '/programs/{identifier}';
+};
+export type ProgramsGetByIdentifierResponses = {
+    200: EntityDetailsResponse;
+};
+export type ProgramsGetByIdentifierResponse = ProgramsGetByIdentifierResponses[keyof ProgramsGetByIdentifierResponses];
+export type ProgramsGetByIdsData = {
+    body: EntitiesByIdsRequest;
+    path?: never;
+    query?: never;
+    url: '/programs/ids';
+};
+export type ProgramsGetByIdsResponses = {
+    200: EntitiesResponse;
+};
+export type ProgramsGetByIdsResponse = ProgramsGetByIdsResponses[keyof ProgramsGetByIdsResponses];
+export type ProgramsGetCountData = {
+    body: CountRequest;
+    path?: never;
+    query?: never;
+    url: '/programs/count';
+};
+export type ProgramsGetCountResponses = {
+    200: CountResponse;
+};
+export type ProgramsGetCountResponse = ProgramsGetCountResponses[keyof ProgramsGetCountResponses];
+export type ProgramsGetRelationsData = {
+    body: RelatedEntitiesRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/programs/{entityId}/relations/{relationName}';
+};
+export type ProgramsGetRelationsResponses = {
+    200: EntitiesResponse;
+};
+export type ProgramsGetRelationsResponse = ProgramsGetRelationsResponses[keyof ProgramsGetRelationsResponses];
+export type ProgramsGetRelationsCountData = {
+    body: CountRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/programs/{entityId}/relations/{relationName}/count';
+};
+export type ProgramsGetRelationsCountResponses = {
+    200: CountResponse;
+};
+export type ProgramsGetRelationsCountResponse = ProgramsGetRelationsCountResponses[keyof ProgramsGetRelationsCountResponses];
+export type ProgramsGetGroupedRelationsData = {
+    body: GroupedRelationsRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/programs/{entityId}/relations/{relationName}/grouped';
+};
+export type ProgramsGetGroupedRelationsResponses = {
+    200: GroupedEntitiesResponse;
+};
+export type ProgramsGetGroupedRelationsResponse = ProgramsGetGroupedRelationsResponses[keyof ProgramsGetGroupedRelationsResponses];
+export type ProgramsGetAvatarsData = {
+    body: AvatarsRequest;
+    path?: never;
+    query?: never;
+    url: '/programs/avatars';
+};
+export type ProgramsGetAvatarsResponses = {
+    200: AvatarsResponse;
+};
+export type ProgramsGetAvatarsResponse = ProgramsGetAvatarsResponses[keyof ProgramsGetAvatarsResponses];
+export type ProgramsGetRelationsAvatarsData = {
+    body: AvatarsRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/programs/{entityId}/relations/{relationName}/avatars';
+};
+export type ProgramsGetRelationsAvatarsResponses = {
+    200: AvatarsResponse;
+};
+export type ProgramsGetRelationsAvatarsResponse = ProgramsGetRelationsAvatarsResponses[keyof ProgramsGetRelationsAvatarsResponses];
+export type ProjectsGetData = {
+    body: EntitiesRequest;
+    path?: never;
+    query?: never;
+    url: '/projects';
+};
+export type ProjectsGetResponses = {
+    200: EntitiesResponse;
+};
+export type ProjectsGetResponse = ProjectsGetResponses[keyof ProjectsGetResponses];
+export type ProjectsGetGroupedData = {
+    body: GroupedEntitiesRequest;
+    path?: never;
+    query?: never;
+    url: '/projects/grouped';
+};
+export type ProjectsGetGroupedResponses = {
+    200: GroupedEntitiesResponse;
+};
+export type ProjectsGetGroupedResponse = ProjectsGetGroupedResponses[keyof ProjectsGetGroupedResponses];
+export type ProjectsGetByIdentifierData = {
+    body: EntityDetailsRequest;
+    path: {
+        identifier: string;
+    };
+    query?: never;
+    url: '/projects/{identifier}';
+};
+export type ProjectsGetByIdentifierResponses = {
+    200: EntityDetailsResponse;
+};
+export type ProjectsGetByIdentifierResponse = ProjectsGetByIdentifierResponses[keyof ProjectsGetByIdentifierResponses];
+export type ProjectsGetByIdsData = {
+    body: EntitiesByIdsRequest;
+    path?: never;
+    query?: never;
+    url: '/projects/ids';
+};
+export type ProjectsGetByIdsResponses = {
+    200: EntitiesResponse;
+};
+export type ProjectsGetByIdsResponse = ProjectsGetByIdsResponses[keyof ProjectsGetByIdsResponses];
+export type ProjectsGetCountData = {
+    body: CountRequest;
+    path?: never;
+    query?: never;
+    url: '/projects/count';
+};
+export type ProjectsGetCountResponses = {
+    200: CountResponse;
+};
+export type ProjectsGetCountResponse = ProjectsGetCountResponses[keyof ProjectsGetCountResponses];
+export type ProjectsGetRelationsData = {
+    body: RelatedEntitiesRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/projects/{entityId}/relations/{relationName}';
+};
+export type ProjectsGetRelationsResponses = {
+    200: EntitiesResponse;
+};
+export type ProjectsGetRelationsResponse = ProjectsGetRelationsResponses[keyof ProjectsGetRelationsResponses];
+export type ProjectsGetRelationsCountData = {
+    body: CountRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/projects/{entityId}/relations/{relationName}/count';
+};
+export type ProjectsGetRelationsCountResponses = {
+    200: CountResponse;
+};
+export type ProjectsGetRelationsCountResponse = ProjectsGetRelationsCountResponses[keyof ProjectsGetRelationsCountResponses];
+export type ProjectsGetGroupedRelationsData = {
+    body: GroupedRelationsRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/projects/{entityId}/relations/{relationName}/grouped';
+};
+export type ProjectsGetGroupedRelationsResponses = {
+    200: GroupedEntitiesResponse;
+};
+export type ProjectsGetGroupedRelationsResponse = ProjectsGetGroupedRelationsResponses[keyof ProjectsGetGroupedRelationsResponses];
+export type ProjectsGetAvatarsData = {
+    body: AvatarsRequest;
+    path?: never;
+    query?: never;
+    url: '/projects/avatars';
+};
+export type ProjectsGetAvatarsResponses = {
+    200: AvatarsResponse;
+};
+export type ProjectsGetAvatarsResponse = ProjectsGetAvatarsResponses[keyof ProjectsGetAvatarsResponses];
+export type ProjectsGetRelationsAvatarsData = {
+    body: AvatarsRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/projects/{entityId}/relations/{relationName}/avatars';
+};
+export type ProjectsGetRelationsAvatarsResponses = {
+    200: AvatarsResponse;
+};
+export type ProjectsGetRelationsAvatarsResponse = ProjectsGetRelationsAvatarsResponses[keyof ProjectsGetRelationsAvatarsResponses];
+export type TasksGetData = {
+    body: EntitiesRequest;
+    path?: never;
+    query?: never;
+    url: '/tasks';
+};
+export type TasksGetResponses = {
+    200: EntitiesResponse;
+};
+export type TasksGetResponse = TasksGetResponses[keyof TasksGetResponses];
+export type TasksGetGroupedData = {
+    body: GroupedEntitiesRequest;
+    path?: never;
+    query?: never;
+    url: '/tasks/grouped';
+};
+export type TasksGetGroupedResponses = {
+    200: GroupedEntitiesResponse;
+};
+export type TasksGetGroupedResponse = TasksGetGroupedResponses[keyof TasksGetGroupedResponses];
+export type TasksGetByIdentifierData = {
+    body: EntityDetailsRequest;
+    path: {
+        identifier: string;
+    };
+    query?: never;
+    url: '/tasks/{identifier}';
+};
+export type TasksGetByIdentifierResponses = {
+    200: EntityDetailsResponse;
+};
+export type TasksGetByIdentifierResponse = TasksGetByIdentifierResponses[keyof TasksGetByIdentifierResponses];
+export type TasksGetByIdsData = {
+    body: EntitiesByIdsRequest;
+    path?: never;
+    query?: never;
+    url: '/tasks/ids';
+};
+export type TasksGetByIdsResponses = {
+    200: EntitiesResponse;
+};
+export type TasksGetByIdsResponse = TasksGetByIdsResponses[keyof TasksGetByIdsResponses];
+export type TasksGetCountData = {
+    body: CountRequest;
+    path?: never;
+    query?: never;
+    url: '/tasks/count';
+};
+export type TasksGetCountResponses = {
+    200: CountResponse;
+};
+export type TasksGetCountResponse = TasksGetCountResponses[keyof TasksGetCountResponses];
+export type TasksGetRelationsData = {
+    body: RelatedEntitiesRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/tasks/{entityId}/relations/{relationName}';
+};
+export type TasksGetRelationsResponses = {
+    200: EntitiesResponse;
+};
+export type TasksGetRelationsResponse = TasksGetRelationsResponses[keyof TasksGetRelationsResponses];
+export type TasksGetRelationsCountData = {
+    body: CountRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/tasks/{entityId}/relations/{relationName}/count';
+};
+export type TasksGetRelationsCountResponses = {
+    200: CountResponse;
+};
+export type TasksGetRelationsCountResponse = TasksGetRelationsCountResponses[keyof TasksGetRelationsCountResponses];
+export type TasksGetGroupedRelationsData = {
+    body: GroupedRelationsRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/tasks/{entityId}/relations/{relationName}/grouped';
+};
+export type TasksGetGroupedRelationsResponses = {
+    200: GroupedEntitiesResponse;
+};
+export type TasksGetGroupedRelationsResponse = TasksGetGroupedRelationsResponses[keyof TasksGetGroupedRelationsResponses];
+export type TasksGetAvatarsData = {
+    body: AvatarsRequest;
+    path?: never;
+    query?: never;
+    url: '/tasks/avatars';
+};
+export type TasksGetAvatarsResponses = {
+    200: AvatarsResponse;
+};
+export type TasksGetAvatarsResponse = TasksGetAvatarsResponses[keyof TasksGetAvatarsResponses];
+export type TasksGetRelationsAvatarsData = {
+    body: AvatarsRequest;
+    path: {
+        entityId: string;
+        relationName: string;
+    };
+    query?: never;
+    url: '/tasks/{entityId}/relations/{relationName}/avatars';
+};
+export type TasksGetRelationsAvatarsResponses = {
+    200: AvatarsResponse;
+};
+export type TasksGetRelationsAvatarsResponse = TasksGetRelationsAvatarsResponses[keyof TasksGetRelationsAvatarsResponses];
+export type DataWarehouseEntityGetCountData = {
+    body: DataWarehouseCountRequest;
+    path: {
+        entityType: string;
+    };
+    query?: never;
+    url: '/dwhentity/{entityType}/count';
+};
+export type DataWarehouseEntityGetCountResponses = {
+    200: CountResponse;
+};
+export type DataWarehouseEntityGetCountResponse = DataWarehouseEntityGetCountResponses[keyof DataWarehouseEntityGetCountResponses];
+export type DataWarehouseEntityGetByIdsData = {
+    body: DataWarehouseEntitiesByIdsRequest;
+    path: {
+        entityType: string;
+    };
+    query?: never;
+    url: '/dwhentity/{entityType}/ids';
+};
+export type DataWarehouseEntityGetByIdsResponses = {
+    200: DataWarehouseEntitiesByIdsResponse;
+};
+export type DataWarehouseEntityGetByIdsResponse = DataWarehouseEntityGetByIdsResponses[keyof DataWarehouseEntityGetByIdsResponses];
+export type DataWarehouseEntityGetIdsData = {
+    body: DataWarehouseGetIdsRequest;
+    path: {
+        entityType: string;
+    };
+    query?: never;
+    url: '/dwhentity/{entityType}';
+};
+export type DataWarehouseEntityGetIdsResponses = {
+    200: DataWarehouseGetIdsResponse;
+};
+export type DataWarehouseEntityGetIdsResponse = DataWarehouseEntityGetIdsResponses[keyof DataWarehouseEntityGetIdsResponses];
+export type ConfigurationGetConfigurationData = {
+    body: ConfigurationRequest;
+    path?: never;
+    query?: never;
+    url: '/dwhcoordinator/configuration';
+};
+export type ConfigurationGetConfigurationErrors = {
+    400: unknown;
+    401: unknown;
+};
+export type ConfigurationGetConfigurationResponses = {
+    200: DataWarehouseEntityDetailsResponseOfBiConfiguration;
+};
+export type ConfigurationGetConfigurationResponse = ConfigurationGetConfigurationResponses[keyof ConfigurationGetConfigurationResponses];
+export type ConfigurationUpdateConfigurationData = {
+    body: UpdateConfigurationRequest;
+    path?: never;
+    query?: never;
+    url: '/dwhcoordinator/configuration';
+};
+export type ConfigurationUpdateConfigurationErrors = {
+    400: unknown;
+    401: unknown;
+    404: unknown;
+};
+export type ConfigurationUpdateConfigurationResponses = {
+    204: unknown;
+};
+export type StorageConnectionsTestAzureBlobConnectionData = {
+    body: BlobConnectionRequest;
+    path?: never;
+    query?: never;
+    url: '/dwhcoordinator/storageconnection/blob';
+};
+export type StorageConnectionsTestAzureBlobConnectionErrors = {
+    400: unknown;
+    401: unknown;
+};
+export type StorageConnectionsTestAzureBlobConnectionResponses = {
+    200: StorageConnectionResponse;
+};
+export type StorageConnectionsTestAzureBlobConnectionResponse = StorageConnectionsTestAzureBlobConnectionResponses[keyof StorageConnectionsTestAzureBlobConnectionResponses];
+export type TriggerExportTriggerExportData = {
+    body?: never;
+    path?: never;
+    query?: never;
+    url: '/dwhcoordinator/triggerexport';
+};
+export type TriggerExportTriggerExportResponses = {
+    200: unknown;
+};
+export type PlanviewAdminVerifyConnectData = {
+    body: VerifyConnectRequest;
+    path?: never;
+    query?: never;
+    url: '/pvadmin/tenant/verifyconnect';
+};
+export type PlanviewAdminVerifyConnectResponses = {
+    200: unknown;
+};
+export type PlanviewAdminGetUsersData = {
+    body?: never;
+    path?: never;
+    query?: never;
+    url: '/pvadmin/tenant/user';
+};
+export type PlanviewAdminGetUsersResponses = {
+    200: GetUsersResponse;
+};
+export type PlanviewAdminGetUsersResponse = PlanviewAdminGetUsersResponses[keyof PlanviewAdminGetUsersResponses];
+export type PlanviewAdminGetData = {
+    body?: never;
+    path?: never;
+    query?: never;
+    url: '/pvadmin/tenant';
+};
+export type PlanviewAdminGetResponses = {
+    200: GetTenantResponse;
+};
+export type PlanviewAdminGetResponse = PlanviewAdminGetResponses[keyof PlanviewAdminGetResponses];
+export type PlanviewAdminRegisterData = {
+    body: RegisterTenantRequest;
+    path?: never;
+    query?: never;
+    url: '/pvadmin/tenant/register';
+};
+export type PlanviewAdminRegisterResponses = {
+    200: unknown;
+};
+export type PlanviewTokenServiceGetPtsTokenForCoPilotData = {
+    body?: never;
+    path?: never;
+    query?: never;
+    url: '/planviewtokenservice/token/copilot';
+};
+export type PlanviewTokenServiceGetPtsTokenForCoPilotResponses = {
+    200: GetTokenResponse;
+};
+export type PlanviewTokenServiceGetPtsTokenForCoPilotResponse = PlanviewTokenServiceGetPtsTokenForCoPilotResponses[keyof PlanviewTokenServiceGetPtsTokenForCoPilotResponses];
+export type PlanviewTokenServiceGetPtsTokenInternalData = {
+    body?: never;
+    path?: never;
+    query?: never;
+    url: '/planviewtokenservice/token/ModernizationAuthorization';
+};
+export type PlanviewTokenServiceGetPtsTokenInternalResponses = {
+    200: GetTokenResponse;
+};
+export type PlanviewTokenServiceGetPtsTokenInternalResponse = PlanviewTokenServiceGetPtsTokenInternalResponses[keyof PlanviewTokenServiceGetPtsTokenInternalResponses];
+export type SentimentAnalysisServiceCalculateSentimentData = {
+    body: CalculateSentimentRequest;
+    path?: never;
+    query?: never;
+    url: '/PlatformaApps/SentimentAnalysis/CalculateSentiment';
+};
+export type SentimentAnalysisServiceCalculateSentimentResponses = {
+    200: CalculateSentimentResponse;
+};
+export type SentimentAnalysisServiceCalculateSentimentResponse = SentimentAnalysisServiceCalculateSentimentResponses[keyof SentimentAnalysisServiceCalculateSentimentResponses];
+export type WhiteboardPtsTokenForWhiteboardData = {
+    body?: never;
+    path: {
+        type: 'Entity';
+        identifier: string;
+    };
+    query?: never;
+    url: '/whiteboard/pts-token/{type}/{identifier}';
+};
+export type WhiteboardPtsTokenForWhiteboardResponses = {
+    200: WhiteboardTokenResponse;
+};
+export type WhiteboardPtsTokenForWhiteboardResponse = WhiteboardPtsTokenForWhiteboardResponses[keyof WhiteboardPtsTokenForWhiteboardResponses];
+export type WorkloadGetWorkloadResourcesData = {
+    body: ResourceWorkloadRequest;
+    path?: never;
+    query?: never;
+    url: '/workload/resources';
+};
+export type WorkloadGetWorkloadResourcesResponses = {
+    200: WorkloadEntitiesResponse;
+};
+export type WorkloadGetWorkloadResourcesResponse = WorkloadGetWorkloadResourcesResponses[keyof WorkloadGetWorkloadResourcesResponses];
+export type WorkloadGetWorkloadProjectsData = {
+    body: EntityWorkloadRequest;
+    path?: never;
+    query?: never;
+    url: '/workload/projects';
+};
+export type WorkloadGetWorkloadProjectsResponses = {
+    200: WorkloadEntitiesResponse;
+};
+export type WorkloadGetWorkloadProjectsResponse = WorkloadGetWorkloadProjectsResponses[keyof WorkloadGetWorkloadProjectsResponses];
+export type WorkloadGetWorkloadTasksData = {
+    body: EntityWorkloadRequest;
+    path: {
+        projectIdentifier: string;
+    };
+    query?: never;
+    url: '/workload/project/{projectIdentifier}/tasks';
+};
+export type WorkloadGetWorkloadTasksResponses = {
+    200: WorkloadEntitiesResponse;
+};
+export type WorkloadGetWorkloadTasksResponse = WorkloadGetWorkloadTasksResponses[keyof WorkloadGetWorkloadTasksResponses];
+export type PublicisGetReportableWorkItemsPerUserData = {
+    body: GetReportableWorkItemsRequest;
+    path: {
+        identifier: string;
+    };
+    query?: never;
+    url: '/publicis/reportableWorkItemsPerUser/{identifier}';
+};
+export type PublicisGetReportableWorkItemsPerUserResponses = {
+    200: GetReportableWorkItemsResponse;
+};
+export type PublicisGetReportableWorkItemsPerUserResponse = PublicisGetReportableWorkItemsPerUserResponses[keyof PublicisGetReportableWorkItemsPerUserResponses];
+export type PublicisGetReportableTasksByIdsData = {
+    body: GetReportableTasksByIdsRequest;
+    path: {
+        businessUnitIdentifier: string;
+    };
+    query?: never;
+    url: '/publicis/reportableTasksByIds/{businessUnitIdentifier}';
+};
+export type PublicisGetReportableTasksByIdsResponses = {
+    200: GetReportableTasksByIdsResponse;
+};
+export type PublicisGetReportableTasksByIdsResponse = PublicisGetReportableTasksByIdsResponses[keyof PublicisGetReportableTasksByIdsResponses];
+export type PublicisGetReportableTasksByIds2Data = {
+    body: GetReportableTasksByIdsRequest;
+    path?: never;
+    query?: never;
+    url: '/publicis/reportableTasksByIds';
+};
+export type PublicisGetReportableTasksByIds2Responses = {
+    200: GetReportableTasksByIdsResponse;
+};
+export type PublicisGetReportableTasksByIds2Response = PublicisGetReportableTasksByIds2Responses[keyof PublicisGetReportableTasksByIds2Responses];
+export type PublicisGetAssignmentsPerUsersData = {
+    body: GetAssignmentsPerUsersRequest;
+    path?: never;
+    query?: never;
+    url: '/publicis/assignmentsPerUsers';
+};
+export type PublicisGetAssignmentsPerUsersResponses = {
+    200: GetAssignmentsPerUsersResponse;
+};
+export type PublicisGetAssignmentsPerUsersResponse = PublicisGetAssignmentsPerUsersResponses[keyof PublicisGetAssignmentsPerUsersResponses];
+export type PublicisGetUsersWorkingHoursData = {
+    body: GetUsersWorkingHoursRequest;
+    path?: never;
+    query?: never;
+    url: '/publicis/usersWorkingHours';
+};
+export type PublicisGetUsersWorkingHoursResponses = {
+    200: GetUsersWorkingHoursResponse;
+};
+export type PublicisGetUsersWorkingHoursResponse = PublicisGetUsersWorkingHoursResponses[keyof PublicisGetUsersWorkingHoursResponses];
+export type PublicisGetGroupMembershipLinksData = {
+    body: GetGroupMembershipLinksRequest;
+    path?: never;
+    query?: never;
+    url: '/publicis/resourceManager/groupMembershipLinks';
+};
+export type PublicisGetGroupMembershipLinksResponses = {
+    200: GetGroupMembershipLinksResponse;
+};
+export type PublicisGetGroupMembershipLinksResponse = PublicisGetGroupMembershipLinksResponses[keyof PublicisGetGroupMembershipLinksResponses];
+export type PublicisGetResourceProjectsData = {
+    body: GetResourceProjectsRequest;
+    path?: never;
+    query?: never;
+    url: '/publicis/resourceProjects';
+};
+export type PublicisGetResourceProjectsResponses = {
+    200: GetResourceProjectsResponse;
+};
+export type PublicisGetResourceProjectsResponse = PublicisGetResourceProjectsResponses[keyof PublicisGetResourceProjectsResponses];
+export type ClientOptions = {
+    baseURL: 'https://qaapp1.clarizen.com/HybridSolutions' | (string & {});
+};
+//# sourceMappingURL=types.gen.d.ts.map

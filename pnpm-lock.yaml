@@ -331,6 +331,55 @@ importers:
         specifier: workspace:*
         version: link:../../tools
 
+  apps/shared-config-demo:
+    dependencies:
+      '@planview/pv-uikit':
+        specifier: ^7.36.0
+        version: 7.36.0(@types/react@19.1.5)(react-dom@19.1.0(react@19.1.0))(react-intl@7.1.11(react@19.1.0)(typescript@5.8.3))(react@19.1.0)(styled-components@6.1.18(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
+      '@planview/pv-utilities':
+        specifier: ^4.22.2
+        version: 4.22.2(react@19.1.0)(styled-components@6.1.18(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
+      '@unity/core.shell':
+        specifier: workspace:*
+        version: link:../../libs/core/shell
+      '@unity/shared.hybrid':
+        specifier: workspace:*
+        version: link:../../libs/shared/hybrid
+      react:
+        specifier: ^19.0.0
+        version: 19.1.0
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.1.0(react@19.1.0)
+      styled-components:
+        specifier: ^6.1.18
+        version: 6.1.18(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+    devDependencies:
+      '@module-federation/rsbuild-plugin':
+        specifier: ^0.14.0
+        version: 0.14.0(@rsbuild/core@1.3.21)(@rspack/core@1.3.11(@swc/helpers@0.5.17))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)
+      '@rsbuild/core':
+        specifier: ^1.3.21
+        version: 1.3.21
+      '@rsbuild/plugin-react':
+        specifier: ^1.3.1
+        version: 1.3.1(@rsbuild/core@1.3.21)
+      '@rspack/core':
+        specifier: ^1.3.11
+        version: 1.3.11(@swc/helpers@0.5.17)
+      '@types/react':
+        specifier: ^19.1.5
+        version: 19.1.5
+      '@types/react-dom':
+        specifier: ^19.1.5
+        version: 19.1.5(@types/react@19.1.5)
+      '@unity/shared.utils':
+        specifier: workspace:*
+        version: link:../../libs/shared/utils
+      '@unity/tools':
+        specifier: workspace:*
+        version: link:../../tools
+
   apps/workplan-import:
     dependencies:
       '@planview/pv-utilities':
@@ -1623,6 +1672,7 @@ packages:
 
   '@hey-api/client-axios@0.7.1':
     resolution: {integrity: sha512-qFHLhrRssIr8kRr3TcYFfaIXbTRbvWJK8q5jH2e7YRIH29fwGcbk8Ud1B7JyBashPXEGpnypM9ygNOCo6vVKAA==}
+    deprecated: Starting with v0.73.0, this package is bundled directly inside @hey-api/openapi-ts.
     peerDependencies:
       '@hey-api/openapi-ts': < 2
       axios: '>= 1.0.0 < 2'

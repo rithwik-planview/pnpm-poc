@@ -22,11 +22,11 @@ export default defineConfig({
     plugins: [
         rsbuildPluginRemoteFetch([
             {
-                url: 'http://localhost:81/index.js',
+                url: 'https://one.clarizen-ci.io/workload/esm/index.js',
                 localPath: path.resolve(__dirname, './downloads/WorkloadApp.js'),
             },
             {
-                url: 'http://localhost:81/main.css',
+                url: 'https://one.clarizen-ci.io/workload/esm/main.css',
                 localPath: path.resolve(__dirname, './downloads/WorkloadApp.css'),
             },
         ]),

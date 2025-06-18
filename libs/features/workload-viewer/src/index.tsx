@@ -5,12 +5,8 @@ import { Workload } from 'WorkloadApp';
 import '../downloads/WorkloadApp.css';
 
 export enum AppState {
-    BasePath = 'basePath',
-    BoardId = 'boardId',
-    Data = 'data',
     Origin = 'origin',
     SessionId = 'sessionId',
-    TaskId = 'taskId',
     EntityIds = 'entityIds',
     InternalId = 'internalId',
     BusinessUnitId = 'businessUnitId',
@@ -20,7 +16,7 @@ export enum AppState {
     ServiceSource = 'serviceSource',
 }
 
-export type AppProps = Record<AppState, string>;
+export type AppProps = Partial<Record<AppState, string>>;
 
 export type WorkloadViewerHandle = {
     refresh: () => void;

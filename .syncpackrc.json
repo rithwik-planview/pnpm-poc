@@ -32,5 +32,12 @@
         "peerDependencies"
     ],
     "source": [],
-    "versionGroups": []
+    "versionGroups": [
+        {
+            "label": "react@17.0.0 for workload-viewer",
+            "dependencies": ["react", "react-dom", "@types/react", "@types/react-dom"],
+            "packages": ["@unity/features.workload-viewer"],
+            "pinVersion": "^17.0.2"
+        }
+    ]
 }

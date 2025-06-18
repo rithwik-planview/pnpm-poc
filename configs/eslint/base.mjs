@@ -4,5 +4,5 @@ import ts from 'typescript-eslint';
 export default [
     js.configs.recommended,
     ...ts.configs.recommended,
-    { ignores: ['dist/', '@mf-types/'] },
+    { ignores: ['dist/', '@mf-types/', 'downloads/'] },
 ];

@@ -20,4 +20,4 @@ overrides:
   "@unity/features.workload-viewer@1.0.0>@types/react": 17.0.2
   "@unity/features.workload-viewer@1.0.0>@types/react-dom": 17.0.2
 sharedWorkspaceLockFile: true
-strictPeerDependencies: false
+strictPeerDependencies: true

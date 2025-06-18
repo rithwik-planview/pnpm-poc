@@ -5,6 +5,7 @@
 build-drop/
 *.tsbuildinfo
 .swc
+downloads/
 
 # Dist
 node_modules
@@ -20,6 +21,3 @@ coverage/
 .vscode/*
 !.vscode/extensions.json
 .idea
-
-# Downloads
-downloads/

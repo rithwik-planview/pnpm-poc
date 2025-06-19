@@ -1,6 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
-import { createDataLibrary } from '@unity/core.data-access';
-import { decodeToken, validateToken } from '../utils/jwt';
+import React from 'react';
 import {
     NavigationBar,
     ToolbarSectionLeft,
@@ -13,14 +11,7 @@ import { Avatar, EmptyStateError, ListItem, ListItemDivider, Spinner } from '@pl
 import { Logout, Mail, User, WarningFilled } from '@planview/pv-icons';
 import styled from 'styled-components';
 import { align, color } from '@planview/pv-utilities';
-import { HYBRID_BASE_URL, SESSION_ID, TIME_DELTA } from '../constants';
-
-interface AuthResponse {
-    sessionId: string;
-    userId: string;
-    organizationId: string;
-    serverTime: string;
-}
+import { useAuth } from './useAuth';
 
 interface AppShellProps {
     title: string;
@@ -52,67 +43,20 @@ const LoadingLayout = styled.div`
 export const HybridAppShell: React.FC<AppShellProps> = ({
     title,
     origin,
-    basePath = 'release.latest',
-    hybridBasePath = 'HybridSolutions',
-    username = 'Admin_User',
-    password = 'Password1!',
+    basePath,
+    hybridBasePath,
+    username,
+    password,
     children,
 }) => {
-    const [hybridClient] = React.useState(() => {
-        return createDataLibrary(`${origin}/${basePath}_ApiV2/services/`, {
-            'Content-Type': 'application/json',
-            Accept: 'application/json',
-        });
+    const { isAuthenticated, error, user, handleLogout } = useAuth({
+        origin,
+        basePath,
+        hybridBasePath,
+        username,
+        password,
     });
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
-    const [error, setError] = useState(false);
 
-    const updateSessionIdAndReload = useCallback(async () => {
-        try {
-            const response = await hybridClient.fetch<AuthResponse>(
-                'post',
-                '/authentication/login',
-                {
-                    params: {
-                        username,
-                        password,
-                    },
-                },
-            );
-            const { sessionId } = response;
-            const serverTime = new Date(response.serverTime);
-            const localTime = new Date();
-            const timeDelta = (serverTime.getTime() - localTime.getTime()) / 1000;
-            const baseUrl = `${origin}/${hybridBasePath}`;
-            localStorage.setItem(TIME_DELTA, `${timeDelta}`);
-            localStorage.setItem(HYBRID_BASE_URL, baseUrl);
-            localStorage.setItem(SESSION_ID, sessionId);
-            window.location.reload();
-        } catch (e) {
-            console.error('Authentication failed:', e);
-            setError(true);
-        }
-    }, [hybridBasePath, hybridClient, origin, password, username]);
-    useEffect(() => {
-        const sessionId = localStorage.getItem(SESSION_ID);
-        const timeDelta = +(localStorage.getItem(TIME_DELTA) ?? 0);
-
-        if (sessionId && validateToken(sessionId, { username, origin, timeDelta })) {
-            setIsAuthenticated(true);
-        } else {
-            updateSessionIdAndReload();
-        }
-    }, [basePath, updateSessionIdAndReload, hybridClient, origin, password, username]);
-
-    const handleLogout = useCallback(() => {
-        localStorage.removeItem(SESSION_ID);
-        localStorage.removeItem(TIME_DELTA);
-        localStorage.removeItem(HYBRID_BASE_URL);
-        window.location.reload();
-    }, []);
-
-    const fullName = decodeToken(localStorage.getItem(SESSION_ID))?.clzUserName ?? '';
-    const email = decodeToken(localStorage.getItem(SESSION_ID))?.email ?? '';
     return (
         <AppLayout>
             <NavigationBar aria-label="Main navigation" logo={<LogoAdaptiveWork />}>
@@ -127,7 +71,7 @@ export const HybridAppShell: React.FC<AppShellProps> = ({
                             isAuthenticated ? (
                                 <Avatar
                                     size="medium"
-                                    initials={fullName
+                                    initials={user.fullName
                                         .split(/[\s._]/)
                                         .map((s) => s.charAt(0))
                                         .join('')}
@@ -139,8 +83,8 @@ export const HybridAppShell: React.FC<AppShellProps> = ({
                             )
                         }
                     >
-                        <ListItem icon={<User />} label={fullName} />
-                        <ListItem icon={<Mail />} label={email} />
+                        <ListItem icon={<User />} label={user.fullName} />
+                        <ListItem icon={<Mail />} label={user.email} />
                         <ListItemDivider />
                         <ListItem
                             icon={<Logout />}

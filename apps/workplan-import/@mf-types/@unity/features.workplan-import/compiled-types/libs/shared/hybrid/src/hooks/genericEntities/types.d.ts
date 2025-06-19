@@ -10,14 +10,14 @@ export declare const ApiPickerValueTypeSchema: z.ZodObject<{
     name: string;
     internalId: string;
     color?: string | undefined;
-    externalId?: string | undefined;
     imageUrl?: string | null | undefined;
+    externalId?: string | undefined;
 }, {
     name: string;
     internalId: string;
     color?: string | undefined;
-    externalId?: string | undefined;
     imageUrl?: string | null | undefined;
+    externalId?: string | undefined;
 }>;
 export declare const EntityFieldSchema: z.ZodUnion<[z.ZodNull, z.ZodUndefined, z.ZodString, z.ZodNumber, z.ZodBoolean, z.ZodObject<{
     internalId: z.ZodString;
@@ -29,14 +29,14 @@ export declare const EntityFieldSchema: z.ZodUnion<[z.ZodNull, z.ZodUndefined, z
     name: string;
     internalId: string;
     color?: string | undefined;
-    externalId?: string | undefined;
     imageUrl?: string | null | undefined;
+    externalId?: string | undefined;
 }, {
     name: string;
     internalId: string;
     color?: string | undefined;
-    externalId?: string | undefined;
     imageUrl?: string | null | undefined;
+    externalId?: string | undefined;
 }>]>;
 export type StringValue = {
     type: 'String';

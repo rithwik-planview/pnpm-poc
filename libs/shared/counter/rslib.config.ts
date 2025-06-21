@@ -4,6 +4,9 @@ export default defineConfig({
     source: {
         tsconfigPath: './tsconfig.build.json',
     },
+    output: {
+        target: 'web',
+    },
     lib: [
         {
             format: 'esm',

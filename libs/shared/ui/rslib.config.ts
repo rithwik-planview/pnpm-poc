@@ -12,6 +12,9 @@ export default defineConfig({
             'test-utils': './src/test-utils/index.tsx',
         },
     },
+    output: {
+        target: 'web',
+    },
     lib: [
         {
             format: 'esm',

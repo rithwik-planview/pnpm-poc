@@ -15,6 +15,14 @@ export default defineConfig({
         tsconfigPath: './tsconfig.build.json',
         define: publicVars,
     },
+    output: {
+        assetPrefix: 'auto',
+    },
+    resolve: {
+        alias: {
+            'styled-components': 'styled-components/dist/styled-components.js',
+        },
+    },
     html: {
         title: 'Shared config demo',
     },

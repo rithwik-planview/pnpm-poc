@@ -1,0 +1,22 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "noEmit": false,
+        "rootDir": "src"
+    },
+    "include": ["src/**/*.ts", "src/**/*.tsx"],
+    "exclude": [
+        "**/*.spec.tsx",
+        "**/*.spec.ts",
+        "**/*.test.js",
+        "./src/__utils/tests/*.*",
+        "**/*.stories.tsx"
+    ],
+    "references": [
+        { "path": "../../shared/utils/tsconfig.build.json" },
+        { "path": "../../shared/hybrid/tsconfig.build.json" },
+        { "path": "../../shared/ui/tsconfig.build.json" },
+        { "path": "../../core/shell/tsconfig.build.json" },
+        { "path": "../../../tools/tsconfig.build.json" }
+    ]
+}

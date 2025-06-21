@@ -4,6 +4,7 @@
     "private": true,
     "scripts": {
         "build": "rsbuild build",
+        "deploy-package": "deploy-package @unity/apps.shared-config-demo",
         "dev": "rsbuild dev --open",
         "lint": "eslint .",
         "mf-dev": "rsbuild mf-dev --open",
@@ -18,6 +19,7 @@
         "@planview/pv-utilities": "^4.22.2",
         "@unity/core.shell": "workspace:*",
         "@unity/shared.hybrid": "workspace:*",
+        "@unity/shared.utils": "workspace:*",
         "react": "^19.1.0",
         "react-dom": "^19.1.0",
         "styled-components": "^6.1.18"
@@ -29,7 +31,6 @@
         "@rspack/core": "^1.3.11",
         "@types/react": "^19.1.5",
         "@types/react-dom": "^19.1.5",
-        "@unity/shared.utils": "workspace:*",
         "@unity/tools": "workspace:*"
     }
 }

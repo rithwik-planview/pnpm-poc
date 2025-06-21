@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { DropdownMenu, ListItem, ButtonGhost } from '@planview/pv-uikit';
 import { relations } from '../relations';
 import { loadRemote } from '@unity/core.shell';
+import { getUnityBasePath } from '@unity/shared.utils';
 import { useCallback } from 'react';
 
 type ModuleType = Awaited<ReturnType<typeof loadRemote>>;
@@ -43,6 +44,15 @@ const RelationContent = styled.div`
 
 const elementModuleMap = new Map<string, ModuleType>();
 
+let baseUrl: string | undefined = undefined;
+try {
+    if (!import.meta.env.DEV) {
+        baseUrl = getUnityBasePath();
+    }
+} catch (error) {
+    console.log('Running in local mode', error);
+}
+
 export const Content = () => {
     const renderRelation = useCallback(
         (relation: (typeof filteredRelations)[number], index: number) => {
@@ -56,8 +66,10 @@ export const Content = () => {
                     }
                     elementModuleMap.delete(elementId);
                 }
+                const suffix = index % 2 === 1 ? '-pink' : '';
                 loadRemote({
-                    remoteName: '@unity/features.relation-viewer',
+                    remoteName: `@unity/features.relation-viewer${suffix}`,
+                    baseUrl,
                 }).then((module: ModuleType) => {
                     if (module) {
                         elementModuleMap.set(elementId, module);
@@ -90,7 +102,7 @@ export const Content = () => {
     );
     return (
         <Container>
-            {[0, 1, 2].map((index) => (
+            {[0, 1, 2, 3].map((index) => (
                 <RelationContainer key={index}>
                     <DropdownMenu
                         label="Select a relation"

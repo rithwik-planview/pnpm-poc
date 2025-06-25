@@ -9,6 +9,8 @@ export default defineConfig({
     },
     output: {
         target: 'web',
+        cleanDistPath: true,
+        minify: true,
     },
     lib: [
         {

@@ -11,7 +11,7 @@
         },
         "typeRoots": ["./node_modules/@types", "./src/types"]
     },
-    "include": ["./src", "*.config.ts", "**/*.json"],
+    "include": ["./src/**/*", "*.config.ts", "**/*.json", "*.ts"],
     "exclude": ["node_modules", "dist"],
     "references": [{ "path": "../../shared/utils/tsconfig.build.json" }]
 }

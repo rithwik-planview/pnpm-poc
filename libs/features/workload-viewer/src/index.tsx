@@ -24,7 +24,6 @@ export type WorkloadViewerHandle = {
 type WorkloadViewerProps = Parameters<typeof WorkloadViewer>[0];
 
 const WorkloadViewer = forwardRef<WorkloadViewerHandle, AppProps>(function (props, ref) {
-    console.log('WorkloadViewer props:', props);
     return <Workload {...props} ref={ref} />;
 });
 
@@ -33,7 +32,6 @@ type Args = WorkloadViewerProps & { element: HTMLElement };
 export function render(props: Args) {
     const appRef = createRef<WorkloadViewerHandle>();
     const { element, ...rest } = props;
-    console.log('Rendering WorkloadViewer with props:', rest);
     ReactDOM.render(<WorkloadViewer {...rest} ref={appRef} />, element);
     return appRef;
 }

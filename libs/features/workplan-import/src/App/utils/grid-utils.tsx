@@ -19,6 +19,7 @@ import {
     GridEditorDatePicker,
     GridEditorInputNumeric,
     GridEditorCombobox,
+    GridEditorComboboxMulti,
 } from '@planview/pv-grid';
 import {
     type Header,
@@ -31,6 +32,7 @@ import { RowState } from '../types';
 import { Avatar, type ComboboxOption } from '@planview/pv-uikit';
 import styled from 'styled-components';
 import { useQueryClient } from '@tanstack/react-query';
+import { useRelationOptions } from '../hooks/useRelationOptions';
 
 export interface FilterOption {
     icon: React.JSX.Element;
@@ -45,6 +47,13 @@ type RowStateIconMap = {
 type ColumnConfigParams = {
     field: Header | FieldsResponseAugumented;
     isNullField?: boolean;
+};
+
+type Tag = {
+    name: string;
+    internalId: string;
+    externalId?: string;
+    imageUrl?: string | null;
 };
 
 const CellIndicator = styled.div`
@@ -377,13 +386,49 @@ export function getColumnConfig({
                         value: item.value,
                     }));
 
+                    const { relationsOptions, isLoading, handleSearch } =
+                        useRelationOptions(fieldValue);
+
                     switch (fieldValue?.presentationType) {
                         case 'ReferenceToObject':
-                            return <GridEditorInput {...props} />;
-
-                        case 'Relation':
-                            return <GridEditorInput {...props} />;
-
+                            return (
+                                <GridEditorCombobox
+                                    {...props}
+                                    virtualized={true}
+                                    loading={isLoading}
+                                    clearable={false}
+                                    options={relationsOptions}
+                                    value={
+                                        relationsOptions?.find(
+                                            (option) =>
+                                                option.value === fieldValue.value.name ||
+                                                option.internalId === fieldValue.value.internalId,
+                                        ) || null
+                                    }
+                                />
+                            );
+                        case 'Relation': {
+                            const tags = props.value || [];
+                            const currentTags = Array.isArray(tags)
+                                ? tags.map((tag: Tag) => tag.name)
+                                : tags.name;
+                            return (
+                                <GridEditorComboboxMulti
+                                    {...props}
+                                    inputMode="search"
+                                    virtualized={true}
+                                    loading={isLoading}
+                                    clearable={false}
+                                    options={relationsOptions}
+                                    value={currentTags
+                                        ?.map((t: string) =>
+                                            relationsOptions?.find((tagOpt) => t === tagOpt.value),
+                                        )
+                                        .filter(Boolean)}
+                                    onInputChange={handleSearch}
+                                />
+                            );
+                        }
                         case 'Effort':
                         case 'Duration':
                             return <DurationEditor {...props} />;

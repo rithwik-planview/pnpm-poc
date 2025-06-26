@@ -62,11 +62,11 @@ type referenceType = {
     type: string;
     displayField: string | null;
 };
-interface TypedValue {
+export interface TypedValue {
     type: string;
     presentationType?: string | unknown;
     referenceTypes?: referenceType[] | null | unknown;
-    value: any;
+    value: unknown;
     error?: string | null;
     isChanged?: boolean;
 }

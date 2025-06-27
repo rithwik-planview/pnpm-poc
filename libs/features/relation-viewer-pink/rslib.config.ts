@@ -4,6 +4,7 @@ import { pluginModuleFederation } from '@module-federation/rsbuild-plugin';
 import moduleFederationConfig from './module-federation.config';
 import { name } from './package.json';
 import { getPortFromName } from '@unity/shared.utils';
+import { RsdoctorRspackPlugin } from '@rsdoctor/rspack-plugin';
 
 export default defineConfig({
     source: {
@@ -51,6 +52,16 @@ export default defineConfig({
                     ],
                 },
             },
+        },
+        rspack: {
+            plugins: [
+                process.env.RSDOCTOR === 'true' &&
+                    new RsdoctorRspackPlugin({
+                        supports: {
+                            generateTileGraph: true,
+                        },
+                    }),
+            ],
         },
     },
 });

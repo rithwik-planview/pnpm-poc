@@ -1,4 +1,5 @@
 import { defineConfig } from '@rslib/core';
+import { RsdoctorRspackPlugin } from '@rsdoctor/rspack-plugin';
 
 export default defineConfig({
     source: {
@@ -27,4 +28,16 @@ export default defineConfig({
             },
         },
     ],
+    tools: {
+        rspack: {
+            plugins: [
+                process.env.RSDOCTOR === 'true' &&
+                    new RsdoctorRspackPlugin({
+                        supports: {
+                            generateTileGraph: true,
+                        },
+                    }),
+            ],
+        },
+    },
 });

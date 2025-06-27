@@ -2,6 +2,7 @@ import { pluginReact } from '@rsbuild/plugin-react';
 import { defineConfig } from '@rslib/core';
 import { rsbuildPluginRemoteFetch } from './rspack.plugin.remoteFetch';
 import path from 'path';
+import { RsdoctorRspackPlugin } from '@rsdoctor/rspack-plugin';
 
 export default defineConfig({
     source: {
@@ -44,6 +45,14 @@ export default defineConfig({
                     WorkloadApp: path.resolve(__dirname, './downloads/WorkloadApp.js'),
                 },
             },
+            plugins: [
+                process.env.RSDOCTOR === 'true' &&
+                    new RsdoctorRspackPlugin({
+                        supports: {
+                            generateTileGraph: true,
+                        },
+                    }),
+            ],
         },
     },
 });

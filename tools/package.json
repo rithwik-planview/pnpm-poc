@@ -41,5 +41,6 @@
     "files": [
         "dist"
     ],
+    "sideEffects": false,
     "types": "./dist/types/index.d.ts"
 }

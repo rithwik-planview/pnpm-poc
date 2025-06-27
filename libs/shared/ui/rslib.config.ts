@@ -1,6 +1,7 @@
 import { pluginReact } from '@rsbuild/plugin-react';
 import { defineConfig } from '@rslib/core';
 import { peerDependencies } from './package.json';
+import { RsdoctorRspackPlugin } from '@rsdoctor/rspack-plugin';
 
 const externals = Object.keys(peerDependencies);
 
@@ -36,5 +37,17 @@ export default defineConfig({
             },
         },
     ],
+    tools: {
+        rspack: {
+            plugins: [
+                process.env.RSDOCTOR === 'true' &&
+                    new RsdoctorRspackPlugin({
+                        supports: {
+                            generateTileGraph: true,
+                        },
+                    }),
+            ],
+        },
+    },
     plugins: [pluginReact()],
 });

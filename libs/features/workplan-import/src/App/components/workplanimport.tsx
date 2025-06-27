@@ -48,6 +48,7 @@ import React from 'react';
 import type { WorkplanData } from '../types';
 import {
     filterOptions,
+    formatErrorMessage,
     getColumnConfigForNullFields,
     getColumnConfigFromField,
 } from '../utils/grid-utils';
@@ -177,7 +178,7 @@ export const WorkplanImport = forwardRef<WorkplanImportHandle, Props>(function W
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     _ref,
 ) {
-    const [show, setShow] = useState<boolean>(false);
+    const [show, setShow] = useState<boolean>(true);
     const [isDragActive, setIsDragActive] = useState<boolean>(false);
     const [file, setFile] = useState<File | null>(null);
     const [errMsg, setErrMsg] = useState<string>('');
@@ -336,6 +337,7 @@ ref,
             return {
                 ...columnConfig,
                 border: 'right' as GridColumnBorder,
+                minWidth: field?.type === 'Relation' ? 200 : 36,
             };
         });
 
@@ -355,7 +357,7 @@ ref,
         Object.entries(row.values).forEach(([key, field]) => {
             if (field.error) {
                 errors.push({
-                    message: field.error,
+                    message: formatErrorMessage(field.error),
                     key: `${rowIndex}-${key}`,
                 });
             }
@@ -383,9 +385,14 @@ ref,
                             ...row.values,
                             [confirm.columnId]: {
                                 ...row.values[confirm.columnId],
-                                value: confirm.nextValue.value ?? confirm.nextValue,
+                                value: Array.isArray(confirm.nextValue)
+                                    ? null
+                                    : (confirm.nextValue.value ?? confirm.nextValue),
                                 isChanged: true,
                                 error: null, // Reset error on change
+                                ...(row.values[confirm.columnId].listValues && {
+                                    listValues: confirm.nextValue,
+                                }),
                                 ...(row.values[confirm.columnId].serverValue && {
                                     serverValue: confirm.nextValue,
                                 }),
@@ -401,7 +408,9 @@ ref,
                 fileId: fileData?.guid || '',
                 rows: {
                     [confirm.rowId]: {
-                        [confirm.columnId]: confirm.nextValue.value ?? confirm.nextValue,
+                        [confirm.columnId]: Array.isArray(confirm.nextValue)
+                            ? confirm.nextValue.map((item) => item.internalId).join(';')
+                            : (confirm.nextValue.value ?? confirm.nextValue),
                     },
                 },
             });
@@ -436,9 +445,6 @@ ref,
 
     return (
         <>
-            <a id="btn-generic-modal" onClick={() => setShow(true)}>
-                Import
-            </a>
             {show && (
                 <Modal
                     headerText={isUploaded ? 'Imported work-plan preview' : 'Upload File'}

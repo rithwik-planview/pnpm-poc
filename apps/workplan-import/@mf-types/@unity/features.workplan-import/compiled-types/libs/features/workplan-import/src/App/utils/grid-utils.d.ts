@@ -42,5 +42,11 @@ export declare function getColumnConfigForNullFields_(field: Header): {
 export declare function getColumnConfig({ field, isNullField, }: ColumnConfigParams): Column<EnrichedEntity>;
 export declare function getColumnConfigForNullFields(field: Header): Column<EnrichedEntity>;
 export declare function getColumnConfigFromField(field: FieldsResponseAugumented): Column<EnrichedEntity>;
+/**
+ * Formats error messages by removing escape characters and HTML tags
+ * @param {string} errorMessage - The original error message
+ * @returns {string} A clean, user-readable error message
+ */
+export declare function formatErrorMessage(errorMessage: string): string;
 export {};
 //# sourceMappingURL=grid-utils.d.ts.map

@@ -478,3 +478,31 @@ export function getColumnConfigForNullFields(field: Header): Column<EnrichedEnti
 export function getColumnConfigFromField(field: FieldsResponseAugumented): Column<EnrichedEntity> {
     return getColumnConfig({ field, isNullField: false });
 }
+
+/**
+ * Formats error messages by removing escape characters and HTML tags
+ * @param {string} errorMessage - The original error message
+ * @returns {string} A clean, user-readable error message
+ */
+export function formatErrorMessage(errorMessage: string) {
+    if (!errorMessage) return '';
+
+    // Step 1: Replace escape sequences
+    let cleanMessage = errorMessage
+        .replace(/\\r\\n|\\n|\\r/g, ' ') // Replace \r\n, \n, \r with spaces
+        .replace(/\\t/g, ' ') // Replace \t with space
+        .replace(/\\"/g, '"') // Replace escaped quotes
+        .replace(/\\\\/g, '\\'); // Replace escaped backslashes
+
+    // Step 2: Remove HTML tags
+    cleanMessage = cleanMessage
+        .replace(/<br\s*\/?>/gi, ' ') // Replace <br> tags with spaces
+        .replace(/<[^>]*>/g, ''); // Remove all other HTML tags
+
+    // Step 3: Trim excess whitespace
+    cleanMessage = cleanMessage
+        .replace(/\s+/g, ' ') // Replace multiple spaces with a single space
+        .trim(); // Remove leading/trailing spaces
+
+    return cleanMessage;
+}

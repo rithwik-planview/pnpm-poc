@@ -63,6 +63,8 @@
     "files": [
         "dist"
     ],
-    "sideEffects": "false",
+    "sideEffects": [
+        "./src/data-access/index.ts"
+    ],
     "types": "./dist/types/index.d.ts"
 }

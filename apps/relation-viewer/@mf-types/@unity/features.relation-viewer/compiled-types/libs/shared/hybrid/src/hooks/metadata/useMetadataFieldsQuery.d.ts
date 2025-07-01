@@ -6,13 +6,13 @@ export declare const FieldsResponseSchema: z.ZodObject<{
     type: z.ZodUnion<[z.ZodLiteral<"Entity">, z.ZodLiteral<"DateTime">, z.ZodLiteral<"Date">, z.ZodLiteral<"String">, z.ZodLiteral<"Boolean">, z.ZodLiteral<"Integer">, z.ZodLiteral<"Long">, z.ZodLiteral<"Double">, z.ZodLiteral<"Money">, z.ZodLiteral<"Duration">, z.ZodLiteral<"MultiPickList">, z.ZodLiteral<"Relation">]>;
     presentationType: z.ZodUnion<[z.ZodLiteral<"ReferenceToObject">, z.ZodLiteral<"Date">, z.ZodLiteral<"Text">, z.ZodLiteral<"TextArea">, z.ZodLiteral<"Checkbox">, z.ZodLiteral<"Boolean">, z.ZodLiteral<"Currency">, z.ZodLiteral<"Duration">, z.ZodLiteral<"Effort">, z.ZodLiteral<"Numeric">, z.ZodLiteral<"Percent">, z.ZodLiteral<"Progress">, z.ZodLiteral<"Label">, z.ZodLiteral<"PickList">, z.ZodLiteral<"MultiPickList">, z.ZodLiteral<"Url">, z.ZodLiteral<"Relation">, z.ZodLiteral<"Other">]>;
 }, "strip", z.ZodTypeAny, {
+    type: "Entity" | "DateTime" | "Date" | "String" | "Boolean" | "Integer" | "Long" | "Double" | "Money" | "Duration" | "MultiPickList" | "Relation";
     name: string;
-    type: "Date" | "Entity" | "DateTime" | "String" | "Boolean" | "Integer" | "Long" | "Double" | "Money" | "Duration" | "MultiPickList" | "Relation";
-    presentationType: "Numeric" | "PickList" | "Date" | "ReferenceToObject" | "Checkbox" | "Text" | "TextArea" | "Boolean" | "Duration" | "MultiPickList" | "Relation" | "Currency" | "Effort" | "Percent" | "Progress" | "Label" | "Url" | "Other";
+    presentationType: "Date" | "Boolean" | "Duration" | "MultiPickList" | "Relation" | "ReferenceToObject" | "Text" | "TextArea" | "Checkbox" | "Currency" | "Effort" | "Numeric" | "Percent" | "Progress" | "Label" | "PickList" | "Url" | "Other";
 }, {
+    type: "Entity" | "DateTime" | "Date" | "String" | "Boolean" | "Integer" | "Long" | "Double" | "Money" | "Duration" | "MultiPickList" | "Relation";
     name: string;
-    type: "Date" | "Entity" | "DateTime" | "String" | "Boolean" | "Integer" | "Long" | "Double" | "Money" | "Duration" | "MultiPickList" | "Relation";
-    presentationType: "Numeric" | "PickList" | "Date" | "ReferenceToObject" | "Checkbox" | "Text" | "TextArea" | "Boolean" | "Duration" | "MultiPickList" | "Relation" | "Currency" | "Effort" | "Percent" | "Progress" | "Label" | "Url" | "Other";
+    presentationType: "Date" | "Boolean" | "Duration" | "MultiPickList" | "Relation" | "ReferenceToObject" | "Text" | "TextArea" | "Checkbox" | "Currency" | "Effort" | "Numeric" | "Percent" | "Progress" | "Label" | "PickList" | "Url" | "Other";
 }>;
 export type FieldsResponseAugumented = FieldsResponse & z.infer<typeof FieldsResponseSchema>;
 export interface Header {
@@ -20,16 +20,16 @@ export interface Header {
     error: string | null;
     fieldsResponse: FieldsResponseAugumented;
 }
-export declare function fileteredMetadataFieldsQueryOptions(options: Options<MetadataGetAvailableFieldsData>): import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<FieldsResponseAugumented[], Error, FieldsResponseAugumented[], [Pick<import("../../client/sdk.gen").Options<MetadataGetAvailableFieldsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
+export declare function fileteredMetadataFieldsQueryOptions(options: Options<MetadataGetAvailableFieldsData>): import("@tanstack/react-query").OmitKeyof<import("@tanstack/react-query").UseQueryOptions<FieldsResponseAugumented[], Error, FieldsResponseAugumented[], [Pick<import("../../client/sdk.gen").Options<MetadataGetAvailableFieldsData>, "baseURL" | "headers" | "path" | "body" | "query"> & {
     _id: string;
     _infinite?: boolean;
 }]>, "queryFn"> & {
-    queryFn?: import("@tanstack/react-query").QueryFunction<FieldsResponseAugumented[], [Pick<import("../../client/sdk.gen").Options<MetadataGetAvailableFieldsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
+    queryFn?: import("@tanstack/react-query").QueryFunction<FieldsResponseAugumented[], [Pick<import("../../client/sdk.gen").Options<MetadataGetAvailableFieldsData>, "baseURL" | "headers" | "path" | "body" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }], never> | undefined;
 } & {
-    queryKey: [Pick<import("../../client/sdk.gen").Options<MetadataGetAvailableFieldsData>, "body" | "path" | "headers" | "baseURL" | "query"> & {
+    queryKey: [Pick<import("../../client/sdk.gen").Options<MetadataGetAvailableFieldsData>, "baseURL" | "headers" | "path" | "body" | "query"> & {
         _id: string;
         _infinite?: boolean;
     }] & {

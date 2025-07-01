@@ -16,6 +16,8 @@
     "type": "module",
     "main": "index.js",
     "devDependencies": {
+        "@commitlint/cli": "^19.8.1",
+        "@commitlint/config-conventional": "^19.8.1",
         "@eslint/js": "^9.27.0",
         "@mdx-js/language-service": "^0.7.1",
         "@storybook/addon-docs": "^9.0.4",

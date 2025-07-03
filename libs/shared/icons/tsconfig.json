@@ -1,0 +1,10 @@
+{
+    "extends": "../../../configs/tsconfig/react.json",
+    "compilerOptions": {
+        "noEmit": true,
+        "declarationDir": "./dist/types",
+        "rootDir": "./"
+    },
+    "include": ["./src", "./docs", "build.ts", "**/*.json"],
+    "exclude": ["node_modules", "dist"]
+}

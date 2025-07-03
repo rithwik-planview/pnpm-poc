@@ -5,6 +5,8 @@
     cursor: pointer;
     display: inline-block;
     line-height: 1;
+    display: inline-flex;
+    align-items: center;
 }
 
 .demo-button--primary {
@@ -31,4 +33,10 @@
 .demo-button--large {
     font-size: 16px;
     padding: 12px 24px;
+}
+
+.demo-button__icon {
+    display: inline-flex;
+    margin-right: 0.5em;
+    align-items: center;
 }

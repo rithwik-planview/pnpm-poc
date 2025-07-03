@@ -1,10 +1,12 @@
 {
-    "name": "@unity/shared.ui",
+    "name": "@unity/shared.icons",
     "version": "1.0.0",
     "private": true,
     "scripts": {
-        "build": "rslib build",
-        "dev": "rslib build --watch",
+        "build": "pnpm run build-icons && rslib build",
+        "dev": "pnpm run build-icons && rslib build --watch",
+        "build-icons": "tsx build.ts",
+        "prebuild-icons": "svgo -f assets",
         "lint": "eslint .",
         "test": "jest",
         "typecheck": "pnpm typecheck:all && pnpm typecheck:build",
@@ -13,42 +15,37 @@
     },
     "type": "module",
     "main": "./dist/cjs/index.cjs",
-    "dependencies": {
-        "@planview/pv-grid": "^1.34.2",
-        "@planview/pv-uikit": "^7.36.0",
-        "@planview/pv-utilities": "^4.22.2"
-    },
     "devDependencies": {
+        "@planview/pv-form": "^1.5.3",
+        "@planview/pv-icons": "^2.25.0",
+        "@planview/pv-utilities": "^4.22.2",
         "@rsbuild/plugin-react": "^1.3.1",
         "@rsdoctor/rspack-plugin": "^1.1.4",
         "@rslib/core": "^0.8.0",
         "@rspack/core": "^1.3.11",
+        "@svgr/cli": "^8.1.0",
         "@types/react": "^19.1.5",
-        "@types/react-dom": "^19.1.5",
-        "@unity/shared.icons": "workspace:*",
-        "react-intl": "^7.1.11",
-        "styled-components": "^6.1.18"
+        "chalk": "^5.4.1",
+        "listr2": "^8.3.3",
+        "react": "^19.1.0",
+        "styled-components": "^6.1.18",
+        "svgo": "^4.0.0",
+        "tsx": "^4.20.3"
     },
     "peerDependencies": {
-        "react": "^19.1.0",
-        "react-dom": "^19.1.0",
-        "styled-components": "^6.1.18"
+        "react": "^19.1.0"
     },
     "exports": {
         ".": {
             "types": "./dist/types/index.d.ts",
             "import": "./dist/esm/index.js",
             "require": "./dist/cjs/index.cjs"
-        },
-        "./test-utils": {
-            "types": "./dist/types/test-utils/index.d.ts",
-            "import": "./dist/esm/test-utils.js",
-            "require": "./dist/cjs/test-utils.cjs"
         }
     },
     "files": [
         "dist"
     ],
+    "packageManager": "pnpm@10.12.1",
     "sideEffects": false,
     "types": "./dist/types/index.d.ts"
 }

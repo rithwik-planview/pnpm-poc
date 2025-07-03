@@ -1,4 +1,5 @@
 import './Button.css';
+import type { ReactNode } from 'react';
 
 export interface ButtonProps {
     primary?: boolean;
@@ -6,6 +7,7 @@ export interface ButtonProps {
     size?: 'small' | 'medium' | 'large';
     label: string;
     onClick?: () => void;
+    icon?: ReactNode;
 }
 
 export const Button = ({
@@ -13,6 +15,7 @@ export const Button = ({
     size = 'medium',
     backgroundColor,
     label,
+    icon,
     ...props
 }: ButtonProps) => {
     const mode = primary ? 'demo-button--primary' : 'demo-button--secondary';
@@ -23,6 +26,7 @@ export const Button = ({
             style={{ backgroundColor }}
             {...props}
         >
+            {icon && <span className="demo-button__icon">{icon}</span>}
             {label}
         </button>
     );

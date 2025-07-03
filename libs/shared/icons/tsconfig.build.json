@@ -11,6 +11,5 @@
         "**/*.test.js",
         "./src/__utils/tests/*.*",
         "**/*.stories.tsx"
-    ],
-    "references": [{ "path": "../icons/tsconfig.build.json" }]
+    ]
 }

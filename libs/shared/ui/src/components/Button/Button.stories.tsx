@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { fn } from 'storybook/test';
 
 import { Button } from './Button';
+import { Copy } from '@unity/shared.icons';
 
 const meta = {
     title: 'Shared-UI/Button',
@@ -44,5 +45,14 @@ export const Small: Story = {
     args: {
         size: 'small',
         label: 'Button',
+    },
+};
+
+export const WithIcon: Story = {
+    args: {
+        primary: true,
+        size: 'medium',
+        label: 'Copy',
+        icon: <Copy />,
     },
 };

@@ -1,0 +1,34 @@
+import { Meta, Story, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import { iconSizes } from '@planview/pv-utilities';
+import * as IconApiStories from './Icons.api.stories';
+
+<Meta title="Shared-Icons/API" />
+
+# API
+
+## Color
+
+You can customize the color of the icons by using the icon colors exported from `@planview/pv-utilities`. In special cases, you can also provide specific hex, rgb, etc. colors (any valid browser color will work).
+
+<Canvas of={IconApiStories.Color} sourceState="shown" />
+
+## Size
+
+The official sizes used by the design system are exported as `iconSizes` from `@planview/pv-utilities`
+
+There are two sets of variables exported from `iconSizes`:
+
+- Uppercase variables like `SIZE_SMALL` which are objects that configure both [the IconContainer size](https://design.planview.com/components/data-display/icon-container) and the icon size
+- Lowercase variables like `small` which are numbers that omit the container, and only set the size of the icon
+
+### With containers
+
+In almost all cases of building new interfaces with the design system you will want to use the the variant with the container.
+
+<Canvas of={IconApiStories.SizesWithContainers} sourceState="shown" />
+
+### Without containers
+
+In some cases where you need to use an icon with non-design system components you may need it without the outer container. For those cases you can use our lowercase size variables or just a number.
+
+<Canvas of={IconApiStories.SizesWithoutContainers} sourceState="shown" />

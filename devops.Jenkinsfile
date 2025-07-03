@@ -151,16 +151,20 @@ pipeline {
         }
         stage("Upload Build to S3") {
             steps {
-                script {
-                    withAWS(region: 'eu-west-1', credentials: '411231698121-aws-creds') {
+              script {
+              
+                def dateStr = new Date().format("yy_MM_dd")
+                def gitSha = sh(script: "git rev-parse --short HEAD", returnStdout: true).trim()
+                env.packageName = "${dateStr}_${gitSha}"
+                withAWS(region: 'eu-west-1', credentials: '411231698121-aws-creds') {
                         s3Upload(
                             workingDir: 'build-drop',
                             includePathPattern: '**/*',
                             bucket: 'modernization-build-drop',
-                            path: "unityV2/test-build"
+                            path: "unityV2/${packageName}"
                         )
-                    }
                 }
+              }
             }
         }
         stage("Deploy to QA") {
@@ -178,7 +182,7 @@ pipeline {
                     withAWS(region: 'eu-west-1', credentials: 'jenkins-aws-rnd-s3-admin') {
                       sh """
                           echo "Syncing files from ${sourceBucket} to ${destBucket} ..."
-                          aws s3 sync s3://${sourceBucket}/unityV2/test-build/ s3://${destBucket}/unityV2/
+                          aws s3 sync s3://${sourceBucket}/unityV2/${env.packageName}/ s3://${destBucket}/unityV2/
                           """
                             
                       // Flush the Cache on AWS CloudFront
@@ -194,9 +198,25 @@ pipeline {
         }
     }
     post {
-        unsuccessful {
+        success {
             script {
-                mailNotifier(config)
+                def userId = currentBuild.getBuildCauses()[0].userId
+                echo userId
+                slackSend(color: 'green', channel: "@$userId", message: "<@$userId> Unity Service Build & CI Deployment to QA completed successfully for develop branch. Job Details: ${env.BUILD_URL} ")
+                slackSend(color: 'green', channel: 'aw-qa-deployments', message: "<@$userId> Unity Service Build & CI Deployment to QA completed successfully for develop branch. Job Details: ${env.BUILD_URL} ")              
+            }
+        }
+        failure {
+            script {
+                def userId = currentBuild.getBuildCauses()[0].userId
+                echo userId
+                slackSend(color: 'green', channel: "@$userId", message: "<@$userId> Unity Service Build & CI Deployment to QA failed for develop branch. Job Details: ${env.BUILD_URL} ")
+                slackSend(color: 'green', channel: 'aw-qa-deployments', message: "<@$userId> Unity Service Build & CI Deployment to QA failed for develop branch. Job Details: ${env.BUILD_URL} ")  
+            }
+        }
+        cleanup {
+            script {
+                cleanWs()
             }
         }
     }

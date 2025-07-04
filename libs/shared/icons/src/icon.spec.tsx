@@ -9,7 +9,7 @@ const snapshot = (str: string, ui: Parameters<typeof render>[0]) => {
     });
 };
 
-describe('PV Icons', () => {
+describe('Unity icons', () => {
     snapshot('Icon with default container', <Copy />);
     snapshot('Icon with no container', <Copy size={16} />);
     snapshot('Icon with color', <Copy color="red" />);

@@ -28,7 +28,7 @@ export const strings = defineMessages({
 Run the extraction script to collect all defined messages into translation files:
 
 ```bash
-pnpm i18n:extract <package-name>
+pnpm -F <package-identifier> i18n:extract
 ```
 
 This creates or updates `translations/en.json` in your package directory with entries like:
@@ -47,7 +47,7 @@ This creates or updates `translations/en.json` in your package directory with en
 After translations are added for different languages, compile them using:
 
 ```bash
-pnpm i18n:compile <package-name>
+pnpm -F <package-identifier> i18n:compile
 ```
 
 This generates compiled translations in `translations/compiled/{locale}.json`.
@@ -130,6 +130,7 @@ Currently supported locales are:
 - English (en)
 - Spanish (es)
 - French (fr)
+- German (de)
 
 ## Tools Reference
 

@@ -1,0 +1,140 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Features/Internationalization" />
+
+# Internationalization (i18n)
+
+This guide explains how to handle translations in the application using our i18n system based on `react-intl`.
+
+## Setting Up Translations
+
+### 1. Define Translation Strings
+
+Use the `defineMessages` function from `@unity/shared.ui` to define your translation strings:
+
+```typescript
+import { defineMessages } from '@unity/shared.ui';
+
+export const strings = defineMessages({
+    myString: {
+        defaultMessage: 'My String',
+        description: 'Description for translators',
+    },
+});
+```
+
+### 2. Extract Translations
+
+Run the extraction script to collect all defined messages into translation files:
+
+```bash
+pnpm i18n:extract <package-name>
+```
+
+This creates or updates `translations/en.json` in your package directory with entries like:
+
+```json
+{
+    "messageId": {
+        "defaultMessage": "My String",
+        "description": "Description for translators"
+    }
+}
+```
+
+### 3. Compile Translations
+
+After translations are added for different languages, compile them using:
+
+```bash
+pnpm i18n:compile <package-name>
+```
+
+This generates compiled translations in `translations/compiled/{locale}.json`.
+
+### 4. Using Translations in Components
+
+Use the translations in your React components:
+
+```typescript
+import { useUnityIntl } from '@unity/shared.ui';
+import { strings } from './strings';
+
+function MyComponent() {
+    const { formatMessage } = useUnityIntl();
+
+    return (
+        <div>
+            {formatMessage(strings.myString)}
+        </div>
+    );
+}
+```
+
+### 5. Provider Setup
+
+Ensure your app is wrapped with `UnityIntlProvider`:
+
+```typescript
+import { UnityIntlProvider, type MessageLoader } from '@unity/shared.ui';
+import en from '../../translations/en.json';
+
+const loadMessages: MessageLoader = async (locale: SupportedLocales) => {
+    try {
+        const { default: md } = await import(`../../translations/compiled/${locale}.json`);
+        return md;
+    } catch (e) {
+        console.error(`Failed to load messages for locale ${locale}:`, e);
+        return en;
+    }
+};
+
+export const App = () => (
+    <UnityIntlProvider
+        defaultLocale="en"
+        loadMessages={loadMessages}
+    >
+        {children}
+    </UnityIntlProvider>
+);
+```
+
+## Translation Workflow
+
+The translation workflow is managed through npm scripts defined in your package's `package.json`:
+
+- `pnpm i18n`: Runs both extract and compile commands
+- `pnpm i18n:extract`: Extracts messages from source code
+- `pnpm i18n:compile`: Compiles translations for use in the application
+
+## Tips and Best Practices
+
+1. **Descriptive IDs**: Use descriptive message IDs to help translators understand the context
+2. **Provide Context**: Always include a meaningful description for translators
+3. **Variables**: Use variables in messages when needed:
+    ```typescript
+    defineMessages({
+        welcome: {
+            defaultMessage: 'Welcome, {name}!',
+            description: 'Welcome message with user name',
+        },
+    });
+    ```
+4. **Keep Source Files Updated**: Run extract whenever you add new strings
+5. **Verify Compilation**: Always compile and test translations before deploying
+
+## Supported Locales
+
+Currently supported locales are:
+
+- English (en)
+- Spanish (es)
+- French (fr)
+
+## Tools Reference
+
+Our i18n system uses the following tools:
+
+- `@formatjs/cli-lib`: For extracting and compiling messages
+- `react-intl`: For runtime message formatting
+- Custom tooling in the `tools/src/i18n` directory for managing the workflow
